@@ -1,0 +1,28 @@
+{
+  "coverage": 1.0,
+  "scenes": 1000,
+  "dev_scenes": 256,
+  "failures": 0,
+  "pilot1000": {
+    "score": 60.86740070238809,
+    "no_at_fault_collisions": 93.85,
+    "drivable_area_compliance": 71.7,
+    "time_to_collision_within_bound": 86.9,
+    "comfort": 99.8,
+    "ego_progress": 56.9695076541308,
+    "driving_direction_compliance": 88.8
+  },
+  "dev256": {
+    "score": 59.92871481886344,
+    "no_at_fault_collisions": 94.921875,
+    "drivable_area_compliance": 69.140625,
+    "time_to_collision_within_bound": 87.109375,
+    "comfort": 100.0,
+    "ego_progress": 56.73300178576592,
+    "driving_direction_compliance": 85.9375
+  },
+  "prediction_sha256": "6498fc99ddd3d41276356f8f03a0a7da759a590bc11c4225d84f01379d2fba37",
+  "scores_sha256": "e9dac4bd1585402a4313e40c2ec2f653b71a16a6db87f746414cc768c45eb9fa",
+  "official_navsim_commit": "3e8291bfa89ff247231e0227778840cd0a036896",
+  "navtest_used": false
+}

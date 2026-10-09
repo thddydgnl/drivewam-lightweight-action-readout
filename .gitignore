@@ -1,0 +1,11 @@
+# OS / editor / caches
+.DS_Store
+__pycache__/
+*.pyc
+
+# Large artifacts kept locally only (see README "Reproducibility notes")
+*.safetensors
+!*-stats.safetensors
+*.tar.gz
+vendor/
+docs/report/build/fonts/

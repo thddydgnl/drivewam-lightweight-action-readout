@@ -1,0 +1,18 @@
+{
+  "navsim_transformer_parameters": 6241020126,
+  "navsim_transformer_BF16_GiB": 11.624805863946676,
+  "text_encoder_file_GiB": 10.581548519432545,
+  "vae_file_GiB": 2.625191405415535,
+  "kv_slots": 1800,
+  "kv_BF16_GiB": 0.61798095703125,
+  "dense_3_layers_MiB_per_sample": 1.96875,
+  "dense_6_layers_GiB_100k": 384.521484375,
+  "dense_3_layers_GiB_100k": 192.2607421875,
+  "pooled_6_layers_GiB_100k": 3.4332275390625,
+  "sigmas_video_default": [
+    1.0,
+    0.9523809523809523,
+    0.8823529411764706,
+    0.7692307692307692
+  ]
+}

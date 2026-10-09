@@ -1,0 +1,13 @@
+1613768944 /home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/navtest_dev_quality_2026-10-02/shard0/00896.safetensors
+1613768944 /home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/navtest_dev_quality_2026-10-02/shard0/00256.safetensors
+1613768944 /home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/navtest_dev_quality_2026-10-02/shard0/00640.safetensors
+1613768944 /home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/navtest_dev_quality_2026-10-02/shard0/00512.safetensors
+1613768944 /home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/navtest_dev_quality_2026-10-02/shard0/00128.safetensors
+1613768944 /home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/navtest_dev_quality_2026-10-02/shard0/00384.safetensors
+1613768944 /home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/navtest_dev_quality_2026-10-02/shard0/00000.safetensors
+1613768944 /home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/navtest_dev_quality_2026-10-02/shard0/01280.safetensors
+1613768944 /home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/navtest_dev_quality_2026-10-02/shard0/01152.safetensors
+1613768944 /home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/navtest_dev_quality_2026-10-02/shard0/01024.safetensors
+1613768944 /home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/navtest_dev_quality_2026-10-02/shard0/01408.safetensors
+1613768944 /home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/navtest_dev_quality_2026-10-02/shard0/00768.safetensors
+1122073792 /home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/navtest_dev_quality_2026-10-02/shard0/01536.safetensors

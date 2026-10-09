@@ -1,0 +1,13 @@
+{
+  "name": "train4k-fixedprompt-first-seed17",
+  "frame": "ego",
+  "train_rows": 19996,
+  "epochs": 40,
+  "steps": 25000,
+  "checkpoint_sha256": "7c021eb05fd87ab3e9496c176387b06bde74da9fd9ef960f0716afeb16159f15",
+  "predictions": {
+    "dev": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/pai_heads_2026-10-04/train4k-fixedprompt-first-seed17/pred-dev.npz"
+  },
+  "elapsed_s": 1091.2320210784674,
+  "utc": "2026-10-04T14:38:25.807761+00:00"
+}

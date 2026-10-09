@@ -1,0 +1,52 @@
+{
+  "split_sha256": "68178d2266df41c3f5d618f81ba75f00a9b99589bab026f271a8b82b4ef031a4",
+  "navtest_dev": {
+    "scenes": 3250,
+    "logs": 34,
+    "maps": {
+      "us-nv-las-vegas-strip": 733,
+      "us-ma-boston": 1193,
+      "us-pa-pittsburgh-hazelwood": 1020,
+      "sg-one-north": 304
+    },
+    "commands": {
+      "1": 2189,
+      "2": 469,
+      "0": 592
+    },
+    "speed_mps_quantiles": [
+      0.0002952712392303447,
+      2.3317582053914747,
+      4.8555013948612675,
+      7.4239164292495845,
+      15.015899667222595
+    ],
+    "largest_log_fraction": 0.08738461538461538
+  },
+  "navtest_final": {
+    "scenes": 8896,
+    "logs": 102,
+    "maps": {
+      "us-nv-las-vegas-strip": 3331,
+      "us-pa-pittsburgh-hazelwood": 1417,
+      "us-ma-boston": 2538,
+      "sg-one-north": 1610
+    },
+    "commands": {
+      "1": 5881,
+      "0": 1909,
+      "2": 1106
+    },
+    "speed_mps_quantiles": [
+      6.0342599157342094e-05,
+      2.57581438876215,
+      5.144243377742722,
+      7.5942151671562215,
+      15.232069309308377
+    ],
+    "largest_log_fraction": 0.06384892086330936
+  },
+  "index_sha256": "ada7489af7395304f9abad6074720ec63f7a44bf57820e081c94eec044256a20",
+  "dev_tokens_sha256": "75c85c14cb42450c54266fdd07e288e764e7a815880d3336182d5804a81c12c2",
+  "completed_at_utc": "2026-10-02T08:12:45.507977+00:00"
+}

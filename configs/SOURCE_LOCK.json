@@ -1,0 +1,443 @@
+{
+  "as_of": "2026-09-15",
+  "execution_status": "navtrain_pilot_prepared; dev256_B10_B05_official_quality_and_three_repeat_online_timing_verified; opt_full_headval_navtest_and_head_training_pending",
+  "repositories": [
+    {
+      "name": "DriveWAM",
+      "url": "https://github.com/chenshi3/DriveWAM",
+      "commit": "abbefb407c9c553f221522fc26077d307620adb4",
+      "license": "Apache-2.0",
+      "role": "required_model_code",
+      "review": "static_source_review; no package installation or GPU execution",
+      "files": [
+        {
+          "path": "README.md",
+          "sha256": "157db988f71e20515929d35b011aea0b841e7f2bd20b81e8f9fee035d0a22562",
+          "lines": 277,
+          "source_url": "https://github.com/chenshi3/DriveWAM/blob/abbefb407c9c553f221522fc26077d307620adb4/README.md"
+        },
+        {
+          "path": "environment.yml",
+          "sha256": "9312f8b899870482e65309f8ff0afcf1a9f5339a7fb3a7fc444cabcd7f2fc30f",
+          "lines": 55,
+          "source_url": "https://github.com/chenshi3/DriveWAM/blob/abbefb407c9c553f221522fc26077d307620adb4/environment.yml"
+        },
+        {
+          "path": "LICENSE.txt",
+          "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+          "lines": 201,
+          "source_url": "https://github.com/chenshi3/DriveWAM/blob/abbefb407c9c553f221522fc26077d307620adb4/LICENSE.txt"
+        },
+        {
+          "path": "src/navsim/eval.py",
+          "sha256": "cc26fe81a0082c97d95396a0c865e2ab1d2e1ff68853aba31b20c0834c6d78df",
+          "lines": 634,
+          "source_url": "https://github.com/chenshi3/DriveWAM/blob/abbefb407c9c553f221522fc26077d307620adb4/src/navsim/eval.py"
+        },
+        {
+          "path": "src/configs/navsim_cfg.py",
+          "sha256": "11b387da9b50042f741d68fac7163bc9343569f3a6666b41ef5e79eab2eca8b9",
+          "lines": 66,
+          "source_url": "https://github.com/chenshi3/DriveWAM/blob/abbefb407c9c553f221522fc26077d307620adb4/src/configs/navsim_cfg.py"
+        },
+        {
+          "path": "src/modules/navsim_model.py",
+          "sha256": "85125e8212c9b7f43b629af7c775c9282c5046001bb424583a3b337036d5d992",
+          "lines": 618,
+          "source_url": "https://github.com/chenshi3/DriveWAM/blob/abbefb407c9c553f221522fc26077d307620adb4/src/modules/navsim_model.py"
+        },
+        {
+          "path": "src/modules/model.py",
+          "sha256": "95e4b855380b3c146dad6ebb64702b7283e42fa70a3ee431b2d4fd0a82ed940d",
+          "lines": 1736,
+          "source_url": "https://github.com/chenshi3/DriveWAM/blob/abbefb407c9c553f221522fc26077d307620adb4/src/modules/model.py"
+        },
+        {
+          "path": "src/utils/scheduler.py",
+          "sha256": "d9e880843e11acfa5dac4400bfd01f20ae641204677dc2a78aa01ee8d31e4520",
+          "lines": 134,
+          "source_url": "https://github.com/chenshi3/DriveWAM/blob/abbefb407c9c553f221522fc26077d307620adb4/src/utils/scheduler.py"
+        },
+        {
+          "path": "src/dataset/navsim_dataset.py",
+          "sha256": "266f4b7b6774a4ebf515bb54af435e2f8424fc109b2d32bfb9afdffa5dbc726c",
+          "lines": 176,
+          "source_url": "https://github.com/chenshi3/DriveWAM/blob/abbefb407c9c553f221522fc26077d307620adb4/src/dataset/navsim_dataset.py"
+        },
+        {
+          "path": "src/navsim/process_data.py",
+          "sha256": "5a3bfd7c9b7ff4f06d51f526ad61885df47b8f3863543fea3a91b74e965205f7",
+          "lines": 472,
+          "source_url": "https://github.com/chenshi3/DriveWAM/blob/abbefb407c9c553f221522fc26077d307620adb4/src/navsim/process_data.py"
+        },
+        {
+          "path": "navsim/common/dataloader.py",
+          "sha256": "f9c1af29cd08d3da7b8b892db0e1d6676b0ab3aab0447c36a474b4a8c08e0696",
+          "lines": 222,
+          "source_url": "https://github.com/chenshi3/DriveWAM/blob/abbefb407c9c553f221522fc26077d307620adb4/navsim/common/dataloader.py"
+        }
+      ]
+    },
+    {
+      "name": "Light-WAM",
+      "url": "https://github.com/L1ziang/Light-WAM",
+      "commit": "db7d05e724f3eac2d4f0c9c3ac727fe93a44d727",
+      "license": "MIT",
+      "role": "selective_head_reference",
+      "review": "static_source_review; no package installation or GPU execution",
+      "files": [
+        {
+          "path": "LICENSE",
+          "sha256": "6a14ce7fd254fc8b5c3cbe813861d79588f998870ddb14b855ba7b6d28fcb8ed",
+          "lines": 25,
+          "source_url": "https://github.com/L1ziang/Light-WAM/blob/db7d05e724f3eac2d4f0c9c3ac727fe93a44d727/LICENSE"
+        },
+        {
+          "path": "pyproject.toml",
+          "sha256": "635f2a1c1332b38651035325bdc9178106513003e27f5a88cb0c7a4a78fcd3a0",
+          "lines": 52,
+          "source_url": "https://github.com/L1ziang/Light-WAM/blob/db7d05e724f3eac2d4f0c9c3ac727fe93a44d727/pyproject.toml"
+        },
+        {
+          "path": "src/lightwam/models/wan22/state_fusion_action_expert.py",
+          "sha256": "f0f1f73e947e9cc5342b3e661a7e6d32a0a445488591c5c2d5b030c515de7b58",
+          "lines": 477,
+          "source_url": "https://github.com/L1ziang/Light-WAM/blob/db7d05e724f3eac2d4f0c9c3ac727fe93a44d727/src/lightwam/models/wan22/state_fusion_action_expert.py"
+        },
+        {
+          "path": "src/lightwam/models/wan22/wan_video_dit.py",
+          "sha256": "1766c748a7f2f55e7f1ee8c00b89c8a8e5b506f40ea22f0967be5706b30875c3",
+          "lines": 1097,
+          "source_url": "https://github.com/L1ziang/Light-WAM/blob/db7d05e724f3eac2d4f0c9c3ac727fe93a44d727/src/lightwam/models/wan22/wan_video_dit.py"
+        },
+        {
+          "path": "configs/model/lightwam.yaml",
+          "sha256": "0fa5ebd9ccd799d879f8a9cec4e847a2552d6ce16621dc0b3def69266c67c98a",
+          "lines": 95,
+          "source_url": "https://github.com/L1ziang/Light-WAM/blob/db7d05e724f3eac2d4f0c9c3ac727fe93a44d727/configs/model/lightwam.yaml"
+        }
+      ]
+    },
+    {
+      "name": "navsim-v1.1",
+      "url": "https://github.com/autonomousvision/navsim",
+      "commit": "3e8291bfa89ff247231e0227778840cd0a036896",
+      "license": "Apache-2.0",
+      "role": "required_evaluation",
+      "review": "static_source_review; no package installation or GPU execution",
+      "files": [
+        {
+          "path": "LICENSE",
+          "sha256": "de4940fe77d9b191436c278d5419323ac437487aa9883843bfcac06032e8d13d",
+          "lines": 201,
+          "source_url": "https://github.com/autonomousvision/navsim/blob/3e8291bfa89ff247231e0227778840cd0a036896/LICENSE"
+        },
+        {
+          "path": "requirements.txt",
+          "sha256": "3019889a822b15967ef186621195f04fd1c4fb5c9c1c1654662c6b9b86ce35a8",
+          "lines": 49,
+          "source_url": "https://github.com/autonomousvision/navsim/blob/3e8291bfa89ff247231e0227778840cd0a036896/requirements.txt"
+        },
+        {
+          "path": "setup.py",
+          "sha256": "e3b07493a09461dd5b3060f7ce5f1efb4b60449d242ffd60a137e5f74107cc77",
+          "lines": 30,
+          "source_url": "https://github.com/autonomousvision/navsim/blob/3e8291bfa89ff247231e0227778840cd0a036896/setup.py"
+        },
+        {
+          "path": "docs/install.md",
+          "sha256": "17cc88478b3d4bab3605b10a4e7e228fe2b08f9e8754ca604528cd7f20bc292f",
+          "lines": 70,
+          "source_url": "https://github.com/autonomousvision/navsim/blob/3e8291bfa89ff247231e0227778840cd0a036896/docs/install.md"
+        },
+        {
+          "path": "docs/splits.md",
+          "sha256": "34be9c00356d09a8faf7e2418f204f54480bb1f6509468d97c164e82789680c1",
+          "lines": 141,
+          "source_url": "https://github.com/autonomousvision/navsim/blob/3e8291bfa89ff247231e0227778840cd0a036896/docs/splits.md"
+        },
+        {
+          "path": "download/download_navtrain.sh",
+          "sha256": "48c26cdb2db328505dc5e21ae2033b719f0f837a7f5fc0278365a14870be6768",
+          "lines": 26,
+          "source_url": "https://github.com/autonomousvision/navsim/blob/3e8291bfa89ff247231e0227778840cd0a036896/download/download_navtrain.sh"
+        },
+        {
+          "path": "download/download_test.sh",
+          "sha256": "bb9d1060f8172dbe4bfcb16c6f3c1b38c98d2527e3cdbe92a787df6501921960",
+          "lines": 21,
+          "source_url": "https://github.com/autonomousvision/navsim/blob/3e8291bfa89ff247231e0227778840cd0a036896/download/download_test.sh"
+        },
+        {
+          "path": "navsim/evaluate/pdm_score.py",
+          "sha256": "07c3fdf737388f4ee219bba4de5187a2140d8e6411151d686302666be5f063c8",
+          "lines": 140,
+          "source_url": "https://github.com/autonomousvision/navsim/blob/3e8291bfa89ff247231e0227778840cd0a036896/navsim/evaluate/pdm_score.py"
+        },
+        {
+          "path": "navsim/planning/simulation/planner/pdm_planner/scoring/pdm_scorer.py",
+          "sha256": "02ab075017d4edb1c8bba6476ef1674b84d43dbca0f599df87cfe052b2dd5211",
+          "lines": 509,
+          "source_url": "https://github.com/autonomousvision/navsim/blob/3e8291bfa89ff247231e0227778840cd0a036896/navsim/planning/simulation/planner/pdm_planner/scoring/pdm_scorer.py"
+        }
+      ]
+    },
+    {
+      "name": "lingbot-va",
+      "url": "https://github.com/robbyant/lingbot-va",
+      "commit": "7c6ffa9bfc4b83582cafc860fab4c82cc7deeeeb",
+      "license": "Apache-2.0",
+      "role": "dependency_reference_only",
+      "review": "static_source_review; no package installation or GPU execution",
+      "files": [
+        {
+          "path": "requirements.txt",
+          "sha256": "63470c928db122d75b76f3373a24e1372774320bff4669206b91c41e684cb146",
+          "lines": 24,
+          "source_url": "https://github.com/robbyant/lingbot-va/blob/7c6ffa9bfc4b83582cafc860fab4c82cc7deeeeb/requirements.txt"
+        },
+        {
+          "path": "LICENSE.txt",
+          "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+          "lines": 201,
+          "source_url": "https://github.com/robbyant/lingbot-va/blob/7c6ffa9bfc4b83582cafc860fab4c82cc7deeeeb/LICENSE.txt"
+        },
+        {
+          "path": "pyproject.toml",
+          "sha256": "a3109a71e732ceda3a1ebb9413443ed1824b4fd1b50a239ac13d9db86203ceae",
+          "lines": 61,
+          "source_url": "https://github.com/robbyant/lingbot-va/blob/7c6ffa9bfc4b83582cafc860fab4c82cc7deeeeb/pyproject.toml"
+        }
+      ]
+    }
+  ],
+  "selected_upstream": [
+    {
+      "repo": "Dao-AILab/flash-attention",
+      "commit": "060c9188beec3a8b62b33a3bfa6d5d2d44975fab",
+      "tag": "v2.8.3",
+      "scope": [
+        "setup.py",
+        "README.md",
+        "LICENSE"
+      ],
+      "license": "BSD-3-Clause",
+      "kernel_audit": false
+    },
+    {
+      "repo": "motional/nuplan-devkit",
+      "commit": "ce3c323af01c0d7ec5672f7832ef53f9c679aab0",
+      "tag": "nuplan-devkit-v1.2",
+      "scope": [
+        "requirements.txt",
+        "setup.py",
+        "LICENSE.txt"
+      ],
+      "license": "Apache-2.0",
+      "full_repo_audit": false
+    }
+  ],
+  "model_assets": [
+    {
+      "repo_id": "chenchenshi/DriveWAM",
+      "revision": "c4fb6d2c5d26ee3018a9ee1507f36fd02b85b1ce",
+      "gated": false,
+      "license": "not_explicit_in_model_card",
+      "files": [
+        {
+          "path": ".gitattributes",
+          "bytes": 1570,
+          "publisher_sha256": null
+        },
+        {
+          "path": "PhysicalAI-Autonomous-Vehicles-Front-nav_prompts.tar.gz",
+          "bytes": 28658441,
+          "publisher_sha256": "8753c19acc318d963d6378e324d0a9a4dc06ee9f60a8b79d4a2608840c359d3b"
+        },
+        {
+          "path": "README.md",
+          "bytes": 10620,
+          "publisher_sha256": null
+        },
+        {
+          "path": "metric_cache_navtest.tar.gz",
+          "bytes": 3168096463,
+          "publisher_sha256": "ff96c6dd388205573ee58700f4094c6ebcfe7259803d6ded45ff1c0f82df93e3"
+        },
+        {
+          "path": "navsim/config.json",
+          "bytes": 656,
+          "publisher_sha256": null
+        },
+        {
+          "path": "navsim/diffusion_pytorch_model.safetensors",
+          "bytes": 12482164484,
+          "publisher_sha256": "27e4846b0a25e22fc299f7aca90c01d802072d2b297741c85ed074b689ef26a9"
+        },
+        {
+          "path": "physicalai/config.json",
+          "bytes": 543,
+          "publisher_sha256": null
+        },
+        {
+          "path": "physicalai/diffusion_pytorch_model.safetensors",
+          "bytes": 12482072236,
+          "publisher_sha256": "ad90feae1a26007d13743ecb7896887ae7f9906168e5652d57b5406073fa0d98"
+        },
+        {
+          "path": "train_100k.csv",
+          "bytes": 28757187,
+          "publisher_sha256": "06338eefac9a9214e7010c2597a7642768f7e11b3718ebd2d9247e1207d914dd"
+        },
+        {
+          "path": "train_20k.csv",
+          "bytes": 5751563,
+          "publisher_sha256": null
+        },
+        {
+          "path": "train_4k.csv",
+          "bytes": 1151247,
+          "publisher_sha256": null
+        }
+      ]
+    },
+    {
+      "repo_id": "robbyant/lingbot-va-base",
+      "revision": "68b7bc1b35da6ddc67ea94c4ceb58d768fbb3f9c",
+      "gated": false,
+      "license": "apache-2.0",
+      "files": [
+        {
+          "path": ".gitattributes",
+          "bytes": 1634,
+          "publisher_sha256": null
+        },
+        {
+          "path": "README.md",
+          "bytes": 4170,
+          "publisher_sha256": null
+        },
+        {
+          "path": "assets/teaser.png",
+          "bytes": 1107098,
+          "publisher_sha256": "f27d456c7af839b5929aeffaffa9ac2cb9a3b69e5e0df2440b37b4f241aa933d"
+        },
+        {
+          "path": "text_encoder/config.json",
+          "bytes": 855,
+          "publisher_sha256": null
+        },
+        {
+          "path": "text_encoder/model-00001-of-00003.safetensors",
+          "bytes": 4935812536,
+          "publisher_sha256": "a8e861969c7433e707cc5a74065d795d36cca07ec96eb6763eb4083df7248f58"
+        },
+        {
+          "path": "text_encoder/model-00002-of-00003.safetensors",
+          "bytes": 4983103192,
+          "publisher_sha256": "d57d948ece4837d850b7a859a4415121d57cacf8b9ee1d4db200c67f592902d7"
+        },
+        {
+          "path": "text_encoder/model-00003-of-00003.safetensors",
+          "bytes": 1442935480,
+          "publisher_sha256": "0da9ee284e21d1406df708788db1d502d95d75f69faa25cd26151bf8829b7c5f"
+        },
+        {
+          "path": "text_encoder/model.safetensors.index.json",
+          "bytes": 22476,
+          "publisher_sha256": null
+        },
+        {
+          "path": "tokenizer/special_tokens_map.json",
+          "bytes": 7079,
+          "publisher_sha256": null
+        },
+        {
+          "path": "tokenizer/spiece.model",
+          "bytes": 4548313,
+          "publisher_sha256": "e3909a67b780650b35cf529ac782ad2b6b26e6d1f849d3fbb6a872905f452458"
+        },
+        {
+          "path": "tokenizer/tokenizer.json",
+          "bytes": 16837459,
+          "publisher_sha256": "20a46ac256746594ed7e1e3ef733b83fbc5a6f0922aa7480eda961743de080ef"
+        },
+        {
+          "path": "tokenizer/tokenizer_config.json",
+          "bytes": 61758,
+          "publisher_sha256": null
+        },
+        {
+          "path": "transformer/config.json",
+          "bytes": 450,
+          "publisher_sha256": null
+        },
+        {
+          "path": "transformer/diffusion_pytorch_model-00001-of-00003.safetensors",
+          "bytes": 4821987820,
+          "publisher_sha256": "1f4a62a9d6e9293eb1254eca04e54bd51af6414cb3da65f9ab55caad96bfd388"
+        },
+        {
+          "path": "transformer/diffusion_pytorch_model-00002-of-00003.safetensors",
+          "bytes": 4821655760,
+          "publisher_sha256": "c86f3039ad582de0da3daf6b60d07a6010336db501b5596d70d4cb4adb5c5407"
+        },
+        {
+          "path": "transformer/diffusion_pytorch_model-00003-of-00003.safetensors",
+          "bytes": 535373816,
+          "publisher_sha256": "338240f2443f81d18e26c442f06f962637c0e8dbe8a7d607293f7dfda1c1d37f"
+        },
+        {
+          "path": "transformer/diffusion_pytorch_model.safetensors.index.json",
+          "bytes": 74936,
+          "publisher_sha256": null
+        },
+        {
+          "path": "vae/config.json",
+          "bytes": 1701,
+          "publisher_sha256": null
+        },
+        {
+          "path": "vae/diffusion_pytorch_model.safetensors",
+          "bytes": 2818777808,
+          "publisher_sha256": "62cd18f19438e35b32ac63020e2852f566e9b02f46b6cdbd87972a356e3c6f4b"
+        }
+      ]
+    }
+  ],
+  "not_verified": [
+    "opt pass-skip parity and low-step candidates; full head-val and navtest quality/coverage",
+    "student quality and online latency comparisons against B10/B*",
+    "head training",
+    "storage retention after container replacement",
+    "Faster-WAM arXiv 2608.02365 official code URL",
+    "Remaining full navtrain camera data and locked navtest dataset acquisition"
+  ],
+  "plan_revision_date": "2026-10-01",
+  "plan_revision_note": "Pinned revisions unchanged. Environment/data locks preserve 2026-09-30 snapshots. Dev256 B10/B05 official/vendored scoring, paired generation control, three-repeat online latency and phase/VRAM measurements completed on 2026-10-01; this is not navtest generalization or B* selection.",
+  "environment_verified_date": "2026-09-30",
+  "environment_evidence": "evidence/remote_environment_2026-09-30/ENVIRONMENT_LOCK.json",
+  "data_verified_date": "2026-09-30",
+  "data_evidence": "evidence/navsim_data_2026-09-30/DATA_LOCK.json",
+  "data_assets": {
+    "repo_id": "OpenDriveLab/OpenScene",
+    "repo_type": "dataset",
+    "revision": "a76f840b65e972bc45e56c2adced897498e9a026",
+    "map_version": "nuplan-maps-v1.0",
+    "prepared_navtrain_metadata_scenes": 103288,
+    "pilot_head_train": 4000,
+    "pilot_head_val": 1000,
+    "navtest_used": false
+  },
+  "evaluation_verified_date": "2026-10-01",
+  "evaluation_evidence": "evidence/baselines_devval256_2026-10-01/EVALUATION_LOCK.json",
+  "evaluation_scope": {
+    "split": "navtrain internal head-val dev256 pilot",
+    "scenes": 256,
+    "logs": 12,
+    "timing_samples_each_model": 768,
+    "navtest_used": false,
+    "B_star_selected": false,
+    "backbone_holdout_guaranteed": false
+  }
+}

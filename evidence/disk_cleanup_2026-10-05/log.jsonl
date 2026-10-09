@@ -1,0 +1,18 @@
+{"start": true, "free_gb": 102, "utc": "2026-10-05T05:41:38Z"}
+{"deleted": "data/physicalai/front", "group": "1", "size_mb": 42712, "note": "dev-pool 10Hz mp4 + ego (guidance done; re-streamable)", "free_after_gb": 144, "utc": "2026-10-05T05:41:38Z"}
+{"deleted": "checkpoints/qwen3-vl-8b-instruct", "group": "1", "size_mb": 16734, "note": "VLM for dev guidance (done; re-downloadable at REVISION)", "free_after_gb": 161, "utc": "2026-10-05T05:41:38Z"}
+{"deleted": "caches/pai-features/dev-nohist", "group": "1", "size_mb": 9845, "note": "diagnostic dev features (heads predicted; pred-dev.npz kept)", "free_after_gb": 170, "utc": "2026-10-05T05:41:38Z"}
+{"deleted": "caches/pai-features/dev-fixedprompt", "group": "1", "size_mb": 9845, "note": "diagnostic dev features (heads predicted; pred-dev.npz kept)", "free_after_gb": 180, "utc": "2026-10-05T05:41:38Z"}
+{"deleted": "data/archives/openscene_metadata_trainval.tgz", "group": "1", "size_mb": 6726, "note": "already extracted (receipt json kept)", "free_after_gb": 186, "utc": "2026-10-05T05:41:38Z"}
+{"deleted": "data/archives/openscene_metadata_test.tgz", "group": "1", "size_mb": 454, "note": "already extracted (receipt json kept)", "free_after_gb": 187, "utc": "2026-10-05T05:41:38Z"}
+{"deleted": "data/archives/nuplan-maps-v1.1.zip", "group": "1", "size_mb": 927, "note": "already extracted (receipt json kept)", "free_after_gb": 188, "utc": "2026-10-05T05:41:38Z"}
+{"deleted": "caches/uv", "group": "1", "size_mb": 4375, "note": "uv download cache", "free_after_gb": 189, "utc": "2026-10-05T05:41:40Z"}
+{"deleted": "/tmp build leftovers", "group": "1", "count": 114, "free_after_gb": 191}
+{"deleted": "caches/features/full_first_2026-10-03", "group": "2", "size_mb": 142943, "note": "NAVSIM round-4 head-train features (pilot/x1 already deleted)", "free_after_gb": 331, "utc": "2026-10-05T05:41:40Z"}
+{"deleted": "processed/navtrain-current-v1/inputs", "group": "2", "size_mb": 138940, "note": "NAVSIM navtrain preprocessed inputs (targets kept)", "free_after_gb": 466, "utc": "2026-10-05T05:41:42Z"}
+{"deleted": "processed/navtest-current-v1/inputs", "group": "2", "size_mb": 18030, "note": "NAVSIM navtest preprocessed inputs (targets kept)", "free_after_gb": 484, "utc": "2026-10-05T05:41:42Z"}
+{"deleted": "runs/navtest_dev_quality_2026-10-02/shard0/*.safetensors", "group": "2", "size_mb": 19539, "note": "navtest-dev feature cache (json pointers + npz trajectories + predictions/scores kept)", "free_after_gb": 503}
+{"deleted": "runs/navtest_dev_quality_2026-10-02/shard1/*.safetensors", "group": "2", "size_mb": 19539, "note": "navtest-dev feature cache (json pointers + npz trajectories + predictions/scores kept)", "free_after_gb": 522}
+{"deleted": "runs/head_pilot_2026-10-01 weights (*.safetensors, *.pt)", "group": "2", "size_mb": 5957, "note": "pilot head checkpoints (csv/json/log/npz kept)", "free_after_gb": 528}
+{"deleted": "runs/target_diagnostic_2026-10-01 weights (*.safetensors, *.pt)", "group": "2", "size_mb": 2016, "note": "pilot head checkpoints (csv/json/log/npz kept)", "free_after_gb": 530}
+{"end": true, "free_gb": 530, "utc": "2026-10-05T05:41:42Z"}

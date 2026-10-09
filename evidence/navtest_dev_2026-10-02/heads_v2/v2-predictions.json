@@ -1,0 +1,30 @@
+{
+  "predictions": {
+    "FMLP-current@seed17": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/heads_navtest_dev_2026-10-02/seed17/FMLP-current/navtest-dev-predictions.npz",
+    "FMLP-first@seed17": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/heads_navtest_dev_2026-10-02/seed17/FMLP-first/navtest-dev-predictions.npz",
+    "FMLP-terminal@seed17": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/heads_navtest_dev_2026-10-02/seed17/FMLP-terminal/navtest-dev-predictions.npz",
+    "SF1-terminal@seed17": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/heads_navtest_dev_2026-10-02/seed17/SF1-terminal/navtest-dev-predictions.npz",
+    "SF1-wide-terminal@seed17": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/heads_navtest_dev_2026-10-02/seed17/SF1-wide-terminal/navtest-dev-predictions.npz",
+    "SF3-current@seed17": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/heads_navtest_dev_2026-10-02/seed17/SF3-current/navtest-dev-predictions.npz",
+    "SF3-first@seed17": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/heads_navtest_dev_2026-10-02/seed17/SF3-first/navtest-dev-predictions.npz",
+    "SF3-terminal@seed17": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/heads_navtest_dev_2026-10-02/seed17/SF3-terminal/navtest-dev-predictions.npz",
+    "ego-only@seed17": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/heads_navtest_dev_2026-10-02/seed17/ego-only/navtest-dev-predictions.npz",
+    "linear-current@seed17": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/heads_navtest_dev_2026-10-02/seed17/linear-current/navtest-dev-predictions.npz",
+    "linear-first@seed17": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/heads_navtest_dev_2026-10-02/seed17/linear-first/navtest-dev-predictions.npz",
+    "linear-terminal@seed17": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/heads_navtest_dev_2026-10-02/seed17/linear-terminal/navtest-dev-predictions.npz",
+    "FMLP-current@seed29": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/heads_navtest_dev_2026-10-02/seed29/FMLP-current/navtest-dev-predictions.npz",
+    "FMLP-first@seed29": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/heads_navtest_dev_2026-10-02/seed29/FMLP-first/navtest-dev-predictions.npz",
+    "FMLP-terminal@seed29": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/heads_navtest_dev_2026-10-02/seed29/FMLP-terminal/navtest-dev-predictions.npz",
+    "SF1-terminal@seed29": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/heads_navtest_dev_2026-10-02/seed29/SF1-terminal/navtest-dev-predictions.npz",
+    "SF1-wide-terminal@seed29": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/heads_navtest_dev_2026-10-02/seed29/SF1-wide-terminal/navtest-dev-predictions.npz",
+    "SF3-current@seed29": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/heads_navtest_dev_2026-10-02/seed29/SF3-current/navtest-dev-predictions.npz",
+    "SF3-first@seed29": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/heads_navtest_dev_2026-10-02/seed29/SF3-first/navtest-dev-predictions.npz",
+    "SF3-terminal@seed29": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/heads_navtest_dev_2026-10-02/seed29/SF3-terminal/navtest-dev-predictions.npz",
+    "ego-only@seed29": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/heads_navtest_dev_2026-10-02/seed29/ego-only/navtest-dev-predictions.npz",
+    "linear-current@seed29": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/heads_navtest_dev_2026-10-02/seed29/linear-current/navtest-dev-predictions.npz",
+    "linear-first@seed29": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/heads_navtest_dev_2026-10-02/seed29/linear-first/navtest-dev-predictions.npz",
+    "linear-terminal@seed29": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/heads_navtest_dev_2026-10-02/seed29/linear-terminal/navtest-dev-predictions.npz"
+  },
+  "split": "navtest_dev",
+  "checkpoint": "last epoch"
+}

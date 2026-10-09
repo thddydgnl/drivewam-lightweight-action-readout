@@ -1,0 +1,418 @@
+[
+ {
+  "name": "dev-guidance-s0",
+  "after": [],
+  "cmd": "OMP_NUM_THREADS=8 bash remote_pai_dev_guidance.sh guidance \"$LITE_GPU_IDS:0\" 8"
+ },
+ {
+  "name": "dev-guidance-s1",
+  "after": [],
+  "cmd": "OMP_NUM_THREADS=8 bash remote_pai_dev_guidance.sh guidance \"$LITE_GPU_IDS:1\" 8"
+ },
+ {
+  "name": "dev-guidance-merge",
+  "after": [
+   "dev-guidance-s0",
+   "dev-guidance-s1"
+  ],
+  "cmd": "bash remote_pai_dev_guidance.sh merge"
+ },
+ {
+  "name": "dev-prompts",
+  "after": [
+   "dev-guidance-merge"
+  ],
+  "cmd": "python -u remote_pai_prompts.py --set dev"
+ },
+ {
+  "name": "train-prompts",
+  "after": [],
+  "cmd": "python -u remote_pai_prompts.py --set train20k"
+ },
+ {
+  "name": "train4k-s0",
+  "after": [
+   "train-prompts"
+  ],
+  "cmd": "python -u remote_pai_features.py --set train20k --variant normal --phases first --clips /home/yonghwi/DriveWAM_Lightweight_Action_Readout/splits/pai-train-4k-order.txt --shard 0"
+ },
+ {
+  "name": "train4k-s1",
+  "after": [
+   "train-prompts"
+  ],
+  "cmd": "python -u remote_pai_features.py --set train20k --variant normal --phases first --clips /home/yonghwi/DriveWAM_Lightweight_Action_Readout/splits/pai-train-4k-order.txt --shard 1"
+ },
+ {
+  "name": "dev-baselines-s0",
+  "after": [
+   "dev-prompts"
+  ],
+  "cmd": "python -u remote_pai_baselines.py --set dev --models B10-opt,B05-opt,B03-opt,B02-opt,B01-opt --shard 0 --num-shards 2 --run-id pai_dev_baselines_2026-10-04"
+ },
+ {
+  "name": "dev-baselines-s1",
+  "after": [
+   "dev-prompts"
+  ],
+  "cmd": "python -u remote_pai_baselines.py --set dev --models B10-opt,B05-opt,B03-opt,B02-opt,B01-opt --shard 1 --num-shards 2 --run-id pai_dev_baselines_2026-10-04"
+ },
+ {
+  "name": "parity-dev32",
+  "after": [
+   "dev-prompts"
+  ],
+  "cmd": "python -u remote_pai_parity.py --set dev --n 32 --taps-only"
+ },
+ {
+  "name": "dev-feat-s0",
+  "after": [
+   "dev-prompts",
+   "parity-dev32"
+  ],
+  "cmd": "python -u remote_pai_features.py --set dev --variant normal --phases current,first,terminal --shard 0"
+ },
+ {
+  "name": "dev-feat-s1",
+  "after": [
+   "dev-prompts",
+   "parity-dev32"
+  ],
+  "cmd": "python -u remote_pai_features.py --set dev --variant normal --phases current,first,terminal --shard 1"
+ },
+ {
+  "name": "heads-4k",
+  "after": [
+   "train4k-s0",
+   "train4k-s1",
+   "dev-feat-s0",
+   "dev-feat-s1"
+  ],
+  "cmd": "python -u remote_pai_train_heads.py --train train4k --seeds 17,29,43 --eval-sets dev --parallel-seeds"
+ },
+ {
+  "name": "final-feat-s0",
+  "after": [],
+  "cmd": "python -u remote_pai_features.py --set final --variant normal --phases first --shard 0"
+ },
+ {
+  "name": "final-feat-s1",
+  "after": [],
+  "cmd": "python -u remote_pai_features.py --set final --variant normal --phases first --shard 1"
+ },
+ {
+  "name": "navsim-cache-cleanup",
+  "after": [],
+  "cmd": "bash remote_navsim_cache_cleanup.sh 260"
+ },
+ {
+  "name": "train16k-s0",
+  "after": [
+   "train4k-s0",
+   "navsim-cache-cleanup"
+  ],
+  "cmd": "python -u remote_pai_features.py --set train20k --variant normal --phases first --clips /home/yonghwi/DriveWAM_Lightweight_Action_Readout/splits/pai-train-16k-rest.txt --wait --shard 0"
+ },
+ {
+  "name": "train16k-s1",
+  "after": [
+   "train4k-s1",
+   "navsim-cache-cleanup"
+  ],
+  "cmd": "python -u remote_pai_features.py --set train20k --variant normal --phases first --clips /home/yonghwi/DriveWAM_Lightweight_Action_Readout/splits/pai-train-16k-rest.txt --wait --shard 1"
+ },
+ {
+  "name": "latency-smoke",
+  "after": [
+   "train16k-s0",
+   "heads-4k"
+  ],
+  "cmd": "python -u remote_pai_latency.py --head /home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/pai_heads_2026-10-04/train4k-normal-first-seed17 --clips 4 --reps 1 --shard 0 --num-shards 1 --run-id pai_latency_smoke"
+ },
+ {
+  "name": "latency-s0",
+  "after": [
+   "heads-4k",
+   "latency-smoke",
+   "train16k-s0",
+   "train16k-s1"
+  ],
+  "cmd": "python -u remote_pai_latency.py --head /home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/pai_heads_2026-10-04/train4k-normal-first-seed17 --clips 128 --reps 3 --shard 0 --run-id pai_latency_2026-10-04"
+ },
+ {
+  "name": "latency-s1",
+  "after": [
+   "heads-4k",
+   "latency-smoke",
+   "train16k-s0",
+   "train16k-s1"
+  ],
+  "cmd": "python -u remote_pai_latency.py --head /home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/pai_heads_2026-10-04/train4k-normal-first-seed17 --clips 128 --reps 3 --shard 1 --run-id pai_latency_2026-10-04"
+ },
+ {
+  "name": "heads-20k",
+  "after": [
+   "train16k-s0",
+   "train16k-s1",
+   "dev-feat-s0",
+   "dev-feat-s1",
+   "latency-s0",
+   "latency-s1"
+  ],
+  "cmd": "python -u remote_pai_train_heads.py --train train20k --seeds 17,29,43 --eval-sets dev --parallel-seeds"
+ },
+ {
+  "name": "final-baselines-s0",
+  "after": [],
+  "cmd": "python -u remote_pai_baselines.py --set final --models B10-opt,B05-opt,B03-opt,B02-opt,B01-opt --shard 0 --num-shards 2 --run-id pai_final_baselines_2026-10-04"
+ },
+ {
+  "name": "final-baselines-s1",
+  "after": [
+   "latency-s0",
+   "latency-s1"
+  ],
+  "cmd": "python -u remote_pai_baselines.py --set final --models B10-opt,B05-opt,B03-opt,B02-opt,B01-opt --shard 1 --num-shards 2 --run-id pai_final_baselines_2026-10-04"
+ },
+ {
+  "name": "dev-analysis",
+  "after": [
+   "dev-baselines-s0",
+   "dev-baselines-s1",
+   "heads-4k",
+   "heads-20k",
+   "latency-s0",
+   "latency-s1"
+  ],
+  "cmd": "python -u remote_pai_analyze.py --set dev --baselines pai_dev_baselines_2026-10-04 --latency pai_latency_2026-10-04"
+ },
+ {
+  "name": "final-predict",
+  "after": [
+   "dev-analysis",
+   "final-feat-s0",
+   "final-feat-s1"
+  ],
+  "cmd": "python -u remote_pai_train_heads.py --train $(python3 -c \"import json; print(json.load(open('/home/yonghwi/DriveWAM_Lightweight_Action_Readout/reports/pai-analysis-dev.json'))['scale'])\") --seeds 17,29,43 --predict --eval-sets final"
+ },
+ {
+  "name": "final-analysis",
+  "after": [
+   "final-predict",
+   "final-baselines-s0",
+   "final-baselines-s1"
+  ],
+  "cmd": "python -u remote_pai_analyze.py --set final --baselines pai_final_baselines_2026-10-04 --latency pai_latency_2026-10-04"
+ },
+ {
+  "name": "dev-nohist-s0",
+  "after": [
+   "dev-prompts",
+   "latency-s0",
+   "latency-s1",
+   "parity-dev32"
+  ],
+  "cmd": "python -u remote_pai_features.py --set dev --variant nohist --phases first --shard 0"
+ },
+ {
+  "name": "dev-nohist-s1",
+  "after": [
+   "dev-prompts",
+   "latency-s0",
+   "latency-s1",
+   "parity-dev32"
+  ],
+  "cmd": "python -u remote_pai_features.py --set dev --variant nohist --phases first --shard 1"
+ },
+ {
+  "name": "dev-fixedprompt-s0",
+  "after": [
+   "dev-prompts",
+   "latency-s0",
+   "latency-s1",
+   "parity-dev32"
+  ],
+  "cmd": "python -u remote_pai_features.py --set dev --variant fixedprompt --phases first --shard 0"
+ },
+ {
+  "name": "dev-fixedprompt-s1",
+  "after": [
+   "dev-prompts",
+   "latency-s0",
+   "latency-s1",
+   "parity-dev32"
+  ],
+  "cmd": "python -u remote_pai_features.py --set dev --variant fixedprompt --phases first --shard 1"
+ },
+ {
+  "name": "train4k-ct-s0",
+  "after": [
+   "final-analysis"
+  ],
+  "cmd": "python -u remote_pai_features.py --set train4k --variant normal --tag ct --phases current,terminal --clips /home/yonghwi/DriveWAM_Lightweight_Action_Readout/splits/pai-train-4k-order.txt --shard 0"
+ },
+ {
+  "name": "train4k-ct-s1",
+  "after": [
+   "final-analysis"
+  ],
+  "cmd": "python -u remote_pai_features.py --set train4k --variant normal --tag ct --phases current,terminal --clips /home/yonghwi/DriveWAM_Lightweight_Action_Readout/splits/pai-train-4k-order.txt --shard 1"
+ },
+ {
+  "name": "heads-4k-current",
+  "after": [
+   "train4k-ct-s0",
+   "train4k-ct-s1"
+  ],
+  "cmd": "python -u remote_pai_train_heads.py --train train4k --seeds 17,29,43 --eval-sets dev --phase current --parallel-seeds"
+ },
+ {
+  "name": "heads-4k-terminal",
+  "after": [
+   "train4k-ct-s0",
+   "train4k-ct-s1"
+  ],
+  "cmd": "python -u remote_pai_train_heads.py --train train4k --seeds 17,29,43 --eval-sets dev --phase terminal --parallel-seeds"
+ },
+ {
+  "name": "b10seed1-s0",
+  "after": [
+   "latency-s0",
+   "latency-s1"
+  ],
+  "cmd": "python -u remote_pai_baselines.py --set dev --models B10-opt --shard 0 --num-shards 2 --run-id pai_dev_b10seed1_2026-10-04 --seed 1 --raw-check 0"
+ },
+ {
+  "name": "b10seed1-s1",
+  "after": [
+   "latency-s0",
+   "latency-s1"
+  ],
+  "cmd": "python -u remote_pai_baselines.py --set dev --models B10-opt --shard 1 --num-shards 2 --run-id pai_dev_b10seed1_2026-10-04 --seed 1 --raw-check 0"
+ },
+ {
+  "name": "b10seed2-s0",
+  "after": [
+   "latency-s0",
+   "latency-s1"
+  ],
+  "cmd": "python -u remote_pai_baselines.py --set dev --models B10-opt --shard 0 --num-shards 2 --run-id pai_dev_b10seed2_2026-10-04 --seed 2 --raw-check 0"
+ },
+ {
+  "name": "b10seed2-s1",
+  "after": [
+   "latency-s0",
+   "latency-s1"
+  ],
+  "cmd": "python -u remote_pai_baselines.py --set dev --models B10-opt --shard 1 --num-shards 2 --run-id pai_dev_b10seed2_2026-10-04 --seed 2 --raw-check 0"
+ },
+ {
+  "name": "b10seed3-s0",
+  "after": [
+   "latency-s0",
+   "latency-s1"
+  ],
+  "cmd": "python -u remote_pai_baselines.py --set dev --models B10-opt --shard 0 --num-shards 2 --run-id pai_dev_b10seed3_2026-10-04 --seed 3 --raw-check 0"
+ },
+ {
+  "name": "b10seed3-s1",
+  "after": [
+   "latency-s0",
+   "latency-s1"
+  ],
+  "cmd": "python -u remote_pai_baselines.py --set dev --models B10-opt --shard 1 --num-shards 2 --run-id pai_dev_b10seed3_2026-10-04 --seed 3 --raw-check 0"
+ },
+ {
+  "name": "ensemble-analysis",
+  "after": [
+   "b10seed1-s0",
+   "b10seed1-s1",
+   "b10seed2-s0",
+   "b10seed2-s1",
+   "b10seed3-s0",
+   "b10seed3-s1",
+   "heads-20k"
+  ],
+  "cmd": "CUDA_VISIBLE_DEVICES= python -u remote_pai_ensemble_analyze.py"
+ },
+ {
+  "name": "cleanup-ct",
+  "after": [
+   "heads-4k-current",
+   "heads-4k-terminal"
+  ],
+  "cmd": "du -sh /home/yonghwi/DriveWAM_Lightweight_Action_Readout/caches/pai-features/train4k-ct && rm -rf /home/yonghwi/DriveWAM_Lightweight_Action_Readout/caches/pai-features/train4k-ct"
+ },
+ {
+  "name": "train4k-nohist-s0",
+  "after": [
+   "cleanup-ct"
+  ],
+  "cmd": "python -u remote_pai_features.py --set train4k --variant nohist --phases first --clips /home/yonghwi/DriveWAM_Lightweight_Action_Readout/splits/pai-train-4k-order.txt --shard 0"
+ },
+ {
+  "name": "train4k-nohist-s1",
+  "after": [
+   "cleanup-ct"
+  ],
+  "cmd": "python -u remote_pai_features.py --set train4k --variant nohist --phases first --clips /home/yonghwi/DriveWAM_Lightweight_Action_Readout/splits/pai-train-4k-order.txt --shard 1"
+ },
+ {
+  "name": "heads-4k-nohist",
+  "after": [
+   "train4k-nohist-s0",
+   "train4k-nohist-s1",
+   "dev-nohist-s0",
+   "dev-nohist-s1"
+  ],
+  "cmd": "python -u remote_pai_train_heads.py --train train4k --variant nohist --seeds 17,29,43 --eval-sets dev --parallel-seeds"
+ },
+ {
+  "name": "train4k-fixedprompt-s0",
+  "after": [
+   "cleanup-ct"
+  ],
+  "cmd": "python -u remote_pai_features.py --set train4k --variant fixedprompt --phases first --clips /home/yonghwi/DriveWAM_Lightweight_Action_Readout/splits/pai-train-4k-order.txt --shard 0"
+ },
+ {
+  "name": "train4k-fixedprompt-s1",
+  "after": [
+   "cleanup-ct"
+  ],
+  "cmd": "python -u remote_pai_features.py --set train4k --variant fixedprompt --phases first --clips /home/yonghwi/DriveWAM_Lightweight_Action_Readout/splits/pai-train-4k-order.txt --shard 1"
+ },
+ {
+  "name": "heads-4k-fixedprompt",
+  "after": [
+   "train4k-fixedprompt-s0",
+   "train4k-fixedprompt-s1",
+   "dev-fixedprompt-s0",
+   "dev-fixedprompt-s1"
+  ],
+  "cmd": "python -u remote_pai_train_heads.py --train train4k --variant fixedprompt --seeds 17,29,43 --eval-sets dev --parallel-seeds"
+ },
+ {
+  "name": "diag-analysis",
+  "after": [
+   "heads-4k-current",
+   "heads-4k-terminal",
+   "heads-4k-nohist",
+   "heads-4k-fixedprompt",
+   "heads-4k-clipframe"
+  ],
+  "cmd": "python -u remote_pai_analyze.py --set dev --baselines pai_dev_baselines_2026-10-04 --latency pai_latency_2026-10-04 --tag diag"
+ },
+ {
+  "name": "heads-4k-clipframe",
+  "after": [
+   "dev-feat-s0",
+   "dev-feat-s1",
+   "heads-4k",
+   "latency-s0",
+   "latency-s1",
+   "train4k-s0",
+   "train4k-s1"
+  ],
+  "cmd": "python -u remote_pai_train_heads.py --train train4k --seeds 17,29,43 --eval-sets dev --frame clip --parallel-seeds"
+ }
+]

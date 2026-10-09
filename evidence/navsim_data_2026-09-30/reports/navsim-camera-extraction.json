@@ -1,0 +1,23 @@
+{
+  "archives": 12,
+  "front_images": 5180,
+  "extracted_bytes": 1031487227,
+  "missing_required_images": 0,
+  "lidar_extracted": false,
+  "other_cameras_extracted": false,
+  "archive_receipts": [
+    "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/reports/navsim-camera-extraction/openscene_sensor_trainval_camera_86.tgz.json",
+    "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/reports/navsim-camera-extraction/openscene_sensor_trainval_camera_169.tgz.json",
+    "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/reports/navsim-camera-extraction/openscene_sensor_trainval_camera_3.tgz.json",
+    "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/reports/navsim-camera-extraction/openscene_sensor_trainval_camera_126.tgz.json",
+    "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/reports/navsim-camera-extraction/openscene_sensor_trainval_camera_23.tgz.json",
+    "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/reports/navsim-camera-extraction/openscene_sensor_trainval_camera_68.tgz.json",
+    "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/reports/navsim-camera-extraction/openscene_sensor_trainval_camera_145.tgz.json",
+    "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/reports/navsim-camera-extraction/openscene_sensor_trainval_camera_142.tgz.json",
+    "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/reports/navsim-camera-extraction/openscene_sensor_trainval_camera_199.tgz.json",
+    "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/reports/navsim-camera-extraction/openscene_sensor_trainval_camera_144.tgz.json",
+    "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/reports/navsim-camera-extraction/openscene_sensor_trainval_camera_134.tgz.json",
+    "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/reports/navsim-camera-extraction/openscene_sensor_trainval_camera_146.tgz.json"
+  ],
+  "completed_at_utc": "2026-09-30T10:32:27.085155+00:00"
+}

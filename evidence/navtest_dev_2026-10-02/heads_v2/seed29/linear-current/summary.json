@@ -1,0 +1,20 @@
+{
+  "model": "linear-current",
+  "config": {
+    "kind": "linear",
+    "phase": "current"
+  },
+  "seed": 29,
+  "parameters": 74232,
+  "epochs": 40,
+  "steps": 5000,
+  "checkpoint": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/heads_navtest_dev_2026-10-02/seed29/linear-current/epoch-040.safetensors",
+  "checkpoint_sha256": "b4062a5a56e3fa16a589a23416fcdfd21e92057cecea0417fba985c233fb6644",
+  "gradient_gate": {
+    "all_parameter_gradients_finite": true,
+    "query_gradient_norms": {},
+    "backbone_present": false
+  },
+  "elapsed_seconds": 13.432274993509054,
+  "completed_at_utc": "2026-10-02T08:19:08.404510+00:00"
+}

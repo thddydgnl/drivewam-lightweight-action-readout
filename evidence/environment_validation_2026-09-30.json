@@ -1,0 +1,61 @@
+{
+  "date": "2026-09-30T10:02:37.380934+00:00",
+  "scope": "Post-environment documentation, source, dependency-lock, script and runtime evidence validation",
+  "documents": [
+    {
+      "path": "DriveWAM_Lightweight_Action_Readout_Research_Idea.md",
+      "sha256": "43b86b450349f8f9a23f891c5c9157813cf57761700a4d830858b65cf83af94a",
+      "lines": 1590
+    },
+    {
+      "path": "research_plan/실행계획서.md",
+      "sha256": "75437f5480e82b9d5a4e07b949a27510931ed4e58ea2377c315d487561222cc0",
+      "lines": 1346
+    },
+    {
+      "path": "research_plan/외부코드_검수보고서.md",
+      "sha256": "7cd495ca74958f6104f2307e2b902f8a451246523a5814b25c3472f629c1b551",
+      "lines": 306
+    },
+    {
+      "path": "research_plan/README.md",
+      "sha256": "d61d620410fa55b6aa10eeffc00a28876588a3c52d6c3793de6bbf5415363b19",
+      "lines": 72
+    }
+  ],
+  "source_trees": [
+    {
+      "name": "DriveWAM",
+      "commit": "abbefb407c9c553f221522fc26077d307620adb4",
+      "clean": true,
+      "files": 11
+    },
+    {
+      "name": "Light-WAM",
+      "commit": "db7d05e724f3eac2d4f0c9c3ac727fe93a44d727",
+      "clean": true,
+      "files": 5
+    },
+    {
+      "name": "navsim-v1.1",
+      "commit": "3e8291bfa89ff247231e0227778840cd0a036896",
+      "clean": true,
+      "files": 9
+    },
+    {
+      "name": "lingbot-va",
+      "commit": "7c6ffa9bfc4b83582cafc860fab4c82cc7deeeeb",
+      "clean": true,
+      "files": 3
+    }
+  ],
+  "local_link_targets_checked": 10,
+  "setup_files_hashes_match": true,
+  "dependency_locks_hashes_match": true,
+  "python_compile_and_shell_syntax": "passed",
+  "remote_access": true,
+  "package_installation": true,
+  "model_execution": "synthetic_B10_only",
+  "actual_scene_PDMS_or_latency": false,
+  "issues": []
+}

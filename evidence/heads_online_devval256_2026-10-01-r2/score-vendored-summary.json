@@ -1,0 +1,77 @@
+{
+  "backend": "vendored",
+  "source": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/work/DriveWAM",
+  "pdm_score_file": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/work/DriveWAM/navsim/evaluate/pdm_score.py",
+  "batch_lqr_file": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/work/DriveWAM/navsim/planning/simulation/planner/pdm_planner/simulation/batch_lqr_utils.py",
+  "batch_lqr_sha256": "71974793e518e3eac5eb6de850a4a4071adf47e3ebceeb41d89b163d7807de9d",
+  "requested": 3584,
+  "scored": 3584,
+  "primary_each_model": 256,
+  "failures": 0,
+  "coverage": 1.0,
+  "prediction_index_sha256": "35c39f2e322c90ecdd6c2ea17d7287959d6695d24399b9aa0fb4ec0e6df4ea31",
+  "scores_sha256": "84a9c56bce72432402b9a61bb382584f596b5033fe697585944f2c4091df0ef9",
+  "proposal_sampling": {
+    "num_poses": 40,
+    "interval_length": 0.1
+  },
+  "model_trajectory_sampling": {
+    "num_poses": 8,
+    "interval_length": 0.5
+  },
+  "scorer_config": {
+    "progress_weight": 5.0,
+    "ttc_weight": 5.0,
+    "comfortable_weight": 2.0,
+    "driving_direction_weight": 0.0,
+    "driving_direction_horizon": 1.0,
+    "driving_direction_compliance_threshold": 2.0,
+    "driving_direction_violation_threshold": 6.0,
+    "stopped_speed_threshold": 0.005,
+    "progress_distance_threshold": 5.0
+  },
+  "blas": [
+    {
+      "user_api": "blas",
+      "internal_api": "openblas",
+      "num_threads": 1,
+      "prefix": "libopenblas",
+      "filepath": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/.venvs/drivewam-scorer/lib/python3.9/site-packages/scipy.libs/libopenblasp-r0-41284840.3.18.so",
+      "version": "0.3.18",
+      "threading_layer": "pthreads",
+      "architecture": "Haswell"
+    },
+    {
+      "user_api": "blas",
+      "internal_api": "openblas",
+      "num_threads": 1,
+      "prefix": "libopenblas",
+      "filepath": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/.venvs/drivewam-scorer/lib/python3.9/site-packages/opencv_python.libs/libopenblas-r0-f650aae0.3.3.so",
+      "version": null,
+      "threading_layer": "disabled",
+      "architecture": "Haswell"
+    },
+    {
+      "user_api": "blas",
+      "internal_api": "openblas",
+      "num_threads": 1,
+      "prefix": "libopenblas",
+      "filepath": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/.venvs/drivewam-scorer/lib/python3.9/site-packages/numpy.libs/libopenblas64_p-r0-742d56dc.3.20.so",
+      "version": "0.3.20",
+      "threading_layer": "pthreads",
+      "architecture": "Haswell"
+    },
+    {
+      "user_api": "openmp",
+      "internal_api": "openmp",
+      "num_threads": 32,
+      "prefix": "libgomp",
+      "filepath": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/.venvs/drivewam-scorer/lib/python3.9/site-packages/torch/lib/libgomp-a34b3233.so.1",
+      "version": null
+    }
+  ],
+  "openblas_coretype": "Haswell",
+  "torch": "2.0.1+cpu",
+  "navtest_used": false,
+  "completed_at_utc": "2026-10-01T11:27:50.127132+00:00"
+}

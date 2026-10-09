@@ -1,0 +1,24 @@
+{
+  "model": "SF3-first",
+  "config": {
+    "kind": "sf3",
+    "phase": "first"
+  },
+  "seed": 29,
+  "parameters": 9978163,
+  "epochs": 40,
+  "steps": 5000,
+  "checkpoint": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/heads_navtest_dev_2026-10-02/seed29/SF3-first/epoch-040.safetensors",
+  "checkpoint_sha256": "8429213a01e9a0ee25269245e8e442762b26bd6268db8154e5e8fca0a74ade3c",
+  "gradient_gate": {
+    "all_parameter_gradients_finite": true,
+    "query_gradient_norms": {
+      "poolers.0.query": 0.0007521596271544695,
+      "poolers.1.query": 0.001114828628487885,
+      "poolers.2.query": 0.0005470610340125859
+    },
+    "backbone_present": false
+  },
+  "elapsed_seconds": 266.3262330535799,
+  "completed_at_utc": "2026-10-02T08:33:31.643942+00:00"
+}

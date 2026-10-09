@@ -1,0 +1,77 @@
+{
+  "group": "probes",
+  "models": {
+    "ego-only": {
+      "kind": "ego",
+      "phase": "current"
+    },
+    "linear-current": {
+      "kind": "linear",
+      "phase": "current"
+    },
+    "linear-first": {
+      "kind": "linear",
+      "phase": "first"
+    },
+    "linear-terminal": {
+      "kind": "linear",
+      "phase": "terminal"
+    },
+    "FMLP-current": {
+      "kind": "fmlp",
+      "phase": "current"
+    },
+    "FMLP-first": {
+      "kind": "fmlp",
+      "phase": "first"
+    },
+    "FMLP-terminal": {
+      "kind": "fmlp",
+      "phase": "terminal"
+    }
+  },
+  "train_seed": 17,
+  "cache_protocol_sha256": "fb12b36bcea96c93d7364a5c405f1989bafcde8d2e3d7aca1c5505e3b718b277",
+  "feature_lock_sha256": "7412d867387fbb639b16eb0d0d332a12bec93ed347ded3ae23ed5bca8134848e",
+  "stats_sha256": "4b2ece5d80000713996e7bf8ea4b6886c2ac81e8bd41aa995c6711b632ec379f",
+  "train_scenes": 4000,
+  "val_scenes": 1000,
+  "generation_seed": 0,
+  "backbone_trained": false,
+  "optimizer": "AdamW",
+  "learning_rate": 0.0003,
+  "weight_decay": 0.01,
+  "betas": [
+    0.9,
+    0.999
+  ],
+  "batch_size": 32,
+  "max_epochs": 30,
+  "early_stopping_no_ADE_improvement_validations": 5,
+  "minibatch_order": "isolated CPU torch.Generator seed=train_seed+100003*epoch; identical across architectures",
+  "warmup_fraction": 0.05,
+  "gradient_clip_norm": 1.0,
+  "dropout": 0.0,
+  "amp": "bfloat16",
+  "parameter_dtype": "float32",
+  "loss": "position Huber(delta=1m) + 0.2 circular yaw + 0.1 normalized-delta Huber",
+  "validation": "ADE/FDE on all 1000 each epoch; official PDMS on all 1000 every 5 epochs and last epoch",
+  "selection": "pilot1000 PDMS, then ADE, then epoch; full head-val selection remains pending",
+  "wide_projection_dim": 1088,
+  "SF3_parameters": null,
+  "SF1_wide_parameters": null,
+  "ego_standardization": "fit on head-train only",
+  "linear_world_standardization": "fit on head-train only",
+  "world_feature_width": 3072,
+  "selected_layer_depths_one_based": [
+    10,
+    20,
+    30
+  ],
+  "navtest_used": false,
+  "scripts": {
+    "lightweight_heads.py": "73b5c95bd303bf58bdb3b1a6757b10e57d9c488bc1b7e9afd5a82c4c36eb9bb0",
+    "remote_train_heads.py": "91f4e91e9abbe17016c975bbaaf847357a54151548466136dd102977e7d56b68",
+    "remote_pilot_head_score.py": "466ead3cf77f70e79864bf969cb019d3775ea9fcf8cd8d1d5dc25857d6410724"
+  }
+}

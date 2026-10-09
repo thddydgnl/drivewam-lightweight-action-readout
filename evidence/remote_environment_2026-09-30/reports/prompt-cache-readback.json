@@ -1,0 +1,48 @@
+{
+  "cache_path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/caches/prompt/navsim-four-prompts.pt",
+  "sha256": "2a81a22661486e6569a718d568c4efaf36d7bb3dde934409788226fb1cfd4e9f",
+  "source_commit": "abbefb407c9c553f221522fc26077d307620adb4",
+  "encoder_and_tokenizer_repo": "robbyant/lingbot-va-base",
+  "encoder_and_tokenizer_revision": "68b7bc1b35da6ddc67ea94c4ceb58d768fbb3f9c",
+  "encoding_method": "Pinned NavSimEvaluator._encode_prompt, eval mode, BF16",
+  "torch": "2.9.0+cu126",
+  "serialized_cache_readback": "passed",
+  "commands": [
+    {
+      "command_id": 0,
+      "prompt": "autonomous driving scene, the intended route is to the left.",
+      "shape": [
+        512,
+        4096
+      ],
+      "tensor_sha256": "d76ebfa30df8c2764d1a81f9bfea4929eabda15aa75d553ca92963faac525657"
+    },
+    {
+      "command_id": 1,
+      "prompt": "autonomous driving scene, the intended route is straight.",
+      "shape": [
+        512,
+        4096
+      ],
+      "tensor_sha256": "79924ab766dae703d2d69a265014c3b8af2a551483ede3dae6c6b292166825fa"
+    },
+    {
+      "command_id": 2,
+      "prompt": "autonomous driving scene, the intended route is to the right.",
+      "shape": [
+        512,
+        4096
+      ],
+      "tensor_sha256": "b933b746d0fce9b7be0000d4652cf2f8dc8e9325404dd6c2af7407fcd6baad6a"
+    },
+    {
+      "command_id": 3,
+      "prompt": "autonomous driving scene, the driving command is unknown.",
+      "shape": [
+        512,
+        4096
+      ],
+      "tensor_sha256": "01f81642aa52d8c3be670829dbec04b029b2ff01843eab0258406e37182cf31c"
+    }
+  ]
+}

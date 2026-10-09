@@ -1,0 +1,13 @@
+{
+  "name": "train4k-normal-first-seed43",
+  "frame": "ego",
+  "train_rows": 19996,
+  "epochs": 40,
+  "steps": 25000,
+  "checkpoint_sha256": "abe1c0af158bd8c246224d4ce03e7f4b23c66c2de5de4b5ec632e3a4bbb72939",
+  "predictions": {
+    "dev": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/pai_heads_2026-10-04/train4k-normal-first-seed43/pred-dev.npz"
+  },
+  "elapsed_s": 1058.5792466085404,
+  "utc": "2026-10-04T00:51:04.113649+00:00"
+}

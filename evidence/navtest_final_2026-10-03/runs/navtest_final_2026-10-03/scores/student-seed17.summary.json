@@ -1,0 +1,12 @@
+{
+  "predictions": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/navtest_final_2026-10-03/predictions/student-seed17.npz",
+  "prediction_sha256": "3c40f4f4596e8b9ce8999af1506d3a44dcef1676bbce2f1116d8d603173f7953",
+  "scores_sha256": "ac58b3fdcb296d5570a75a868ec87768a7220992f523c9ab750acd71a0b029bc",
+  "scenes": 8896,
+  "coverage": 1.0,
+  "failures": 0,
+  "pdms": 89.24842772975612,
+  "ade_4s_m": 0.5788714696295671,
+  "official_navsim_commit": "3e8291bfa89ff247231e0227778840cd0a036896",
+  "split": "navtest-final"
+}

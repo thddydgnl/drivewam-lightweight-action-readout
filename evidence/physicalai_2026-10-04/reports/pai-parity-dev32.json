@@ -1,0 +1,1308 @@
+{
+  "utc": "2026-10-03T21:37:21.563718+00:00",
+  "set": "dev",
+  "data": [
+    {
+      "clip": "bb5e843d-37d2-44c8-b6f3-abd40dde2115",
+      "equal": true
+    },
+    {
+      "clip": "13a9e664-4a21-43db-972e-a3febf872f57",
+      "equal": true
+    },
+    {
+      "clip": "65ba066a-0975-458b-bcce-a6c90069ca3b",
+      "equal": true
+    },
+    {
+      "clip": "240525d8-f6e4-448a-bbb5-9541b5f2ed11",
+      "equal": true
+    }
+  ],
+  "rollout": [],
+  "opt": [],
+  "fused": [],
+  "taps": [
+    {
+      "clip": "bb5e843d-37d2-44c8-b6f3-abd40dde2115",
+      "hooked_outputs_equal": true,
+      "early_exit_features_equal": true,
+      "student_calls": {
+        "video": 5,
+        "action": 0,
+        "register": 12,
+        "action_by_model": {
+          "main": 0
+        }
+      },
+      "feature_shapes": [
+        [
+          3,
+          112,
+          3072
+        ],
+        [
+          3,
+          112,
+          3072
+        ],
+        [
+          3,
+          112,
+          3072
+        ],
+        [
+          3,
+          112,
+          3072
+        ],
+        [
+          3,
+          112,
+          3072
+        ]
+      ]
+    },
+    {
+      "clip": "13a9e664-4a21-43db-972e-a3febf872f57",
+      "hooked_outputs_equal": true,
+      "early_exit_features_equal": true,
+      "student_calls": {
+        "video": 5,
+        "action": 0,
+        "register": 12,
+        "action_by_model": {
+          "main": 0
+        }
+      },
+      "feature_shapes": [
+        [
+          3,
+          112,
+          3072
+        ],
+        [
+          3,
+          112,
+          3072
+        ],
+        [
+          3,
+          112,
+          3072
+        ],
+        [
+          3,
+          112,
+          3072
+        ],
+        [
+          3,
+          112,
+          3072
+        ]
+      ]
+    },
+    {
+      "clip": "65ba066a-0975-458b-bcce-a6c90069ca3b",
+      "hooked_outputs_equal": true,
+      "early_exit_features_equal": true,
+      "student_calls": {
+        "video": 5,
+        "action": 0,
+        "register": 12,
+        "action_by_model": {
+          "main": 0
+        }
+      },
+      "feature_shapes": [
+        [
+          3,
+          112,
+          3072
+        ],
+        [
+          3,
+          112,
+          3072
+        ],
+        [
+          3,
+          112,
+          3072
+        ],
+        [
+          3,
+          112,
+          3072
+        ],
+        [
+          3,
+          112,
+          3072
+        ]
+      ]
+    },
+    {
+      "clip": "240525d8-f6e4-448a-bbb5-9541b5f2ed11",
+      "hooked_outputs_equal": true,
+      "early_exit_features_equal": true,
+      "student_calls": {
+        "video": 5,
+        "action": 0,
+        "register": 12,
+        "action_by_model": {
+          "main": 0
+        }
+      },
+      "feature_shapes": [
+        [
+          3,
+          112,
+          3072
+        ],
+        [
+          3,
+          112,
+          3072
+        ],
+        [
+          3,
+          112,
+          3072
+        ],
+        [
+          3,
+          112,
+          3072
+        ],
+        [
+          3,
+          112,
+          3072
+        ]
+      ]
+    },
+    {
+      "clip": "e34a7bc9-8b5f-435b-9c5b-43cc8c69485d",
+      "hooked_outputs_equal": true,
+      "early_exit_features_equal": true,
+      "student_calls": {
+        "video": 5,
+        "action": 0,
+        "register": 12,
+        "action_by_model": {
+          "main": 0
+        }
+      },
+      "feature_shapes": [
+        [
+          3,
+          112,
+          3072
+        ],
+        [
+          3,
+          112,
+          3072
+        ],
+        [
+          3,
+          112,
+          3072
+        ],
+        [
+          3,
+          112,
+          3072
+        ],
+        [
+          3,
+          112,
+          3072
+        ]
+      ]
+    },
+    {
+      "clip": "f4276572-fe8d-4cf0-92f9-0057332576e7",
+      "hooked_outputs_equal": true,
+      "early_exit_features_equal": true,
+      "student_calls": {
+        "video": 5,
+        "action": 0,
+        "register": 12,
+        "action_by_model": {
+          "main": 0
+        }
+      },
+      "feature_shapes": [
+        [
+          3,
+          112,
+          3072
+        ],
+        [
+          3,
+          112,
+          3072
+        ],
+        [
+          3,
+          112,
+          3072
+        ],
+        [
+          3,
+          112,
+          3072
+        ],
+        [
+          3,
+          112,
+          3072
+        ]
+      ]
+    },
+    {
+      "clip": "7cc46d1a-bd6d-4452-ad60-0ddefdee9612",
+      "hooked_outputs_equal": true,
+      "early_exit_features_equal": true,
+      "student_calls": {
+        "video": 5,
+        "action": 0,
+        "register": 12,
+        "action_by_model": {
+          "main": 0
+        }
+      },
+      "feature_shapes": [
+        [
+          3,
+          112,
+          3072
+        ],
+        [
+          3,
+          112,
+          3072
+        ],
+        [
+          3,
+          112,
+          3072
+        ],
+        [
+          3,
+          112,
+          3072
+        ],
+        [
+          3,
+          112,
+          3072
+        ]
+      ]
+    },
+    {
+      "clip": "e9faf4ab-014a-48a8-8f5d-7d85618b0829",
+      "hooked_outputs_equal": true,
+      "early_exit_features_equal": true,
+      "student_calls": {
+        "video": 5,
+        "action": 0,
+        "register": 12,
+        "action_by_model": {
+          "main": 0
+        }
+      },
+      "feature_shapes": [
+        [
+          3,
+          112,
+          3072
+        ],
+        [
+          3,
+          112,
+          3072
+        ],
+        [
+          3,
+          112,
+          3072
+        ],
+        [
+          3,
+          112,
+          3072
+        ],
+        [
+          3,
+          112,
+          3072
+        ]
+      ]
+    },
+    {
+      "clip": "e9fad645-1a12-4589-8c99-84cc3f84be76",
+      "hooked_outputs_equal": true,
+      "early_exit_features_equal": true,
+      "student_calls": {
+        "video": 5,
+        "action": 0,
+        "register": 12,
+        "action_by_model": {
+          "main": 0
+        }
+      },
+      "feature_shapes": [
+        [
+          3,
+          112,
+          3072
+        ],
+        [
+          3,
+          112,
+          3072
+        ],
+        [
+          3,
+          112,
+          3072
+        ],
+        [
+          3,
+          112,
+          3072
+        ],
+        [
+          3,
+          112,
+          3072
+        ]
+      ]
+    },
+    {
+      "clip": "77abdb8b-7648-4bd2-9d12-fda55b2a6437",
+      "hooked_outputs_equal": true,
+      "early_exit_features_equal": true,
+      "student_calls": {
+        "video": 5,
+        "action": 0,
+        "register": 12,
+        "action_by_model": {
+          "main": 0
+        }
+      },
+      "feature_shapes": [
+        [
+          3,
+          112,
+          3072
+        ],
+        [
+          3,
+          112,
+          3072
+        ],
+        [
+          3,
+          112,
+          3072
+        ],
+        [
+          3,
+          112,
+          3072
+        ],
+        [
+          3,
+          112,
+          3072
+        ]
+      ]
+    },
+    {
+      "clip": "da2edaec-c943-4b36-a9d7-439d9257796d",
+      "hooked_outputs_equal": true,
+      "early_exit_features_equal": true,
+      "student_calls": {
+        "video": 5,
+        "action": 0,
+        "register": 12,
+        "action_by_model": {
+          "main": 0
+        }
+      },
+      "feature_shapes": [
+        [
+          3,
+          112,
+          3072
+        ],
+        [
+          3,
+          112,
+          3072
+        ],
+        [
+          3,
+          112,
+          3072
+        ],
+        [
+          3,
+          112,
+          3072
+        ],
+        [
+          3,
+          112,
+          3072
+        ]
+      ]
+    },
+    {
+      "clip": "5fbb48b6-786e-4065-ad49-7e8dc7275c24",
+      "hooked_outputs_equal": true,
+      "early_exit_features_equal": true,
+      "student_calls": {
+        "video": 5,
+        "action": 0,
+        "register": 12,
+        "action_by_model": {
+          "main": 0
+        }
+      },
+      "feature_shapes": [
+        [
+          3,
+          112,
+          3072
+        ],
+        [
+          3,
+          112,
+          3072
+        ],
+        [
+          3,
+          112,
+          3072
+        ],
+        [
+          3,
+          112,
+          3072
+        ],
+        [
+          3,
+          112,
+          3072
+        ]
+      ]
+    },
+    {
+      "clip": "927778d8-1763-4470-b7ae-263985792918",
+      "hooked_outputs_equal": true,
+      "early_exit_features_equal": true,
+      "student_calls": {
+        "video": 5,
+        "action": 0,
+        "register": 12,
+        "action_by_model": {
+          "main": 0
+        }
+      },
+      "feature_shapes": [
+        [
+          3,
+          112,
+          3072
+        ],
+        [
+          3,
+          112,
+          3072
+        ],
+        [
+          3,
+          112,
+          3072
+        ],
+        [
+          3,
+          112,
+          3072
+        ],
+        [
+          3,
+          112,
+          3072
+        ]
+      ]
+    },
+    {
+      "clip": "274b43ab-e6cc-45d3-9290-211690756610",
+      "hooked_outputs_equal": true,
+      "early_exit_features_equal": true,
+      "student_calls": {
+        "video": 5,
+        "action": 0,
+        "register": 12,
+        "action_by_model": {
+          "main": 0
+        }
+      },
+      "feature_shapes": [
+        [
+          3,
+          112,
+          3072
+        ],
+        [
+          3,
+          112,
+          3072
+        ],
+        [
+          3,
+          112,
+          3072
+        ],
+        [
+          3,
+          112,
+          3072
+        ],
+        [
+          3,
+          112,
+          3072
+        ]
+      ]
+    },
+    {
+      "clip": "7a970ed8-5f05-4744-abfa-46714004b4e4",
+      "hooked_outputs_equal": true,
+      "early_exit_features_equal": true,
+      "student_calls": {
+        "video": 5,
+        "action": 0,
+        "register": 12,
+        "action_by_model": {
+          "main": 0
+        }
+      },
+      "feature_shapes": [
+        [
+          3,
+          112,
+          3072
+        ],
+        [
+          3,
+          112,
+          3072
+        ],
+        [
+          3,
+          112,
+          3072
+        ],
+        [
+          3,
+          112,
+          3072
+        ],
+        [
+          3,
+          112,
+          3072
+        ]
+      ]
+    },
+    {
+      "clip": "8744a3b2-0e8f-4101-96ee-dbd1d49a46c9",
+      "hooked_outputs_equal": true,
+      "early_exit_features_equal": true,
+      "student_calls": {
+        "video": 5,
+        "action": 0,
+        "register": 12,
+        "action_by_model": {
+          "main": 0
+        }
+      },
+      "feature_shapes": [
+        [
+          3,
+          112,
+          3072
+        ],
+        [
+          3,
+          112,
+          3072
+        ],
+        [
+          3,
+          112,
+          3072
+        ],
+        [
+          3,
+          112,
+          3072
+        ],
+        [
+          3,
+          112,
+          3072
+        ]
+      ]
+    },
+    {
+      "clip": "f38d651e-6557-44fb-b5d9-61e236a34ebb",
+      "hooked_outputs_equal": true,
+      "early_exit_features_equal": true,
+      "student_calls": {
+        "video": 5,
+        "action": 0,
+        "register": 12,
+        "action_by_model": {
+          "main": 0
+        }
+      },
+      "feature_shapes": [
+        [
+          3,
+          112,
+          3072
+        ],
+        [
+          3,
+          112,
+          3072
+        ],
+        [
+          3,
+          112,
+          3072
+        ],
+        [
+          3,
+          112,
+          3072
+        ],
+        [
+          3,
+          112,
+          3072
+        ]
+      ]
+    },
+    {
+      "clip": "36670863-69d3-43a9-a96a-f2daf91ec482",
+      "hooked_outputs_equal": true,
+      "early_exit_features_equal": true,
+      "student_calls": {
+        "video": 5,
+        "action": 0,
+        "register": 12,
+        "action_by_model": {
+          "main": 0
+        }
+      },
+      "feature_shapes": [
+        [
+          3,
+          112,
+          3072
+        ],
+        [
+          3,
+          112,
+          3072
+        ],
+        [
+          3,
+          112,
+          3072
+        ],
+        [
+          3,
+          112,
+          3072
+        ],
+        [
+          3,
+          112,
+          3072
+        ]
+      ]
+    },
+    {
+      "clip": "3c2902b2-f7bb-49f2-b967-36e6d2c7f25c",
+      "hooked_outputs_equal": true,
+      "early_exit_features_equal": true,
+      "student_calls": {
+        "video": 5,
+        "action": 0,
+        "register": 12,
+        "action_by_model": {
+          "main": 0
+        }
+      },
+      "feature_shapes": [
+        [
+          3,
+          112,
+          3072
+        ],
+        [
+          3,
+          112,
+          3072
+        ],
+        [
+          3,
+          112,
+          3072
+        ],
+        [
+          3,
+          112,
+          3072
+        ],
+        [
+          3,
+          112,
+          3072
+        ]
+      ]
+    },
+    {
+      "clip": "6416b940-8c3a-4610-a1c8-a17f2d51a46c",
+      "hooked_outputs_equal": true,
+      "early_exit_features_equal": true,
+      "student_calls": {
+        "video": 5,
+        "action": 0,
+        "register": 12,
+        "action_by_model": {
+          "main": 0
+        }
+      },
+      "feature_shapes": [
+        [
+          3,
+          112,
+          3072
+        ],
+        [
+          3,
+          112,
+          3072
+        ],
+        [
+          3,
+          112,
+          3072
+        ],
+        [
+          3,
+          112,
+          3072
+        ],
+        [
+          3,
+          112,
+          3072
+        ]
+      ]
+    },
+    {
+      "clip": "501c4135-31d7-4084-8e71-f2c161a9c377",
+      "hooked_outputs_equal": true,
+      "early_exit_features_equal": true,
+      "student_calls": {
+        "video": 5,
+        "action": 0,
+        "register": 12,
+        "action_by_model": {
+          "main": 0
+        }
+      },
+      "feature_shapes": [
+        [
+          3,
+          112,
+          3072
+        ],
+        [
+          3,
+          112,
+          3072
+        ],
+        [
+          3,
+          112,
+          3072
+        ],
+        [
+          3,
+          112,
+          3072
+        ],
+        [
+          3,
+          112,
+          3072
+        ]
+      ]
+    },
+    {
+      "clip": "16bd494e-ce60-4a27-8b53-c19afa73c8aa",
+      "hooked_outputs_equal": true,
+      "early_exit_features_equal": true,
+      "student_calls": {
+        "video": 5,
+        "action": 0,
+        "register": 12,
+        "action_by_model": {
+          "main": 0
+        }
+      },
+      "feature_shapes": [
+        [
+          3,
+          112,
+          3072
+        ],
+        [
+          3,
+          112,
+          3072
+        ],
+        [
+          3,
+          112,
+          3072
+        ],
+        [
+          3,
+          112,
+          3072
+        ],
+        [
+          3,
+          112,
+          3072
+        ]
+      ]
+    },
+    {
+      "clip": "397bb6c3-76bc-4823-9909-fceb7fc1fda1",
+      "hooked_outputs_equal": true,
+      "early_exit_features_equal": true,
+      "student_calls": {
+        "video": 5,
+        "action": 0,
+        "register": 12,
+        "action_by_model": {
+          "main": 0
+        }
+      },
+      "feature_shapes": [
+        [
+          3,
+          112,
+          3072
+        ],
+        [
+          3,
+          112,
+          3072
+        ],
+        [
+          3,
+          112,
+          3072
+        ],
+        [
+          3,
+          112,
+          3072
+        ],
+        [
+          3,
+          112,
+          3072
+        ]
+      ]
+    },
+    {
+      "clip": "5e9d3b55-ba59-4777-a344-95817ad8e232",
+      "hooked_outputs_equal": true,
+      "early_exit_features_equal": true,
+      "student_calls": {
+        "video": 5,
+        "action": 0,
+        "register": 12,
+        "action_by_model": {
+          "main": 0
+        }
+      },
+      "feature_shapes": [
+        [
+          3,
+          112,
+          3072
+        ],
+        [
+          3,
+          112,
+          3072
+        ],
+        [
+          3,
+          112,
+          3072
+        ],
+        [
+          3,
+          112,
+          3072
+        ],
+        [
+          3,
+          112,
+          3072
+        ]
+      ]
+    },
+    {
+      "clip": "7a659249-7d6e-42cf-9c27-d02ba144e758",
+      "hooked_outputs_equal": true,
+      "early_exit_features_equal": true,
+      "student_calls": {
+        "video": 5,
+        "action": 0,
+        "register": 12,
+        "action_by_model": {
+          "main": 0
+        }
+      },
+      "feature_shapes": [
+        [
+          3,
+          112,
+          3072
+        ],
+        [
+          3,
+          112,
+          3072
+        ],
+        [
+          3,
+          112,
+          3072
+        ],
+        [
+          3,
+          112,
+          3072
+        ],
+        [
+          3,
+          112,
+          3072
+        ]
+      ]
+    },
+    {
+      "clip": "6c68321e-cd67-42ee-aec7-062e940afb56",
+      "hooked_outputs_equal": true,
+      "early_exit_features_equal": true,
+      "student_calls": {
+        "video": 5,
+        "action": 0,
+        "register": 12,
+        "action_by_model": {
+          "main": 0
+        }
+      },
+      "feature_shapes": [
+        [
+          3,
+          112,
+          3072
+        ],
+        [
+          3,
+          112,
+          3072
+        ],
+        [
+          3,
+          112,
+          3072
+        ],
+        [
+          3,
+          112,
+          3072
+        ],
+        [
+          3,
+          112,
+          3072
+        ]
+      ]
+    },
+    {
+      "clip": "e106b6ff-4df1-459b-bbe2-01164a6504fb",
+      "hooked_outputs_equal": true,
+      "early_exit_features_equal": true,
+      "student_calls": {
+        "video": 5,
+        "action": 0,
+        "register": 12,
+        "action_by_model": {
+          "main": 0
+        }
+      },
+      "feature_shapes": [
+        [
+          3,
+          112,
+          3072
+        ],
+        [
+          3,
+          112,
+          3072
+        ],
+        [
+          3,
+          112,
+          3072
+        ],
+        [
+          3,
+          112,
+          3072
+        ],
+        [
+          3,
+          112,
+          3072
+        ]
+      ]
+    },
+    {
+      "clip": "1907830e-f6bd-430d-ba8b-b4cad241fdda",
+      "hooked_outputs_equal": true,
+      "early_exit_features_equal": true,
+      "student_calls": {
+        "video": 5,
+        "action": 0,
+        "register": 12,
+        "action_by_model": {
+          "main": 0
+        }
+      },
+      "feature_shapes": [
+        [
+          3,
+          112,
+          3072
+        ],
+        [
+          3,
+          112,
+          3072
+        ],
+        [
+          3,
+          112,
+          3072
+        ],
+        [
+          3,
+          112,
+          3072
+        ],
+        [
+          3,
+          112,
+          3072
+        ]
+      ]
+    },
+    {
+      "clip": "fd30d974-15e9-41a7-abc2-fbc03a041771",
+      "hooked_outputs_equal": true,
+      "early_exit_features_equal": true,
+      "student_calls": {
+        "video": 5,
+        "action": 0,
+        "register": 12,
+        "action_by_model": {
+          "main": 0
+        }
+      },
+      "feature_shapes": [
+        [
+          3,
+          112,
+          3072
+        ],
+        [
+          3,
+          112,
+          3072
+        ],
+        [
+          3,
+          112,
+          3072
+        ],
+        [
+          3,
+          112,
+          3072
+        ],
+        [
+          3,
+          112,
+          3072
+        ]
+      ]
+    },
+    {
+      "clip": "33745ce2-9087-4667-9d86-2c9e56d2fcf0",
+      "hooked_outputs_equal": true,
+      "early_exit_features_equal": true,
+      "student_calls": {
+        "video": 5,
+        "action": 0,
+        "register": 12,
+        "action_by_model": {
+          "main": 0
+        }
+      },
+      "feature_shapes": [
+        [
+          3,
+          112,
+          3072
+        ],
+        [
+          3,
+          112,
+          3072
+        ],
+        [
+          3,
+          112,
+          3072
+        ],
+        [
+          3,
+          112,
+          3072
+        ],
+        [
+          3,
+          112,
+          3072
+        ]
+      ]
+    },
+    {
+      "clip": "e2fe47b8-6877-40c6-99bb-987b1c7e80fc",
+      "hooked_outputs_equal": true,
+      "early_exit_features_equal": true,
+      "student_calls": {
+        "video": 5,
+        "action": 0,
+        "register": 12,
+        "action_by_model": {
+          "main": 0
+        }
+      },
+      "feature_shapes": [
+        [
+          3,
+          112,
+          3072
+        ],
+        [
+          3,
+          112,
+          3072
+        ],
+        [
+          3,
+          112,
+          3072
+        ],
+        [
+          3,
+          112,
+          3072
+        ],
+        [
+          3,
+          112,
+          3072
+        ]
+      ]
+    },
+    {
+      "clip": "aab837ec-94df-4e57-849f-d5ad94619d26",
+      "hooked_outputs_equal": true,
+      "early_exit_features_equal": true,
+      "student_calls": {
+        "video": 5,
+        "action": 0,
+        "register": 12,
+        "action_by_model": {
+          "main": 0
+        }
+      },
+      "feature_shapes": [
+        [
+          3,
+          112,
+          3072
+        ],
+        [
+          3,
+          112,
+          3072
+        ],
+        [
+          3,
+          112,
+          3072
+        ],
+        [
+          3,
+          112,
+          3072
+        ],
+        [
+          3,
+          112,
+          3072
+        ]
+      ]
+    }
+  ],
+  "passed": true
+}

@@ -1,0 +1,19 @@
+{
+  "stage": "verified",
+  "completed": 36179,
+  "loading": {
+    "transformer": {
+      "missing_keys": [],
+      "unexpected_keys": []
+    },
+    "vae": {
+      "missing_keys": [],
+      "unexpected_keys": [],
+      "mismatched_keys": [],
+      "error_msgs": []
+    },
+    "prompt_cache_sha256": "2a81a22661486e6569a718d568c4efaf36d7bb3dde934409788226fb1cfd4e9f",
+    "transformer_parameters": 6241020126,
+    "vae_parameters": 704688668
+  }
+}

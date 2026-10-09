@@ -1,0 +1,7 @@
+{
+  "stage": "verified",
+  "updated_at_utc": "2026-10-01T09:36:08.191873+00:00",
+  "train_scenes": 4000,
+  "val_scenes": 1000,
+  "bytes": 63037854704
+}

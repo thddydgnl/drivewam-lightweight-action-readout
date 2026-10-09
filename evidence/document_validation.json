@@ -1,0 +1,30 @@
+{
+  "date": "2026-09-15",
+  "documents": [
+    {
+      "name": "README.md",
+      "lines": 15,
+      "sha256": "c9d2331b7fdc71eedbca435dc2d1f150ed1999530d06f7b0171ccb6c91aeb31b"
+    },
+    {
+      "name": "외부코드_검수보고서.md",
+      "lines": 299,
+      "sha256": "6019e50526f3b77362d383d0e3257d91a0f478efc074c92c84f729622e6d2083"
+    },
+    {
+      "name": "실행계획서.md",
+      "lines": 1235,
+      "sha256": "b67b9a443d49a05e9d1791a88156cea14d37d65a65aa677d61ecf0f01be4ae55"
+    }
+  ],
+  "checks": {
+    "markdown_fences_balanced": true,
+    "markdown_table_column_counts": true,
+    "pinned_source_links_checked": 29,
+    "reviewed_source_trees_unchanged": true,
+    "source_file_hashes_match": true
+  },
+  "model_execution": false,
+  "package_installation": false,
+  "remote_access": false
+}

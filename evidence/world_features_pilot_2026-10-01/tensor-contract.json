@@ -1,0 +1,55 @@
+{
+  "dense_shape_per_scene": [
+    3,
+    6,
+    112,
+    3072
+  ],
+  "dtype": "bfloat16",
+  "mean_shape_per_scene": [
+    3,
+    6,
+    3072
+  ],
+  "phase_metadata": {
+    "current_primer": {
+      "input_timestep": [
+        [
+          0.0
+        ]
+      ],
+      "input_sigma": 0.0,
+      "completed_video_updates": 0,
+      "video_forward_index": 0,
+      "update_cache": 2
+    },
+    "future_first_preupdate": {
+      "input_timestep": [
+        [
+          1000.0
+        ]
+      ],
+      "input_sigma": 1.0,
+      "completed_video_updates": 0,
+      "video_forward_index": 1,
+      "update_cache": 0
+    },
+    "future_cache_terminal": {
+      "input_timestep": [
+        [
+          769.2307739257812
+        ]
+      ],
+      "input_sigma": 0.7692307739257812,
+      "completed_video_updates": 3,
+      "video_forward_index": 4,
+      "update_cache": 1
+    }
+  },
+  "native_forward_calls": {
+    "current": 1,
+    "first": 3,
+    "terminal": 6
+  },
+  "future_action_calls": 0
+}

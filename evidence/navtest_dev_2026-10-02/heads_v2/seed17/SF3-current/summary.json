@@ -1,0 +1,24 @@
+{
+  "model": "SF3-current",
+  "config": {
+    "kind": "sf3",
+    "phase": "current"
+  },
+  "seed": 17,
+  "parameters": 9978163,
+  "epochs": 40,
+  "steps": 5000,
+  "checkpoint": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/heads_navtest_dev_2026-10-02/seed17/SF3-current/epoch-040.safetensors",
+  "checkpoint_sha256": "d2f2a3df0fcb828433e332788bfe13b740a07fd82d649cdc49a7bf7ad7e9b03b",
+  "gradient_gate": {
+    "all_parameter_gradients_finite": true,
+    "query_gradient_norms": {
+      "poolers.0.query": 0.0010598828084766865,
+      "poolers.1.query": 0.001117480220273137,
+      "poolers.2.query": 0.0007991043385118246
+    },
+    "backbone_present": false
+  },
+  "elapsed_seconds": 286.38618452101946,
+  "completed_at_utc": "2026-10-02T08:29:32.440602+00:00"
+}

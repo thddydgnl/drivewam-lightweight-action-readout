@@ -1,0 +1,22 @@
+{
+  "stage": "superseded",
+  "elapsed_seconds": 300,
+  "files": {
+    "nuplan-maps-v1.1.zip": {
+      "stage": "verified",
+      "bytes": 970997691,
+      "total": 970997691
+    },
+    "openscene_metadata_trainval.tgz": {
+      "stage": "verified",
+      "bytes": 7052210642,
+      "total": 7052210642
+    },
+    "navtrain_current_1.tgz": {
+      "stage": "downloading",
+      "bytes": 9999220736,
+      "total": 54527213142
+    }
+  },
+  "reason": "Pilot camera coverage will use pinned HF trainval camera shards; European S3 throughput was approximately 33 MB/s."
+}

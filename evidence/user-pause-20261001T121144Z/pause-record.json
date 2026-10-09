@@ -1,0 +1,123 @@
+{
+  "status": "stopped_gpu_released",
+  "requested_reason": "Release GPUs for other work; do not automatically resume",
+  "created_at_utc": "2026-10-01T12:11:44.216085+00:00",
+  "paused_process_group": 446722,
+  "processes_before_pause": [
+    {
+      "uid": "1000",
+      "pid": "446722",
+      "ppid": "1",
+      "pgid": "446722",
+      "sid": "446722",
+      "stat": "Ss",
+      "command": "bash /home/yonghwi/DriveWAM_Lightweight_Action_Readout/scripts/remote_pilot_diagnostics.sh"
+    },
+    {
+      "uid": "1000",
+      "pid": "446797",
+      "ppid": "446722",
+      "pgid": "446722",
+      "sid": "446722",
+      "stat": "S",
+      "command": "bash /home/yonghwi/DriveWAM_Lightweight_Action_Readout/scripts/remote_pilot_diagnostics.sh"
+    },
+    {
+      "uid": "1000",
+      "pid": "446802",
+      "ppid": "446797",
+      "pgid": "446722",
+      "sid": "446722",
+      "stat": "Rl",
+      "command": "python -u /home/yonghwi/DriveWAM_Lightweight_Action_Readout/scripts/remote_target_diagnostic_extract.py"
+    }
+  ],
+  "status_before_pause": {
+    "runs/feature_control_2026-10-01/predict-status.json": {
+      "stage": "verified",
+      "updated_at_utc": "2026-10-01T11:56:09.458887+00:00",
+      "scenes": 256,
+      "models": 12
+    },
+    "runs/feature_control_2026-10-01/score-status.json": {
+      "stage": "verified",
+      "updated_at_utc": "2026-10-01T11:58:03.846014+00:00",
+      "models": 12,
+      "scenes": 256
+    },
+    "runs/target_diagnostic_2026-10-01/extract-status.json": {
+      "stage": "extracting",
+      "updated_at_utc": "2026-10-01T12:10:57.394046+00:00",
+      "completed": 1024,
+      "total": 2304,
+      "elapsed_seconds": 881.3874832503498
+    }
+  },
+  "automation": "drivewam PAUSED",
+  "resume_requires_user_instruction": true,
+  "finished_at_utc": "2026-10-01T12:12:15.127418+00:00",
+  "active_drivewam_processes": [],
+  "gpu_snapshot": "index, name, memory.used [MiB], utilization.gpu [%]\n0, NVIDIA RTX A5000, 2 MiB, 0 %\n1, NVIDIA RTX A5000, 2 MiB, 0 %\n",
+  "gpu_compute_apps": "gpu_uuid, pid, process_name, used_gpu_memory [MiB]\n",
+  "completed_extraction_shards_sha256_verified": [
+    {
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/target_diagnostic_2026-10-01/head_train-seed0-0000.safetensors",
+      "sha256": "5829b05a30293e692664ef0856603a506565d4864ba76e3700904a966ff54aaf",
+      "rows": 128,
+      "split": "head_train",
+      "generation_seed": 0
+    },
+    {
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/target_diagnostic_2026-10-01/head_train-seed0-0128.safetensors",
+      "sha256": "458235dc19663be98fbd8aa661d070588b5383cca3c68bf832d798a226d65e47",
+      "rows": 128,
+      "split": "head_train",
+      "generation_seed": 0
+    },
+    {
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/target_diagnostic_2026-10-01/head_train-seed0-0256.safetensors",
+      "sha256": "1d1a90b143d6b797125f8a63fbe81b4588b745293ebfa62b562274ac9693ba35",
+      "rows": 128,
+      "split": "head_train",
+      "generation_seed": 0
+    },
+    {
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/target_diagnostic_2026-10-01/head_train-seed0-0384.safetensors",
+      "sha256": "818701a8c1c260bcf16c613fe485aca7b313e5eba3828058d500a71749e49b52",
+      "rows": 128,
+      "split": "head_train",
+      "generation_seed": 0
+    },
+    {
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/target_diagnostic_2026-10-01/head_train-seed1-0000.safetensors",
+      "sha256": "37e17f1035852aaab125feb03011187e47f911144736c66086eb719593f77355",
+      "rows": 128,
+      "split": "head_train",
+      "generation_seed": 1
+    },
+    {
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/target_diagnostic_2026-10-01/head_train-seed1-0128.safetensors",
+      "sha256": "b507c48eb93a5e1621ca28e94ae7fc6e339bd93d0bf68abeacd49d76b7862de1",
+      "rows": 128,
+      "split": "head_train",
+      "generation_seed": 1
+    },
+    {
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/target_diagnostic_2026-10-01/head_train-seed1-0256.safetensors",
+      "sha256": "cd224d95d16d4a61036c6c98e12a3092d7bd84247f54a5c47dfd4bac3344d383",
+      "rows": 128,
+      "split": "head_train",
+      "generation_seed": 1
+    },
+    {
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/target_diagnostic_2026-10-01/head_train-seed1-0384.safetensors",
+      "sha256": "03e6e4b6740067b3920dc6f346a3d47b8b8cf27800f50558bb0c0b756cecca05",
+      "rows": 128,
+      "split": "head_train",
+      "generation_seed": 1
+    }
+  ],
+  "completed_extraction_rows": 1024,
+  "in_progress_shard_memory_discarded": true,
+  "future_D_GT_D_Teacher_training_not_started": true
+}

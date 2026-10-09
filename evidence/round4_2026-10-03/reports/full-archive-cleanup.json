@@ -1,0 +1,20 @@
+{
+  "deleted": [
+    {
+      "archive": "openscene_sensor_trainval_camera_146.tgz",
+      "bytes": 1772587391
+    },
+    {
+      "archive": "openscene_sensor_trainval_camera_185.tgz",
+      "bytes": 4628923851
+    },
+    {
+      "archive": "openscene_sensor_trainval_camera_58.tgz",
+      "bytes": 2763024521
+    }
+  ],
+  "bytes": 9164535763,
+  "approved_by_user": "2026-10-03",
+  "receipts_kept": true,
+  "utc": "2026-10-03T08:10:15.047281+00:00"
+}

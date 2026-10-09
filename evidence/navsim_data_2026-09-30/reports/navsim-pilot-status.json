@@ -1,0 +1,6 @@
+{
+  "stage": "processed_and_verified",
+  "samples": 5000,
+  "head_train": 4000,
+  "head_val": 1000
+}

@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "If you use this work, please cite it as below."
+title: "DriveWAM Lightweight Action Readout: reading driving actions from a frozen world-action model's first imagination pass"
+type: software
+authors:
+  - family-names: "Song"
+    given-names: "YongHwi"
+    affiliation: "Chungbuk National University"
+version: "1.0.0"
+date-released: "2026-10-09"
+url: "https://github.com/thddydgnl/drivewam-lightweight-action-readout"
+keywords:
+  - world action model
+  - autonomous driving
+  - DriveWAM
+  - NAVSIM
+  - PhysicalAI-AV
+  - efficient inference

@@ -1,0 +1,20 @@
+{
+  "model": "linear-terminal",
+  "config": {
+    "kind": "linear",
+    "phase": "terminal"
+  },
+  "seed": 17,
+  "parameters": 74232,
+  "epochs": 40,
+  "steps": 5000,
+  "checkpoint": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/heads_navtest_dev_2026-10-02/seed17/linear-terminal/epoch-040.safetensors",
+  "checkpoint_sha256": "b26cc909e2ed3f662bff85518a5b11d95985392dbc64fd4a6c96d83cd1ba808a",
+  "gradient_gate": {
+    "all_parameter_gradients_finite": true,
+    "query_gradient_norms": {},
+    "backbone_present": false
+  },
+  "elapsed_seconds": 13.939643705263734,
+  "completed_at_utc": "2026-10-02T08:19:32.917471+00:00"
+}

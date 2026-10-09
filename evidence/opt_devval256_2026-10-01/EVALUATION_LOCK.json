@@ -1,0 +1,137 @@
+{
+  "status": "dev256_raw_opt_CV_quality_and_three_repeat_timing_verified",
+  "run_id": "opt_devval256_2026-10-01",
+  "workspace": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout",
+  "files": [
+    {
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/opt_devval256_2026-10-01/protocol.json",
+      "bytes": 17404,
+      "sha256": "f842c78bfc9ea6f34677440e585f57d57566001f60ae729249cae45e5dfccece"
+    },
+    {
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/opt_devval256_2026-10-01/action-opt-transformation.json",
+      "bytes": 3171,
+      "sha256": "5ab5df7997f98074797123e8d169bd41b5d81caec560bc24f76dfbaf0381be9f"
+    },
+    {
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/opt_devval256_2026-10-01/raw-opt-parity.json",
+      "bytes": 64758,
+      "sha256": "48ea0d0b8f660dfdcfe04472fbe5c7198bcefcc4167967e8a8645ac83a2af7ee"
+    },
+    {
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/opt_devval256_2026-10-01/instrumentation-parity.json",
+      "bytes": 128,
+      "sha256": "eed35a2b7f30de9f715a071f0f043a6447afb6be974b666956728e4cd645728f"
+    },
+    {
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/opt_devval256_2026-10-01/inference-summary.json",
+      "bytes": 1023,
+      "sha256": "b329496ee561d2ad63d9a1999dd120f6ebccc296cdbfe40ce89efd4a562f6d15"
+    },
+    {
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/opt_devval256_2026-10-01/prediction-index.jsonl",
+      "bytes": 1520169,
+      "sha256": "f36cb3eaeefafc99f463fecdbba9422c786ed7706bdaba3c533a94354d51314b"
+    },
+    {
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/opt_devval256_2026-10-01/timings.jsonl",
+      "bytes": 7911294,
+      "sha256": "a54f18ebb2dbb48fe42ee28d919716a3d4ee517604f87c4d348ec1b916cdf606"
+    },
+    {
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/opt_devval256_2026-10-01/scores-official.csv",
+      "bytes": 1159130,
+      "sha256": "cfc4e90ee03ef50a1a0cece1ec9d57687cb0ce3615d346abb65cf79ea58b55bf"
+    },
+    {
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/opt_devval256_2026-10-01/scores-vendored.csv",
+      "bytes": 1159084,
+      "sha256": "508c6f9542d58c631e389f163082bf90740395d6e08126a73fba997353126165"
+    },
+    {
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/opt_devval256_2026-10-01/score-official-summary.json",
+      "bytes": 2943,
+      "sha256": "78f8201576c50ad269b1c6c1ff3f8b5cc85e9f5560020c90f86a4e8654dfaf7c"
+    },
+    {
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/opt_devval256_2026-10-01/score-vendored-summary.json",
+      "bytes": 2922,
+      "sha256": "5ddf27876eae82286fa3cbb7cbebbfe85c52dfd7e1807695b08b3e758efc804d"
+    },
+    {
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/opt_devval256_2026-10-01/summary.json",
+      "bytes": 54385,
+      "sha256": "0d91cc1cbbfa54f2f9c45f24a244fbdc2ab179fb3b14ea5644b8e5083a169148"
+    },
+    {
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/opt_devval256_2026-10-01/summary.csv",
+      "bytes": 2365,
+      "sha256": "a444d763d690efd257513ac247a5f8f0be8c93a91369802f3f4ceef5f3ff6f2d"
+    },
+    {
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/opt_devval256_2026-10-01/paired-differences.csv",
+      "bytes": 362164,
+      "sha256": "68a784b414c52ccf6d00dd25efe6235997706556ace3f336d0e6135adb87d2ed"
+    },
+    {
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/opt_devval256_2026-10-01/subgroups.csv",
+      "bytes": 5775,
+      "sha256": "0232d836e8ffb01cfc11fd857efe30fcd26d42debf059a7b05c41802f36905ef"
+    },
+    {
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/opt_devval256_2026-10-01/opt-comparison.png",
+      "bytes": 135631,
+      "sha256": "6110a62a829b0951a4c66c75f16d59eecd0e7918366c2dfbdd5b8cccffc8da40"
+    },
+    {
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/opt_devval256_2026-10-01/opt-comparison.svg",
+      "bytes": 74948,
+      "sha256": "b2db4872fefb04d808716242ffd274e15b7c6653c252e20a7d38daa73c9855f0"
+    }
+  ],
+  "scripts": [
+    {
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/scripts/baseline_common.py",
+      "sha256": "ac70c9e43477727d67bd0222f7bb3308dc02f8b16c8b5e807ca1405618769977"
+    },
+    {
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/scripts/remote_baseline_infer.py",
+      "sha256": "472cf5287db40e846ee89abf580bbbc3daddb1a7f047af6d775d27617570483e"
+    },
+    {
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/scripts/remote_baseline_analyze.py",
+      "sha256": "9638206bedab45c6cd0c5cdbf774328513523ebcd05f1f23a3ca634154692d9c"
+    },
+    {
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/scripts/navsim_action_opt.py",
+      "sha256": "16b1520ad05d080d2cdeab3323db9f326efbad6728f06ea44727fd11f26e8a8a"
+    },
+    {
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/scripts/remote_opt_infer.py",
+      "sha256": "1c85e291b477deed6c1fbd4a8de145d84d8c1f0e8730a87d05f8ce0fa9f2aa69"
+    },
+    {
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/scripts/remote_opt_score.py",
+      "sha256": "dd8c8e57c1af6fcba05752e48285ee5a96d718ced2ac3518970a07fa9e7d5e4c"
+    },
+    {
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/scripts/remote_opt_analyze.py",
+      "sha256": "64cb444b9a9b29f138540678d65ef19a8d592a7cd4ccdcda5524ce3b1367118a"
+    }
+  ],
+  "models": [
+    "B10",
+    "B05",
+    "B10-opt",
+    "B05-opt",
+    "B03-opt",
+    "B02-opt",
+    "B01-opt",
+    "CV"
+  ],
+  "primary_scored_each_model": 256,
+  "timing_samples_each_model": 768,
+  "prediction_count": 2496,
+  "B_star_selected": false,
+  "navtest_used": false
+}

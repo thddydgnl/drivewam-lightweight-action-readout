@@ -1,0 +1,517 @@
+{
+  "run_id": "baselines_devval256_2026-10-01",
+  "client_date": "2026-10-01",
+  "scope": "head-val dev256 pilot only; not navtest or full head-val",
+  "models": {
+    "B10": {
+      "quality": {
+        "score": {
+          "mean": 93.11534090030723,
+          "ci95_low": 91.15135077492218,
+          "ci95_high": 95.83497991822709
+        },
+        "no_at_fault_collisions": {
+          "mean": 100.0,
+          "ci95_low": 100.0,
+          "ci95_high": 100.0
+        },
+        "drivable_area_compliance": {
+          "mean": 99.609375,
+          "ci95_low": 99.19354838709677,
+          "ci95_high": 100.0
+        },
+        "time_to_collision_within_bound": {
+          "mean": 99.609375,
+          "ci95_low": 98.14756944444444,
+          "ci95_high": 100.0
+        },
+        "comfort": {
+          "mean": 100.0,
+          "ci95_low": 100.0,
+          "ci95_high": 100.0
+        },
+        "ego_progress": {
+          "mean": 84.41431816073737,
+          "ci95_low": 80.00584788285117,
+          "ci95_high": 90.8112324036457
+        },
+        "driving_direction_compliance": {
+          "mean": 97.65625,
+          "ci95_low": 96.29629629629629,
+          "ci95_high": 100.0
+        },
+        "ade_4s_m": {
+          "mean": 0.07597768261644015,
+          "ci95_low": 0.07062443774422932,
+          "ci95_high": 0.08399374364439854
+        },
+        "fde_4s_m": {
+          "mean": 0.13800925950922707,
+          "ci95_low": 0.12902340483770572,
+          "ci95_high": 0.154185370059462
+        },
+        "ade_3s_m": {
+          "mean": 0.05847354878779417,
+          "ci95_low": 0.053650805053562615,
+          "ci95_high": 0.0651085668000062
+        },
+        "fde_3s_m": {
+          "mean": 0.10120914871398648,
+          "ci95_low": 0.0926343767650255,
+          "ci95_high": 0.11270596359076838
+        },
+        "heading_mae_rad": {
+          "mean": 0.0029600740813293175,
+          "ci95_low": 0.0023431648140707644,
+          "ci95_high": 0.0033932665005711525
+        }
+      },
+      "coverage": 1.0,
+      "scenes": 256,
+      "logs": 12,
+      "at_fault_collision_scenes": 0,
+      "nc_below_one_scenes": 0,
+      "dac_failure_scenes": 1,
+      "ttc_infraction_scenes": 1,
+      "policy_ms": {
+        "n": 768,
+        "mean": 792.5234750800882,
+        "p50": 792.7004769444466,
+        "p90": 793.8092764467001,
+        "p95": 794.2009057849646,
+        "min": 785.153528675437,
+        "max": 795.1767817139626
+      },
+      "policy_ms_by_repeat": {
+        "0": {
+          "n": 256,
+          "mean": 791.6010499684489,
+          "p50": 791.9130017980933,
+          "p90": 793.1399447843432,
+          "p95": 793.508286587894,
+          "min": 785.153528675437,
+          "max": 794.9824184179306
+        },
+        "1": {
+          "n": 256,
+          "mean": 793.0897363621625,
+          "p50": 793.1201718747616,
+          "p90": 794.0980633720756,
+          "p95": 794.4371271878481,
+          "min": 790.7866165041924,
+          "max": 794.973211362958
+        },
+        "2": {
+          "n": 256,
+          "mean": 792.8796389096533,
+          "p50": 792.8339214995503,
+          "p90": 793.7888065353036,
+          "p95": 794.063163921237,
+          "min": 790.9276578575373,
+          "max": 795.1767817139626
+        }
+      },
+      "repeat_p50_relative_range": 0.001522601447709307,
+      "gpu_phase_ms": {
+        "vae_encode_gpu_ms": {
+          "n": 768,
+          "mean": 42.92905600865682,
+          "p50": 42.89486312866211,
+          "p90": 43.01680793762207,
+          "p95": 43.077632904052734,
+          "min": 42.66700744628906,
+          "max": 45.248512268066406
+        },
+        "prompt_cache_gpu_ms": {
+          "n": 768,
+          "mean": 0.03359358349310545,
+          "p50": 0.03379200026392937,
+          "p90": 0.03481600061058998,
+          "p95": 0.03686400130391121,
+          "min": 0.030719999223947525,
+          "max": 0.04198399931192398
+        },
+        "primer_gpu_ms": {
+          "n": 768,
+          "mean": 90.07046988606453,
+          "p50": 90.06950378417969,
+          "p90": 90.32120132446289,
+          "p95": 90.42723999023437,
+          "min": 89.13407897949219,
+          "max": 91.79341125488281
+        },
+        "world_gpu_ms": {
+          "n": 768,
+          "mean": 197.1465655763944,
+          "p50": 197.11386108398438,
+          "p90": 197.73430328369142,
+          "p95": 197.83772201538085,
+          "min": 194.9286346435547,
+          "max": 199.1065673828125
+        },
+        "action_gpu_ms": {
+          "n": 768,
+          "mean": 460.2872587442398,
+          "p50": 460.3760681152344,
+          "p90": 461.1167266845703,
+          "p95": 461.4262725830078,
+          "min": 456.1008605957031,
+          "max": 463.0302734375
+        }
+      },
+      "actual_forward_calls": [
+        17
+      ],
+      "peak_allocated_gib": 13.674188137054443,
+      "peak_reserved_gib": 13.734375
+    },
+    "B05": {
+      "quality": {
+        "score": {
+          "mean": 93.11088859956809,
+          "ci95_low": 91.1525025320294,
+          "ci95_high": 95.82231716183286
+        },
+        "no_at_fault_collisions": {
+          "mean": 100.0,
+          "ci95_low": 100.0,
+          "ci95_high": 100.0
+        },
+        "drivable_area_compliance": {
+          "mean": 99.609375,
+          "ci95_low": 99.19354838709677,
+          "ci95_high": 100.0
+        },
+        "time_to_collision_within_bound": {
+          "mean": 99.609375,
+          "ci95_low": 98.14756944444444,
+          "ci95_high": 100.0
+        },
+        "comfort": {
+          "mean": 100.0,
+          "ci95_low": 100.0,
+          "ci95_high": 100.0
+        },
+        "ego_progress": {
+          "mean": 84.4036326389634,
+          "ci95_low": 80.00432427846071,
+          "ci95_high": 90.77770525207424
+        },
+        "driving_direction_compliance": {
+          "mean": 97.65625,
+          "ci95_low": 96.29629629629629,
+          "ci95_high": 100.0
+        },
+        "ade_4s_m": {
+          "mean": 0.07481929168935213,
+          "ci95_low": 0.0688705946771198,
+          "ci95_high": 0.08246761288473323
+        },
+        "fde_4s_m": {
+          "mean": 0.1357386266317614,
+          "ci95_low": 0.12486226795147622,
+          "ci95_high": 0.15097474987760742
+        },
+        "ade_3s_m": {
+          "mean": 0.057637402557896136,
+          "ci95_low": 0.052441160331536917,
+          "ci95_high": 0.06385771192687291
+        },
+        "fde_3s_m": {
+          "mean": 0.0994087660134847,
+          "ci95_low": 0.08950998803031124,
+          "ci95_high": 0.11020405516161223
+        },
+        "heading_mae_rad": {
+          "mean": 0.0029304800867179836,
+          "ci95_low": 0.002328831280751085,
+          "ci95_high": 0.0033393996289583245
+        }
+      },
+      "coverage": 1.0,
+      "scenes": 256,
+      "logs": 12,
+      "at_fault_collision_scenes": 0,
+      "nc_below_one_scenes": 0,
+      "dac_failure_scenes": 1,
+      "ttc_infraction_scenes": 1,
+      "policy_ms": {
+        "n": 768,
+        "mean": 583.7212348924368,
+        "p50": 583.7895590811968,
+        "p90": 584.7813572734594,
+        "p95": 585.0723469629884,
+        "min": 578.2206244766712,
+        "max": 587.2514080256224
+      },
+      "policy_ms_by_repeat": {
+        "0": {
+          "n": 256,
+          "mean": 583.1171553072636,
+          "p50": 583.3870843052864,
+          "p90": 584.2995196580887,
+          "p95": 584.8257807083428,
+          "min": 578.2206244766712,
+          "max": 585.9168581664562
+        },
+        "1": {
+          "n": 256,
+          "mean": 584.1127290768782,
+          "p50": 584.0819207951427,
+          "p90": 584.9639307707548,
+          "p95": 585.2167303673923,
+          "min": 582.502543926239,
+          "max": 587.2514080256224
+        },
+        "2": {
+          "n": 256,
+          "mean": 583.9338202931685,
+          "p50": 583.8273642584682,
+          "p90": 584.7307490184903,
+          "p95": 585.0367299281061,
+          "min": 582.2700522840023,
+          "max": 586.1818641424179
+        }
+      },
+      "repeat_p50_relative_range": 0.001190140326393865,
+      "gpu_phase_ms": {
+        "vae_encode_gpu_ms": {
+          "n": 768,
+          "mean": 42.92464948693911,
+          "p50": 42.898433685302734,
+          "p90": 43.012403106689455,
+          "p95": 43.13323554992676,
+          "min": 42.63113784790039,
+          "max": 45.13075256347656
+        },
+        "prompt_cache_gpu_ms": {
+          "n": 768,
+          "mean": 0.033649000174288325,
+          "p50": 0.03379200026392937,
+          "p90": 0.03481600061058998,
+          "p95": 0.03686400130391121,
+          "min": 0.03174399957060814,
+          "max": 0.04608000069856644
+        },
+        "primer_gpu_ms": {
+          "n": 768,
+          "mean": 90.05912794669469,
+          "p50": 90.04851150512695,
+          "p90": 90.31608200073242,
+          "p95": 90.43113021850586,
+          "min": 89.03372955322266,
+          "max": 91.57324981689453
+        },
+        "world_gpu_ms": {
+          "n": 768,
+          "mean": 197.13587745030722,
+          "p50": 197.10873413085938,
+          "p90": 197.71730194091796,
+          "p95": 197.81801147460936,
+          "min": 195.0576629638672,
+          "max": 198.78604125976562
+        },
+        "action_gpu_ms": {
+          "n": 768,
+          "mean": 251.5055935382843,
+          "p50": 251.53075408935547,
+          "p90": 251.92744903564454,
+          "p95": 252.215909576416,
+          "min": 249.2794952392578,
+          "max": 252.97613525390625
+        }
+      },
+      "actual_forward_calls": [
+        12
+      ],
+      "peak_allocated_gib": 13.674188137054443,
+      "peak_reserved_gib": 13.734375
+    }
+  },
+  "paired_B05_minus_B10": {
+    "score": {
+      "mean": -0.00445230073915609,
+      "ci95_low": -0.016317636011864152,
+      "ci95_high": 0.0028852809529104385
+    },
+    "no_at_fault_collisions": {
+      "mean": 0.0,
+      "ci95_low": 0.0,
+      "ci95_high": 0.0
+    },
+    "drivable_area_compliance": {
+      "mean": 0.0,
+      "ci95_low": 0.0,
+      "ci95_high": 0.0
+    },
+    "time_to_collision_within_bound": {
+      "mean": 0.0,
+      "ci95_low": 0.0,
+      "ci95_high": 0.0
+    },
+    "comfort": {
+      "mean": 0.0,
+      "ci95_low": 0.0,
+      "ci95_high": 0.0
+    },
+    "ego_progress": {
+      "mean": -0.010685521773974416,
+      "ci95_low": -0.03916232642847726,
+      "ci95_high": 0.006924674286985847
+    },
+    "driving_direction_compliance": {
+      "mean": 0.0,
+      "ci95_low": 0.0,
+      "ci95_high": 0.0
+    },
+    "ade_4s_m": {
+      "mean": -0.0011583909270880361,
+      "ci95_low": -0.002474566427415335,
+      "ci95_high": -0.0003021570396767083
+    },
+    "fde_4s_m": {
+      "mean": -0.0022706328774656677,
+      "ci95_low": -0.007405670960292507,
+      "ci95_high": 0.0008819052826106168
+    },
+    "ade_3s_m": {
+      "mean": -0.0008361462298980308,
+      "ci95_low": -0.001560060596199768,
+      "ci95_high": -0.00034860093737266225
+    },
+    "fde_3s_m": {
+      "mean": -0.001800382700501799,
+      "ci95_low": -0.0045083517560001165,
+      "ci95_high": -3.128791459865438e-05
+    },
+    "heading_mae_rad": {
+      "mean": -2.9593994611333966e-05,
+      "ci95_low": -0.0001021730549924035,
+      "ci95_high": 2.6322970645265562e-05
+    }
+  },
+  "speed": {
+    "policy_p50_ratio_B05_over_B10": 0.7364566769676733,
+    "policy_p95_ratio_B05_over_B10": 0.7366805334787679,
+    "policy_p50_reduction_percent": 26.354332303232674
+  },
+  "uncertainty": {
+    "method": "paired log-cluster bootstrap preserving sample-weighted means",
+    "resamples": 2000,
+    "bootstrap_seed": 17,
+    "unique_logs": 12,
+    "confidence": 0.95
+  },
+  "scorer_difference_all_640_predictions": {
+    "score": {
+      "mean_vendored_minus_official_points": -1.798908244587949e-13,
+      "max_abs_difference_points": 6.737943536450075e-11,
+      "rows_differing_above_1e-6_points": 0
+    },
+    "no_at_fault_collisions": {
+      "mean_vendored_minus_official_points": 0.0,
+      "max_abs_difference_points": 0.0,
+      "rows_differing_above_1e-6_points": 0
+    },
+    "drivable_area_compliance": {
+      "mean_vendored_minus_official_points": 0.0,
+      "max_abs_difference_points": 0.0,
+      "rows_differing_above_1e-6_points": 0
+    },
+    "time_to_collision_within_bound": {
+      "mean_vendored_minus_official_points": 0.0,
+      "max_abs_difference_points": 0.0,
+      "rows_differing_above_1e-6_points": 0
+    },
+    "comfort": {
+      "mean_vendored_minus_official_points": 0.0,
+      "max_abs_difference_points": 0.0,
+      "rows_differing_above_1e-6_points": 0
+    },
+    "ego_progress": {
+      "mean_vendored_minus_official_points": -4.317726731706273e-13,
+      "max_abs_difference_points": 1.617372902273928e-10,
+      "rows_differing_above_1e-6_points": 0
+    },
+    "driving_direction_compliance": {
+      "mean_vendored_minus_official_points": 0.0,
+      "max_abs_difference_points": 0.0,
+      "rows_differing_above_1e-6_points": 0
+    }
+  },
+  "generation_seed_diagnostic": {
+    "B10": {
+      "scenes": 32,
+      "generation_seeds": [
+        0,
+        1,
+        2
+      ],
+      "seed_means": {
+        "0": {
+          "pdms": 93.58702885071733,
+          "ade_4s_m": 0.07929229885533655
+        },
+        "1": {
+          "pdms": 93.56940334994113,
+          "ade_4s_m": 0.05730350381240931
+        },
+        "2": {
+          "pdms": 93.58896398856275,
+          "ade_4s_m": 0.07536134393096054
+        }
+      },
+      "mean_within_scene_pdms_population_std_points": 0.052224229209001036,
+      "mean_trajectory_rms_spread_m": 0.03509062368539162,
+      "seed_rows_are_not_independent_scenes": true
+    },
+    "B05": {
+      "scenes": 32,
+      "generation_seeds": [
+        0,
+        1,
+        2
+      ],
+      "seed_means": {
+        "0": {
+          "pdms": 93.5792618925662,
+          "ade_4s_m": 0.08032258300307085
+        },
+        "1": {
+          "pdms": 93.57567598580903,
+          "ade_4s_m": 0.05751370660853782
+        },
+        "2": {
+          "pdms": 93.58589466239746,
+          "ade_4s_m": 0.07191614382694399
+        }
+      },
+      "mean_within_scene_pdms_population_std_points": 0.05198040424609386,
+      "mean_trajectory_rms_spread_m": 0.0327740436187014,
+      "seed_rows_are_not_independent_scenes": true
+    }
+  },
+  "metadata": {
+    "maps": {
+      "sg-one-north": 92,
+      "us-nv-las-vegas-strip": 138,
+      "us-ma-boston": 26
+    },
+    "commands": {
+      "1": 146,
+      "0": 71,
+      "2": 39
+    }
+  },
+  "baseline_B_star_selected": false,
+  "navtest_used": false,
+  "limitations": [
+    "Dev256 archive cohort covers 12 head-val logs; Pittsburgh is absent.",
+    "Head-val is split from navtrain and may overlap the public backbone's training data; this does not measure backbone generalization.",
+    "This evaluates public frozen checkpoint/code; it is not reproduction of a published navtest score.",
+    "Timing uses fixed precomputed text embeddings and includes online VAE/world/action; disk and CPU scoring excluded.",
+    "Phase CUDA events and forward-count hooks add small measurement overhead and are identical for both models.",
+    "B* requires opt parity/candidates and complete head-val; it is not selected from these raw baselines."
+  ],
+  "generated_at_utc": "2026-10-01T07:32:38.615924+00:00"
+}

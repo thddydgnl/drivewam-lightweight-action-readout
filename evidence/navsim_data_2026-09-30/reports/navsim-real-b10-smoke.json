@@ -1,0 +1,122 @@
+{
+  "scene_token": "2921b009ed4551bb",
+  "log_name": "2021.10.05.07.38.12_veh-50_01085_01463",
+  "split": "head_train",
+  "input_path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/processed/navtrain-current-v1/inputs/2921b009ed4551bb.npz",
+  "input_sha256": "268c99ecf6491137830de908719cbdba9338c0a2c4eb8b648dcbbf8f288c2b69",
+  "prompt_cache_sha256": "2a81a22661486e6569a718d568c4efaf36d7bb3dde934409788226fb1cfd4e9f",
+  "initializer": "test-only initializer with precomputed prompts; original predict unchanged",
+  "transformer_loading_info": {
+    "missing_keys": [],
+    "unexpected_keys": []
+  },
+  "vae_loading_info": {
+    "missing_keys": [],
+    "unexpected_keys": [],
+    "mismatched_keys": [],
+    "error_msgs": []
+  },
+  "num_video_steps": 3,
+  "num_action_steps": 10,
+  "video_denoise_fraction": 0.6,
+  "seed": 20260930,
+  "forward_calls": [
+    {
+      "action_mode": false,
+      "update_cache": 2
+    },
+    {
+      "action_mode": true,
+      "update_cache": 2
+    },
+    {
+      "action_mode": false,
+      "update_cache": 0
+    },
+    {
+      "action_mode": false,
+      "update_cache": 0
+    },
+    {
+      "action_mode": false,
+      "update_cache": 0
+    },
+    {
+      "action_mode": false,
+      "update_cache": 1
+    },
+    {
+      "action_mode": true,
+      "update_cache": 0
+    },
+    {
+      "action_mode": true,
+      "update_cache": 0
+    },
+    {
+      "action_mode": true,
+      "update_cache": 0
+    },
+    {
+      "action_mode": true,
+      "update_cache": 0
+    },
+    {
+      "action_mode": true,
+      "update_cache": 0
+    },
+    {
+      "action_mode": true,
+      "update_cache": 0
+    },
+    {
+      "action_mode": true,
+      "update_cache": 0
+    },
+    {
+      "action_mode": true,
+      "update_cache": 0
+    },
+    {
+      "action_mode": true,
+      "update_cache": 0
+    },
+    {
+      "action_mode": true,
+      "update_cache": 0
+    },
+    {
+      "action_mode": true,
+      "update_cache": 1
+    }
+  ],
+  "actions_shape": [
+    1,
+    30,
+    2,
+    8,
+    1
+  ],
+  "latents_shape": [
+    1,
+    48,
+    2,
+    16,
+    28
+  ],
+  "trajectory_shape": [
+    8,
+    3
+  ],
+  "outputs_finite": true,
+  "policy_input_contains_future_pixels_or_gt": false,
+  "reference_with_real_future_rgb_and_gt_actions_has_bitwise_identical_predictions": true,
+  "gt_normalization_denormalization_max_abs_error": 6.616115570068359e-06,
+  "peak_allocated_bytes": 14682634752,
+  "peak_reserved_bytes": 14747172864,
+  "elapsed_unwarmed_seconds": 1.3024039696902037,
+  "latency_benchmark": false,
+  "driving_quality_evaluated": false,
+  "navtest_used": false,
+  "completed_at_utc": "2026-09-30T10:34:57.626219+00:00"
+}

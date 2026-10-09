@@ -1,0 +1,185 @@
+{
+  "_id": "697b6129e3ce5830b78ab5db",
+  "id": "robbyant/lingbot-va-base",
+  "private": false,
+  "pipeline_tag": "robotics",
+  "library_name": "transformers",
+  "tags": [
+    "transformers",
+    "diffusers",
+    "safetensors",
+    "robotics",
+    "arxiv:2601.21998",
+    "license:apache-2.0",
+    "endpoints_compatible",
+    "region:us"
+  ],
+  "downloads": 0,
+  "likes": 30,
+  "modelId": "robbyant/lingbot-va-base",
+  "author": "robbyant",
+  "sha": "68b7bc1b35da6ddc67ea94c4ceb58d768fbb3f9c",
+  "lastModified": "2026-04-24T03:51:14.000Z",
+  "gated": false,
+  "disabled": false,
+  "model-index": null,
+  "config": {},
+  "cardData": {
+    "license": "apache-2.0",
+    "pipeline_tag": "robotics",
+    "library_name": "transformers"
+  },
+  "transformersInfo": {
+    "auto_model": "AutoModel"
+  },
+  "siblings": [
+    {
+      "rfilename": ".gitattributes",
+      "blobId": "a5aa48b58034ca5384b5f05e184d7c3983c39219",
+      "size": 1634
+    },
+    {
+      "rfilename": "README.md",
+      "blobId": "d9625464d9aee929d5f82d5e73600c657456bf8a",
+      "size": 4170
+    },
+    {
+      "rfilename": "assets/teaser.png",
+      "blobId": "44fed275985b307a734508a346ce639e348629f6",
+      "size": 1107098,
+      "lfs": {
+        "sha256": "f27d456c7af839b5929aeffaffa9ac2cb9a3b69e5e0df2440b37b4f241aa933d",
+        "size": 1107098,
+        "pointerSize": 132
+      }
+    },
+    {
+      "rfilename": "text_encoder/config.json",
+      "blobId": "ab4a73bce055c6e32e66133032dcb3adfb26ee8d",
+      "size": 855
+    },
+    {
+      "rfilename": "text_encoder/model-00001-of-00003.safetensors",
+      "blobId": "3e671d382b9dd6c7fff4cb11756526032d5e6f6c",
+      "size": 4935812536,
+      "lfs": {
+        "sha256": "a8e861969c7433e707cc5a74065d795d36cca07ec96eb6763eb4083df7248f58",
+        "size": 4935812536,
+        "pointerSize": 135
+      }
+    },
+    {
+      "rfilename": "text_encoder/model-00002-of-00003.safetensors",
+      "blobId": "b35fc9ac361a2b8ee0289121cd045e00cfe57e49",
+      "size": 4983103192,
+      "lfs": {
+        "sha256": "d57d948ece4837d850b7a859a4415121d57cacf8b9ee1d4db200c67f592902d7",
+        "size": 4983103192,
+        "pointerSize": 135
+      }
+    },
+    {
+      "rfilename": "text_encoder/model-00003-of-00003.safetensors",
+      "blobId": "a76bb7245d7e1cb456132b1a8abe2b1e48a87481",
+      "size": 1442935480,
+      "lfs": {
+        "sha256": "0da9ee284e21d1406df708788db1d502d95d75f69faa25cd26151bf8829b7c5f",
+        "size": 1442935480,
+        "pointerSize": 135
+      }
+    },
+    {
+      "rfilename": "text_encoder/model.safetensors.index.json",
+      "blobId": "f3d3d4da90eb33e14c92d88ea346370fa3c0b5b2",
+      "size": 22476
+    },
+    {
+      "rfilename": "tokenizer/special_tokens_map.json",
+      "blobId": "2ed25bf989a28d20b5d4b5822fbc24666d12a6f7",
+      "size": 7079
+    },
+    {
+      "rfilename": "tokenizer/spiece.model",
+      "blobId": "2fe5f347e9f9367585589ae89e997dfbd5cf802c",
+      "size": 4548313,
+      "lfs": {
+        "sha256": "e3909a67b780650b35cf529ac782ad2b6b26e6d1f849d3fbb6a872905f452458",
+        "size": 4548313,
+        "pointerSize": 132
+      }
+    },
+    {
+      "rfilename": "tokenizer/tokenizer.json",
+      "blobId": "9c6427ab2f801c942da4ee9740f1a750d3978a3b",
+      "size": 16837459,
+      "lfs": {
+        "sha256": "20a46ac256746594ed7e1e3ef733b83fbc5a6f0922aa7480eda961743de080ef",
+        "size": 16837459,
+        "pointerSize": 133
+      }
+    },
+    {
+      "rfilename": "tokenizer/tokenizer_config.json",
+      "blobId": "09d434f9457238f697f4c208aab47f58caa15bfe",
+      "size": 61758
+    },
+    {
+      "rfilename": "transformer/config.json",
+      "blobId": "18c72b6ecb199028da2564c2b06ea033c2e9900e",
+      "size": 450
+    },
+    {
+      "rfilename": "transformer/diffusion_pytorch_model-00001-of-00003.safetensors",
+      "blobId": "8ca6a7f1cf25b0c35d7eac677d858c695d946508",
+      "size": 4821987820,
+      "lfs": {
+        "sha256": "1f4a62a9d6e9293eb1254eca04e54bd51af6414cb3da65f9ab55caad96bfd388",
+        "size": 4821987820,
+        "pointerSize": 135
+      }
+    },
+    {
+      "rfilename": "transformer/diffusion_pytorch_model-00002-of-00003.safetensors",
+      "blobId": "b728b05d19080dd185b13b11091b93d0fec63cec",
+      "size": 4821655760,
+      "lfs": {
+        "sha256": "c86f3039ad582de0da3daf6b60d07a6010336db501b5596d70d4cb4adb5c5407",
+        "size": 4821655760,
+        "pointerSize": 135
+      }
+    },
+    {
+      "rfilename": "transformer/diffusion_pytorch_model-00003-of-00003.safetensors",
+      "blobId": "5ac9c5574d4f5955665f79481eec346b775143af",
+      "size": 535373816,
+      "lfs": {
+        "sha256": "338240f2443f81d18e26c442f06f962637c0e8dbe8a7d607293f7dfda1c1d37f",
+        "size": 535373816,
+        "pointerSize": 134
+      }
+    },
+    {
+      "rfilename": "transformer/diffusion_pytorch_model.safetensors.index.json",
+      "blobId": "976eb12c8dbf3c2fcee0a61cf279d340c6479857",
+      "size": 74936
+    },
+    {
+      "rfilename": "vae/config.json",
+      "blobId": "29f65bc63e9daadb95e4c1a8344d162be4b7d533",
+      "size": 1701
+    },
+    {
+      "rfilename": "vae/diffusion_pytorch_model.safetensors",
+      "blobId": "ce286de5e77fb7878058355c6dcee7be8308a83c",
+      "size": 2818777808,
+      "lfs": {
+        "sha256": "62cd18f19438e35b32ac63020e2852f566e9b02f46b6cdbd87972a356e3c6f4b",
+        "size": 2818777808,
+        "pointerSize": 135
+      }
+    }
+  ],
+  "spaces": [],
+  "createdAt": "2026-01-29T13:31:21.000Z",
+  "usedStorage": 24382760932
+}

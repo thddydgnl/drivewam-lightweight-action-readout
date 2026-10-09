@@ -1,0 +1,63 @@
+{
+  "samples": 5000,
+  "distributions": {
+    "head_train": {
+      "scenes": 4000,
+      "logs": 60,
+      "maps": {
+        "us-ma-boston": 1514,
+        "us-nv-las-vegas-strip": 1266,
+        "sg-one-north": 1138,
+        "us-pa-pittsburgh-hazelwood": 82
+      },
+      "commands": {
+        "1": 2670,
+        "0": 886,
+        "2": 444
+      },
+      "speed_mps_quantiles": [
+        8.342466612746674e-05,
+        2.781064126218675,
+        5.559258072308552,
+        8.022634995323584,
+        14.644597929168516
+      ]
+    },
+    "head_val": {
+      "scenes": 1000,
+      "logs": 12,
+      "maps": {
+        "us-nv-las-vegas-strip": 532,
+        "sg-one-north": 387,
+        "us-ma-boston": 81
+      },
+      "commands": {
+        "1": 609,
+        "2": 146,
+        "0": 245
+      },
+      "speed_mps_quantiles": [
+        0.0010083662907057534,
+        2.2386230073422304,
+        4.861867831285432,
+        7.623421106952364,
+        13.656598318234328
+      ]
+    }
+  },
+  "input_keys": [
+    "command_id",
+    "ego_velocity_acc",
+    "history_poses",
+    "rgb_current"
+  ],
+  "input_contains_future_pixels_or_labels": false,
+  "ground_truth_separate": true,
+  "future_label_horizon_s": 4.0,
+  "rgb_preprocessing": "PIL RGB uint8; cv2 INTER_AREA to half source dimensions; model subsequently uses its original bilinear 256x448 resize",
+  "canonical_history_parity_checked": 5000,
+  "trajectory_cumsum_roundtrip_checked": 5000,
+  "all_values_finite": true,
+  "manifest_sha256": "ba94a5994314edbafff21a028ac3a51c3a4b581dd90df86e179366add049bd1e",
+  "completed_at_utc": "2026-09-30T10:33:41.559276+00:00"
+}

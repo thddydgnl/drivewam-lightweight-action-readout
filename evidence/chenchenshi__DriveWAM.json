@@ -1,0 +1,106 @@
+{
+  "_id": "6a250fb043d4c2ecb4798687",
+  "id": "chenchenshi/DriveWAM",
+  "private": false,
+  "library_name": "diffusers",
+  "tags": [
+    "diffusers",
+    "safetensors",
+    "arxiv:2605.28544",
+    "region:us"
+  ],
+  "downloads": 0,
+  "likes": 3,
+  "modelId": "chenchenshi/DriveWAM",
+  "author": "chenchenshi",
+  "sha": "c4fb6d2c5d26ee3018a9ee1507f36fd02b85b1ce",
+  "lastModified": "2026-06-17T15:15:56.000Z",
+  "gated": false,
+  "disabled": false,
+  "config": {},
+  "siblings": [
+    {
+      "rfilename": ".gitattributes",
+      "blobId": "afcf12708e9a43d62709029983128d6f759397b2",
+      "size": 1570
+    },
+    {
+      "rfilename": "PhysicalAI-Autonomous-Vehicles-Front-nav_prompts.tar.gz",
+      "blobId": "65f7aecef22dc0b818fcc16931fff6426ca64bf9",
+      "size": 28658441,
+      "lfs": {
+        "sha256": "8753c19acc318d963d6378e324d0a9a4dc06ee9f60a8b79d4a2608840c359d3b",
+        "size": 28658441,
+        "pointerSize": 133
+      }
+    },
+    {
+      "rfilename": "README.md",
+      "blobId": "cd948255014065f153ffd2bc1b4223f26423bef9",
+      "size": 10620
+    },
+    {
+      "rfilename": "metric_cache_navtest.tar.gz",
+      "blobId": "e3b847a8d344373cc7bfb2f81ce52b6aa7d3dd13",
+      "size": 3168096463,
+      "lfs": {
+        "sha256": "ff96c6dd388205573ee58700f4094c6ebcfe7259803d6ded45ff1c0f82df93e3",
+        "size": 3168096463,
+        "pointerSize": 135
+      }
+    },
+    {
+      "rfilename": "navsim/config.json",
+      "blobId": "bca4b5cf81c398466770d39333b5890094170117",
+      "size": 656
+    },
+    {
+      "rfilename": "navsim/diffusion_pytorch_model.safetensors",
+      "blobId": "25eb8810ba7ebdf7208b4f6c634aca26d4812f83",
+      "size": 12482164484,
+      "lfs": {
+        "sha256": "27e4846b0a25e22fc299f7aca90c01d802072d2b297741c85ed074b689ef26a9",
+        "size": 12482164484,
+        "pointerSize": 136
+      }
+    },
+    {
+      "rfilename": "physicalai/config.json",
+      "blobId": "141ab932957dbb2acf589d7a891ef7719b80dfb2",
+      "size": 543
+    },
+    {
+      "rfilename": "physicalai/diffusion_pytorch_model.safetensors",
+      "blobId": "31afd5a5d98598561f582749a495625fe6b48d47",
+      "size": 12482072236,
+      "lfs": {
+        "sha256": "ad90feae1a26007d13743ecb7896887ae7f9906168e5652d57b5406073fa0d98",
+        "size": 12482072236,
+        "pointerSize": 136
+      }
+    },
+    {
+      "rfilename": "train_100k.csv",
+      "blobId": "dd01bd9a8b3f67a291dac122ed949d724f394fc5",
+      "size": 28757187,
+      "lfs": {
+        "sha256": "06338eefac9a9214e7010c2597a7642768f7e11b3718ebd2d9247e1207d914dd",
+        "size": 28757187,
+        "pointerSize": 133
+      }
+    },
+    {
+      "rfilename": "train_20k.csv",
+      "blobId": "fbc7fe842542f3fb1e4b3115a012ff86506826dd",
+      "size": 5751563
+    },
+    {
+      "rfilename": "train_4k.csv",
+      "blobId": "f5061c81adf693d21e798badd05828d9db05ad80",
+      "size": 1151247
+    }
+  ],
+  "spaces": [],
+  "createdAt": "2026-06-07T06:29:04.000Z",
+  "usedStorage": 28189748811
+}

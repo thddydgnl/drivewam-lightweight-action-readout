@@ -1,0 +1,7 @@
+{
+  "stage": "verified",
+  "backend": "vendored",
+  "scored": 640,
+  "coverage": 1.0,
+  "failures": 0
+}

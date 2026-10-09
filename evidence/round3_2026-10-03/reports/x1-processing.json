@@ -1,0 +1,9 @@
+{
+  "split": "navtest_dev",
+  "samples": 16000,
+  "manifest_sha256": "e8112574f6cfb9bc69a187cb19a41d32a1572781a3adbeb74f6fc32aa4137169",
+  "input_contains_future_pixels_or_labels": false,
+  "canonical_history_parity_checked": 16000,
+  "trajectory_cumsum_roundtrip_checked": 16000,
+  "completed_at_utc": "2026-10-02T18:25:43.406462+00:00"
+}

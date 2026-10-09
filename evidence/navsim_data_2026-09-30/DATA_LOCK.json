@@ -1,0 +1,457 @@
+{
+  "as_of": "2026-09-30T10:35:22.735788+00:00",
+  "status": "navtrain_pilot_prepared_and_real_B10_smoke_verified",
+  "workspace": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout",
+  "environment_lock_sha256": "df37059652ed6554027316d9ace64400a3826616dc536988ef2adf44eeb62fda",
+  "openscene_revision": "a76f840b65e972bc45e56c2adced897498e9a026",
+  "map_version": "nuplan-maps-v1.0",
+  "archive_files": [
+    {
+      "name": "nuplan-maps-v1.1.zip",
+      "bytes": 970997691,
+      "url": "https://motional-nuplan.s3-ap-northeast-1.amazonaws.com/public/nuplan-v1.1/nuplan-maps-v1.1.zip",
+      "etag": "\"0efaac6b7c603ae6f341021b35059bcc-116\"",
+      "publisher_sha256": null,
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/data/archives/nuplan-maps-v1.1.zip",
+      "sha256": "444860429f9a3bcf89a6459d683fa82eb9219aa259d8d9b8cdefdb37f0b56b05",
+      "publisher_sha256_verified": false,
+      "etag_verified_per_range": true,
+      "completed_at_utc": "2026-09-30T10:19:28.635649+00:00"
+    },
+    {
+      "name": "openscene_metadata_trainval.tgz",
+      "bytes": 7052210642,
+      "url": "https://huggingface.co/datasets/OpenDriveLab/OpenScene/resolve/a76f840b65e972bc45e56c2adced897498e9a026/openscene-v1.1/openscene_metadata_trainval.tgz?download=true",
+      "publisher_sha256": "193138ac68b29d977d4438a95dfda35a07ff4ad3efb1800b3ee47d6e1dcb3764",
+      "etag": null,
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/data/archives/openscene_metadata_trainval.tgz",
+      "sha256": "193138ac68b29d977d4438a95dfda35a07ff4ad3efb1800b3ee47d6e1dcb3764",
+      "publisher_sha256_verified": true,
+      "etag_verified_per_range": false,
+      "completed_at_utc": "2026-09-30T10:19:42.460929+00:00"
+    },
+    {
+      "name": "openscene_sensor_trainval_camera_3.tgz",
+      "bytes": 3856766877,
+      "url": "https://huggingface.co/datasets/OpenDriveLab/OpenScene/resolve/a76f840b65e972bc45e56c2adced897498e9a026/openscene-v1.1/openscene_sensor_trainval_camera/openscene_sensor_trainval_camera_3.tgz?download=true",
+      "publisher_sha256": "514d2342ddbf680baf14573dc91d94cec32d71be879792f9e89e58d9f6111617",
+      "etag": null,
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/data/archives/openscene_sensor_trainval_camera_3.tgz",
+      "sha256": "514d2342ddbf680baf14573dc91d94cec32d71be879792f9e89e58d9f6111617",
+      "publisher_sha256_verified": true,
+      "etag_verified_per_range": false,
+      "completed_at_utc": "2026-09-30T10:26:41.337043+00:00"
+    },
+    {
+      "name": "openscene_sensor_trainval_camera_86.tgz",
+      "bytes": 3716217298,
+      "url": "https://huggingface.co/datasets/OpenDriveLab/OpenScene/resolve/a76f840b65e972bc45e56c2adced897498e9a026/openscene-v1.1/openscene_sensor_trainval_camera/openscene_sensor_trainval_camera_86.tgz?download=true",
+      "publisher_sha256": "11cbae59278c3bd6c12fe5dd6075f002719d721b9301ee58bb1183e5465294ae",
+      "etag": null,
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/data/archives/openscene_sensor_trainval_camera_86.tgz",
+      "sha256": "11cbae59278c3bd6c12fe5dd6075f002719d721b9301ee58bb1183e5465294ae",
+      "publisher_sha256_verified": true,
+      "etag_verified_per_range": false,
+      "completed_at_utc": "2026-09-30T10:26:41.688749+00:00"
+    },
+    {
+      "name": "openscene_sensor_trainval_camera_169.tgz",
+      "bytes": 6360475387,
+      "url": "https://huggingface.co/datasets/OpenDriveLab/OpenScene/resolve/a76f840b65e972bc45e56c2adced897498e9a026/openscene-v1.1/openscene_sensor_trainval_camera/openscene_sensor_trainval_camera_169.tgz?download=true",
+      "publisher_sha256": "c5b64ca52fba2ee3064c49795e2424eb5f8b5d96b3aeeaa46e50a11f0bc0ee52",
+      "etag": null,
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/data/archives/openscene_sensor_trainval_camera_169.tgz",
+      "sha256": "c5b64ca52fba2ee3064c49795e2424eb5f8b5d96b3aeeaa46e50a11f0bc0ee52",
+      "publisher_sha256_verified": true,
+      "etag_verified_per_range": false,
+      "completed_at_utc": "2026-09-30T10:27:48.900661+00:00"
+    },
+    {
+      "name": "openscene_sensor_trainval_camera_126.tgz",
+      "bytes": 2591614847,
+      "url": "https://huggingface.co/datasets/OpenDriveLab/OpenScene/resolve/a76f840b65e972bc45e56c2adced897498e9a026/openscene-v1.1/openscene_sensor_trainval_camera/openscene_sensor_trainval_camera_126.tgz?download=true",
+      "publisher_sha256": "38af771727c94f9c5fb3575bd4b3281706b356c0eb72e9c9969fe44cb504c7ec",
+      "etag": null,
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/data/archives/openscene_sensor_trainval_camera_126.tgz",
+      "sha256": "38af771727c94f9c5fb3575bd4b3281706b356c0eb72e9c9969fe44cb504c7ec",
+      "publisher_sha256_verified": true,
+      "etag_verified_per_range": false,
+      "completed_at_utc": "2026-09-30T10:28:07.140248+00:00"
+    },
+    {
+      "name": "openscene_sensor_trainval_camera_23.tgz",
+      "bytes": 3508775313,
+      "url": "https://huggingface.co/datasets/OpenDriveLab/OpenScene/resolve/a76f840b65e972bc45e56c2adced897498e9a026/openscene-v1.1/openscene_sensor_trainval_camera/openscene_sensor_trainval_camera_23.tgz?download=true",
+      "publisher_sha256": "4556834c9d16b47b2323c3b1283e02a37303474631ed104c43dec78d302950f8",
+      "etag": null,
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/data/archives/openscene_sensor_trainval_camera_23.tgz",
+      "sha256": "4556834c9d16b47b2323c3b1283e02a37303474631ed104c43dec78d302950f8",
+      "publisher_sha256_verified": true,
+      "etag_verified_per_range": false,
+      "completed_at_utc": "2026-09-30T10:28:30.428946+00:00"
+    },
+    {
+      "name": "openscene_sensor_trainval_camera_68.tgz",
+      "bytes": 3366432810,
+      "url": "https://huggingface.co/datasets/OpenDriveLab/OpenScene/resolve/a76f840b65e972bc45e56c2adced897498e9a026/openscene-v1.1/openscene_sensor_trainval_camera/openscene_sensor_trainval_camera_68.tgz?download=true",
+      "publisher_sha256": "e8bab2d3ccc95ea0ee466cb74c76cfb0cd6f1e0914279286236d8dcf7ecc437c",
+      "etag": null,
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/data/archives/openscene_sensor_trainval_camera_68.tgz",
+      "sha256": "e8bab2d3ccc95ea0ee466cb74c76cfb0cd6f1e0914279286236d8dcf7ecc437c",
+      "publisher_sha256_verified": true,
+      "etag_verified_per_range": false,
+      "completed_at_utc": "2026-09-30T10:29:43.231968+00:00"
+    },
+    {
+      "name": "openscene_sensor_trainval_camera_142.tgz",
+      "bytes": 3125691047,
+      "url": "https://huggingface.co/datasets/OpenDriveLab/OpenScene/resolve/a76f840b65e972bc45e56c2adced897498e9a026/openscene-v1.1/openscene_sensor_trainval_camera/openscene_sensor_trainval_camera_142.tgz?download=true",
+      "publisher_sha256": "68ebe9acae8c339dc22f6b9edc0d2177de115785add33549765138b8b7c4ffea",
+      "etag": null,
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/data/archives/openscene_sensor_trainval_camera_142.tgz",
+      "sha256": "68ebe9acae8c339dc22f6b9edc0d2177de115785add33549765138b8b7c4ffea",
+      "publisher_sha256_verified": true,
+      "etag_verified_per_range": false,
+      "completed_at_utc": "2026-09-30T10:30:05.386355+00:00"
+    },
+    {
+      "name": "openscene_sensor_trainval_camera_145.tgz",
+      "bytes": 3768687977,
+      "url": "https://huggingface.co/datasets/OpenDriveLab/OpenScene/resolve/a76f840b65e972bc45e56c2adced897498e9a026/openscene-v1.1/openscene_sensor_trainval_camera/openscene_sensor_trainval_camera_145.tgz?download=true",
+      "publisher_sha256": "0c64073ef6ab9f1c96e35c51255994b49b2f13bc716ffcae14518f7d155a6582",
+      "etag": null,
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/data/archives/openscene_sensor_trainval_camera_145.tgz",
+      "sha256": "0c64073ef6ab9f1c96e35c51255994b49b2f13bc716ffcae14518f7d155a6582",
+      "publisher_sha256_verified": true,
+      "etag_verified_per_range": false,
+      "completed_at_utc": "2026-09-30T10:30:06.593583+00:00"
+    },
+    {
+      "name": "openscene_sensor_trainval_camera_144.tgz",
+      "bytes": 2189136850,
+      "url": "https://huggingface.co/datasets/OpenDriveLab/OpenScene/resolve/a76f840b65e972bc45e56c2adced897498e9a026/openscene-v1.1/openscene_sensor_trainval_camera/openscene_sensor_trainval_camera_144.tgz?download=true",
+      "publisher_sha256": "84646ce5ded6196754c81137f4ad205f0d98ce4f0bc1f5e11b5121dfcc444e17",
+      "etag": null,
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/data/archives/openscene_sensor_trainval_camera_144.tgz",
+      "sha256": "84646ce5ded6196754c81137f4ad205f0d98ce4f0bc1f5e11b5121dfcc444e17",
+      "publisher_sha256_verified": true,
+      "etag_verified_per_range": false,
+      "completed_at_utc": "2026-09-30T10:31:23.325477+00:00"
+    },
+    {
+      "name": "openscene_sensor_trainval_camera_199.tgz",
+      "bytes": 4210008448,
+      "url": "https://huggingface.co/datasets/OpenDriveLab/OpenScene/resolve/a76f840b65e972bc45e56c2adced897498e9a026/openscene-v1.1/openscene_sensor_trainval_camera/openscene_sensor_trainval_camera_199.tgz?download=true",
+      "publisher_sha256": "e5ec4313c2ceef7c535b9c62e90e1302838adb776fc5815d6fdd2239df3a6227",
+      "etag": null,
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/data/archives/openscene_sensor_trainval_camera_199.tgz",
+      "sha256": "e5ec4313c2ceef7c535b9c62e90e1302838adb776fc5815d6fdd2239df3a6227",
+      "publisher_sha256_verified": true,
+      "etag_verified_per_range": false,
+      "completed_at_utc": "2026-09-30T10:31:48.815837+00:00"
+    },
+    {
+      "name": "openscene_sensor_trainval_camera_134.tgz",
+      "bytes": 3341502479,
+      "url": "https://huggingface.co/datasets/OpenDriveLab/OpenScene/resolve/a76f840b65e972bc45e56c2adced897498e9a026/openscene-v1.1/openscene_sensor_trainval_camera/openscene_sensor_trainval_camera_134.tgz?download=true",
+      "publisher_sha256": "4ea8161bdbe42bd8f7fc0103a70f0e9ebcaa512df47170556b24c9847e47400c",
+      "etag": null,
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/data/archives/openscene_sensor_trainval_camera_134.tgz",
+      "sha256": "4ea8161bdbe42bd8f7fc0103a70f0e9ebcaa512df47170556b24c9847e47400c",
+      "publisher_sha256_verified": true,
+      "etag_verified_per_range": false,
+      "completed_at_utc": "2026-09-30T10:31:56.929154+00:00"
+    },
+    {
+      "name": "openscene_sensor_trainval_camera_146.tgz",
+      "bytes": 1772587391,
+      "url": "https://huggingface.co/datasets/OpenDriveLab/OpenScene/resolve/a76f840b65e972bc45e56c2adced897498e9a026/openscene-v1.1/openscene_sensor_trainval_camera/openscene_sensor_trainval_camera_146.tgz?download=true",
+      "publisher_sha256": "86a20b3ef6a5b1e2e3841a1d02dc0aafc1e2aec8c75b3a8172715df7ad7e99a9",
+      "etag": null,
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/data/archives/openscene_sensor_trainval_camera_146.tgz",
+      "sha256": "86a20b3ef6a5b1e2e3841a1d02dc0aafc1e2aec8c75b3a8172715df7ad7e99a9",
+      "publisher_sha256_verified": true,
+      "etag_verified_per_range": false,
+      "completed_at_utc": "2026-09-30T10:32:05.978775+00:00"
+    }
+  ],
+  "archive_download_bytes": 49831105057,
+  "reports": {
+    "navsim-download-manifest": {
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/reports/navsim-download-manifest.json",
+      "sha256": "39d8ef7ecbdf23c44c68f8a2f20a769f96d0631ffed26aa6e8ff956260eb3dc0"
+    },
+    "navsim-maps-extraction": {
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/reports/navsim-maps-extraction.json",
+      "sha256": "355e9ddcd4044300accbe81bd03519cbb7308078e1aceaf5e861e96ee841e92e"
+    },
+    "navsim-metadata-extraction": {
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/reports/navsim-metadata-extraction.json",
+      "sha256": "024a4252a48b7c57c4f7128cf730a8c9f31323acffcb5e59ac3fdd7b44dc03a1"
+    },
+    "navsim-scene-index": {
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/reports/navsim-scene-index.json",
+      "sha256": "54a371448e15e19ce8a2be5fe7e8aa9ccd36ffa255c798943853ce9a9ad9c39f"
+    },
+    "navsim-pilot-archive-selection": {
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/reports/navsim-pilot-archive-selection.json",
+      "sha256": "f121a6ef42d71e6ba7727b0794a0f96d87cb34a539a9d543e800ca4c779a78f0"
+    },
+    "navsim-pilot-selection": {
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/reports/navsim-pilot-selection.json",
+      "sha256": "5d7df334f1532afa215b23930c4b771909c181bb99690b81235bd561d4cdf07b"
+    },
+    "navsim-camera-extraction": {
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/reports/navsim-camera-extraction.json",
+      "sha256": "acdcbddfd7f918360a664b44a99e94a2bec1aa8f3cc31bfa4bfcadcf56ef0c8c"
+    },
+    "navsim-pilot-processing": {
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/reports/navsim-pilot-processing.json",
+      "sha256": "e2918dc1bac9dbbc88e0c35b81b43a4175efc431bb56ad3cc53317761b942b18"
+    },
+    "navsim-devval-cache": {
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/reports/navsim-devval-cache.json",
+      "sha256": "d6e8768e02c8e40c30e45afd218ba99e0ef2d34d82c8342148b23b0417ab1eac"
+    },
+    "navsim-reference-parity": {
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/reports/navsim-reference-parity.json",
+      "sha256": "907dc96111432d415ed65d09388e0e9d0b9e117cf30f5094948e2bcffe058c4d"
+    },
+    "navsim-real-b10-smoke": {
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/reports/navsim-real-b10-smoke.json",
+      "sha256": "055e529f663a29f4b7f3e79249228b925350d793a545d1f553eb5f28d5837f64"
+    },
+    "navsim-s3-superseded": {
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/reports/navsim-s3-superseded.json",
+      "sha256": "c97f7d9ea0f7a0b51a1c7d6bf99ba12bb89fe2b0f3dfb0e699c33acf9c1432a5"
+    }
+  },
+  "files": [
+    {
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/scripts/remote_navsim_download.py",
+      "bytes": 8482,
+      "sha256": "b6ce7ac112ec551ca1bb49a2a325cd4e62f3491583c7d8ff83a3c6f483e4624b"
+    },
+    {
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/scripts/remote_navsim_extract.py",
+      "bytes": 8632,
+      "sha256": "d33820c9fb07e79e8267aebac7f456471e3f9e22fa18b2f3db950c0266b46dbd"
+    },
+    {
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/scripts/remote_navsim_select.py",
+      "bytes": 3898,
+      "sha256": "2b2244f19fd1ae9180c8ca5e08aee22250e8f786eb74c1db2c3d5eb7242a6d0c"
+    },
+    {
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/scripts/remote_navsim_pilot.py",
+      "bytes": 13515,
+      "sha256": "91e38f9852a21c73beda0bf59e9095d1a57d9e9b20f86bd49538d1d3a19dee1e"
+    },
+    {
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/scripts/remote_navsim_metric_cache.py",
+      "bytes": 2830,
+      "sha256": "cabbc716a830a9d323662fd8c54a8b508bf2066dc1dbd8bd6b272bb145b25970"
+    },
+    {
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/scripts/navsim_current_dataset.py",
+      "bytes": 3462,
+      "sha256": "d2dd1561b96a84c6753a7a2c8f3d8b1ee4a09d0dbf4b136825bb5879d7383299"
+    },
+    {
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/scripts/remote_navsim_reference.py",
+      "bytes": 2954,
+      "sha256": "8f83bde8fabdb29196a2161f4dc4d388c65b9d7fc5334305e519c0f5499fe365"
+    },
+    {
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/scripts/remote_navsim_real_smoke.py",
+      "bytes": 7942,
+      "sha256": "b169bb434bedc4ce690e98ca37e9cac9dc38b5927d31aa647a821323c656757f"
+    },
+    {
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/scripts/remote_navsim_finalize.py",
+      "bytes": 5452,
+      "sha256": "9defa39e29eef0f5ae1895cecebcfc35224cbba6b84161cefba82242a3f3fac9"
+    },
+    {
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/splits/devval256-tokens.txt",
+      "bytes": 4352,
+      "sha256": "ee8c6105ab7082f2a6d0f43be18c67a322d6e01f3fabbdeabfc298efcdff5d5e"
+    },
+    {
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/splits/devval256.yaml",
+      "bytes": 5533,
+      "sha256": "ac5286523aeaca0364a6899b790a8d9493f873c455acb0f7b06e5537477ce359"
+    },
+    {
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/splits/navtrain-log-split-seed17.json",
+      "bytes": 55203,
+      "sha256": "176fcd62c3a8c051c63cdd410a642a19c61c421f660d1aa97eecf220632f6236"
+    },
+    {
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/splits/navtrain-scene-index.jsonl",
+      "bytes": 71124335,
+      "sha256": "1fdf73154ba4d66b1cb9c6d326c80ddd40e714542de7826ee8865442e91765ad"
+    },
+    {
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/splits/pilot-head-train-tokens.txt",
+      "bytes": 68000,
+      "sha256": "c2bc3d8185004741497df13a4d7accbec6efeaba0d3d140edbf14380af3d4f29"
+    },
+    {
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/splits/pilot-head-train.yaml",
+      "bytes": 78643,
+      "sha256": "1bffcf4543528edd5b6f815e36bbd0287f2001dc167f1a6c10a88e422ff77fc9"
+    },
+    {
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/splits/pilot-head-val-tokens.txt",
+      "bytes": 17000,
+      "sha256": "ac60cc05e2b428e84fc4d8e278408601d5576322c63c8d7d82ff61aade6ca104"
+    },
+    {
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/splits/pilot-head-val.yaml",
+      "bytes": 19671,
+      "sha256": "f22bfa982edd27f0a9d525e2c958a0bb07bf18a5d86e578b8b13c2301c928d41"
+    },
+    {
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/splits/pilot-manifest.jsonl",
+      "bytes": 4880306,
+      "sha256": "a2847614c4c6a9886018d532d56b6230b3d2f2ea35c6d300c949f92eb6d176c4"
+    },
+    {
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/splits/smoke32-tokens.txt",
+      "bytes": 544,
+      "sha256": "254ee34aaa8af3094b15d1137e9c1281d873d79d4def9681340e9509803173ec"
+    },
+    {
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/splits/smoke32.yaml",
+      "bytes": 1769,
+      "sha256": "9cb2ccc1de4fb086449a0a29728b037dbdb693bbeb1e059ef885dca908f15aeb"
+    },
+    {
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/reports/navsim-download-manifest.json",
+      "bytes": 11101,
+      "sha256": "39d8ef7ecbdf23c44c68f8a2f20a769f96d0631ffed26aa6e8ff956260eb3dc0"
+    },
+    {
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/reports/navsim-maps-extraction.json",
+      "bytes": 2576,
+      "sha256": "355e9ddcd4044300accbe81bd03519cbb7308078e1aceaf5e861e96ee841e92e"
+    },
+    {
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/reports/navsim-metadata-extraction.json",
+      "bytes": 306274,
+      "sha256": "024a4252a48b7c57c4f7128cf730a8c9f31323acffcb5e59ac3fdd7b44dc03a1"
+    },
+    {
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/reports/navsim-scene-index.json",
+      "bytes": 60162,
+      "sha256": "54a371448e15e19ce8a2be5fe7e8aa9ccd36ffa255c798943853ce9a9ad9c39f"
+    },
+    {
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/reports/navsim-pilot-archive-selection.json",
+      "bytes": 4064,
+      "sha256": "f121a6ef42d71e6ba7727b0794a0f96d87cb34a539a9d543e800ca4c779a78f0"
+    },
+    {
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/reports/navsim-pilot-selection.json",
+      "bytes": 7354,
+      "sha256": "5d7df334f1532afa215b23930c4b771909c181bb99690b81235bd561d4cdf07b"
+    },
+    {
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/reports/navsim-camera-extraction.json",
+      "bytes": 1887,
+      "sha256": "acdcbddfd7f918360a664b44a99e94a2bec1aa8f3cc31bfa4bfcadcf56ef0c8c"
+    },
+    {
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/reports/navsim-pilot-processing.json",
+      "bytes": 1617,
+      "sha256": "e2918dc1bac9dbbc88e0c35b81b43a4175efc431bb56ad3cc53317761b942b18"
+    },
+    {
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/reports/navsim-devval-cache.json",
+      "bytes": 6543,
+      "sha256": "d6e8768e02c8e40c30e45afd218ba99e0ef2d34d82c8342148b23b0417ab1eac"
+    },
+    {
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/reports/navsim-reference-parity.json",
+      "bytes": 559,
+      "sha256": "907dc96111432d415ed65d09388e0e9d0b9e117cf30f5094948e2bcffe058c4d"
+    },
+    {
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/reports/navsim-real-b10-smoke.json",
+      "bytes": 2648,
+      "sha256": "055e529f663a29f4b7f3e79249228b925350d793a545d1f553eb5f28d5837f64"
+    },
+    {
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/reports/navsim-s3-superseded.json",
+      "bytes": 567,
+      "sha256": "c97f7d9ea0f7a0b51a1c7d6bf99ba12bb89fe2b0f3dfb0e699c33acf9c1432a5"
+    },
+    {
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/reports/navsim-data-LICENSE.txt",
+      "bytes": 25319,
+      "sha256": "1a218286e733f6d6135fc5698d614cda2be94ea096f6eee280278458e570636a"
+    },
+    {
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/data/maps/LICENSE",
+      "bytes": 25319,
+      "sha256": "1a218286e733f6d6135fc5698d614cda2be94ea096f6eee280278458e570636a"
+    },
+    {
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/reports/openscene-repository.json",
+      "bytes": 222262,
+      "sha256": "551a33903e39685011bbcc1469c01c6999bf2b016f20b029ad94ae4bb3002a2f"
+    },
+    {
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/reports/openscene_sensor_trainval_0-199.json",
+      "bytes": 68352,
+      "sha256": "52ee3d5eb7c4b7e3681bea6fe410458d3b30a2c8d480ac9882d6c6f5a6039bf2"
+    },
+    {
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/reports/openscene_sensor_mini_0-31.json",
+      "bytes": 4088,
+      "sha256": "7c8a6cded3b688d252c070879afc008101c0f3e1576a3ad8de696748451c6075"
+    },
+    {
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/reports/navsim-camera-download-specs.json",
+      "bytes": 5033,
+      "sha256": "251733c0d1e958a17e5367827c59f25b93730cc393f58179b77463ab741983f5"
+    },
+    {
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/reports/navsim-pilot-required-images.json",
+      "bytes": 372963,
+      "sha256": "90c94510e6dde009ae81b9abf6a72faecb05620e2d5590131875ec660a83fc27"
+    }
+  ],
+  "prepared": {
+    "navtrain_metadata_logs": 1192,
+    "navtrain_metadata_scenes": 103288,
+    "head_train": 4000,
+    "head_val": 1000,
+    "smoke_train": 32,
+    "devval": 256,
+    "devval_metric_cache": 256,
+    "reference_fixtures": 1,
+    "real_B10_smoke_scenes": 1,
+    "navtest_data_or_scores_used": false
+  },
+  "split": {
+    "seed": 17,
+    "unit": "log_name",
+    "full_head_train_logs": 1072,
+    "full_head_val_logs": 120,
+    "train_val_log_overlap": 0,
+    "train_val_token_overlap": 0
+  },
+  "manifest_sha256": "a2847614c4c6a9886018d532d56b6230b3d2f2ea35c6d300c949f92eb6d176c4",
+  "discarded_superseded_partial_bytes": 11491344384,
+  "disk_free_bytes": 1049157599232,
+  "scope": "Full navtrain metadata and a fixed 4k/1k pilot. Complete full-train RGB acquisition is pending.",
+  "remaining": [
+    "B10/B05/opt quality comparison on dev/head-val",
+    "P01-P10 remaining research evaluator/feature/scoring integration",
+    "Head implementation, feature extraction and training",
+    "Remaining full navtrain camera data and locked navtest data acquisition",
+    "Storage retention across container replacement"
+  ]
+}

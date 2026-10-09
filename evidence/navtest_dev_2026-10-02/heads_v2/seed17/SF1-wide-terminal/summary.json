@@ -1,0 +1,22 @@
+{
+  "model": "SF1-wide-terminal",
+  "config": {
+    "kind": "sf1-wide",
+    "phase": "terminal"
+  },
+  "seed": 17,
+  "parameters": 9939155,
+  "epochs": 40,
+  "steps": 5000,
+  "checkpoint": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/heads_navtest_dev_2026-10-02/seed17/SF1-wide-terminal/epoch-040.safetensors",
+  "checkpoint_sha256": "4370b28f878ba2462830303e76461f20a7d06c74ca313564525a1e6146c96094",
+  "gradient_gate": {
+    "all_parameter_gradients_finite": true,
+    "query_gradient_norms": {
+      "poolers.0.query": 0.0014727158704772592
+    },
+    "backbone_present": false
+  },
+  "elapsed_seconds": 103.96064279787242,
+  "completed_at_utc": "2026-10-02T08:24:45.971491+00:00"
+}

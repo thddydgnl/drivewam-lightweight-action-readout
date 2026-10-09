@@ -1,0 +1,6 @@
+{
+  "backend": "nccl",
+  "world_size": 2,
+  "all_reduce_result": 3.0,
+  "passed": true
+}

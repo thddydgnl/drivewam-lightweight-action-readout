@@ -1,0 +1,8 @@
+264263920 /home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/target_diagnostic_2026-10-01/head_train-seed1-0000.safetensors
+264263920 /home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/target_diagnostic_2026-10-01/head_train-seed0-0000.safetensors
+264263920 /home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/target_diagnostic_2026-10-01/head_train-seed1-0384.safetensors
+264263920 /home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/target_diagnostic_2026-10-01/head_train-seed0-0256.safetensors
+264263920 /home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/target_diagnostic_2026-10-01/head_train-seed0-0384.safetensors
+264263920 /home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/target_diagnostic_2026-10-01/head_train-seed1-0256.safetensors
+264263920 /home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/target_diagnostic_2026-10-01/head_train-seed0-0128.safetensors
+264263920 /home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/target_diagnostic_2026-10-01/head_train-seed1-0128.safetensors

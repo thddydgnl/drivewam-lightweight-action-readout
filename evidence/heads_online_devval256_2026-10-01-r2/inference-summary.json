@@ -1,0 +1,27 @@
+{
+  "coverage_each_model": 1.0,
+  "predictions": 3584,
+  "timing_count": {
+    "ego-only": 768,
+    "linear-current": 768,
+    "linear-first": 768,
+    "linear-terminal": 768,
+    "FMLP-current": 768,
+    "FMLP-first": 768,
+    "FMLP-terminal": 768,
+    "SF1-terminal": 768,
+    "SF1-wide-terminal": 768,
+    "SF3-current": 768,
+    "SF3-first": 768,
+    "SF3-terminal": 768,
+    "B10": 768,
+    "B02-opt": 768
+  },
+  "repeated_predictions_bitwise_equal": true,
+  "all_outputs_finite": true,
+  "online_cache_parity_passed": true,
+  "prediction_index_sha256": "35c39f2e322c90ecdd6c2ea17d7287959d6695d24399b9aa0fb4ec0e6df4ea31",
+  "timings_sha256": "7f6b0d4a58ed882d96a8dd7c704c4dfe03002bb50278f3515cd36a14108023d9",
+  "telemetry_after": "0, GPU-a908b59a-6e7f-31dc-6fb0-ce6d61e0cf2c, NVIDIA RTX A5000, 13614 MiB, 2 %, 62, 1875 MHz, 184.31 W\n1, GPU-0639afab-9af0-2aee-b618-2ae10da61b95, NVIDIA RTX A5000, 2 MiB, 0 %, 29, 0 MHz, 16.02 W",
+  "completed_at_utc": "2026-10-01T11:26:13.618341+00:00"
+}

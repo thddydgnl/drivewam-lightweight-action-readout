@@ -1,0 +1,74 @@
+{"stage":"wait_inputs_and_cache","utc":"2026-10-03T12:55:40Z"}
+{"stage":"inference","utc":"2026-10-03T13:24:42Z"}
+{"stage":"assemble_and_score","utc":"2026-10-03T14:56:50Z"}
+assembled ['B02_opt', 'B10', 'student_seed17', 'student_seed29']
+{"predictions": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/navtest_final_2026-10-03/predictions/B02-opt.npz", "prediction_sha256": "319f80bd9fead2d62d9ddae57d50556ef99a3b99d25d7fe24d6905bdd58be56d", "scores_sha256": "4414d78b5f388d7a9320bf990e966d2d20b2dcf78d0d028b40bd9bd8903c4b23", "scenes": 8896, "coverage": 1.0, "failures": 0, "pdms": 89.65084689708955, "ade_4s_m": 0.5637445688384762, "official_navsim_commit": "3e8291bfa89ff247231e0227778840cd0a036896", "split": "navtest-final"}
+{"predictions": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/navtest_final_2026-10-03/predictions/B10.npz", "prediction_sha256": "42c936a4d8746a1834ae9a0dab78108ce984d4cdf548710b86b29dee77cc51c8", "scores_sha256": "d2451fd5c179e9a36ac5814d4ce8bd39d9551116e9c6377c1e44ddcfd5b6c226", "scenes": 8896, "coverage": 1.0, "failures": 0, "pdms": 89.66771139903518, "ade_4s_m": 0.5639365812816254, "official_navsim_commit": "3e8291bfa89ff247231e0227778840cd0a036896", "split": "navtest-final"}
+{"predictions": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/navtest_final_2026-10-03/predictions/student-seed17.npz", "prediction_sha256": "3c40f4f4596e8b9ce8999af1506d3a44dcef1676bbce2f1116d8d603173f7953", "scores_sha256": "ac58b3fdcb296d5570a75a868ec87768a7220992f523c9ab750acd71a0b029bc", "scenes": 8896, "coverage": 1.0, "failures": 0, "pdms": 89.24842772975612, "ade_4s_m": 0.5788714696295671, "official_navsim_commit": "3e8291bfa89ff247231e0227778840cd0a036896", "split": "navtest-final"}
+{"predictions": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/navtest_final_2026-10-03/predictions/student-seed29.npz", "prediction_sha256": "676ea700581b7163325e3e68235e0a845b401f79ad467afba30b84635354fec7", "scores_sha256": "bcff6b6d7d2d9a9cab73fca88e991a0929d72b24b9088020f19db56261656d02", "scenes": 8896, "coverage": 1.0, "failures": 0, "pdms": 89.49491636320185, "ade_4s_m": 0.57747502192296, "official_navsim_commit": "3e8291bfa89ff247231e0227778840cd0a036896", "split": "navtest-final"}
+{"stage":"latency","utc":"2026-10-03T15:00:30Z"}
+The config attributes {'clip_output': False} were passed to AutoencoderKLWan, but are not expected and will be ignored. Please verify your config.json configuration file.
+/usr/lib/python3.10/contextlib.py:103: FutureWarning: `torch.backends.cuda.sdp_kernel()` is deprecated. In the future, this context manager will be removed. Please see `torch.nn.attention.sdpa_kernel()` for the new context manager, with updated signature.
+  self.gen = func(*args, **kwds)
+latency done
+B10            p50   797.9 p95   804.9  repeat range  0.1%  low/high load p50 798.1/797.7
+B02-opt        p50   420.7 p95   424.8  repeat range  0.2%  low/high load p50 420.8/420.6
+student        p50   189.0 p95   192.2  repeat range  0.2%  low/high load p50 189.2/188.8
+== vs B10
+  B02-opt        ratio 0.527 repeats [0.527, 0.527, 0.527] gate pass p95 ratio 0.528
+  student        ratio 0.237 repeats [0.237, 0.237, 0.237] gate pass p95 ratio 0.239
+== vs B02-opt
+  B10            ratio 1.897 repeats [1.898, 1.897, 1.896] gate fail p95 ratio 1.895
+  student        ratio 0.449 repeats [0.449, 0.449, 0.449] gate pass p95 ratio 0.452
+host load1 {'median': 11.75, 'min': 10.68, 'max': 19.9} sm clock {'min': 0, 'max': 0}
+B10              PDMS 89.67 NC 98.12 DAC 97.97 EP 83.83 ADE 0.564
+B02-opt          PDMS 89.65 NC 98.15 DAC 97.93 EP 83.81 ADE 0.564
+student-seed17   PDMS 89.25 NC 98.27 DAC 97.46 EP 83.36 ADE 0.579
+student-seed29   PDMS 89.49 NC 98.30 DAC 97.62 EP 83.52 ADE 0.577
+  student-seed17 - B10         PDMS -0.42 [-0.76,-0.08] NC +0.15 DAC -0.51
+  student-seed17 - B02-opt     PDMS -0.40 [-0.74,-0.07] NC +0.12 DAC -0.47
+  student-seed29 - B10         PDMS -0.17 [-0.56,+0.27] NC +0.17 DAC -0.35
+  student-seed29 - B02-opt     PDMS -0.16 [-0.54,+0.29] NC +0.15 DAC -0.31
+  B02-opt - B10                PDMS -0.02 [-0.09,+0.06] NC +0.03 DAC -0.03
+{
+ "dac_fail_scenes": {
+  "student-seed17": 226,
+  "student-seed29": 212,
+  "B02-opt": 184,
+  "B10": 181
+ },
+ "verdict": {
+  "seed17": {
+   "checks": {
+    "pdms_ci_low_vs_B10>=-2": true,
+    "nc_drop_vs_B10<=0.5": true,
+    "dac_drop_vs_B10<=0.5": false,
+    "pdms_ci_low_vs_B02-opt>=-2": true,
+    "nc_drop_vs_B02-opt<=0.5": true,
+    "dac_drop_vs_B02-opt<=0.5": true,
+    "p50_ratio_vs_B*<=0.80": true
+   },
+   "pass": false
+  },
+  "seed29": {
+   "checks": {
+    "pdms_ci_low_vs_B10>=-2": true,
+    "nc_drop_vs_B10<=0.5": true,
+    "dac_drop_vs_B10<=0.5": true,
+    "pdms_ci_low_vs_B02-opt>=-2": true,
+    "nc_drop_vs_B02-opt<=0.5": true,
+    "dac_drop_vs_B02-opt<=0.5": true,
+    "p50_ratio_vs_B*<=0.80": true
+   },
+   "pass": true
+  }
+ },
+ "final_pass": false,
+ "p50_ratio": 0.4493343022273796,
+ "repeats": {
+  "0": 0.44925929821470134,
+  "1": 0.4493413675370478,
+  "2": 0.4493573548412039
+ }
+}
+{"stage":"done","utc":"2026-10-03T15:19:09Z"}

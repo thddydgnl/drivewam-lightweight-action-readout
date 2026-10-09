@@ -1,0 +1,20 @@
+{
+  "model": "FMLP-current",
+  "config": {
+    "kind": "fmlp",
+    "phase": "current"
+  },
+  "seed": 17,
+  "parameters": 2589443,
+  "epochs": 40,
+  "steps": 5000,
+  "checkpoint": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/heads_navtest_dev_2026-10-02/seed17/FMLP-current/epoch-040.safetensors",
+  "checkpoint_sha256": "6f95c6594356584b9fba920ad8979c48cb7e317afb575d2323a193e66427ba41",
+  "gradient_gate": {
+    "all_parameter_gradients_finite": true,
+    "query_gradient_norms": {},
+    "backbone_present": false
+  },
+  "elapsed_seconds": 35.34083637967706,
+  "completed_at_utc": "2026-10-02T08:20:08.282517+00:00"
+}

@@ -1,0 +1,13 @@
+{
+  "name": "train4k-normal-first-clipframe-seed29",
+  "frame": "clip",
+  "train_rows": 19996,
+  "epochs": 40,
+  "steps": 25000,
+  "checkpoint_sha256": "4a73fa35dc045f7e871b9aba9d3d1f6e233d552cbfd2b3f28c03a258f4e8abf1",
+  "predictions": {
+    "dev": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/pai_heads_2026-10-04/train4k-normal-first-clipframe-seed29/pred-dev.npz"
+  },
+  "elapsed_s": 1033.530077058822,
+  "utc": "2026-10-04T13:47:53.426809+00:00"
+}

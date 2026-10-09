@@ -1,0 +1,17 @@
+{
+  "data": "4k",
+  "kind": "R",
+  "phase": "first",
+  "seed": 17,
+  "train_scenes": 4000,
+  "parameters": 9978163,
+  "epochs": 40,
+  "steps": 5000,
+  "checkpoint": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/heads_v3_2026-10-03/4k-R-first-seed17/epoch-040.safetensors",
+  "checkpoint_sha256": "0c928b25287263758d59d1a21ecf4d68c248cd81c2a7fd0134d2efecf46abd5b",
+  "anchors_K": null,
+  "elapsed_seconds": 157.33949656412005,
+  "protocol": "pre-registration \u00a76 (round 3)",
+  "feature_integrity": "pilot/dev shards verified by SHA-256 on 2026-10-01/02 (size re-checked); X1 shards SHA-256 verified at load",
+  "completed_at_utc": "2026-10-02T17:54:36.477897+00:00"
+}

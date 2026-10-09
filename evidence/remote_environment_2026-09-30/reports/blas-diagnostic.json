@@ -1,0 +1,52 @@
+[
+  {
+    "forced_coretype": null,
+    "blas": [
+      {
+        "user_api": "openmp",
+        "internal_api": "openmp",
+        "num_threads": 1,
+        "prefix": "libgomp",
+        "filepath": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/.venvs/drivewam-scorer/lib/python3.9/site-packages/torch/lib/libgomp-a34b3233.so.1",
+        "version": null
+      },
+      {
+        "user_api": "blas",
+        "internal_api": "openblas",
+        "num_threads": 1,
+        "prefix": "libopenblas",
+        "filepath": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/.venvs/drivewam-scorer/lib/python3.9/site-packages/numpy.libs/libopenblas64_p-r0-742d56dc.3.20.so",
+        "version": "0.3.20",
+        "threading_layer": "pthreads",
+        "architecture": "Cooperlake"
+      }
+    ],
+    "pinv_identity_max_abs_error": 1.0,
+    "pinv_spd_vs_torch_max_abs_error": 4.680825239413345
+  },
+  {
+    "forced_coretype": "Haswell",
+    "blas": [
+      {
+        "user_api": "openmp",
+        "internal_api": "openmp",
+        "num_threads": 1,
+        "prefix": "libgomp",
+        "filepath": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/.venvs/drivewam-scorer/lib/python3.9/site-packages/torch/lib/libgomp-a34b3233.so.1",
+        "version": null
+      },
+      {
+        "user_api": "blas",
+        "internal_api": "openblas",
+        "num_threads": 1,
+        "prefix": "libopenblas",
+        "filepath": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/.venvs/drivewam-scorer/lib/python3.9/site-packages/numpy.libs/libopenblas64_p-r0-742d56dc.3.20.so",
+        "version": "0.3.20",
+        "threading_layer": "pthreads",
+        "architecture": "Haswell"
+      }
+    ],
+    "pinv_identity_max_abs_error": 0.0,
+    "pinv_spd_vs_torch_max_abs_error": 1.4311468676808659e-15
+  }
+]

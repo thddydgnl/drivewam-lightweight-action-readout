@@ -1,0 +1,20 @@
+{
+  "model": "FMLP-terminal",
+  "config": {
+    "kind": "fmlp",
+    "phase": "terminal"
+  },
+  "seed": 29,
+  "parameters": 2589443,
+  "epochs": 40,
+  "steps": 5000,
+  "checkpoint": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/heads_navtest_dev_2026-10-02/seed29/FMLP-terminal/epoch-040.safetensors",
+  "checkpoint_sha256": "99039766a342b2dc47a07a0921d7336ed314e0fd6890358423751a0c421c2ce2",
+  "gradient_gate": {
+    "all_parameter_gradients_finite": true,
+    "query_gradient_norms": {},
+    "backbone_present": false
+  },
+  "elapsed_seconds": 33.263821233063936,
+  "completed_at_utc": "2026-10-02T08:21:16.849174+00:00"
+}

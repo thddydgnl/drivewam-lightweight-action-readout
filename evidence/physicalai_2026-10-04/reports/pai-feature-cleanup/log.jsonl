@@ -1,0 +1,2 @@
+{"deleted": "caches/pai-features/train4k-nohist", "size_gb": 39, "reason": "diagnostic train features; heads trained (runs/pai_heads_2026-10-04), user approved 2026-10-05", "utc": "2026-10-04T15:24:32Z"}
+{"deleted": "caches/pai-features/train4k-fixedprompt", "size_gb": 39, "reason": "diagnostic train features; heads trained (runs/pai_heads_2026-10-04), user approved 2026-10-05", "utc": "2026-10-04T15:24:37Z"}

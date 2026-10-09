@@ -1,0 +1,98 @@
+{
+  "model": "linear-terminal",
+  "config": {
+    "kind": "linear",
+    "phase": "terminal"
+  },
+  "parameters": 74232,
+  "train_seed": 17,
+  "protocol_sha256": "b2f795bcd03c76cd922909e43d2aa47407380b9aa3498ba95fea6931db67e4e2",
+  "epochs": 30,
+  "steps": 3750,
+  "elapsed_seconds": 129.64525894261897,
+  "best_by_pilot_PDMS": {
+    "epoch": 30,
+    "checkpoint": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/head_pilot_2026-10-01/linear-terminal/epoch-030.safetensors",
+    "checkpoint_sha256": "ee48b68c136b8df5f2292344ce3af59a6a5d3db24f3dbb89d341f1cf9608a188",
+    "prediction_path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/head_pilot_2026-10-01/linear-terminal/epoch-030-predictions.npz",
+    "scores_path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/head_pilot_2026-10-01/linear-terminal/epoch-030-scores.csv",
+    "pilot1000_pdms": 77.56654606260678,
+    "dev256_pdms": 78.10194596150836,
+    "ade_4s_m": 1.0568888187408447,
+    "fde_4s_m": 1.8259085416793823
+  },
+  "score_checks": [
+    {
+      "epoch": 5,
+      "checkpoint": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/head_pilot_2026-10-01/linear-terminal/epoch-005.safetensors",
+      "checkpoint_sha256": "f94e6268310466b288421224696b09e3f48f7691107a6c717af8c6deda179e41",
+      "prediction_path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/head_pilot_2026-10-01/linear-terminal/epoch-005-predictions.npz",
+      "scores_path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/head_pilot_2026-10-01/linear-terminal/epoch-005-scores.csv",
+      "pilot1000_pdms": 66.46239262277783,
+      "dev256_pdms": 67.52586818121952,
+      "ade_4s_m": 1.8550366163253784,
+      "fde_4s_m": 3.0598831176757812
+    },
+    {
+      "epoch": 10,
+      "checkpoint": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/head_pilot_2026-10-01/linear-terminal/epoch-010.safetensors",
+      "checkpoint_sha256": "5c42263ce046618465472ed47355117ab3060b82d1e8466532fff689504a9e63",
+      "prediction_path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/head_pilot_2026-10-01/linear-terminal/epoch-010-predictions.npz",
+      "scores_path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/head_pilot_2026-10-01/linear-terminal/epoch-010-scores.csv",
+      "pilot1000_pdms": 71.04472724621989,
+      "dev256_pdms": 69.2381037739886,
+      "ade_4s_m": 1.4876179695129395,
+      "fde_4s_m": 2.4875664710998535
+    },
+    {
+      "epoch": 15,
+      "checkpoint": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/head_pilot_2026-10-01/linear-terminal/epoch-015.safetensors",
+      "checkpoint_sha256": "a501a037f006f7c6718804be1a05c19fd6cf07b4f06e0d22be8f89d0bde364a0",
+      "prediction_path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/head_pilot_2026-10-01/linear-terminal/epoch-015-predictions.npz",
+      "scores_path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/head_pilot_2026-10-01/linear-terminal/epoch-015-scores.csv",
+      "pilot1000_pdms": 73.85572507042806,
+      "dev256_pdms": 71.60779888670889,
+      "ade_4s_m": 1.284105658531189,
+      "fde_4s_m": 2.147339344024658
+    },
+    {
+      "epoch": 20,
+      "checkpoint": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/head_pilot_2026-10-01/linear-terminal/epoch-020.safetensors",
+      "checkpoint_sha256": "1495040229dcc1e279ed20203b8ca200b37817295ceee3d748ef55fba6a15a72",
+      "prediction_path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/head_pilot_2026-10-01/linear-terminal/epoch-020-predictions.npz",
+      "scores_path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/head_pilot_2026-10-01/linear-terminal/epoch-020-scores.csv",
+      "pilot1000_pdms": 76.40639021354144,
+      "dev256_pdms": 78.74578335237784,
+      "ade_4s_m": 1.1525505781173706,
+      "fde_4s_m": 1.9782618284225464
+    },
+    {
+      "epoch": 25,
+      "checkpoint": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/head_pilot_2026-10-01/linear-terminal/epoch-025.safetensors",
+      "checkpoint_sha256": "dd067423d59791c0a0c03a722ae09bc797d6445a4b2529f3a21c1febd6111c2e",
+      "prediction_path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/head_pilot_2026-10-01/linear-terminal/epoch-025-predictions.npz",
+      "scores_path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/head_pilot_2026-10-01/linear-terminal/epoch-025-scores.csv",
+      "pilot1000_pdms": 76.69870204188021,
+      "dev256_pdms": 77.30700635760833,
+      "ade_4s_m": 1.0796877145767212,
+      "fde_4s_m": 1.8651862144470215
+    },
+    {
+      "epoch": 30,
+      "checkpoint": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/head_pilot_2026-10-01/linear-terminal/epoch-030.safetensors",
+      "checkpoint_sha256": "ee48b68c136b8df5f2292344ce3af59a6a5d3db24f3dbb89d341f1cf9608a188",
+      "prediction_path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/head_pilot_2026-10-01/linear-terminal/epoch-030-predictions.npz",
+      "scores_path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/head_pilot_2026-10-01/linear-terminal/epoch-030-scores.csv",
+      "pilot1000_pdms": 77.56654606260678,
+      "dev256_pdms": 78.10194596150836,
+      "ade_4s_m": 1.0568888187408447,
+      "fde_4s_m": 1.8259085416793823
+    }
+  ],
+  "gradient_gate": {
+    "all_parameter_gradients_finite": true,
+    "query_gradient_norms": {},
+    "backbone_present": false
+  },
+  "navtest_used": false
+}

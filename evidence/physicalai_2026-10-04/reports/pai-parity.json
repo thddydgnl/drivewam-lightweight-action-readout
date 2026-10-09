@@ -1,0 +1,358 @@
+{
+  "utc": "2026-10-03T17:50:16.781424+00:00",
+  "set": "final",
+  "data": [
+    {
+      "clip": "bb5e843d-37d2-44c8-b6f3-abd40dde2115",
+      "equal": true
+    },
+    {
+      "clip": "13a9e664-4a21-43db-972e-a3febf872f57",
+      "equal": true
+    },
+    {
+      "clip": "65ba066a-0975-458b-bcce-a6c90069ca3b",
+      "equal": true
+    },
+    {
+      "clip": "240525d8-f6e4-448a-bbb5-9541b5f2ed11",
+      "equal": true
+    }
+  ],
+  "rollout": [
+    {
+      "clip": "19add94b-5fe7-4550-91df-beed00f9d134",
+      "steps": 10,
+      "equal": true,
+      "calls": {
+        "video": 20,
+        "action": 55,
+        "register": 12,
+        "action_by_model": {
+          "main": 55
+        }
+      }
+    },
+    {
+      "clip": "19add94b-5fe7-4550-91df-beed00f9d134",
+      "steps": 5,
+      "equal": true,
+      "calls": {
+        "video": 20,
+        "action": 30,
+        "register": 12,
+        "action_by_model": {
+          "main": 30
+        }
+      }
+    },
+    {
+      "clip": "59726448-f8b2-473f-8a54-ee5ee3348e25",
+      "steps": 10,
+      "equal": true,
+      "calls": {
+        "video": 20,
+        "action": 55,
+        "register": 12,
+        "action_by_model": {
+          "main": 55
+        }
+      }
+    },
+    {
+      "clip": "59726448-f8b2-473f-8a54-ee5ee3348e25",
+      "steps": 5,
+      "equal": true,
+      "calls": {
+        "video": 20,
+        "action": 30,
+        "register": 12,
+        "action_by_model": {
+          "main": 30
+        }
+      }
+    },
+    {
+      "clip": "687799b4-4124-4328-a509-404d92d41f38",
+      "steps": 10,
+      "equal": true,
+      "calls": {
+        "video": 20,
+        "action": 55,
+        "register": 12,
+        "action_by_model": {
+          "main": 55
+        }
+      }
+    },
+    {
+      "clip": "687799b4-4124-4328-a509-404d92d41f38",
+      "steps": 5,
+      "equal": true,
+      "calls": {
+        "video": 20,
+        "action": 30,
+        "register": 12,
+        "action_by_model": {
+          "main": 30
+        }
+      }
+    }
+  ],
+  "opt": [
+    {
+      "clip": "19add94b-5fe7-4550-91df-beed00f9d134",
+      "steps": 10,
+      "equal": true,
+      "calls": {
+        "video": 20,
+        "action": 50,
+        "register": 12,
+        "action_by_model": {
+          "main": 50
+        }
+      }
+    },
+    {
+      "clip": "19add94b-5fe7-4550-91df-beed00f9d134",
+      "steps": 5,
+      "equal": true,
+      "calls": {
+        "video": 20,
+        "action": 25,
+        "register": 12,
+        "action_by_model": {
+          "main": 25
+        }
+      }
+    },
+    {
+      "clip": "59726448-f8b2-473f-8a54-ee5ee3348e25",
+      "steps": 10,
+      "equal": true,
+      "calls": {
+        "video": 20,
+        "action": 50,
+        "register": 12,
+        "action_by_model": {
+          "main": 50
+        }
+      }
+    },
+    {
+      "clip": "59726448-f8b2-473f-8a54-ee5ee3348e25",
+      "steps": 5,
+      "equal": true,
+      "calls": {
+        "video": 20,
+        "action": 25,
+        "register": 12,
+        "action_by_model": {
+          "main": 25
+        }
+      }
+    },
+    {
+      "clip": "687799b4-4124-4328-a509-404d92d41f38",
+      "steps": 10,
+      "equal": true,
+      "calls": {
+        "video": 20,
+        "action": 50,
+        "register": 12,
+        "action_by_model": {
+          "main": 50
+        }
+      }
+    },
+    {
+      "clip": "687799b4-4124-4328-a509-404d92d41f38",
+      "steps": 5,
+      "equal": true,
+      "calls": {
+        "video": 20,
+        "action": 25,
+        "register": 12,
+        "action_by_model": {
+          "main": 25
+        }
+      }
+    }
+  ],
+  "fused": [
+    {
+      "clip": "19add94b-5fe7-4550-91df-beed00f9d134",
+      "equal": true,
+      "calls": {
+        "video": 20,
+        "action": 160,
+        "register": 12,
+        "action_by_model": {
+          "B10-opt": 50,
+          "B05-opt": 25,
+          "B03-opt": 15,
+          "B02-opt": 10,
+          "B01-opt": 5,
+          "B10": 55
+        }
+      }
+    },
+    {
+      "clip": "59726448-f8b2-473f-8a54-ee5ee3348e25",
+      "equal": true,
+      "calls": {
+        "video": 20,
+        "action": 160,
+        "register": 12,
+        "action_by_model": {
+          "B10-opt": 50,
+          "B05-opt": 25,
+          "B03-opt": 15,
+          "B02-opt": 10,
+          "B01-opt": 5,
+          "B10": 55
+        }
+      }
+    },
+    {
+      "clip": "687799b4-4124-4328-a509-404d92d41f38",
+      "equal": true,
+      "calls": {
+        "video": 20,
+        "action": 160,
+        "register": 12,
+        "action_by_model": {
+          "B10-opt": 50,
+          "B05-opt": 25,
+          "B03-opt": 15,
+          "B02-opt": 10,
+          "B01-opt": 5,
+          "B10": 55
+        }
+      }
+    }
+  ],
+  "taps": [
+    {
+      "clip": "19add94b-5fe7-4550-91df-beed00f9d134",
+      "hooked_outputs_equal": true,
+      "early_exit_features_equal": true,
+      "student_calls": {
+        "video": 5,
+        "action": 0,
+        "register": 12,
+        "action_by_model": {
+          "main": 0
+        }
+      },
+      "feature_shapes": [
+        [
+          3,
+          112,
+          3072
+        ],
+        [
+          3,
+          112,
+          3072
+        ],
+        [
+          3,
+          112,
+          3072
+        ],
+        [
+          3,
+          112,
+          3072
+        ],
+        [
+          3,
+          112,
+          3072
+        ]
+      ]
+    },
+    {
+      "clip": "59726448-f8b2-473f-8a54-ee5ee3348e25",
+      "hooked_outputs_equal": true,
+      "early_exit_features_equal": true,
+      "student_calls": {
+        "video": 5,
+        "action": 0,
+        "register": 12,
+        "action_by_model": {
+          "main": 0
+        }
+      },
+      "feature_shapes": [
+        [
+          3,
+          112,
+          3072
+        ],
+        [
+          3,
+          112,
+          3072
+        ],
+        [
+          3,
+          112,
+          3072
+        ],
+        [
+          3,
+          112,
+          3072
+        ],
+        [
+          3,
+          112,
+          3072
+        ]
+      ]
+    },
+    {
+      "clip": "687799b4-4124-4328-a509-404d92d41f38",
+      "hooked_outputs_equal": true,
+      "early_exit_features_equal": true,
+      "student_calls": {
+        "video": 5,
+        "action": 0,
+        "register": 12,
+        "action_by_model": {
+          "main": 0
+        }
+      },
+      "feature_shapes": [
+        [
+          3,
+          112,
+          3072
+        ],
+        [
+          3,
+          112,
+          3072
+        ],
+        [
+          3,
+          112,
+          3072
+        ],
+        [
+          3,
+          112,
+          3072
+        ],
+        [
+          3,
+          112,
+          3072
+        ]
+      ]
+    }
+  ],
+  "passed": true
+}

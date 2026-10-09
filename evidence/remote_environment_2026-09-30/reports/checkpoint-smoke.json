@@ -1,0 +1,144 @@
+{
+  "started_at_utc": "2026-09-30T09:56:09.307552+00:00",
+  "input": "synthetic constant RGB / zero ego history; not a benchmark",
+  "source_modified": false,
+  "initializer": "test-only initializer with precomputed prompts",
+  "text_encoder_loading_info": {
+    "missing_keys": [],
+    "unexpected_keys": [],
+    "mismatched_keys": [],
+    "error_msgs": []
+  },
+  "prompt_cache": {
+    "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/caches/prompt/navsim-four-prompts.pt",
+    "prompts": [
+      "autonomous driving scene, the intended route is to the left.",
+      "autonomous driving scene, the intended route is straight.",
+      "autonomous driving scene, the intended route is to the right.",
+      "autonomous driving scene, the driving command is unknown."
+    ],
+    "shape_each": [
+      512,
+      4096
+    ],
+    "dtype": "bfloat16",
+    "sha256": "2a81a22661486e6569a718d568c4efaf36d7bb3dde934409788226fb1cfd4e9f",
+    "encoder_peak_allocated_bytes": 11618866176
+  },
+  "transformer_loading_info": {
+    "missing_keys": [],
+    "unexpected_keys": [],
+    "ignore_mismatched_sizes": false
+  },
+  "vae_loading_info": {
+    "missing_keys": [],
+    "unexpected_keys": [],
+    "mismatched_keys": [],
+    "error_msgs": []
+  },
+  "transformer_parameters": 6241020126,
+  "vae_parameters": 704688668,
+  "resident_allocated_bytes": 13948868096,
+  "synthetic_b10": {
+    "num_video_steps": 3,
+    "num_action_steps": 10,
+    "video_denoise_fraction": 0.6,
+    "seed": 20260930,
+    "forward_calls": [
+      {
+        "action_mode": false,
+        "update_cache": 2
+      },
+      {
+        "action_mode": true,
+        "update_cache": 2
+      },
+      {
+        "action_mode": false,
+        "update_cache": 0
+      },
+      {
+        "action_mode": false,
+        "update_cache": 0
+      },
+      {
+        "action_mode": false,
+        "update_cache": 0
+      },
+      {
+        "action_mode": false,
+        "update_cache": 1
+      },
+      {
+        "action_mode": true,
+        "update_cache": 0
+      },
+      {
+        "action_mode": true,
+        "update_cache": 0
+      },
+      {
+        "action_mode": true,
+        "update_cache": 0
+      },
+      {
+        "action_mode": true,
+        "update_cache": 0
+      },
+      {
+        "action_mode": true,
+        "update_cache": 0
+      },
+      {
+        "action_mode": true,
+        "update_cache": 0
+      },
+      {
+        "action_mode": true,
+        "update_cache": 0
+      },
+      {
+        "action_mode": true,
+        "update_cache": 0
+      },
+      {
+        "action_mode": true,
+        "update_cache": 0
+      },
+      {
+        "action_mode": true,
+        "update_cache": 0
+      },
+      {
+        "action_mode": true,
+        "update_cache": 1
+      }
+    ],
+    "actions_shape": [
+      1,
+      30,
+      2,
+      8,
+      1
+    ],
+    "latents_shape": [
+      1,
+      48,
+      2,
+      16,
+      28
+    ],
+    "trajectory_shape": [
+      1,
+      3,
+      8
+    ],
+    "outputs_finite": true,
+    "elapsed_unwarmed_seconds": 1.0625507719814777,
+    "peak_allocated_bytes": 14675625472,
+    "peak_reserved_bytes": 14732492800,
+    "latency_benchmark": false,
+    "driving_quality_evaluated": false
+  },
+  "completed_at_utc": "2026-09-30T09:56:17.793548+00:00"
+}

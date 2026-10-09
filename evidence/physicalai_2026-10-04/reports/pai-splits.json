@@ -1,0 +1,15 @@
+{
+  "devpool_rule": "val split & clip_is_valid; rank sha256(\"17:pai-devpool:\"+clip_id); first 3000",
+  "sizes": {
+    "final": 1000,
+    "devpool": 3000,
+    "train4k": 4000,
+    "train20k": 20000
+  },
+  "sha256": {
+    "pai-final-1k": "3760a84e5550f03302d0e78d2e6d98a4316e7c9d97693f0fbfa60c9348f9e94d",
+    "pai-devpool-3k": "bd5dd9d583138ed1caaaf3215dfe37fece182c624b84b08b958a9725169eacd5",
+    "pai-train-4k": "b9bdf75f6e08b66a77346ee457e30d630b981f13964584054cad24432653eb95",
+    "pai-train-20k": "8d4e247f435913b095823ef855067aab6de9f0b4f10e8f845c5edfe52888cff9"
+  }
+}

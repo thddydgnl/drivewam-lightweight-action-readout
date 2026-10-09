@@ -1,0 +1,14 @@
+{
+  "name": "train20k-normal-first-seed17",
+  "frame": "ego",
+  "train_rows": 99971,
+  "epochs": 40,
+  "steps": 125000,
+  "checkpoint_sha256": "5a0e0ba8f5b5e1f1dcf1adc05481f153e304d159e60b1dc1ef9fcb79d0db6854",
+  "predictions": {
+    "final": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/pai_heads_2026-10-04/train20k-normal-first-seed17/pred-final.npz",
+    "dev": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/pai_heads_2026-10-04/train20k-normal-first-seed17/pred-dev.npz"
+  },
+  "elapsed_s": 5379.413268791512,
+  "utc": "2026-10-04T07:27:34.565989+00:00"
+}

@@ -1,0 +1,18 @@
+{
+  "status": "cancelled_before_training",
+  "decided_at_utc": "2026-10-02T08:11:20.333434+00:00",
+  "reason": "head_train/head_val are inside public backbone training data; B10 is ~8cm from GT and seeds differ by ~3.5cm, so D-GT and D-Teacher targets are nearly identical and the diagnostic cannot discriminate.",
+  "preserved_partial_shards": [
+    "head_train-seed0-0000.safetensors",
+    "head_train-seed0-0128.safetensors",
+    "head_train-seed0-0256.safetensors",
+    "head_train-seed0-0384.safetensors",
+    "head_train-seed1-0000.safetensors",
+    "head_train-seed1-0128.safetensors",
+    "head_train-seed1-0256.safetensors",
+    "head_train-seed1-0384.safetensors"
+  ],
+  "training_started": false,
+  "preregistration": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/reports/\uc0ac\uc804\ub4f1\ub85d_navtest-dev_2026-10-02.md",
+  "preregistration_sha256": "537849edff175d78190c23122522401fbabab540edc195a87e1bd0f8790317d5"
+}

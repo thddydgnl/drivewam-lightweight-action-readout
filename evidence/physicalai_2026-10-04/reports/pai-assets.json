@@ -1,0 +1,56 @@
+{
+  "drivewam_revision": "c4fb6d2c5d26ee3018a9ee1507f36fd02b85b1ce",
+  "files": [
+    {
+      "name": "physicalai/config.json",
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/checkpoints/drivewam/physicalai/config.json",
+      "bytes": 543,
+      "sha256": "6040670a40b4a683aa6c4326391f39e19d38d24369e97e23d5cedac35858128d",
+      "pinned_verified": false
+    },
+    {
+      "name": "physicalai/diffusion_pytorch_model.safetensors",
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/checkpoints/drivewam/physicalai/diffusion_pytorch_model.safetensors",
+      "bytes": 12482072236,
+      "sha256": "ad90feae1a26007d13743ecb7896887ae7f9906168e5652d57b5406073fa0d98",
+      "pinned_verified": true
+    },
+    {
+      "name": "train_4k.csv",
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/checkpoints/drivewam/train_4k.csv",
+      "bytes": 1151247,
+      "sha256": "b1224ff92980a0352380a97bf54f51cb6c3c0d9486767c49534cf2adbcf699b0",
+      "pinned_verified": false
+    },
+    {
+      "name": "train_20k.csv",
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/checkpoints/drivewam/train_20k.csv",
+      "bytes": 5751563,
+      "sha256": "91de9859e21f3ecb03525a4372902cf688ba42c2a4316bd8d21fdade715e0fce",
+      "pinned_verified": false
+    },
+    {
+      "name": "train_100k.csv",
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/checkpoints/drivewam/train_100k.csv",
+      "bytes": 28757187,
+      "sha256": "06338eefac9a9214e7010c2597a7642768f7e11b3718ebd2d9247e1207d914dd",
+      "pinned_verified": true
+    },
+    {
+      "name": "PhysicalAI-Autonomous-Vehicles-Front-nav_prompts.tar.gz",
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/checkpoints/drivewam/PhysicalAI-Autonomous-Vehicles-Front-nav_prompts.tar.gz",
+      "bytes": 28658441,
+      "sha256": "8753c19acc318d963d6378e324d0a9a4dc06ee9f60a8b79d4a2608840c359d3b",
+      "pinned_verified": true
+    },
+    {
+      "name": "clip_index.parquet",
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/data/physicalai/clip_index.parquet",
+      "bytes": 11132300,
+      "sha256": "9630a3de5ee057ded194deaa94d3b9b42af6f18c301785706e50141314a6935c"
+    }
+  ],
+  "started_at_utc": "2026-10-03T17:18:22.530541+00:00",
+  "nvidia_dataset_revision": "33f9bf447ed3bcb7d545ce13f4226f824214fafb",
+  "completed_at_utc": "2026-10-03T17:20:42.728426+00:00"
+}

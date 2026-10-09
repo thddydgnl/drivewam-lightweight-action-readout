@@ -1,0 +1,11 @@
+{
+  "recorded_at_utc": "2026-10-01T10:26:45.880136+00:00",
+  "failed_run": "heads_online_devval256_2026-10-01",
+  "error": "PhaseEvents.close missing self.policy initialization",
+  "fix": "store policy reference in PhaseEvents.__init__",
+  "new_run": "heads_online_devval256_2026-10-01-r2",
+  "new_pid": 445008,
+  "new_script_sha256": "3abfd525f2d3ee040738671d9052f2a5d04f86f0de730b23bba2f2e5ef1b8bf0",
+  "old_outputs_and_sources_preserved": true,
+  "head_weights_and_training_unchanged": true
+}

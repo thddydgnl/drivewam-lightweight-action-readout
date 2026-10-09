@@ -1,0 +1,95 @@
+{
+  "run_id": "navtest_dev_quality_2026-10-02",
+  "split": "navtest_dev",
+  "preregistration": "reports/\uc0ac\uc804\ub4f1\ub85d_navtest-dev_2026-10-02.md",
+  "manifest_sha256": "5c0f3256a03bec9c0f6ebdeae3a131007a95299fa83be861f402508e35d65cc7",
+  "tokens_sha256": "75c85c14cb42450c54266fdd07e288e764e7a815880d3336182d5804a81c12c2",
+  "checkpoint_sha256": "27e4846b0a25e22fc299f7aca90c01d802072d2b297741c85ed074b689ef26a9",
+  "source_commit": "abbefb407c9c553f221522fc26077d307620adb4",
+  "models": {
+    "B10": 10,
+    "B05-opt": 5,
+    "B03-opt": 3,
+    "B02-opt": 2,
+    "B01-opt": 1
+  },
+  "skip_terminal_action_cache": {
+    "B10": false,
+    "B05-opt": true,
+    "B03-opt": true,
+    "B02-opt": true,
+    "B01-opt": true
+  },
+  "video_steps": 3,
+  "video_denoise_fraction": 0.6,
+  "generation_seed": 0,
+  "sample_seed": "big-endian first 4 SHA256 bytes of UTF-8 scene_token:generation_seed",
+  "seed_sensitivity": {
+    "model": "B10",
+    "generation_seeds": [
+      1,
+      2
+    ],
+    "tokens": [
+      "01fc240ee1d25c9e",
+      "02328c7410405c5a",
+      "140a3ea8607f528f",
+      "14976ab056005044",
+      "18649e595e7b51ab",
+      "28c74da2ea1d5629",
+      "291e2af79c2258d5",
+      "35fb7e0858ae5bc8",
+      "38f555fbc07f5185",
+      "3b34e3fd5b9e5767",
+      "3e4c9c9e67545b03",
+      "4203da2e7a8b518d",
+      "44137cf5578956d1",
+      "45845be1b56d59c7",
+      "53d3787367c75240",
+      "66ca1ffcef4354e9",
+      "74707039ce5550d1",
+      "83e895f722575452",
+      "88862af321ce5c8f",
+      "a5d356da90d05835",
+      "ad8e3279524854c3",
+      "b4bcd9085faf5842",
+      "b66f066aad62515e",
+      "c0475666b2a55982",
+      "cd89b212efe9585a",
+      "d1065c7c84e054ae",
+      "decd6b1dd7f65e1e",
+      "e14d9a1990535a29",
+      "e55ee684113c5e7d",
+      "f0b6499b393152be",
+      "f1ef98a6ff94525c",
+      "f3fc5020ecbd537f"
+    ]
+  },
+  "features": {
+    "phases": [
+      "current_primer",
+      "future_first_preupdate",
+      "future_cache_terminal"
+    ],
+    "layer_indices_zero_based": [
+      4,
+      9,
+      14,
+      19,
+      24,
+      29
+    ],
+    "dense_dtype": "bfloat16",
+    "source": "hooked original B10 rollout (bitwise parity with world-only extraction verified in pilot)"
+  },
+  "timing": "not measured; quality-only",
+  "targets_opened": false,
+  "navtest_final_used": false,
+  "scripts": {
+    "remote_navtest_dev_infer.py": "92337133be269dab4150659559bacadc9150f2496f326bc99effa4f8d72ee4de",
+    "world_feature_tap.py": "d2fa4de75b40bddf67b1f6fbdb6e2f32605a48d6ea6261733a547ab07b34c03c",
+    "navsim_action_opt.py": "16b1520ad05d080d2cdeab3323db9f326efbad6728f06ea44727fd11f26e8a8a",
+    "baseline_common.py": "ac70c9e43477727d67bd0222f7bb3308dc02f8b16c8b5e807ca1405618769977",
+    "navsim_current_dataset.py": "d2dd1561b96a84c6753a7a2c8f3d8b1ee4a09d0dbf4b136825bb5879d7383299"
+  }
+}

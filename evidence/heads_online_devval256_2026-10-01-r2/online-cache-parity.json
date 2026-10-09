@@ -1,0 +1,1950 @@
+{
+  "scenes_each_head": 32,
+  "max_abs_tolerance": 1e-05,
+  "rows": {
+    "ego-only": [
+      {
+        "scene_token": "2b90c692db755ba4",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "a7fd9fee74ec5611",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "8e1263f249a15dbe",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "60315842b4095274",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "0b68f4dea9185b55",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "7ef666e2075a5db5",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "f2d61196eca15827",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "da0296d571a5594d",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "ab780767041a5c89",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "8b88c7f89d2c5439",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "8fc8b66500535388",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "6b5a8334e4e75478",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "447dbea3a08b5445",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "5d99457d0300502d",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "d12142a50f835c8b",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "d382cb59eee6574c",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "b3dec1fad1e45be2",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "9823cec749b85d4a",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "1deb0d76c4cf5167",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "07ed6ac834135fd1",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "5d017ce5b60354fa",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "71aa2a067a455ac4",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "8690616319e35d4a",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "1f60fc571f2a5f54",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "ce8b138649275703",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "b13928287a955624",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "594cf086fa7e5809",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "dccc415da1cb55e8",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "0b8065082f3a5b3b",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "974b962aa50b5271",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "cbb304543dad56db",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "d3b9f1d478da5f26",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      }
+    ],
+    "linear-current": [
+      {
+        "scene_token": "2b90c692db755ba4",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "a7fd9fee74ec5611",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "8e1263f249a15dbe",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "60315842b4095274",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "0b68f4dea9185b55",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "7ef666e2075a5db5",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "f2d61196eca15827",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "da0296d571a5594d",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "ab780767041a5c89",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "8b88c7f89d2c5439",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "8fc8b66500535388",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "6b5a8334e4e75478",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "447dbea3a08b5445",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "5d99457d0300502d",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "d12142a50f835c8b",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "d382cb59eee6574c",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "b3dec1fad1e45be2",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "9823cec749b85d4a",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "1deb0d76c4cf5167",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "07ed6ac834135fd1",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "5d017ce5b60354fa",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "71aa2a067a455ac4",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "8690616319e35d4a",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "1f60fc571f2a5f54",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "ce8b138649275703",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "b13928287a955624",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "594cf086fa7e5809",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "dccc415da1cb55e8",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "0b8065082f3a5b3b",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "974b962aa50b5271",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "cbb304543dad56db",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "d3b9f1d478da5f26",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      }
+    ],
+    "linear-first": [
+      {
+        "scene_token": "2b90c692db755ba4",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "a7fd9fee74ec5611",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "8e1263f249a15dbe",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "60315842b4095274",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "0b68f4dea9185b55",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "7ef666e2075a5db5",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "f2d61196eca15827",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "da0296d571a5594d",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "ab780767041a5c89",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "8b88c7f89d2c5439",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "8fc8b66500535388",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "6b5a8334e4e75478",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "447dbea3a08b5445",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "5d99457d0300502d",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "d12142a50f835c8b",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "d382cb59eee6574c",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "b3dec1fad1e45be2",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "9823cec749b85d4a",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "1deb0d76c4cf5167",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "07ed6ac834135fd1",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "5d017ce5b60354fa",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "71aa2a067a455ac4",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "8690616319e35d4a",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "1f60fc571f2a5f54",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "ce8b138649275703",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "b13928287a955624",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "594cf086fa7e5809",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "dccc415da1cb55e8",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "0b8065082f3a5b3b",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "974b962aa50b5271",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "cbb304543dad56db",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "d3b9f1d478da5f26",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      }
+    ],
+    "linear-terminal": [
+      {
+        "scene_token": "2b90c692db755ba4",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "a7fd9fee74ec5611",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "8e1263f249a15dbe",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "60315842b4095274",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "0b68f4dea9185b55",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "7ef666e2075a5db5",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "f2d61196eca15827",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "da0296d571a5594d",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "ab780767041a5c89",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "8b88c7f89d2c5439",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "8fc8b66500535388",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "6b5a8334e4e75478",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "447dbea3a08b5445",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "5d99457d0300502d",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "d12142a50f835c8b",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "d382cb59eee6574c",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "b3dec1fad1e45be2",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "9823cec749b85d4a",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "1deb0d76c4cf5167",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "07ed6ac834135fd1",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "5d017ce5b60354fa",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "71aa2a067a455ac4",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "8690616319e35d4a",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "1f60fc571f2a5f54",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "ce8b138649275703",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "b13928287a955624",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "594cf086fa7e5809",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "dccc415da1cb55e8",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "0b8065082f3a5b3b",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "974b962aa50b5271",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "cbb304543dad56db",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "d3b9f1d478da5f26",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      }
+    ],
+    "FMLP-current": [
+      {
+        "scene_token": "2b90c692db755ba4",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "a7fd9fee74ec5611",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "8e1263f249a15dbe",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "60315842b4095274",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "0b68f4dea9185b55",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "7ef666e2075a5db5",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "f2d61196eca15827",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "da0296d571a5594d",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "ab780767041a5c89",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "8b88c7f89d2c5439",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "8fc8b66500535388",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "6b5a8334e4e75478",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "447dbea3a08b5445",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "5d99457d0300502d",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "d12142a50f835c8b",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "d382cb59eee6574c",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "b3dec1fad1e45be2",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "9823cec749b85d4a",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "1deb0d76c4cf5167",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "07ed6ac834135fd1",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "5d017ce5b60354fa",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "71aa2a067a455ac4",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "8690616319e35d4a",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "1f60fc571f2a5f54",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "ce8b138649275703",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "b13928287a955624",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "594cf086fa7e5809",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "dccc415da1cb55e8",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "0b8065082f3a5b3b",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "974b962aa50b5271",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "cbb304543dad56db",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "d3b9f1d478da5f26",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      }
+    ],
+    "FMLP-first": [
+      {
+        "scene_token": "2b90c692db755ba4",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "a7fd9fee74ec5611",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "8e1263f249a15dbe",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "60315842b4095274",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "0b68f4dea9185b55",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "7ef666e2075a5db5",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "f2d61196eca15827",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "da0296d571a5594d",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "ab780767041a5c89",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "8b88c7f89d2c5439",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "8fc8b66500535388",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "6b5a8334e4e75478",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "447dbea3a08b5445",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "5d99457d0300502d",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "d12142a50f835c8b",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "d382cb59eee6574c",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "b3dec1fad1e45be2",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "9823cec749b85d4a",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "1deb0d76c4cf5167",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "07ed6ac834135fd1",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "5d017ce5b60354fa",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "71aa2a067a455ac4",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "8690616319e35d4a",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "1f60fc571f2a5f54",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "ce8b138649275703",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "b13928287a955624",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "594cf086fa7e5809",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "dccc415da1cb55e8",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "0b8065082f3a5b3b",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "974b962aa50b5271",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "cbb304543dad56db",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "d3b9f1d478da5f26",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      }
+    ],
+    "FMLP-terminal": [
+      {
+        "scene_token": "2b90c692db755ba4",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "a7fd9fee74ec5611",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "8e1263f249a15dbe",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "60315842b4095274",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "0b68f4dea9185b55",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "7ef666e2075a5db5",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "f2d61196eca15827",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "da0296d571a5594d",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "ab780767041a5c89",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "8b88c7f89d2c5439",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "8fc8b66500535388",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "6b5a8334e4e75478",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "447dbea3a08b5445",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "5d99457d0300502d",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "d12142a50f835c8b",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "d382cb59eee6574c",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "b3dec1fad1e45be2",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "9823cec749b85d4a",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "1deb0d76c4cf5167",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "07ed6ac834135fd1",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "5d017ce5b60354fa",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "71aa2a067a455ac4",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "8690616319e35d4a",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "1f60fc571f2a5f54",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "ce8b138649275703",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "b13928287a955624",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "594cf086fa7e5809",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "dccc415da1cb55e8",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "0b8065082f3a5b3b",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "974b962aa50b5271",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "cbb304543dad56db",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "d3b9f1d478da5f26",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      }
+    ],
+    "SF1-terminal": [
+      {
+        "scene_token": "2b90c692db755ba4",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "a7fd9fee74ec5611",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "8e1263f249a15dbe",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "60315842b4095274",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "0b68f4dea9185b55",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "7ef666e2075a5db5",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "f2d61196eca15827",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "da0296d571a5594d",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "ab780767041a5c89",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "8b88c7f89d2c5439",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "8fc8b66500535388",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "6b5a8334e4e75478",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "447dbea3a08b5445",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "5d99457d0300502d",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "d12142a50f835c8b",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "d382cb59eee6574c",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "b3dec1fad1e45be2",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "9823cec749b85d4a",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "1deb0d76c4cf5167",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "07ed6ac834135fd1",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "5d017ce5b60354fa",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "71aa2a067a455ac4",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "8690616319e35d4a",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "1f60fc571f2a5f54",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "ce8b138649275703",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "b13928287a955624",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "594cf086fa7e5809",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "dccc415da1cb55e8",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "0b8065082f3a5b3b",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "974b962aa50b5271",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "cbb304543dad56db",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "d3b9f1d478da5f26",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      }
+    ],
+    "SF1-wide-terminal": [
+      {
+        "scene_token": "2b90c692db755ba4",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "a7fd9fee74ec5611",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "8e1263f249a15dbe",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "60315842b4095274",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "0b68f4dea9185b55",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "7ef666e2075a5db5",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "f2d61196eca15827",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "da0296d571a5594d",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "ab780767041a5c89",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "8b88c7f89d2c5439",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "8fc8b66500535388",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "6b5a8334e4e75478",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "447dbea3a08b5445",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "5d99457d0300502d",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "d12142a50f835c8b",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "d382cb59eee6574c",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "b3dec1fad1e45be2",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "9823cec749b85d4a",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "1deb0d76c4cf5167",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "07ed6ac834135fd1",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "5d017ce5b60354fa",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "71aa2a067a455ac4",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "8690616319e35d4a",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "1f60fc571f2a5f54",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "ce8b138649275703",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "b13928287a955624",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "594cf086fa7e5809",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "dccc415da1cb55e8",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "0b8065082f3a5b3b",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "974b962aa50b5271",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "cbb304543dad56db",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "d3b9f1d478da5f26",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      }
+    ],
+    "SF3-current": [
+      {
+        "scene_token": "2b90c692db755ba4",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "a7fd9fee74ec5611",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "8e1263f249a15dbe",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "60315842b4095274",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "0b68f4dea9185b55",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "7ef666e2075a5db5",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "f2d61196eca15827",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "da0296d571a5594d",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "ab780767041a5c89",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "8b88c7f89d2c5439",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "8fc8b66500535388",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "6b5a8334e4e75478",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "447dbea3a08b5445",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "5d99457d0300502d",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "d12142a50f835c8b",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "d382cb59eee6574c",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "b3dec1fad1e45be2",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "9823cec749b85d4a",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "1deb0d76c4cf5167",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "07ed6ac834135fd1",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "5d017ce5b60354fa",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "71aa2a067a455ac4",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "8690616319e35d4a",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "1f60fc571f2a5f54",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "ce8b138649275703",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "b13928287a955624",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "594cf086fa7e5809",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "dccc415da1cb55e8",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "0b8065082f3a5b3b",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "974b962aa50b5271",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "cbb304543dad56db",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "d3b9f1d478da5f26",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      }
+    ],
+    "SF3-first": [
+      {
+        "scene_token": "2b90c692db755ba4",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "a7fd9fee74ec5611",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "8e1263f249a15dbe",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "60315842b4095274",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "0b68f4dea9185b55",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "7ef666e2075a5db5",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "f2d61196eca15827",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "da0296d571a5594d",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "ab780767041a5c89",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "8b88c7f89d2c5439",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "8fc8b66500535388",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "6b5a8334e4e75478",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "447dbea3a08b5445",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "5d99457d0300502d",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "d12142a50f835c8b",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "d382cb59eee6574c",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "b3dec1fad1e45be2",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "9823cec749b85d4a",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "1deb0d76c4cf5167",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "07ed6ac834135fd1",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "5d017ce5b60354fa",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "71aa2a067a455ac4",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "8690616319e35d4a",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "1f60fc571f2a5f54",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "ce8b138649275703",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "b13928287a955624",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "594cf086fa7e5809",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "dccc415da1cb55e8",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "0b8065082f3a5b3b",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "974b962aa50b5271",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "cbb304543dad56db",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "d3b9f1d478da5f26",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      }
+    ],
+    "SF3-terminal": [
+      {
+        "scene_token": "2b90c692db755ba4",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "a7fd9fee74ec5611",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "8e1263f249a15dbe",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "60315842b4095274",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "0b68f4dea9185b55",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "7ef666e2075a5db5",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "f2d61196eca15827",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "da0296d571a5594d",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "ab780767041a5c89",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "8b88c7f89d2c5439",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "8fc8b66500535388",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "6b5a8334e4e75478",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "447dbea3a08b5445",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "5d99457d0300502d",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "d12142a50f835c8b",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "d382cb59eee6574c",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "b3dec1fad1e45be2",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "9823cec749b85d4a",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "1deb0d76c4cf5167",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "07ed6ac834135fd1",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "5d017ce5b60354fa",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "71aa2a067a455ac4",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "8690616319e35d4a",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "1f60fc571f2a5f54",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "ce8b138649275703",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "b13928287a955624",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "594cf086fa7e5809",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "dccc415da1cb55e8",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "0b8065082f3a5b3b",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "974b962aa50b5271",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "cbb304543dad56db",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      },
+      {
+        "scene_token": "d3b9f1d478da5f26",
+        "max_abs_difference": 0.0,
+        "bitwise_equal": true
+      }
+    ]
+  }
+}

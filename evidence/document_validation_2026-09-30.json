@@ -1,0 +1,85 @@
+{
+  "date": "2026-09-30",
+  "scope": "Document revision validation and local pinned source verification; not GPU execution or external link revalidation",
+  "documents": [
+    {
+      "path": "DriveWAM_Lightweight_Action_Readout_Research_Idea.md",
+      "lines": 1590,
+      "sha256": "1ec3ffdbf28b53b6871ae985ec6b5d634e5c40ed2795fa67339be7ffea5079d5"
+    },
+    {
+      "path": "research_plan/실행계획서.md",
+      "lines": 1338,
+      "sha256": "71250dc74698209db254627b2797414b8e27b4f4786e88e55054773c0a07ea39"
+    },
+    {
+      "path": "research_plan/외부코드_검수보고서.md",
+      "lines": 304,
+      "sha256": "b301d4ecb0c34d2611d40d169338110e5e00b4a5ebe47532e2faaab918b53a18"
+    },
+    {
+      "path": "research_plan/README.md",
+      "lines": 43,
+      "sha256": "936f972ce0d8932183a2f09b55c9cc5d25a9f82be00332097bda68288202e1a4"
+    },
+    {
+      "path": "research_plan/SOURCE_LOCK.json",
+      "lines": 417,
+      "sha256": "bdc57492b7160ec2045fa1551cfeb462483084eeb11fad1fbd3bb878bb21537a"
+    }
+  ],
+  "checks": {
+    "markdown_fences_balanced": true,
+    "display_math_balanced": true,
+    "markdown_table_column_counts": true,
+    "local_link_targets_checked": 7,
+    "source_file_hashes_match": true,
+    "reviewed_source_trees_unchanged": true,
+    "environment_yml_tracked": true,
+    "requirements_navsim_txt_tracked": false
+  },
+  "source_trees": [
+    {
+      "name": "DriveWAM",
+      "head": "abbefb407c9c553f221522fc26077d307620adb4",
+      "clean": true,
+      "verified_file_count": 11
+    },
+    {
+      "name": "Light-WAM",
+      "head": "db7d05e724f3eac2d4f0c9c3ac727fe93a44d727",
+      "clean": true,
+      "verified_file_count": 5
+    },
+    {
+      "name": "navsim-v1.1",
+      "head": "3e8291bfa89ff247231e0227778840cd0a036896",
+      "clean": true,
+      "verified_file_count": 9
+    },
+    {
+      "name": "lingbot-va",
+      "head": "7c6ffa9bfc4b83582cafc860fab4c82cc7deeeeb",
+      "clean": true,
+      "verified_file_count": 3
+    }
+  ],
+  "static_backbone_calls_excluding_small_head": {
+    "B10": 17,
+    "B05": 12,
+    "B10-opt": 16,
+    "B05-opt": 11,
+    "B03-opt": 9,
+    "B02-opt": 8,
+    "B01-opt": 7,
+    "SF3-terminal": 6,
+    "SF3-first": 3,
+    "SF3-current": 1
+  },
+  "pilot_dense_cache_gib_5k_6layers_3phases": 57.67822265625,
+  "issues": [],
+  "model_execution": false,
+  "package_installation": false,
+  "remote_access": false,
+  "historical_record_preserved": "document_validation.json"
+}

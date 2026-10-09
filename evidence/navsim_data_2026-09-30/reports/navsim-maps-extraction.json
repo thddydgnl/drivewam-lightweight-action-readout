@@ -1,0 +1,58 @@
+{
+  "archive": {
+    "name": "nuplan-maps-v1.1.zip",
+    "bytes": 970997691,
+    "url": "https://motional-nuplan.s3-ap-northeast-1.amazonaws.com/public/nuplan-v1.1/nuplan-maps-v1.1.zip",
+    "etag": "\"0efaac6b7c603ae6f341021b35059bcc-116\"",
+    "publisher_sha256": null,
+    "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/data/archives/nuplan-maps-v1.1.zip",
+    "sha256": "444860429f9a3bcf89a6459d683fa82eb9219aa259d8d9b8cdefdb37f0b56b05",
+    "publisher_sha256_verified": false,
+    "etag_verified_per_range": true,
+    "completed_at_utc": "2026-09-30T10:19:28.635649+00:00"
+  },
+  "map_version": "nuplan-maps-v1.0",
+  "files": [
+    {
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/data/maps/us-ma-boston/9.12.1817/map.gpkg",
+      "bytes": 254087168,
+      "sha256": "62abd55f127dd7bb06c86e5eaed09afc9be2546e581a13bd7b4e24c4b2f5f414"
+    },
+    {
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/data/maps/sg-one-north/9.17.1964/map.gpkg",
+      "bytes": 317575168,
+      "sha256": "4062b83dda3e616897a0378fa61b91122ae6f0343187e871adb92f74426dc9a3"
+    },
+    {
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/data/maps/us-nv-las-vegas-strip/9.15.1915/drivable_area.npy.npz",
+      "bytes": 2952183,
+      "sha256": "2001e991187dde804c1b50b07294962d4b917cdac2247d9b1020bf2571459870"
+    },
+    {
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/data/maps/us-nv-las-vegas-strip/9.15.1915/Intensity.npy.npz",
+      "bytes": 141384375,
+      "sha256": "de972d92bee4c789409fe21ef6e5e6bdacec19e59e2a09ae38756ef7ae2a660d"
+    },
+    {
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/data/maps/us-nv-las-vegas-strip/9.15.1915/map.gpkg",
+      "bytes": 523767808,
+      "sha256": "f1509eeed9c1c96e1cddf1c5f6d71f7ab9eed8f895de59ab36132308708e8937"
+    },
+    {
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/data/maps/us-pa-pittsburgh-hazelwood/9.17.1937/map.gpkg",
+      "bytes": 186761216,
+      "sha256": "d04464f98175934cb2445f86959356583841a22c3d5b219314e561e0072e816a"
+    },
+    {
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/data/maps/nuplan-maps-v1.0.json",
+      "bytes": 50662,
+      "sha256": "b9c0a62335dded8b25e634bc63e3f271908b6f4f803398f0250ef7769facc504"
+    },
+    {
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/data/maps/LICENSE",
+      "bytes": 25319,
+      "sha256": "1a218286e733f6d6135fc5698d614cda2be94ea096f6eee280278458e570636a"
+    }
+  ],
+  "completed_at_utc": "2026-09-30T10:22:55.560074+00:00"
+}

@@ -1,0 +1,136 @@
+{
+  "deleted": [
+    {
+      "archive": "openscene_sensor_test_camera_0.tgz",
+      "bytes": 3684746149
+    },
+    {
+      "archive": "openscene_sensor_test_camera_1.tgz",
+      "bytes": 3370355258
+    },
+    {
+      "archive": "openscene_sensor_test_camera_10.tgz",
+      "bytes": 4163706067
+    },
+    {
+      "archive": "openscene_sensor_test_camera_11.tgz",
+      "bytes": 4335721652
+    },
+    {
+      "archive": "openscene_sensor_test_camera_12.tgz",
+      "bytes": 3293538547
+    },
+    {
+      "archive": "openscene_sensor_test_camera_13.tgz",
+      "bytes": 3190680624
+    },
+    {
+      "archive": "openscene_sensor_test_camera_14.tgz",
+      "bytes": 5727484174
+    },
+    {
+      "archive": "openscene_sensor_test_camera_15.tgz",
+      "bytes": 2333261608
+    },
+    {
+      "archive": "openscene_sensor_test_camera_16.tgz",
+      "bytes": 3245595071
+    },
+    {
+      "archive": "openscene_sensor_test_camera_17.tgz",
+      "bytes": 3752496368
+    },
+    {
+      "archive": "openscene_sensor_test_camera_18.tgz",
+      "bytes": 4301359960
+    },
+    {
+      "archive": "openscene_sensor_test_camera_19.tgz",
+      "bytes": 2062047425
+    },
+    {
+      "archive": "openscene_sensor_test_camera_2.tgz",
+      "bytes": 3626083094
+    },
+    {
+      "archive": "openscene_sensor_test_camera_20.tgz",
+      "bytes": 8611642334
+    },
+    {
+      "archive": "openscene_sensor_test_camera_21.tgz",
+      "bytes": 3229214091
+    },
+    {
+      "archive": "openscene_sensor_test_camera_22.tgz",
+      "bytes": 3930542795
+    },
+    {
+      "archive": "openscene_sensor_test_camera_23.tgz",
+      "bytes": 2703126184
+    },
+    {
+      "archive": "openscene_sensor_test_camera_24.tgz",
+      "bytes": 5514880549
+    },
+    {
+      "archive": "openscene_sensor_test_camera_25.tgz",
+      "bytes": 2119074450
+    },
+    {
+      "archive": "openscene_sensor_test_camera_26.tgz",
+      "bytes": 3777609783
+    },
+    {
+      "archive": "openscene_sensor_test_camera_27.tgz",
+      "bytes": 2879193968
+    },
+    {
+      "archive": "openscene_sensor_test_camera_28.tgz",
+      "bytes": 3788614736
+    },
+    {
+      "archive": "openscene_sensor_test_camera_29.tgz",
+      "bytes": 2410521159
+    },
+    {
+      "archive": "openscene_sensor_test_camera_3.tgz",
+      "bytes": 8642383588
+    },
+    {
+      "archive": "openscene_sensor_test_camera_30.tgz",
+      "bytes": 1629921998
+    },
+    {
+      "archive": "openscene_sensor_test_camera_31.tgz",
+      "bytes": 4464868306
+    },
+    {
+      "archive": "openscene_sensor_test_camera_4.tgz",
+      "bytes": 5459880010
+    },
+    {
+      "archive": "openscene_sensor_test_camera_5.tgz",
+      "bytes": 5654176410
+    },
+    {
+      "archive": "openscene_sensor_test_camera_6.tgz",
+      "bytes": 6213453844
+    },
+    {
+      "archive": "openscene_sensor_test_camera_7.tgz",
+      "bytes": 3361021387
+    },
+    {
+      "archive": "openscene_sensor_test_camera_8.tgz",
+      "bytes": 2737174084
+    },
+    {
+      "archive": "openscene_sensor_test_camera_9.tgz",
+      "bytes": 3668289945
+    }
+  ],
+  "bytes": 127882665618,
+  "verified_images": 12146,
+  "approved_by_user": "2026-10-03",
+  "receipts_kept": true
+}

@@ -1,0 +1,12 @@
+{"stage": "loading_frozen_backbone", "updated_at_utc": "2026-10-01T11:56:12.205683+00:00"}
+The config attributes {'clip_output': False} were passed to AutoencoderKLWan, but are not expected and will be ignored. Please verify your config.json configuration file.
+/usr/lib/python3.10/contextlib.py:103: FutureWarning: `torch.backends.cuda.sdp_kernel()` is deprecated. In the future, this context manager will be removed. Please see `torch.nn.attention.sdpa_kernel()` for the new context manager, with updated signature.
+  self.gen = func(*args, **kwds)
+{"stage": "extracting", "updated_at_utc": "2026-10-01T11:58:16.036556+00:00", "completed": 128, "total": 2304, "elapsed_seconds": 120.02999408729374}
+{"stage": "extracting", "updated_at_utc": "2026-10-01T12:00:07.481196+00:00", "completed": 256, "total": 2304, "elapsed_seconds": 231.474633987993}
+{"stage": "extracting", "updated_at_utc": "2026-10-01T12:01:55.229968+00:00", "completed": 384, "total": 2304, "elapsed_seconds": 339.2234058380127}
+{"stage": "extracting", "updated_at_utc": "2026-10-01T12:03:45.065870+00:00", "completed": 512, "total": 2304, "elapsed_seconds": 449.0593091510236}
+{"stage": "extracting", "updated_at_utc": "2026-10-01T12:05:35.760160+00:00", "completed": 640, "total": 2304, "elapsed_seconds": 559.7535931896418}
+{"stage": "extracting", "updated_at_utc": "2026-10-01T12:07:22.187566+00:00", "completed": 768, "total": 2304, "elapsed_seconds": 666.1810039188713}
+{"stage": "extracting", "updated_at_utc": "2026-10-01T12:09:11.061377+00:00", "completed": 896, "total": 2304, "elapsed_seconds": 775.0548155140132}
+{"stage": "extracting", "updated_at_utc": "2026-10-01T12:10:57.394046+00:00", "completed": 1024, "total": 2304, "elapsed_seconds": 881.3874832503498}

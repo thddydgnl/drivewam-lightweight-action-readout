@@ -1,0 +1,39 @@
+{"stage": "scoring", "backend": "official", "requested": 640, "workers": 8}
+{"stage": "scoring", "backend": "official", "completed": 64, "total": 640}
+{"stage": "scoring", "backend": "official", "completed": 128, "total": 640}
+{"stage": "scoring", "backend": "official", "completed": 192, "total": 640}
+{"stage": "scoring", "backend": "official", "completed": 256, "total": 640}
+{"stage": "scoring", "backend": "official", "completed": 320, "total": 640}
+{"stage": "scoring", "backend": "official", "completed": 384, "total": 640}
+{"stage": "scoring", "backend": "official", "completed": 448, "total": 640}
+{"stage": "scoring", "backend": "official", "completed": 512, "total": 640}
+{"stage": "scoring", "backend": "official", "completed": 576, "total": 640}
+{"stage": "scoring", "backend": "official", "completed": 640, "total": 640}
+{"stage": "verified", "backend": "official", "scored": 640, "coverage": 1.0, "failures": 0}
+{"stage": "scoring", "backend": "vendored", "requested": 640, "workers": 8}
+{"stage": "scoring", "backend": "vendored", "completed": 64, "total": 640}
+{"stage": "scoring", "backend": "vendored", "completed": 128, "total": 640}
+{"stage": "scoring", "backend": "vendored", "completed": 192, "total": 640}
+{"stage": "scoring", "backend": "vendored", "completed": 256, "total": 640}
+{"stage": "scoring", "backend": "vendored", "completed": 320, "total": 640}
+{"stage": "scoring", "backend": "vendored", "completed": 384, "total": 640}
+{"stage": "scoring", "backend": "vendored", "completed": 448, "total": 640}
+{"stage": "scoring", "backend": "vendored", "completed": 512, "total": 640}
+{"stage": "scoring", "backend": "vendored", "completed": 576, "total": 640}
+{"stage": "scoring", "backend": "vendored", "completed": 640, "total": 640}
+{"stage": "verified", "backend": "vendored", "scored": 640, "coverage": 1.0, "failures": 0}
+model  scenes     score  no_at_fault_collisions  drivable_area_compliance  time_to_collision_within_bound  comfort  ego_progress  driving_direction_compliance  ade_4s_m  fde_4s_m  ade_3s_m  fde_3s_m  heading_mae_rad  policy_p50_ms  policy_p90_ms  policy_p95_ms  action_gpu_p50_ms  peak_allocated_gib  at_fault_collision_scenes  dac_failure_scenes
+  B10     256 93.115341                   100.0                 99.609375                       99.609375    100.0     84.414318                      97.65625  0.075978  0.138009  0.058474  0.101209          0.00296     792.700477     793.809276     794.200906         460.376068           13.674188                          0                   1
+  B05     256 93.110889                   100.0                 99.609375                       99.609375    100.0     84.403633                      97.65625  0.074819  0.135739  0.057637  0.099409          0.00293     583.789559     584.781357     585.072347         251.530754           13.674188                          0                   1
+{
+  "paired_score_delta": {
+    "mean": -0.00445230073915609,
+    "ci95_low": -0.016317636011864152,
+    "ci95_high": 0.0028852809529104385
+  },
+  "speed": {
+    "policy_p50_ratio_B05_over_B10": 0.7364566769676733,
+    "policy_p95_ratio_B05_over_B10": 0.7366805334787679,
+    "policy_p50_reduction_percent": 26.354332303232674
+  }
+}

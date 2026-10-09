@@ -1,0 +1,55 @@
+{
+  "date": "2026-09-30T10:38:44.882701+00:00",
+  "scope": "NAVSIM actual-data preparation and one actual B10 smoke verification",
+  "status": "navtrain_pilot_prepared_and_real_B10_smoke_verified",
+  "local_copies_verified_against_remote_DATA_LOCK": 37,
+  "documents": [
+    {
+      "path": "DriveWAM_Lightweight_Action_Readout_Research_Idea.md",
+      "sha256": "f49d1e318db27361dba97ee0474e13615a6d8f5759e4c317eedb377ba0b4b818"
+    },
+    {
+      "path": "research_plan/README.md",
+      "sha256": "df251cc10c1375cfb38c7bcd336fc3e3addbad0c33807461dd445324607a089f"
+    },
+    {
+      "path": "research_plan/실행계획서.md",
+      "sha256": "ed391e23ab8bf22db94bde1f9a8033f7e5c460600c49c08e09717fa2365896de"
+    },
+    {
+      "path": "research_plan/외부코드_검수보고서.md",
+      "sha256": "7f190126f8091ea5e4909373fe173db6fcf6e0742a3a104f71d241e021688799"
+    }
+  ],
+  "source_trees": [
+    {
+      "name": "DriveWAM",
+      "files": 11,
+      "clean": true
+    },
+    {
+      "name": "Light-WAM",
+      "files": 5,
+      "clean": true
+    },
+    {
+      "name": "navsim-v1.1",
+      "files": 9,
+      "clean": true
+    },
+    {
+      "name": "lingbot-va",
+      "files": 3,
+      "clean": true
+    }
+  ],
+  "local_link_targets_checked": 16,
+  "python_compile": "passed",
+  "train_scenes": 4000,
+  "val_scenes": 1000,
+  "train_val_log_overlap": 0,
+  "metric_cache_scenes": 256,
+  "actual_B10_scenes": 1,
+  "driving_quality_and_latency_benchmark": false,
+  "issues": []
+}

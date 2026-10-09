@@ -1,0 +1,74 @@
+{"stage": "verifying_provenance"}
+{"stage": "preloading_observations"}
+{"stage": "loading_models"}
+The config attributes {'clip_output': False} were passed to AutoencoderKLWan, but are not expected and will be ignored. Please verify your config.json configuration file.
+{"stage": "instrumentation_parity"}
+/usr/lib/python3.10/contextlib.py:103: FutureWarning: `torch.backends.cuda.sdp_kernel()` is deprecated. In the future, this context manager will be removed. Please see `torch.nn.attention.sdpa_kernel()` for the new context manager, with updated signature.
+  self.gen = func(*args, **kwds)
+{"stage": "warmup", "per_model": 20}
+{"stage": "primary_and_online_timing", "repeat": 0, "completed": 0, "total": 256}
+/usr/lib/python3.10/contextlib.py:103: FutureWarning: `torch.backends.cuda.sdp_kernel()` is deprecated. In the future, this context manager will be removed. Please see `torch.nn.attention.sdpa_kernel()` for the new context manager, with updated signature.
+  self.gen = func(*args, **kwds)
+{"stage": "primary_and_online_timing", "repeat": 0, "completed": 16, "total": 256}
+{"stage": "primary_and_online_timing", "repeat": 0, "completed": 32, "total": 256}
+{"stage": "primary_and_online_timing", "repeat": 0, "completed": 48, "total": 256}
+{"stage": "primary_and_online_timing", "repeat": 0, "completed": 64, "total": 256}
+{"stage": "primary_and_online_timing", "repeat": 0, "completed": 80, "total": 256}
+{"stage": "primary_and_online_timing", "repeat": 0, "completed": 96, "total": 256}
+{"stage": "primary_and_online_timing", "repeat": 0, "completed": 112, "total": 256}
+{"stage": "primary_and_online_timing", "repeat": 0, "completed": 128, "total": 256}
+{"stage": "primary_and_online_timing", "repeat": 0, "completed": 144, "total": 256}
+{"stage": "primary_and_online_timing", "repeat": 0, "completed": 160, "total": 256}
+{"stage": "primary_and_online_timing", "repeat": 0, "completed": 176, "total": 256}
+{"stage": "primary_and_online_timing", "repeat": 0, "completed": 192, "total": 256}
+{"stage": "primary_and_online_timing", "repeat": 0, "completed": 208, "total": 256}
+{"stage": "primary_and_online_timing", "repeat": 0, "completed": 224, "total": 256}
+{"stage": "primary_and_online_timing", "repeat": 0, "completed": 240, "total": 256}
+{"stage": "primary_and_online_timing", "repeat": 0, "completed": 256, "total": 256}
+{"stage": "primary_and_online_timing", "repeat": 1, "completed": 0, "total": 256}
+/usr/lib/python3.10/contextlib.py:103: FutureWarning: `torch.backends.cuda.sdp_kernel()` is deprecated. In the future, this context manager will be removed. Please see `torch.nn.attention.sdpa_kernel()` for the new context manager, with updated signature.
+  self.gen = func(*args, **kwds)
+{"stage": "primary_and_online_timing", "repeat": 1, "completed": 16, "total": 256}
+{"stage": "primary_and_online_timing", "repeat": 1, "completed": 32, "total": 256}
+{"stage": "primary_and_online_timing", "repeat": 1, "completed": 48, "total": 256}
+{"stage": "primary_and_online_timing", "repeat": 1, "completed": 64, "total": 256}
+{"stage": "primary_and_online_timing", "repeat": 1, "completed": 80, "total": 256}
+{"stage": "primary_and_online_timing", "repeat": 1, "completed": 96, "total": 256}
+{"stage": "primary_and_online_timing", "repeat": 1, "completed": 112, "total": 256}
+{"stage": "primary_and_online_timing", "repeat": 1, "completed": 128, "total": 256}
+{"stage": "primary_and_online_timing", "repeat": 1, "completed": 144, "total": 256}
+{"stage": "primary_and_online_timing", "repeat": 1, "completed": 160, "total": 256}
+{"stage": "primary_and_online_timing", "repeat": 1, "completed": 176, "total": 256}
+{"stage": "primary_and_online_timing", "repeat": 1, "completed": 192, "total": 256}
+{"stage": "primary_and_online_timing", "repeat": 1, "completed": 208, "total": 256}
+{"stage": "primary_and_online_timing", "repeat": 1, "completed": 224, "total": 256}
+{"stage": "primary_and_online_timing", "repeat": 1, "completed": 240, "total": 256}
+{"stage": "primary_and_online_timing", "repeat": 1, "completed": 256, "total": 256}
+{"stage": "primary_and_online_timing", "repeat": 2, "completed": 0, "total": 256}
+/usr/lib/python3.10/contextlib.py:103: FutureWarning: `torch.backends.cuda.sdp_kernel()` is deprecated. In the future, this context manager will be removed. Please see `torch.nn.attention.sdpa_kernel()` for the new context manager, with updated signature.
+  self.gen = func(*args, **kwds)
+{"stage": "primary_and_online_timing", "repeat": 2, "completed": 16, "total": 256}
+{"stage": "primary_and_online_timing", "repeat": 2, "completed": 32, "total": 256}
+{"stage": "primary_and_online_timing", "repeat": 2, "completed": 48, "total": 256}
+{"stage": "primary_and_online_timing", "repeat": 2, "completed": 64, "total": 256}
+{"stage": "primary_and_online_timing", "repeat": 2, "completed": 80, "total": 256}
+{"stage": "primary_and_online_timing", "repeat": 2, "completed": 96, "total": 256}
+{"stage": "primary_and_online_timing", "repeat": 2, "completed": 112, "total": 256}
+{"stage": "primary_and_online_timing", "repeat": 2, "completed": 128, "total": 256}
+{"stage": "primary_and_online_timing", "repeat": 2, "completed": 144, "total": 256}
+{"stage": "primary_and_online_timing", "repeat": 2, "completed": 160, "total": 256}
+{"stage": "primary_and_online_timing", "repeat": 2, "completed": 176, "total": 256}
+{"stage": "primary_and_online_timing", "repeat": 2, "completed": 192, "total": 256}
+{"stage": "primary_and_online_timing", "repeat": 2, "completed": 208, "total": 256}
+{"stage": "primary_and_online_timing", "repeat": 2, "completed": 224, "total": 256}
+{"stage": "primary_and_online_timing", "repeat": 2, "completed": 240, "total": 256}
+{"stage": "primary_and_online_timing", "repeat": 2, "completed": 256, "total": 256}
+{"stage": "generation_seed_diagnostic", "generation_seed": 1, "completed": 0, "total": 32}
+/usr/lib/python3.10/contextlib.py:103: FutureWarning: `torch.backends.cuda.sdp_kernel()` is deprecated. In the future, this context manager will be removed. Please see `torch.nn.attention.sdpa_kernel()` for the new context manager, with updated signature.
+  self.gen = func(*args, **kwds)
+{"stage": "generation_seed_diagnostic", "generation_seed": 1, "completed": 16, "total": 32}
+{"stage": "generation_seed_diagnostic", "generation_seed": 1, "completed": 32, "total": 32}
+{"stage": "generation_seed_diagnostic", "generation_seed": 2, "completed": 0, "total": 32}
+{"stage": "generation_seed_diagnostic", "generation_seed": 2, "completed": 16, "total": 32}
+{"stage": "generation_seed_diagnostic", "generation_seed": 2, "completed": 32, "total": 32}
+{"stage": "verified", "primary_predictions": 512, "diagnostic_extra_predictions": 128}

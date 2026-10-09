@@ -1,0 +1,20 @@
+{
+  "model": "ego-only",
+  "config": {
+    "kind": "ego",
+    "phase": "current"
+  },
+  "seed": 17,
+  "parameters": 485123,
+  "epochs": 40,
+  "steps": 5000,
+  "checkpoint": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/heads_navtest_dev_2026-10-02/seed17/ego-only/epoch-040.safetensors",
+  "checkpoint_sha256": "89615e2476ea40646332d3e1ea39af01ada43ae3a283f228c22165a48138a503",
+  "gradient_gate": {
+    "all_parameter_gradients_finite": true,
+    "query_gradient_norms": {},
+    "backbone_present": false
+  },
+  "elapsed_seconds": 27.623851116746664,
+  "completed_at_utc": "2026-10-02T08:18:48.928291+00:00"
+}

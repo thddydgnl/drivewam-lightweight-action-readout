@@ -1,0 +1,5 @@
+{
+  "stage": "failed",
+  "updated_at_utc": "2026-10-01T09:59:12.875545+00:00",
+  "error": "AttributeError(\"'PhaseEvents' object has no attribute 'policy'\")"
+}

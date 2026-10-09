@@ -1,0 +1,12 @@
+{
+  "captured_at_utc": "2026-09-30T09:34:19.431956+00:00",
+  "addresses": {
+    "download.pytorch.org": [
+      "52.85.128.43",
+      "52.85.128.81",
+      "52.85.128.85",
+      "52.85.128.9"
+    ]
+  },
+  "verification": "HTTPS HEAD with --resolve returned 200; certificate checks enabled; installation session only"
+}

@@ -1,0 +1,20 @@
+{
+  "model": "FMLP-first",
+  "config": {
+    "kind": "fmlp",
+    "phase": "first"
+  },
+  "seed": 17,
+  "parameters": 2589443,
+  "epochs": 40,
+  "steps": 5000,
+  "checkpoint": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/heads_navtest_dev_2026-10-02/seed17/FMLP-first/epoch-040.safetensors",
+  "checkpoint_sha256": "914358e09ea9704228efe76db2fa1f601f69d77251d42f0628a9dd344e6270e0",
+  "gradient_gate": {
+    "all_parameter_gradients_finite": true,
+    "query_gradient_norms": {},
+    "backbone_present": false
+  },
+  "elapsed_seconds": 36.070857621729374,
+  "completed_at_utc": "2026-10-02T08:20:44.371944+00:00"
+}

@@ -1,0 +1,22 @@
+{
+  "run_id": "navtest_final_2026-10-03",
+  "split": "navtest_final",
+  "preregistration": "reports/\uc0ac\uc804\ub4f1\ub85d_navtest-dev_2026-10-02.final.md (\u00a78)",
+  "models": [
+    "B10",
+    "B02-opt",
+    "student-seed17",
+    "student-seed29"
+  ],
+  "frozen_checkpoints": {
+    "17": "7af22cee1759676c1c078f6f5ce4d0e24e6ffb0fabf62fc447d22edc03b72c90",
+    "29": "0c5ad62f132d0fcf2c47995c5a02d2badcf9e9db88aed9a646ae0179d8ebd6b4"
+  },
+  "stats_sha256": "a4c4b471b2ae35276a9780456ba301749f79a1bc4454d87c5a08fb48af1867d8",
+  "manifest_sha256": "b31174c1bdef10c8c0fb8f43b48ee1455d4661e4580714301a0e12e431c94fa1",
+  "generation_seed": 0,
+  "student_features": "first-phase hook on original B10 rollout, layers [9,19,29]",
+  "student_batch": 1,
+  "targets_opened": false,
+  "created_at_utc": "2026-10-03T13:24:47.821984+00:00"
+}

@@ -1,0 +1,27 @@
+{"stage": "predicting", "updated_at_utc": "2026-10-01T11:55:59.430069+00:00", "model": "ego-only", "scenes": 256}
+{"stage": "predicting", "updated_at_utc": "2026-10-01T11:55:59.748268+00:00", "model": "linear-current", "scenes": 256}
+{"stage": "predicting", "updated_at_utc": "2026-10-01T11:56:00.035533+00:00", "model": "linear-first", "scenes": 256}
+{"stage": "predicting", "updated_at_utc": "2026-10-01T11:56:00.347243+00:00", "model": "linear-terminal", "scenes": 256}
+{"stage": "predicting", "updated_at_utc": "2026-10-01T11:56:00.880606+00:00", "model": "FMLP-current", "scenes": 256}
+{"stage": "predicting", "updated_at_utc": "2026-10-01T11:56:01.374390+00:00", "model": "FMLP-first", "scenes": 256}
+{"stage": "predicting", "updated_at_utc": "2026-10-01T11:56:01.860428+00:00", "model": "FMLP-terminal", "scenes": 256}
+{"stage": "predicting", "updated_at_utc": "2026-10-01T11:56:02.874655+00:00", "model": "SF1-terminal", "scenes": 256}
+{"stage": "predicting", "updated_at_utc": "2026-10-01T11:56:03.980391+00:00", "model": "SF1-wide-terminal", "scenes": 256}
+{"stage": "predicting", "updated_at_utc": "2026-10-01T11:56:05.740152+00:00", "model": "SF3-current", "scenes": 256}
+{"stage": "predicting", "updated_at_utc": "2026-10-01T11:56:07.675074+00:00", "model": "SF3-first", "scenes": 256}
+{"stage": "predicting", "updated_at_utc": "2026-10-01T11:56:09.458325+00:00", "model": "SF3-terminal", "scenes": 256}
+{"stage": "verified", "updated_at_utc": "2026-10-01T11:56:09.458887+00:00", "scenes": 256, "models": 12}
+{"stage": "scoring", "updated_at_utc": "2026-10-01T11:56:12.625912+00:00", "completed_models": 0, "total_models": 12}
+{"stage": "scoring", "updated_at_utc": "2026-10-01T11:56:22.030418+00:00", "completed_models": 1, "total_models": 12, "model": "FMLP-current"}
+{"stage": "scoring", "updated_at_utc": "2026-10-01T11:56:31.311424+00:00", "completed_models": 2, "total_models": 12, "model": "FMLP-first"}
+{"stage": "scoring", "updated_at_utc": "2026-10-01T11:56:40.942718+00:00", "completed_models": 3, "total_models": 12, "model": "FMLP-terminal"}
+{"stage": "scoring", "updated_at_utc": "2026-10-01T11:56:50.343225+00:00", "completed_models": 4, "total_models": 12, "model": "SF1-terminal"}
+{"stage": "scoring", "updated_at_utc": "2026-10-01T11:56:59.510792+00:00", "completed_models": 5, "total_models": 12, "model": "SF1-wide-terminal"}
+{"stage": "scoring", "updated_at_utc": "2026-10-01T11:57:07.994254+00:00", "completed_models": 6, "total_models": 12, "model": "SF3-current"}
+{"stage": "scoring", "updated_at_utc": "2026-10-01T11:57:17.241480+00:00", "completed_models": 7, "total_models": 12, "model": "SF3-first"}
+{"stage": "scoring", "updated_at_utc": "2026-10-01T11:57:26.295080+00:00", "completed_models": 8, "total_models": 12, "model": "SF3-terminal"}
+{"stage": "scoring", "updated_at_utc": "2026-10-01T11:57:35.576817+00:00", "completed_models": 9, "total_models": 12, "model": "ego-only"}
+{"stage": "scoring", "updated_at_utc": "2026-10-01T11:57:44.719146+00:00", "completed_models": 10, "total_models": 12, "model": "linear-current"}
+{"stage": "scoring", "updated_at_utc": "2026-10-01T11:57:54.489002+00:00", "completed_models": 11, "total_models": 12, "model": "linear-first"}
+{"stage": "scoring", "updated_at_utc": "2026-10-01T11:58:03.737807+00:00", "completed_models": 12, "total_models": 12, "model": "linear-terminal"}
+{"stage": "verified", "updated_at_utc": "2026-10-01T11:58:03.846014+00:00", "models": 12, "scenes": 256}

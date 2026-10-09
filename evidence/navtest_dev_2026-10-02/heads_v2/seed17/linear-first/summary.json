@@ -1,0 +1,20 @@
+{
+  "model": "linear-first",
+  "config": {
+    "kind": "linear",
+    "phase": "first"
+  },
+  "seed": 17,
+  "parameters": 74232,
+  "epochs": 40,
+  "steps": 5000,
+  "checkpoint": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/heads_navtest_dev_2026-10-02/seed17/linear-first/epoch-040.safetensors",
+  "checkpoint_sha256": "85cd443690649c6385d4a0e527de84a255cb25cc1c156d29b9a8657ba90f92b7",
+  "gradient_gate": {
+    "all_parameter_gradients_finite": true,
+    "query_gradient_norms": {},
+    "backbone_present": false
+  },
+  "elapsed_seconds": 15.099989859387279,
+  "completed_at_utc": "2026-10-02T08:19:18.976216+00:00"
+}

@@ -1,0 +1,21 @@
+# Direct install inputs validated on the GPU host on 2026-09-30.
+# Full resolved versions: evidence/remote_environment_2026-09-30/locks/model-freeze.txt
+# Install torch==2.9.0 + torchvision==0.24.0 from the official cu126 index first.
+# Install flash-attn==2.8.3 separately after checking the target CUDA toolchain.
+# NAVSIM/nuPlan scoring must use a separate environment.
+diffusers==0.36.0
+transformers==4.55.2
+accelerate==1.12.0
+einops==0.8.1
+easydict==1.13
+numpy==1.26.4
+safetensors==0.6.2
+huggingface-hub==0.34.4
+sentencepiece==0.2.1
+ftfy==6.3.1
+Pillow==11.3.0
+tqdm==4.67.1
+packaging==25.0
+ninja==1.11.1.4
+psutil==7.0.0
+pytest==8.4.2

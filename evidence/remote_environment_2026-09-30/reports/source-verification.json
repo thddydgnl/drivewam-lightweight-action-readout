@@ -1,0 +1,100 @@
+[
+  {
+    "name": "DriveWAM",
+    "commit": "abbefb407c9c553f221522fc26077d307620adb4",
+    "files": [
+      {
+        "path": "README.md",
+        "matched": true
+      },
+      {
+        "path": "environment.yml",
+        "matched": true
+      },
+      {
+        "path": "LICENSE.txt",
+        "matched": true
+      },
+      {
+        "path": "src/navsim/eval.py",
+        "matched": true
+      },
+      {
+        "path": "src/configs/navsim_cfg.py",
+        "matched": true
+      },
+      {
+        "path": "src/modules/navsim_model.py",
+        "matched": true
+      },
+      {
+        "path": "src/modules/model.py",
+        "matched": true
+      },
+      {
+        "path": "src/utils/scheduler.py",
+        "matched": true
+      },
+      {
+        "path": "src/dataset/navsim_dataset.py",
+        "matched": true
+      },
+      {
+        "path": "src/navsim/process_data.py",
+        "matched": true
+      },
+      {
+        "path": "navsim/common/dataloader.py",
+        "matched": true
+      }
+    ],
+    "clean": true
+  },
+  {
+    "name": "navsim-v1.1",
+    "commit": "3e8291bfa89ff247231e0227778840cd0a036896",
+    "files": [
+      {
+        "path": "LICENSE",
+        "matched": true
+      },
+      {
+        "path": "requirements.txt",
+        "matched": true
+      },
+      {
+        "path": "setup.py",
+        "matched": true
+      },
+      {
+        "path": "docs/install.md",
+        "matched": true
+      },
+      {
+        "path": "docs/splits.md",
+        "matched": true
+      },
+      {
+        "path": "download/download_navtrain.sh",
+        "matched": true
+      },
+      {
+        "path": "download/download_test.sh",
+        "matched": true
+      },
+      {
+        "path": "navsim/evaluate/pdm_score.py",
+        "matched": true
+      },
+      {
+        "path": "navsim/planning/simulation/planner/pdm_planner/scoring/pdm_scorer.py",
+        "matched": true
+      }
+    ],
+    "clean": true
+  },
+  {
+    "name": "nuplan-devkit",
+    "commit": "ce3c323af01c0d7ec5672f7832ef53f9c679aab0"
+  }
+]

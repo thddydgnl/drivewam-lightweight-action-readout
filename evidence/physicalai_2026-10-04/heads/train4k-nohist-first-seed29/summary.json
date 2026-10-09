@@ -1,0 +1,13 @@
+{
+  "name": "train4k-nohist-first-seed29",
+  "frame": "ego",
+  "train_rows": 19996,
+  "epochs": 40,
+  "steps": 25000,
+  "checkpoint_sha256": "a313a214073d50c4307d1914d2e686c3dcdba83fd4242abc2097275ee4c791be",
+  "predictions": {
+    "dev": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/pai_heads_2026-10-04/train4k-nohist-first-seed29/pred-dev.npz"
+  },
+  "elapsed_s": 1125.4967319946736,
+  "utc": "2026-10-04T13:30:31.085382+00:00"
+}

@@ -1,0 +1,37 @@
+{"stage":"wait_stream","utc":"2026-10-03T05:08:53Z"}
+{"processed": 72599, "missing": 0, "failed": 0, "excluded_fraction": 0.0}
+{"stage":"wait_features","utc":"2026-10-03T08:04:07Z"}
+locked 568 72599
+{"stage":"cleanup_archives","utc":"2026-10-03T08:10:11Z"}
+deleted 3 9.164535763 GB
+{"stage":"train_full","utc":"2026-10-03T08:10:15Z"}
+{"stage":"score_full","utc":"2026-10-03T10:15:25Z"}
+{"predictions": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/heads_v3_2026-10-03/full-R-first-seed29/navtest-dev-predictions.npz", "prediction_sha256": "d5a3f06dfcda5395d61efb6603d80dc1a8147b9381b987b0055f4ef0d24dd79f", "scores_sha256": "56f2bda9a8d5b8ea1000ac5070faa210e485dd6f308f5cc94d6fa552a8dbf4ad", "scenes": 3250, "coverage": 1.0, "failures": 0, "pdms": 90.57702739103857, "ade_4s_m": 0.6106434252301438, "official_navsim_commit": "3e8291bfa89ff247231e0227778840cd0a036896", "split": "navtest_dev"}
+full-R-first       mean PDMS  90.50  gain vs v2 +3.76  pass False
+20k-R-first        mean PDMS  89.68  gain vs v2 +2.93  pass False
+20k-R-terminal     mean PDMS  89.29  gain vs v2 +2.48  pass False
+4k-R-terminal      mean PDMS  86.81  gain vs v2 +0.00  pass False
+4k-R-first         mean PDMS  86.39  gain vs v2 -0.35  pass False
+20k-A-first        mean PDMS  79.25  gain vs v2 -7.50  pass False
+20k-A-terminal     mean PDMS  79.17  gain vs v2 -7.64  pass False
+4k-A-first         mean PDMS  58.47  gain vs v2 -28.28  pass False
+4k-A-terminal      mean PDMS  57.79  gain vs v2 -29.02  pass False
+  20k-A-first-seed17      79.53 vsB10 -11.40 [-14.61,-8.66] vsB* -11.35 [-14.49] DAC -10.28 ADE 0.714
+  20k-A-first-seed29      78.96 vsB10 -11.97 [-15.47,-9.02] vsB* -11.92 [-15.30] DAC -10.62 ADE 0.709
+  20k-A-terminal-seed17   79.03 vsB10 -11.90 [-15.55,-9.05] vsB* -11.85 [-15.51] DAC -10.46 ADE 0.724
+  20k-A-terminal-seed29   79.31 vsB10 -11.62 [-14.87,-8.91] vsB* -11.58 [-14.79] DAC -9.97 ADE 0.725
+  20k-R-first-seed17      89.36 vsB10 -1.57 [-2.62,-0.71] vsB* -1.52 [-2.61] DAC -1.51 ADE 0.624
+  20k-R-first-seed29      90.00 vsB10 -0.94 [-1.95,+0.00] vsB* -0.89 [-1.91] DAC -1.05 ADE 0.625
+  20k-R-terminal-seed17   89.47 vsB10 -1.46 [-2.43,-0.57] vsB* -1.41 [-2.39] DAC -1.54 ADE 0.627
+  20k-R-terminal-seed29   89.10 vsB10 -1.83 [-3.00,-0.86] vsB* -1.78 [-2.92] DAC -1.72 ADE 0.624
+  4k-A-first-seed17       57.85 vsB10 -33.08 [-38.00,-28.44] vsB* -33.03 [-37.90] DAC -27.63 ADE 1.353
+  4k-A-first-seed29       59.08 vsB10 -31.86 [-36.50,-27.40] vsB* -31.81 [-36.45] DAC -26.68 ADE 1.382
+  4k-A-terminal-seed17    57.66 vsB10 -33.27 [-38.24,-28.68] vsB* -33.22 [-38.10] DAC -27.66 ADE 1.440
+  4k-A-terminal-seed29    57.91 vsB10 -33.02 [-37.62,-28.67] vsB* -32.98 [-37.52] DAC -27.05 ADE 1.428
+  4k-R-first-seed17       86.55 vsB10 -4.39 [-5.76,-3.17] vsB* -4.34 [-5.68] DAC -3.85 ADE 0.675
+  4k-R-first-seed29       86.24 vsB10 -4.69 [-6.63,-2.99] vsB* -4.64 [-6.62] DAC -4.55 ADE 0.674
+  4k-R-terminal-seed17    86.58 vsB10 -4.35 [-5.99,-3.00] vsB* -4.30 [-5.99] DAC -3.94 ADE 0.667
+  4k-R-terminal-seed29    87.04 vsB10 -3.89 [-5.68,-2.40] vsB* -3.84 [-5.66] DAC -3.75 ADE 0.669
+  full-R-first-seed17     90.43 vsB10 -0.51 [-1.12,+0.14] vsB* -0.46 [-0.96] DAC -0.52 ADE 0.613
+  full-R-first-seed29     90.58 vsB10 -0.36 [-0.95,+0.28] vsB* -0.31 [-0.82] DAC -0.40 ADE 0.611
+{"stage":"done","utc":"2026-10-03T10:15:47Z"}

@@ -1,0 +1,104 @@
+{
+  "status": "complete_pilot_artifacts_rechecked",
+  "checks": {
+    "opt_devval256_2026-10-01": {
+      "files_scripts_and_predictions_verified": true,
+      "predictions": 2496
+    },
+    "heads_online_devval256_2026-10-01-r2": {
+      "files_scripts_and_predictions_verified": true,
+      "predictions": 3584
+    },
+    "feature_cache": {
+      "scenes": 5000,
+      "shards": 40,
+      "bytes": 63037854704,
+      "full_shard_sha256_rechecked": true,
+      "split_input_target_parity_verified": true
+    },
+    "head_training_and_native_online": {
+      "models": 12,
+      "overfit_passed": true,
+      "selected_checkpoints_verified": [
+        {
+          "model": "ego-only",
+          "checkpoint": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/head_pilot_2026-10-01/ego-only/epoch-015.safetensors",
+          "sha256": "6ed30cc90bf6247a8b705cb0e2cd86f517d85affa13f9c85cfc654817f7b1aa0"
+        },
+        {
+          "model": "linear-current",
+          "checkpoint": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/head_pilot_2026-10-01/linear-current/epoch-030.safetensors",
+          "sha256": "ec8014991b40a9fe2748522cbada8f8a1b658a95cca3567ac0e5e86db91b9ada"
+        },
+        {
+          "model": "linear-first",
+          "checkpoint": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/head_pilot_2026-10-01/linear-first/epoch-030.safetensors",
+          "sha256": "2ecb6d93180b826fafe5bcf80a46f4d15b7dc165c5aa9f4709efeaf3b6fa81a5"
+        },
+        {
+          "model": "linear-terminal",
+          "checkpoint": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/head_pilot_2026-10-01/linear-terminal/epoch-030.safetensors",
+          "sha256": "ee48b68c136b8df5f2292344ce3af59a6a5d3db24f3dbb89d341f1cf9608a188"
+        },
+        {
+          "model": "FMLP-current",
+          "checkpoint": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/head_pilot_2026-10-01/FMLP-current/epoch-020.safetensors",
+          "sha256": "3f4d75bba02e62db1b400f5eecf48b04c15e7dd3746a3ac5cbc692b05b8d0bad"
+        },
+        {
+          "model": "FMLP-first",
+          "checkpoint": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/head_pilot_2026-10-01/FMLP-first/epoch-025.safetensors",
+          "sha256": "50d73cce190417fc6414b4a6676ee2726d65e70870d3596236aa4cf70cd2e551"
+        },
+        {
+          "model": "FMLP-terminal",
+          "checkpoint": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/head_pilot_2026-10-01/FMLP-terminal/epoch-030.safetensors",
+          "sha256": "6ded05e9519e2bcb9fdcd1d3eb8ca5f8309fd40a5fa9075c89e8dda511296e89"
+        },
+        {
+          "model": "SF1-terminal",
+          "checkpoint": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/head_pilot_2026-10-01/SF1-terminal/epoch-025.safetensors",
+          "sha256": "612e8c9412cc6b42c483719a6277b6976d8e794197bfbfe809c396b048f36fe3"
+        },
+        {
+          "model": "SF1-wide-terminal",
+          "checkpoint": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/head_pilot_2026-10-01/SF1-wide-terminal/epoch-015.safetensors",
+          "sha256": "1c617b0480f226bc4fa0af1393fe9ae4e3a90168dab0796d5cea6b91e1377e36"
+        },
+        {
+          "model": "SF3-current",
+          "checkpoint": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/head_pilot_2026-10-01/SF3-current/epoch-028.safetensors",
+          "sha256": "118a9dfea9d9a890d1088c5fac1deb0040300a329d0ba8c74e5956070f26efb5"
+        },
+        {
+          "model": "SF3-first",
+          "checkpoint": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/head_pilot_2026-10-01/SF3-first/epoch-030.safetensors",
+          "sha256": "028ef96f177354d2988dc5b67b85bb08c5423e60d40b6144a2277539a18fd21b"
+        },
+        {
+          "model": "SF3-terminal",
+          "checkpoint": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/head_pilot_2026-10-01/SF3-terminal/epoch-030.safetensors",
+          "sha256": "a36b942d1cfd69edf63ee8781c9f08a454f4d471f29dba5f9285780eae7eb950"
+        }
+      ],
+      "online_cache_comparisons": 384,
+      "native_paths_verified": true
+    }
+  },
+  "evaluation_locks": [
+    {
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/opt_devval256_2026-10-01/EVALUATION_LOCK.json",
+      "sha256": "db07aa517109db6431e466be8d5925b6e45ac66a8ea91263df6e7ff6710df428"
+    },
+    {
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/heads_online_devval256_2026-10-01-r2/EVALUATION_LOCK.json",
+      "sha256": "ebbdeef158ae6e8ec4a89b1cd2d785d5b0b83c1b6ad6311b361367c5c51653cc"
+    }
+  ],
+  "feature_lock_sha256": "7412d867387fbb639b16eb0d0d332a12bec93ed347ded3ae23ed5bca8134848e",
+  "navtest_used": false,
+  "B_star_selected": false,
+  "generated_at_utc": "2026-10-01T11:55:55.111654+00:00",
+  "elapsed_seconds": 54.90368955023587,
+  "audit_script_sha256": "7a668180ba622cf2c901247e833070e88b9cd5bd2740b7d9844ca13ac916c8ef"
+}

@@ -1,0 +1,116 @@
+{
+  "status": "dev256_B10_B05_quality_and_three_repeat_timing_verified",
+  "run_id": "baselines_devval256_2026-10-01",
+  "workspace": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout",
+  "protocol_sha256": "2925f112db01b4dfe107ca1c3733573eca622f01f126f1b202fd7d65a3a3ef0c",
+  "files": [
+    {
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/baselines_devval256_2026-10-01/protocol.json",
+      "bytes": 12947,
+      "sha256": "2925f112db01b4dfe107ca1c3733573eca622f01f126f1b202fd7d65a3a3ef0c"
+    },
+    {
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/baselines_devval256_2026-10-01/instrumentation-parity.json",
+      "bytes": 33,
+      "sha256": "009bc26d2f6093199a3c94a4a8b12b2b3f838f06c19bc1edef57b983980b9ece"
+    },
+    {
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/baselines_devval256_2026-10-01/inference-summary.json",
+      "bytes": 826,
+      "sha256": "d0830871094310b28afdd0fb066c7f713d627b4803e8d0bc091900375dba0670"
+    },
+    {
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/baselines_devval256_2026-10-01/timings.jsonl",
+      "bytes": 2313437,
+      "sha256": "abfdb3443925a95707c75a79375cee1ada172619963f5f529fbc5acea40d73db"
+    },
+    {
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/baselines_devval256_2026-10-01/prediction-index.jsonl",
+      "bytes": 394072,
+      "sha256": "71def02ec91d1c198d8d5e6ba8c9320adb786b7f32307562cdb938eac6f2ac2c"
+    },
+    {
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/baselines_devval256_2026-10-01/scores-official.csv",
+      "bytes": 297576,
+      "sha256": "4ed0eece8f1341ff82f15d8f4b8eb6a9be4c396c07b92aff19227eb68e1afcd4"
+    },
+    {
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/baselines_devval256_2026-10-01/scores-vendored.csv",
+      "bytes": 297537,
+      "sha256": "8a86631d5676dddf07557722ec521f28e1f9b7934bbf593267c76621f92f3fea"
+    },
+    {
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/baselines_devval256_2026-10-01/score-official-summary.json",
+      "bytes": 2941,
+      "sha256": "8928e96c587636bb6807c824d7491e891d90777cb934b9067c0a408371f9ea92"
+    },
+    {
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/baselines_devval256_2026-10-01/score-vendored-summary.json",
+      "bytes": 2920,
+      "sha256": "c801aa0540001acd8b1e9af3691ba57bd667a23fd5770e3b9d4f8772fb050e3f"
+    },
+    {
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/baselines_devval256_2026-10-01/summary.json",
+      "bytes": 15250,
+      "sha256": "cbdc94b7d6d1a54d57f8917ab2e21180fa687a5c889cc2033203a241690f524e"
+    },
+    {
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/baselines_devval256_2026-10-01/summary.csv",
+      "bytes": 887,
+      "sha256": "269a2792591bc9d25d1731f0c5bcfafeecb32d0e6bd97cb03e5e89b45d0aaf28"
+    },
+    {
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/baselines_devval256_2026-10-01/paired-differences.csv",
+      "bytes": 55010,
+      "sha256": "d47bf5dcbdb910ed69279448615d40edc809592f0b521dc220e6e4a15bd348f9"
+    },
+    {
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/baselines_devval256_2026-10-01/scorer-differences.csv",
+      "bytes": 33139,
+      "sha256": "eafeadd93f1fc1f6f9aa45cf57ffc221e630f5fce7d06232232e5114fb62f404"
+    },
+    {
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/baselines_devval256_2026-10-01/subgroups.csv",
+      "bytes": 1458,
+      "sha256": "a10106664900a82f96a37a4fa6571bfcab199097b9ba8a9e7ca7852793c0c60b"
+    },
+    {
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/baselines_devval256_2026-10-01/baseline-comparison.png",
+      "bytes": 79461,
+      "sha256": "e68c79bc7924c18900ccc94a6d5ba1574546e3f68bcd1669bb60daf06080a254"
+    },
+    {
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/baselines_devval256_2026-10-01/baseline-comparison.svg",
+      "bytes": 46302,
+      "sha256": "9392d49003c929ff60da062b974cd5ab4e6555014d86792e1ee29db251830de5"
+    },
+    {
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/baselines_devval256_2026-10-01/trajectory-example.png",
+      "bytes": 601850,
+      "sha256": "cf7239bffbee0125ef0be634f606cad274417fadd8ee8c4fb18807226d369924"
+    }
+  ],
+  "scripts": [
+    {
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/scripts/baseline_common.py",
+      "sha256": "ac70c9e43477727d67bd0222f7bb3308dc02f8b16c8b5e807ca1405618769977"
+    },
+    {
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/scripts/remote_baseline_infer.py",
+      "sha256": "472cf5287db40e846ee89abf580bbbc3daddb1a7f047af6d775d27617570483e"
+    },
+    {
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/scripts/remote_baseline_score.py",
+      "sha256": "fe3b3ba0402c6d4d16755760a2ea4a2f6daee66ef98ef9589f547b1bc59296c1"
+    },
+    {
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/scripts/remote_baseline_analyze.py",
+      "sha256": "9638206bedab45c6cd0c5cdbf774328513523ebcd05f1f23a3ca634154692d9c"
+    }
+  ],
+  "primary_scored_each_model": 256,
+  "timing_measured_each_model": 768,
+  "diagnostic_scenes": 32,
+  "navtest_used": false,
+  "generated_at_utc": "2026-10-01T07:32:39.135499+00:00"
+}

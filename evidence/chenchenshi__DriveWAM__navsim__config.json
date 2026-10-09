@@ -1,0 +1,31 @@
+{
+  "patch_size": [
+    1,
+    2,
+    2
+  ],
+  "num_attention_heads": 24,
+  "attention_head_dim": 128,
+  "in_channels": 48,
+  "out_channels": 48,
+  "action_dim": 30,
+  "text_dim": 4096,
+  "freq_dim": 256,
+  "ffn_dim": 14336,
+  "num_layers": 30,
+  "cross_attn_norm": true,
+  "eps": 1e-06,
+  "rope_max_seq_len": 1024,
+  "pos_embed_seq_len": null,
+  "attn_mode": "flex",
+  "ego_command_classes": 4,
+  "ego_velocity_acc_dim": 4,
+  "ego_history_pose_dim": 12,
+  "_use_default_values": [
+    "ego_history_pose_dim",
+    "ego_velocity_acc_dim",
+    "ego_command_classes"
+  ],
+  "_class_name": "WanTransformer3DNavSimModel",
+  "_diffusers_version": "0.35.0.dev0"
+}

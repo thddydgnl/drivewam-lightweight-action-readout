@@ -1,0 +1,36 @@
+{
+  "source_trees": [
+    {
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/upstream/DriveWAM",
+      "head": "abbefb407c9c553f221522fc26077d307620adb4",
+      "status": ""
+    },
+    {
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/work/DriveWAM",
+      "head": "abbefb407c9c553f221522fc26077d307620adb4",
+      "status": ""
+    },
+    {
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/upstream/navsim-v1.1",
+      "head": "3e8291bfa89ff247231e0227778840cd0a036896",
+      "status": ""
+    },
+    {
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/upstream/nuplan-devkit",
+      "head": "ce3c323af01c0d7ec5672f7832ef53f9c679aab0",
+      "status": ""
+    }
+  ],
+  "gpu_after": "0, GPU-a908b59a-6e7f-31dc-6fb0-ce6d61e0cf2c, 2 MiB, 0 %\n1, GPU-0639afab-9af0-2aee-b618-2ae10da61b95, 2 MiB, 0 %\n",
+  "baseline_processes_running": [],
+  "historical_locks": [
+    {
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/ENVIRONMENT_LOCK.json",
+      "sha256": "df37059652ed6554027316d9ace64400a3826616dc536988ef2adf44eeb62fda"
+    },
+    {
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/DATA_LOCK.json",
+      "sha256": "888edb14d6346671f9bfe908530530f67ea742ee3dcadf8283e921283000fd2b"
+    }
+  ]
+}

@@ -1,0 +1,296 @@
+{
+  "scenes": 32,
+  "rows": [
+    {
+      "scene_token": "2921b009ed4551bb",
+      "hook_raw_action_and_world_bitwise_equal": true,
+      "world_only_features_bitwise_equal": true,
+      "world_only_latents_bitwise_equal": true,
+      "current_and_first_early_stop_features_bitwise_equal": true,
+      "unused_future_rgb_action_permutation_checked": true
+    },
+    {
+      "scene_token": "6a0c22bca02857a4",
+      "hook_raw_action_and_world_bitwise_equal": true,
+      "world_only_features_bitwise_equal": true,
+      "world_only_latents_bitwise_equal": true,
+      "current_and_first_early_stop_features_bitwise_equal": true,
+      "unused_future_rgb_action_permutation_checked": true
+    },
+    {
+      "scene_token": "fd0ecd5571c95218",
+      "hook_raw_action_and_world_bitwise_equal": true,
+      "world_only_features_bitwise_equal": true,
+      "world_only_latents_bitwise_equal": true,
+      "current_and_first_early_stop_features_bitwise_equal": true,
+      "unused_future_rgb_action_permutation_checked": false
+    },
+    {
+      "scene_token": "d720f0936e795b3d",
+      "hook_raw_action_and_world_bitwise_equal": true,
+      "world_only_features_bitwise_equal": true,
+      "world_only_latents_bitwise_equal": true,
+      "current_and_first_early_stop_features_bitwise_equal": true,
+      "unused_future_rgb_action_permutation_checked": false
+    },
+    {
+      "scene_token": "97a3fc19fc7b508e",
+      "hook_raw_action_and_world_bitwise_equal": true,
+      "world_only_features_bitwise_equal": true,
+      "world_only_latents_bitwise_equal": true,
+      "current_and_first_early_stop_features_bitwise_equal": true,
+      "unused_future_rgb_action_permutation_checked": false
+    },
+    {
+      "scene_token": "8b33da8689c259b0",
+      "hook_raw_action_and_world_bitwise_equal": true,
+      "world_only_features_bitwise_equal": true,
+      "world_only_latents_bitwise_equal": true,
+      "current_and_first_early_stop_features_bitwise_equal": true,
+      "unused_future_rgb_action_permutation_checked": false
+    },
+    {
+      "scene_token": "bc43a81401395acf",
+      "hook_raw_action_and_world_bitwise_equal": true,
+      "world_only_features_bitwise_equal": true,
+      "world_only_latents_bitwise_equal": true,
+      "current_and_first_early_stop_features_bitwise_equal": true,
+      "unused_future_rgb_action_permutation_checked": false
+    },
+    {
+      "scene_token": "f6ce37897fc459a5",
+      "hook_raw_action_and_world_bitwise_equal": true,
+      "world_only_features_bitwise_equal": true,
+      "world_only_latents_bitwise_equal": true,
+      "current_and_first_early_stop_features_bitwise_equal": true,
+      "unused_future_rgb_action_permutation_checked": false
+    },
+    {
+      "scene_token": "4568394754b05af7",
+      "hook_raw_action_and_world_bitwise_equal": true,
+      "world_only_features_bitwise_equal": true,
+      "world_only_latents_bitwise_equal": true,
+      "current_and_first_early_stop_features_bitwise_equal": true,
+      "unused_future_rgb_action_permutation_checked": false
+    },
+    {
+      "scene_token": "9c3d78bda27f5a30",
+      "hook_raw_action_and_world_bitwise_equal": true,
+      "world_only_features_bitwise_equal": true,
+      "world_only_latents_bitwise_equal": true,
+      "current_and_first_early_stop_features_bitwise_equal": true,
+      "unused_future_rgb_action_permutation_checked": false
+    },
+    {
+      "scene_token": "c39f4e9ec7c45527",
+      "hook_raw_action_and_world_bitwise_equal": true,
+      "world_only_features_bitwise_equal": true,
+      "world_only_latents_bitwise_equal": true,
+      "current_and_first_early_stop_features_bitwise_equal": true,
+      "unused_future_rgb_action_permutation_checked": false
+    },
+    {
+      "scene_token": "6d859180a4ed56bb",
+      "hook_raw_action_and_world_bitwise_equal": true,
+      "world_only_features_bitwise_equal": true,
+      "world_only_latents_bitwise_equal": true,
+      "current_and_first_early_stop_features_bitwise_equal": true,
+      "unused_future_rgb_action_permutation_checked": false
+    },
+    {
+      "scene_token": "69cb77b5252d5829",
+      "hook_raw_action_and_world_bitwise_equal": true,
+      "world_only_features_bitwise_equal": true,
+      "world_only_latents_bitwise_equal": true,
+      "current_and_first_early_stop_features_bitwise_equal": true,
+      "unused_future_rgb_action_permutation_checked": false
+    },
+    {
+      "scene_token": "944932a802ca58e3",
+      "hook_raw_action_and_world_bitwise_equal": true,
+      "world_only_features_bitwise_equal": true,
+      "world_only_latents_bitwise_equal": true,
+      "current_and_first_early_stop_features_bitwise_equal": true,
+      "unused_future_rgb_action_permutation_checked": false
+    },
+    {
+      "scene_token": "9594c5209d0a5280",
+      "hook_raw_action_and_world_bitwise_equal": true,
+      "world_only_features_bitwise_equal": true,
+      "world_only_latents_bitwise_equal": true,
+      "current_and_first_early_stop_features_bitwise_equal": true,
+      "unused_future_rgb_action_permutation_checked": false
+    },
+    {
+      "scene_token": "3cb55c11cb4e5479",
+      "hook_raw_action_and_world_bitwise_equal": true,
+      "world_only_features_bitwise_equal": true,
+      "world_only_latents_bitwise_equal": true,
+      "current_and_first_early_stop_features_bitwise_equal": true,
+      "unused_future_rgb_action_permutation_checked": false
+    },
+    {
+      "scene_token": "d24d15bcaa065e6f",
+      "hook_raw_action_and_world_bitwise_equal": true,
+      "world_only_features_bitwise_equal": true,
+      "world_only_latents_bitwise_equal": true,
+      "current_and_first_early_stop_features_bitwise_equal": true,
+      "unused_future_rgb_action_permutation_checked": false
+    },
+    {
+      "scene_token": "fafed3c4242b515d",
+      "hook_raw_action_and_world_bitwise_equal": true,
+      "world_only_features_bitwise_equal": true,
+      "world_only_latents_bitwise_equal": true,
+      "current_and_first_early_stop_features_bitwise_equal": true,
+      "unused_future_rgb_action_permutation_checked": false
+    },
+    {
+      "scene_token": "346bcac329ee5a91",
+      "hook_raw_action_and_world_bitwise_equal": true,
+      "world_only_features_bitwise_equal": true,
+      "world_only_latents_bitwise_equal": true,
+      "current_and_first_early_stop_features_bitwise_equal": true,
+      "unused_future_rgb_action_permutation_checked": false
+    },
+    {
+      "scene_token": "b8f84cae7cbe5978",
+      "hook_raw_action_and_world_bitwise_equal": true,
+      "world_only_features_bitwise_equal": true,
+      "world_only_latents_bitwise_equal": true,
+      "current_and_first_early_stop_features_bitwise_equal": true,
+      "unused_future_rgb_action_permutation_checked": false
+    },
+    {
+      "scene_token": "db5e4ad3990754ac",
+      "hook_raw_action_and_world_bitwise_equal": true,
+      "world_only_features_bitwise_equal": true,
+      "world_only_latents_bitwise_equal": true,
+      "current_and_first_early_stop_features_bitwise_equal": true,
+      "unused_future_rgb_action_permutation_checked": false
+    },
+    {
+      "scene_token": "844e8d02db5a5e8d",
+      "hook_raw_action_and_world_bitwise_equal": true,
+      "world_only_features_bitwise_equal": true,
+      "world_only_latents_bitwise_equal": true,
+      "current_and_first_early_stop_features_bitwise_equal": true,
+      "unused_future_rgb_action_permutation_checked": false
+    },
+    {
+      "scene_token": "4b542b154189537f",
+      "hook_raw_action_and_world_bitwise_equal": true,
+      "world_only_features_bitwise_equal": true,
+      "world_only_latents_bitwise_equal": true,
+      "current_and_first_early_stop_features_bitwise_equal": true,
+      "unused_future_rgb_action_permutation_checked": false
+    },
+    {
+      "scene_token": "83a8078135dc51d8",
+      "hook_raw_action_and_world_bitwise_equal": true,
+      "world_only_features_bitwise_equal": true,
+      "world_only_latents_bitwise_equal": true,
+      "current_and_first_early_stop_features_bitwise_equal": true,
+      "unused_future_rgb_action_permutation_checked": false
+    },
+    {
+      "scene_token": "4de11eddad955ec6",
+      "hook_raw_action_and_world_bitwise_equal": true,
+      "world_only_features_bitwise_equal": true,
+      "world_only_latents_bitwise_equal": true,
+      "current_and_first_early_stop_features_bitwise_equal": true,
+      "unused_future_rgb_action_permutation_checked": false
+    },
+    {
+      "scene_token": "4ec0220b97a9526c",
+      "hook_raw_action_and_world_bitwise_equal": true,
+      "world_only_features_bitwise_equal": true,
+      "world_only_latents_bitwise_equal": true,
+      "current_and_first_early_stop_features_bitwise_equal": true,
+      "unused_future_rgb_action_permutation_checked": false
+    },
+    {
+      "scene_token": "b915739462b752a7",
+      "hook_raw_action_and_world_bitwise_equal": true,
+      "world_only_features_bitwise_equal": true,
+      "world_only_latents_bitwise_equal": true,
+      "current_and_first_early_stop_features_bitwise_equal": true,
+      "unused_future_rgb_action_permutation_checked": false
+    },
+    {
+      "scene_token": "cd8b3f67b78b5ded",
+      "hook_raw_action_and_world_bitwise_equal": true,
+      "world_only_features_bitwise_equal": true,
+      "world_only_latents_bitwise_equal": true,
+      "current_and_first_early_stop_features_bitwise_equal": true,
+      "unused_future_rgb_action_permutation_checked": false
+    },
+    {
+      "scene_token": "b5933f3382a45ce4",
+      "hook_raw_action_and_world_bitwise_equal": true,
+      "world_only_features_bitwise_equal": true,
+      "world_only_latents_bitwise_equal": true,
+      "current_and_first_early_stop_features_bitwise_equal": true,
+      "unused_future_rgb_action_permutation_checked": false
+    },
+    {
+      "scene_token": "0072f00166f45da0",
+      "hook_raw_action_and_world_bitwise_equal": true,
+      "world_only_features_bitwise_equal": true,
+      "world_only_latents_bitwise_equal": true,
+      "current_and_first_early_stop_features_bitwise_equal": true,
+      "unused_future_rgb_action_permutation_checked": false
+    },
+    {
+      "scene_token": "7e87489350495c55",
+      "hook_raw_action_and_world_bitwise_equal": true,
+      "world_only_features_bitwise_equal": true,
+      "world_only_latents_bitwise_equal": true,
+      "current_and_first_early_stop_features_bitwise_equal": true,
+      "unused_future_rgb_action_permutation_checked": false
+    },
+    {
+      "scene_token": "89c74e9b51e95c90",
+      "hook_raw_action_and_world_bitwise_equal": true,
+      "world_only_features_bitwise_equal": true,
+      "world_only_latents_bitwise_equal": true,
+      "current_and_first_early_stop_features_bitwise_equal": true,
+      "unused_future_rgb_action_permutation_checked": false
+    }
+  ],
+  "phase_metadata": {
+    "current_primer": {
+      "input_timestep": [
+        [
+          0.0
+        ]
+      ],
+      "input_sigma": 0.0,
+      "completed_video_updates": 0,
+      "video_forward_index": 0,
+      "update_cache": 2
+    },
+    "future_first_preupdate": {
+      "input_timestep": [
+        [
+          1000.0
+        ]
+      ],
+      "input_sigma": 1.0,
+      "completed_video_updates": 0,
+      "video_forward_index": 1,
+      "update_cache": 0
+    },
+    "future_cache_terminal": {
+      "input_timestep": [
+        [
+          769.2307739257812
+        ]
+      ],
+      "input_sigma": 0.7692307739257812,
+      "completed_video_updates": 3,
+      "video_forward_index": 4,
+      "update_cache": 1
+    }
+  }
+}

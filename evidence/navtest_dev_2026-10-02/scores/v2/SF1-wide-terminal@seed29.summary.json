@@ -1,0 +1,12 @@
+{
+  "predictions": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/heads_navtest_dev_2026-10-02/seed29/SF1-wide-terminal/navtest-dev-predictions.npz",
+  "prediction_sha256": "2b32092e96541fd7703593aca052b12d1b18c311ccb40e9a7e24ed63ff408113",
+  "scores_sha256": "b617eb6e95461ca3350af2b67c54077efc36128355b40892b4ed6086a6d487f1",
+  "scenes": 3250,
+  "coverage": 1.0,
+  "failures": 0,
+  "pdms": 85.04309618774792,
+  "ade_4s_m": 0.698403156013376,
+  "official_navsim_commit": "3e8291bfa89ff247231e0227778840cd0a036896",
+  "split": "navtest_dev"
+}

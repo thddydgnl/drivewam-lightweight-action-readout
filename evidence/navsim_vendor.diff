@@ -1,0 +1,51 @@
+
+
+
+--- v1.1/planning/utils/multithreading/worker_ray_no_torch.py
++++ DriveWAM/planning/utils/multithreading/worker_ray_no_torch.py
+@@ -75,11 +75,15 @@
+         # In this case, we will just start ray directly from this script
+         number_of_nodes = 1
+         logger.info("Starting ray local!")
++        # RAY_TMPDIR allows overriding the temp dir via env var to avoid
++        # AF_UNIX socket path length limit (107 bytes) when TMPDIR is long.
++        ray_tmp = os.environ.get("RAY_TMPDIR", None)
+         ray.init(
+             num_cpus=number_of_cpus_per_node,
+             dashboard_host="0.0.0.0",
+             local_mode=local_mode,
+             log_to_driver=log_to_driver,
++            **({} if ray_tmp is None else {"_temp_dir": ray_tmp}),
+         )
+ 
+     return WorkerResources(
+
+--- v1.1/planning/simulation/planner/pdm_planner/simulation/batch_lqr_utils.py
++++ DriveWAM/planning/simulation/planner/pdm_planner/simulation/batch_lqr_utils.py
+@@ -4,7 +4,7 @@
+ import numpy.typing as npt
+ 
+ from navsim.planning.simulation.planner.pdm_planner.utils.pdm_geometry_utils import normalize_angle
+-
++import torch
+ # Util functions for BatchLQRTracker
+ # Code re-written based on nuPlan's implementation:
+ # https://github.com/motional/nuplan-devkit
+@@ -121,7 +121,7 @@
+ 
+     # Compute regularized least squares solution.
+     intermediate_solution = batch_matmul(
+-        np.linalg.pinv(batch_matmul(A_T, A) + jerk_penalty * batch_matmul(R_T, R)), A_T
++        torch.linalg.pinv(torch.tensor(batch_matmul(A_T, A) + jerk_penalty * batch_matmul(R_T, R))).numpy(), A_T
+     )
+     x = np.einsum("bij, bj -> bi", intermediate_solution, y)
+ 
+@@ -176,7 +176,7 @@
+     # Compute regularized least squares solution.
+     A_T = A.transpose(0, 2, 1)
+ 
+-    intermediate = batch_matmul(np.linalg.pinv(batch_matmul(A_T, A) + Q), A_T)
++    intermediate = batch_matmul(torch.linalg.pinv(torch.tensor(batch_matmul(A_T, A) + Q)).numpy(), A_T)
+     x = np.einsum("bij,bj->bi", intermediate, y)
+ 
+     # Extract profile from solution.

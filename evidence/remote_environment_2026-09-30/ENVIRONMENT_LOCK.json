@@ -1,0 +1,941 @@
+{
+  "as_of": "2026-09-30T10:01:45.005380+00:00",
+  "status": "remote_environment_and_synthetic_B10_verified",
+  "ssh": {
+    "relay_alias": "kiis-mvf-campus",
+    "gpu_alias": "kiis-mvf-gpu"
+  },
+  "workspace": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout",
+  "reports": {
+    "server-profile": {
+      "checked_at_utc": "2026-09-30T09:56:03.793239+00:00",
+      "connection": {
+        "target_alias": "kiis-mvf-gpu",
+        "relay_alias": "kiis-mvf-campus"
+      },
+      "hostname": "yonghwi-racedreamer",
+      "user": "yonghwi",
+      "workspace": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout",
+      "system_python": "3.10.12",
+      "os_release": "PRETTY_NAME=\"Ubuntu 22.04.4 LTS\"\nNAME=\"Ubuntu\"\nVERSION_ID=\"22.04\"\nVERSION=\"22.04.4 LTS (Jammy Jellyfish)\"\nVERSION_CODENAME=jammy\nID=ubuntu\nID_LIKE=debian\nHOME_URL=\"https://www.ubuntu.com/\"\nSUPPORT_URL=\"https://help.ubuntu.com/\"\nBUG_REPORT_URL=\"https://bugs.launchpad.net/ubuntu/\"\nPRIVACY_POLICY_URL=\"https://www.ubuntu.com/legal/terms-and-policies/privacy-policy\"\nUBUNTU_CODENAME=jammy\n",
+      "kernel": "6.8.0-117-generic",
+      "cpu_logical": 64,
+      "cpu_affinity_count": 64,
+      "lscpu": {
+        "lscpu": [
+          {
+            "field": "Architecture:",
+            "data": "x86_64"
+          },
+          {
+            "field": "CPU op-mode(s):",
+            "data": "32-bit, 64-bit"
+          },
+          {
+            "field": "Address sizes:",
+            "data": "46 bits physical, 57 bits virtual"
+          },
+          {
+            "field": "Byte Order:",
+            "data": "Little Endian"
+          },
+          {
+            "field": "CPU(s):",
+            "data": "64"
+          },
+          {
+            "field": "On-line CPU(s) list:",
+            "data": "0-63"
+          },
+          {
+            "field": "Vendor ID:",
+            "data": "GenuineIntel"
+          },
+          {
+            "field": "Model name:",
+            "data": "Intel(R) Xeon(R) Gold 6426Y"
+          },
+          {
+            "field": "CPU family:",
+            "data": "6"
+          },
+          {
+            "field": "Model:",
+            "data": "143"
+          },
+          {
+            "field": "Thread(s) per core:",
+            "data": "2"
+          },
+          {
+            "field": "Core(s) per socket:",
+            "data": "16"
+          },
+          {
+            "field": "Socket(s):",
+            "data": "2"
+          },
+          {
+            "field": "Stepping:",
+            "data": "8"
+          },
+          {
+            "field": "CPU max MHz:",
+            "data": "4100.0000"
+          },
+          {
+            "field": "CPU min MHz:",
+            "data": "800.0000"
+          },
+          {
+            "field": "BogoMIPS:",
+            "data": "5000.00"
+          },
+          {
+            "field": "Flags:",
+            "data": "fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf tsc_known_freq pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb cat_l3 cat_l2 cdp_l3 intel_ppin cdp_l2 ssbd mba ibrs ibpb stibp ibrs_enhanced tpr_shadow flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid cqm rdt_a avx512f avx512dq rdseed adx smap avx512ifma clflushopt clwb intel_pt avx512cd sha_ni avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local split_lock_detect user_shstk avx_vnni avx512_bf16 wbnoinvd dtherm ida arat pln pts hfi vnmi avx512vbmi umip pku ospke waitpkg avx512_vbmi2 gfni vaes vpclmulqdq avx512_vnni avx512_bitalg tme avx512_vpopcntdq la57 rdpid bus_lock_detect cldemote movdiri movdir64b enqcmd fsrm md_clear serialize tsxldtrk pconfig arch_lbr ibt amx_bf16 avx512_fp16 amx_tile amx_int8 flush_l1d arch_capabilities ibpb_exit_to_user"
+          },
+          {
+            "field": "Virtualization:",
+            "data": "VT-x"
+          },
+          {
+            "field": "L1d cache:",
+            "data": "1.5 MiB (32 instances)"
+          },
+          {
+            "field": "L1i cache:",
+            "data": "1 MiB (32 instances)"
+          },
+          {
+            "field": "L2 cache:",
+            "data": "64 MiB (32 instances)"
+          },
+          {
+            "field": "L3 cache:",
+            "data": "75 MiB (2 instances)"
+          },
+          {
+            "field": "NUMA node(s):",
+            "data": "2"
+          },
+          {
+            "field": "NUMA node0 CPU(s):",
+            "data": "0-15,32-47"
+          },
+          {
+            "field": "NUMA node1 CPU(s):",
+            "data": "16-31,48-63"
+          },
+          {
+            "field": "Vulnerability Gather data sampling:",
+            "data": "Not affected"
+          },
+          {
+            "field": "Vulnerability Indirect target selection:",
+            "data": "Not affected"
+          },
+          {
+            "field": "Vulnerability Itlb multihit:",
+            "data": "Not affected"
+          },
+          {
+            "field": "Vulnerability L1tf:",
+            "data": "Not affected"
+          },
+          {
+            "field": "Vulnerability Mds:",
+            "data": "Not affected"
+          },
+          {
+            "field": "Vulnerability Meltdown:",
+            "data": "Not affected"
+          },
+          {
+            "field": "Vulnerability Mmio stale data:",
+            "data": "Not affected"
+          },
+          {
+            "field": "Vulnerability Reg file data sampling:",
+            "data": "Not affected"
+          },
+          {
+            "field": "Vulnerability Retbleed:",
+            "data": "Not affected"
+          },
+          {
+            "field": "Vulnerability Spec rstack overflow:",
+            "data": "Not affected"
+          },
+          {
+            "field": "Vulnerability Spec store bypass:",
+            "data": "Mitigation; Speculative Store Bypass disabled via prctl"
+          },
+          {
+            "field": "Vulnerability Spectre v1:",
+            "data": "Mitigation; usercopy/swapgs barriers and __user pointer sanitization"
+          },
+          {
+            "field": "Vulnerability Spectre v2:",
+            "data": "Mitigation; Enhanced / Automatic IBRS; IBPB conditional; PBRSB-eIBRS SW sequence; BHI BHI_DIS_S"
+          },
+          {
+            "field": "Vulnerability Srbds:",
+            "data": "Not affected"
+          },
+          {
+            "field": "Vulnerability Tsa:",
+            "data": "Not affected"
+          },
+          {
+            "field": "Vulnerability Tsx async abort:",
+            "data": "Not affected"
+          },
+          {
+            "field": "Vulnerability Vmscape:",
+            "data": "Mitigation; IBPB before exit to userspace"
+          }
+        ]
+      },
+      "cgroup": {
+        "cpu.max": "max 100000",
+        "memory.max": "max"
+      },
+      "memory": [
+        "MemTotal:       528046296 kB",
+        "MemFree:        244804476 kB",
+        "MemAvailable:   474662212 kB"
+      ],
+      "disk": {
+        "total": 1853598109696,
+        "used": 636722495488,
+        "free": 1122642448384
+      },
+      "gpu_csv": "0, NVIDIA RTX A5000, 24564, 2, 560.35.05\n1, NVIDIA RTX A5000, 24564, 2, 560.35.05",
+      "cuda_compiler": "nvcc: NVIDIA (R) Cuda compiler driver\nCopyright (c) 2005-2024 NVIDIA Corporation\nBuilt on Thu_Mar_28_02:18:24_PDT_2024\nCuda compilation tools, release 12.4, V12.4.131\nBuild cuda_12.4.r12.4/compiler.34097967_0",
+      "uv": "uv 0.12.21 (x86_64-unknown-linux-gnu)",
+      "storage_note": "Home is on an overlay filesystem; retention across container replacement is not verified."
+    },
+    "source-verification": [
+      {
+        "name": "DriveWAM",
+        "commit": "abbefb407c9c553f221522fc26077d307620adb4",
+        "files": [
+          {
+            "path": "README.md",
+            "matched": true
+          },
+          {
+            "path": "environment.yml",
+            "matched": true
+          },
+          {
+            "path": "LICENSE.txt",
+            "matched": true
+          },
+          {
+            "path": "src/navsim/eval.py",
+            "matched": true
+          },
+          {
+            "path": "src/configs/navsim_cfg.py",
+            "matched": true
+          },
+          {
+            "path": "src/modules/navsim_model.py",
+            "matched": true
+          },
+          {
+            "path": "src/modules/model.py",
+            "matched": true
+          },
+          {
+            "path": "src/utils/scheduler.py",
+            "matched": true
+          },
+          {
+            "path": "src/dataset/navsim_dataset.py",
+            "matched": true
+          },
+          {
+            "path": "src/navsim/process_data.py",
+            "matched": true
+          },
+          {
+            "path": "navsim/common/dataloader.py",
+            "matched": true
+          }
+        ],
+        "clean": true
+      },
+      {
+        "name": "navsim-v1.1",
+        "commit": "3e8291bfa89ff247231e0227778840cd0a036896",
+        "files": [
+          {
+            "path": "LICENSE",
+            "matched": true
+          },
+          {
+            "path": "requirements.txt",
+            "matched": true
+          },
+          {
+            "path": "setup.py",
+            "matched": true
+          },
+          {
+            "path": "docs/install.md",
+            "matched": true
+          },
+          {
+            "path": "docs/splits.md",
+            "matched": true
+          },
+          {
+            "path": "download/download_navtrain.sh",
+            "matched": true
+          },
+          {
+            "path": "download/download_test.sh",
+            "matched": true
+          },
+          {
+            "path": "navsim/evaluate/pdm_score.py",
+            "matched": true
+          },
+          {
+            "path": "navsim/planning/simulation/planner/pdm_planner/scoring/pdm_scorer.py",
+            "matched": true
+          }
+        ],
+        "clean": true
+      },
+      {
+        "name": "nuplan-devkit",
+        "commit": "ce3c323af01c0d7ec5672f7832ef53f9c679aab0"
+      }
+    ],
+    "assets-manifest": {
+      "files": [
+        {
+          "repo_id": "chenchenshi/DriveWAM",
+          "revision": "c4fb6d2c5d26ee3018a9ee1507f36fd02b85b1ce",
+          "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/checkpoints/drivewam/metric_cache_navtest.tar.gz",
+          "bytes": 3168096463,
+          "sha256": "ff96c6dd388205573ee58700f4094c6ebcfe7259803d6ded45ff1c0f82df93e3",
+          "publisher_sha256_verified": true
+        },
+        {
+          "repo_id": "chenchenshi/DriveWAM",
+          "revision": "c4fb6d2c5d26ee3018a9ee1507f36fd02b85b1ce",
+          "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/checkpoints/drivewam/navsim/config.json",
+          "bytes": 656,
+          "sha256": "62d4cc6fc0c1bafa51402d6e0fb12803c60b3a77c49631bdfab2d638d33e518a",
+          "publisher_sha256_verified": false
+        },
+        {
+          "repo_id": "chenchenshi/DriveWAM",
+          "revision": "c4fb6d2c5d26ee3018a9ee1507f36fd02b85b1ce",
+          "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/checkpoints/drivewam/navsim/diffusion_pytorch_model.safetensors",
+          "bytes": 12482164484,
+          "sha256": "27e4846b0a25e22fc299f7aca90c01d802072d2b297741c85ed074b689ef26a9",
+          "publisher_sha256_verified": true
+        },
+        {
+          "repo_id": "chenchenshi/DriveWAM",
+          "revision": "c4fb6d2c5d26ee3018a9ee1507f36fd02b85b1ce",
+          "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/checkpoints/drivewam/train_4k.csv",
+          "bytes": 1151247,
+          "sha256": "b1224ff92980a0352380a97bf54f51cb6c3c0d9486767c49534cf2adbcf699b0",
+          "publisher_sha256_verified": false
+        },
+        {
+          "repo_id": "robbyant/lingbot-va-base",
+          "revision": "68b7bc1b35da6ddc67ea94c4ceb58d768fbb3f9c",
+          "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/checkpoints/lingbot-va-base/text_encoder/config.json",
+          "bytes": 855,
+          "sha256": "a2bcb24699f6c009a2427432bdd483ef8b2b42a712abc9503759cdc77d171f07",
+          "publisher_sha256_verified": false
+        },
+        {
+          "repo_id": "robbyant/lingbot-va-base",
+          "revision": "68b7bc1b35da6ddc67ea94c4ceb58d768fbb3f9c",
+          "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/checkpoints/lingbot-va-base/text_encoder/model-00001-of-00003.safetensors",
+          "bytes": 4935812536,
+          "sha256": "a8e861969c7433e707cc5a74065d795d36cca07ec96eb6763eb4083df7248f58",
+          "publisher_sha256_verified": true
+        },
+        {
+          "repo_id": "robbyant/lingbot-va-base",
+          "revision": "68b7bc1b35da6ddc67ea94c4ceb58d768fbb3f9c",
+          "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/checkpoints/lingbot-va-base/text_encoder/model-00002-of-00003.safetensors",
+          "bytes": 4983103192,
+          "sha256": "d57d948ece4837d850b7a859a4415121d57cacf8b9ee1d4db200c67f592902d7",
+          "publisher_sha256_verified": true
+        },
+        {
+          "repo_id": "robbyant/lingbot-va-base",
+          "revision": "68b7bc1b35da6ddc67ea94c4ceb58d768fbb3f9c",
+          "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/checkpoints/lingbot-va-base/text_encoder/model-00003-of-00003.safetensors",
+          "bytes": 1442935480,
+          "sha256": "0da9ee284e21d1406df708788db1d502d95d75f69faa25cd26151bf8829b7c5f",
+          "publisher_sha256_verified": true
+        },
+        {
+          "repo_id": "robbyant/lingbot-va-base",
+          "revision": "68b7bc1b35da6ddc67ea94c4ceb58d768fbb3f9c",
+          "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/checkpoints/lingbot-va-base/text_encoder/model.safetensors.index.json",
+          "bytes": 22476,
+          "sha256": "31c4c7bcce679eaa0dd4667462394ddb013dc2f748e0bffc893dc9146a320dab",
+          "publisher_sha256_verified": false
+        },
+        {
+          "repo_id": "robbyant/lingbot-va-base",
+          "revision": "68b7bc1b35da6ddc67ea94c4ceb58d768fbb3f9c",
+          "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/checkpoints/lingbot-va-base/tokenizer/special_tokens_map.json",
+          "bytes": 7079,
+          "sha256": "456b58fd240a06c743a7c2cf8008bec501240d68ebd1fc4018ea569505fea270",
+          "publisher_sha256_verified": false
+        },
+        {
+          "repo_id": "robbyant/lingbot-va-base",
+          "revision": "68b7bc1b35da6ddc67ea94c4ceb58d768fbb3f9c",
+          "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/checkpoints/lingbot-va-base/tokenizer/spiece.model",
+          "bytes": 4548313,
+          "sha256": "e3909a67b780650b35cf529ac782ad2b6b26e6d1f849d3fbb6a872905f452458",
+          "publisher_sha256_verified": true
+        },
+        {
+          "repo_id": "robbyant/lingbot-va-base",
+          "revision": "68b7bc1b35da6ddc67ea94c4ceb58d768fbb3f9c",
+          "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/checkpoints/lingbot-va-base/tokenizer/tokenizer.json",
+          "bytes": 16837459,
+          "sha256": "20a46ac256746594ed7e1e3ef733b83fbc5a6f0922aa7480eda961743de080ef",
+          "publisher_sha256_verified": true
+        },
+        {
+          "repo_id": "robbyant/lingbot-va-base",
+          "revision": "68b7bc1b35da6ddc67ea94c4ceb58d768fbb3f9c",
+          "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/checkpoints/lingbot-va-base/tokenizer/tokenizer_config.json",
+          "bytes": 61758,
+          "sha256": "1d8d2a216bf8e70ac15b7ddcea566c4dd0433c024b39a58ca5e4c66bd78defbd",
+          "publisher_sha256_verified": false
+        },
+        {
+          "repo_id": "robbyant/lingbot-va-base",
+          "revision": "68b7bc1b35da6ddc67ea94c4ceb58d768fbb3f9c",
+          "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/checkpoints/lingbot-va-base/vae/config.json",
+          "bytes": 1701,
+          "sha256": "d996c340fe9a7df5d7371f76a7d8d6956f6c98256080074d8434fa5eeac11360",
+          "publisher_sha256_verified": false
+        },
+        {
+          "repo_id": "robbyant/lingbot-va-base",
+          "revision": "68b7bc1b35da6ddc67ea94c4ceb58d768fbb3f9c",
+          "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/checkpoints/lingbot-va-base/vae/diffusion_pytorch_model.safetensors",
+          "bytes": 2818777808,
+          "sha256": "62cd18f19438e35b32ac63020e2852f566e9b02f46b6cdbd87972a356e3c6f4b",
+          "publisher_sha256_verified": true
+        }
+      ],
+      "started_at_utc": "2026-09-30T09:36:49.811314+00:00",
+      "completed_at_utc": "2026-09-30T09:47:29.266878+00:00"
+    },
+    "assets-status": {
+      "stage": "verified",
+      "files": 15,
+      "bytes": 29853521507
+    },
+    "model-smoke": {
+      "checked_at_utc": "2026-09-30T09:55:04.081454+00:00",
+      "torch": "2.9.0+cu126",
+      "torch_cuda": "12.6",
+      "torch_cxx11_abi": true,
+      "packages": {
+        "torchvision": "0.24.0+cu126",
+        "diffusers": "0.36.0",
+        "transformers": "4.55.2",
+        "flash-attn": "2.8.3",
+        "numpy": "1.26.4"
+      },
+      "source_imports": "passed",
+      "evaluator_import": "passed",
+      "pdm_available_in_model_environment": false,
+      "gpus": [
+        {
+          "index": 0,
+          "name": "NVIDIA RTX A5000",
+          "capability": [
+            8,
+            6
+          ],
+          "attention_test": {
+            "q_tokens": 112,
+            "kv_tokens": 512,
+            "head_dim": 128
+          },
+          "fa2_vs_fp32_sdpa_max_abs_error": 0.0010801851749420166,
+          "fa2_backward_finite": true,
+          "bf16_head_backward_finite": true
+        },
+        {
+          "index": 1,
+          "name": "NVIDIA RTX A5000",
+          "capability": [
+            8,
+            6
+          ],
+          "attention_test": {
+            "q_tokens": 112,
+            "kv_tokens": 512,
+            "head_dim": 128
+          },
+          "fa2_vs_fp32_sdpa_max_abs_error": 0.0010801851749420166,
+          "fa2_backward_finite": true,
+          "bf16_head_backward_finite": true
+        }
+      ],
+      "flow_scheduler_import_and_initialization": "passed"
+    },
+    "nccl-smoke": {
+      "backend": "nccl",
+      "world_size": 2,
+      "all_reduce_result": 3.0,
+      "passed": true
+    },
+    "scorer-smoke": {
+      "checked_at_utc": "2026-09-30T09:39:22.249366+00:00",
+      "packages": {
+        "navsim": "1.1.0",
+        "nuplan-devkit": "1.2.0",
+        "torch": "2.0.1+cpu",
+        "numpy": "1.23.4",
+        "Shapely": "2.0.7",
+        "hydra-core": "1.2.0"
+      },
+      "torch_cuda": null,
+      "scorer_imports": "passed",
+      "blas": [
+        {
+          "user_api": "blas",
+          "internal_api": "openblas",
+          "num_threads": 1,
+          "prefix": "libopenblas",
+          "filepath": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/.venvs/drivewam-scorer/lib/python3.9/site-packages/scipy.libs/libopenblasp-r0-41284840.3.18.so",
+          "version": "0.3.18",
+          "threading_layer": "pthreads",
+          "architecture": "Haswell"
+        },
+        {
+          "user_api": "openmp",
+          "internal_api": "openmp",
+          "num_threads": 32,
+          "prefix": "libgomp",
+          "filepath": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/.venvs/drivewam-scorer/lib/python3.9/site-packages/torch/lib/libgomp-a34b3233.so.1",
+          "version": null
+        },
+        {
+          "user_api": "blas",
+          "internal_api": "openblas",
+          "num_threads": 1,
+          "prefix": "libopenblas",
+          "filepath": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/.venvs/drivewam-scorer/lib/python3.9/site-packages/opencv_python.libs/libopenblas-r0-f650aae0.3.3.so",
+          "version": null,
+          "threading_layer": "disabled",
+          "architecture": "Haswell"
+        },
+        {
+          "user_api": "blas",
+          "internal_api": "openblas",
+          "num_threads": 1,
+          "prefix": "libopenblas",
+          "filepath": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/.venvs/drivewam-scorer/lib/python3.9/site-packages/numpy.libs/libopenblas64_p-r0-742d56dc.3.20.so",
+          "version": "0.3.20",
+          "threading_layer": "pthreads",
+          "architecture": "Haswell"
+        }
+      ],
+      "pinv_identity_max_abs_error": 0.0,
+      "simulator": {
+        "shape": [
+          1,
+          41,
+          11
+        ],
+        "straight_4s_final_x": 19.99999999999997
+      },
+      "pdms_on_real_scene": "not_run"
+    },
+    "blas-diagnostic": [
+      {
+        "forced_coretype": null,
+        "blas": [
+          {
+            "user_api": "openmp",
+            "internal_api": "openmp",
+            "num_threads": 1,
+            "prefix": "libgomp",
+            "filepath": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/.venvs/drivewam-scorer/lib/python3.9/site-packages/torch/lib/libgomp-a34b3233.so.1",
+            "version": null
+          },
+          {
+            "user_api": "blas",
+            "internal_api": "openblas",
+            "num_threads": 1,
+            "prefix": "libopenblas",
+            "filepath": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/.venvs/drivewam-scorer/lib/python3.9/site-packages/numpy.libs/libopenblas64_p-r0-742d56dc.3.20.so",
+            "version": "0.3.20",
+            "threading_layer": "pthreads",
+            "architecture": "Cooperlake"
+          }
+        ],
+        "pinv_identity_max_abs_error": 1.0,
+        "pinv_spd_vs_torch_max_abs_error": 4.680825239413345
+      },
+      {
+        "forced_coretype": "Haswell",
+        "blas": [
+          {
+            "user_api": "openmp",
+            "internal_api": "openmp",
+            "num_threads": 1,
+            "prefix": "libgomp",
+            "filepath": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/.venvs/drivewam-scorer/lib/python3.9/site-packages/torch/lib/libgomp-a34b3233.so.1",
+            "version": null
+          },
+          {
+            "user_api": "blas",
+            "internal_api": "openblas",
+            "num_threads": 1,
+            "prefix": "libopenblas",
+            "filepath": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/.venvs/drivewam-scorer/lib/python3.9/site-packages/numpy.libs/libopenblas64_p-r0-742d56dc.3.20.so",
+            "version": "0.3.20",
+            "threading_layer": "pthreads",
+            "architecture": "Haswell"
+          }
+        ],
+        "pinv_identity_max_abs_error": 0.0,
+        "pinv_spd_vs_torch_max_abs_error": 1.4311468676808659e-15
+      }
+    ],
+    "model-blas-smoke": {
+      "numpy": "1.26.4",
+      "pinv_identity_error": 0.0
+    },
+    "metric-cache-smoke": {
+      "archive_member": "metric_cache/2021.05.25.14.16.10_veh-35_00083_00485/unknown/014369205e025f0c/metric_cache.pkl",
+      "local_path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/caches/metrics/smoke/metric_cache.pkl",
+      "bytes": 489168,
+      "sha256": "247222e114a37f3a9ab181715d5d1fc8b4caa6e44288be4acdf0a902c38c6121",
+      "deserialization": "passed",
+      "navtest_scores_computed": false
+    },
+    "checkpoint-smoke": {
+      "started_at_utc": "2026-09-30T09:56:09.307552+00:00",
+      "input": "synthetic constant RGB / zero ego history; not a benchmark",
+      "source_modified": false,
+      "initializer": "test-only initializer with precomputed prompts",
+      "text_encoder_loading_info": {
+        "missing_keys": [],
+        "unexpected_keys": [],
+        "mismatched_keys": [],
+        "error_msgs": []
+      },
+      "prompt_cache": {
+        "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/caches/prompt/navsim-four-prompts.pt",
+        "prompts": [
+          "autonomous driving scene, the intended route is to the left.",
+          "autonomous driving scene, the intended route is straight.",
+          "autonomous driving scene, the intended route is to the right.",
+          "autonomous driving scene, the driving command is unknown."
+        ],
+        "shape_each": [
+          512,
+          4096
+        ],
+        "dtype": "bfloat16",
+        "sha256": "2a81a22661486e6569a718d568c4efaf36d7bb3dde934409788226fb1cfd4e9f",
+        "encoder_peak_allocated_bytes": 11618866176
+      },
+      "transformer_loading_info": {
+        "missing_keys": [],
+        "unexpected_keys": [],
+        "ignore_mismatched_sizes": false
+      },
+      "vae_loading_info": {
+        "missing_keys": [],
+        "unexpected_keys": [],
+        "mismatched_keys": [],
+        "error_msgs": []
+      },
+      "transformer_parameters": 6241020126,
+      "vae_parameters": 704688668,
+      "resident_allocated_bytes": 13948868096,
+      "synthetic_b10": {
+        "num_video_steps": 3,
+        "num_action_steps": 10,
+        "video_denoise_fraction": 0.6,
+        "seed": 20260930,
+        "forward_calls": [
+          {
+            "action_mode": false,
+            "update_cache": 2
+          },
+          {
+            "action_mode": true,
+            "update_cache": 2
+          },
+          {
+            "action_mode": false,
+            "update_cache": 0
+          },
+          {
+            "action_mode": false,
+            "update_cache": 0
+          },
+          {
+            "action_mode": false,
+            "update_cache": 0
+          },
+          {
+            "action_mode": false,
+            "update_cache": 1
+          },
+          {
+            "action_mode": true,
+            "update_cache": 0
+          },
+          {
+            "action_mode": true,
+            "update_cache": 0
+          },
+          {
+            "action_mode": true,
+            "update_cache": 0
+          },
+          {
+            "action_mode": true,
+            "update_cache": 0
+          },
+          {
+            "action_mode": true,
+            "update_cache": 0
+          },
+          {
+            "action_mode": true,
+            "update_cache": 0
+          },
+          {
+            "action_mode": true,
+            "update_cache": 0
+          },
+          {
+            "action_mode": true,
+            "update_cache": 0
+          },
+          {
+            "action_mode": true,
+            "update_cache": 0
+          },
+          {
+            "action_mode": true,
+            "update_cache": 0
+          },
+          {
+            "action_mode": true,
+            "update_cache": 1
+          }
+        ],
+        "actions_shape": [
+          1,
+          30,
+          2,
+          8,
+          1
+        ],
+        "latents_shape": [
+          1,
+          48,
+          2,
+          16,
+          28
+        ],
+        "trajectory_shape": [
+          1,
+          3,
+          8
+        ],
+        "outputs_finite": true,
+        "elapsed_unwarmed_seconds": 1.0625507719814777,
+        "peak_allocated_bytes": 14675625472,
+        "peak_reserved_bytes": 14732492800,
+        "latency_benchmark": false,
+        "driving_quality_evaluated": false
+      },
+      "completed_at_utc": "2026-09-30T09:56:17.793548+00:00"
+    },
+    "prompt-cache-readback": {
+      "cache_path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/caches/prompt/navsim-four-prompts.pt",
+      "sha256": "2a81a22661486e6569a718d568c4efaf36d7bb3dde934409788226fb1cfd4e9f",
+      "source_commit": "abbefb407c9c553f221522fc26077d307620adb4",
+      "encoder_and_tokenizer_repo": "robbyant/lingbot-va-base",
+      "encoder_and_tokenizer_revision": "68b7bc1b35da6ddc67ea94c4ceb58d768fbb3f9c",
+      "encoding_method": "Pinned NavSimEvaluator._encode_prompt, eval mode, BF16",
+      "torch": "2.9.0+cu126",
+      "serialized_cache_readback": "passed",
+      "commands": [
+        {
+          "command_id": 0,
+          "prompt": "autonomous driving scene, the intended route is to the left.",
+          "shape": [
+            512,
+            4096
+          ],
+          "tensor_sha256": "d76ebfa30df8c2764d1a81f9bfea4929eabda15aa75d553ca92963faac525657"
+        },
+        {
+          "command_id": 1,
+          "prompt": "autonomous driving scene, the intended route is straight.",
+          "shape": [
+            512,
+            4096
+          ],
+          "tensor_sha256": "79924ab766dae703d2d69a265014c3b8af2a551483ede3dae6c6b292166825fa"
+        },
+        {
+          "command_id": 2,
+          "prompt": "autonomous driving scene, the intended route is to the right.",
+          "shape": [
+            512,
+            4096
+          ],
+          "tensor_sha256": "b933b746d0fce9b7be0000d4652cf2f8dc8e9325404dd6c2af7407fcd6baad6a"
+        },
+        {
+          "command_id": 3,
+          "prompt": "autonomous driving scene, the driving command is unknown.",
+          "shape": [
+            512,
+            4096
+          ],
+          "tensor_sha256": "01f81642aa52d8c3be670829dbec04b029b2ff01843eab0258406e37182cf31c"
+        }
+      ]
+    }
+  },
+  "dependency_locks": [
+    {
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/locks/model-freeze.txt",
+      "sha256": "077ac5475b619df863c5be8a5fcc8f378c5526b2ae8250e57a6e19bd7103af69"
+    },
+    {
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/locks/scorer-freeze.txt",
+      "sha256": "2d3a17960c48ff95bc62c270de6194998a9b6981d472a6528e010aec9cd49bcb"
+    },
+    {
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/locks/scorer-input.txt",
+      "sha256": "ddb6bef4c4fea03758f7a8fbb0e7947832807172195177922bde6799ecb6142d"
+    },
+    {
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/locks/scorer-constraints.txt",
+      "sha256": "f97d0fa9232ad00fbddefb09267bb6a335b3132f7cc3d6f2d345eed0804d95ef"
+    },
+    {
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/locks/native-libs.json",
+      "sha256": "01289b3a0ba636f8354ac719baaeefc72674ed04719e7f3b7bae8faa742e78a2"
+    },
+    {
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/locks/uv-bootstrap.json",
+      "sha256": "1068aa5f545fd6b61e93db581c682482c1b2d32cc8808bad46a4cbee54ea4cba"
+    },
+    {
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/locks/network-dns-cache.json",
+      "sha256": "c31d50956c67e28fc9751027d68140e500b20a2d98aad1c66ccbea2d2622cb17"
+    }
+  ],
+  "setup_files": [
+    {
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/scripts/SOURCE_LOCK.json",
+      "sha256": "1a8d670478105ffdfff343ff5784e8f100d22e02563813335368e1371d1ec639"
+    },
+    {
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/scripts/remote_blas_diagnostic.py",
+      "sha256": "cf09cb3dab6944d09344bbc66624f637bc8d1e3ae9ecfba1da795651e95de92f"
+    },
+    {
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/scripts/remote_bootstrap.py",
+      "sha256": "d5c7bdf865c5043c921d9673eabc9b13318b243100a42ffec46ceb4b4e384d53"
+    },
+    {
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/scripts/remote_checkpoint_smoke.py",
+      "sha256": "d98dd19aa591ccd9d57cb15dd1559a157c13b95fac840562c7260bc80d6d2066"
+    },
+    {
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/scripts/remote_download_assets.py",
+      "sha256": "d3d7ead9bef0dc1951e381f6d453453cdd968f3cb3d128004b2404a40c066301"
+    },
+    {
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/scripts/remote_env.sh",
+      "sha256": "6548b32cb4e7da27b3c7fa9c101f9dc2073f96c4965d1da67f9fe28b4723803a"
+    },
+    {
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/scripts/remote_finalize_environment.py",
+      "sha256": "ad2cb77aa366b9a0927c865acd4dff50ee4c63bcb043cd0112ad536518d3ee08"
+    },
+    {
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/scripts/remote_metric_cache_smoke.py",
+      "sha256": "4a4e25e580cee1849d8b242c32b3be10e8636dcb7196788b96a50d5674538cf3"
+    },
+    {
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/scripts/remote_native_libs.py",
+      "sha256": "382774709ea37f0818077f59219046f86214c6d05abc2d9de36edb070da09279"
+    },
+    {
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/scripts/remote_pip_ipv4.py",
+      "sha256": "8c8facde4395d18d8d3fb3fe3ab05cf19a5e27ab1feddbbe390a18df3761c897"
+    },
+    {
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/scripts/remote_prepare.py",
+      "sha256": "2198305a01f8fc670d902179f6d3af3be9ca1abbf633e3453a1412f4cd40a8fc"
+    },
+    {
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/scripts/remote_smoke_model.py",
+      "sha256": "d304e583d8e779aa09ef43af118fc759b195e95f5c939d1c649b7dd7919556a9"
+    },
+    {
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/scripts/remote_smoke_nccl.py",
+      "sha256": "fe73e6f84742c41442ae99934f82f51709b7d3a6745de222d652601c6d96eeca"
+    },
+    {
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/scripts/remote_smoke_scorer.py",
+      "sha256": "07f3a0c6f445cdc0b440361570b2f539813b708d39d6f8305f43cd57949eb300"
+    },
+    {
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/scripts/remote_validate_prompt_cache.py",
+      "sha256": "abff8ae1370c6045cae65248930b0e1b23e43fd83619b71c9a50c39fc66be4ab"
+    },
+    {
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/scripts/requirements-model.candidate.txt",
+      "sha256": "50b6ac3a29dd4064955569f3dc3226c374e98cecf2be39a2f154ed751f74c874"
+    }
+  ],
+  "flash_attention_build": {
+    "version": "2.8.3",
+    "source": "PyPI source distribution",
+    "torch": "2.9.0+cu126",
+    "nvcc": "12.4.131",
+    "cuda_archs": "80",
+    "max_jobs": 24,
+    "nvcc_threads": 2,
+    "cuda_minor_versions_differ": true,
+    "validation": "Both GPU forward/reference and finite backward checks passed"
+  },
+  "remaining": [
+    "NAVSIM maps/logs/RGB acquisition and preprocessing",
+    "P01-P10 research evaluator/observation/scoring patches",
+    "B10 on an actual NAVSIM observation",
+    "Driving-quality evaluation and head training",
+    "Storage retention across container replacement"
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "checked_at_utc": "2026-09-30T09:55:04.081454+00:00",
+  "torch": "2.9.0+cu126",
+  "torch_cuda": "12.6",
+  "torch_cxx11_abi": true,
+  "packages": {
+    "torchvision": "0.24.0+cu126",
+    "diffusers": "0.36.0",
+    "transformers": "4.55.2",
+    "flash-attn": "2.8.3",
+    "numpy": "1.26.4"
+  },
+  "source_imports": "passed",
+  "evaluator_import": "passed",
+  "pdm_available_in_model_environment": false,
+  "gpus": [
+    {
+      "index": 0,
+      "name": "NVIDIA RTX A5000",
+      "capability": [
+        8,
+        6
+      ],
+      "attention_test": {
+        "q_tokens": 112,
+        "kv_tokens": 512,
+        "head_dim": 128
+      },
+      "fa2_vs_fp32_sdpa_max_abs_error": 0.0010801851749420166,
+      "fa2_backward_finite": true,
+      "bf16_head_backward_finite": true
+    },
+    {
+      "index": 1,
+      "name": "NVIDIA RTX A5000",
+      "capability": [
+        8,
+        6
+      ],
+      "attention_test": {
+        "q_tokens": 112,
+        "kv_tokens": 512,
+        "head_dim": 128
+      },
+      "fa2_vs_fp32_sdpa_max_abs_error": 0.0010801851749420166,
+      "fa2_backward_finite": true,
+      "bf16_head_backward_finite": true
+    }
+  ],
+  "flow_scheduler_import_and_initialization": "passed"
+}

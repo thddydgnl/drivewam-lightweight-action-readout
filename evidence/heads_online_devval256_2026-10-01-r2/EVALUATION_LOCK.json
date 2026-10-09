@@ -1,0 +1,82 @@
+{
+  "status": "pilot_head_native_online_dev256_verified",
+  "files": [
+    {
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/heads_online_devval256_2026-10-01-r2/protocol.json",
+      "sha256": "982e1ed2971385816aeedf9fb053a78b9b334072db39a09e347bf8c027a8a645"
+    },
+    {
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/heads_online_devval256_2026-10-01-r2/online-cache-parity.json",
+      "sha256": "a421e8cdb2b317e0957be508710f853785cfc536aa89860e9aa27e89cc289fb2"
+    },
+    {
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/heads_online_devval256_2026-10-01-r2/inference-summary.json",
+      "sha256": "170c0f869eedfe4728fcf2919134887edde8b736b8f523339ebf15ca271a54df"
+    },
+    {
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/heads_online_devval256_2026-10-01-r2/prediction-index.jsonl",
+      "sha256": "35c39f2e322c90ecdd6c2ea17d7287959d6695d24399b9aa0fb4ec0e6df4ea31"
+    },
+    {
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/heads_online_devval256_2026-10-01-r2/timings.jsonl",
+      "sha256": "7f6b0d4a58ed882d96a8dd7c704c4dfe03002bb50278f3515cd36a14108023d9"
+    },
+    {
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/heads_online_devval256_2026-10-01-r2/scores-official.csv",
+      "sha256": "7b60c47220505cd9583588b221930c0c90fc02326f40ee1e7021004ab26f99df"
+    },
+    {
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/heads_online_devval256_2026-10-01-r2/scores-vendored.csv",
+      "sha256": "84a9c56bce72432402b9a61bb382584f596b5033fe697585944f2c4091df0ef9"
+    },
+    {
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/heads_online_devval256_2026-10-01-r2/score-official-summary.json",
+      "sha256": "c730514a480dfae40e147ede9fdda0866ae9c73fc2659ef0e643dbaa71730d9f"
+    },
+    {
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/heads_online_devval256_2026-10-01-r2/score-vendored-summary.json",
+      "sha256": "5fa5f3bc23da8a011d2ca79cdf06d4d898b2b8ad72849e989e4431c1bcb36e35"
+    },
+    {
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/heads_online_devval256_2026-10-01-r2/summary.json",
+      "sha256": "9100fe9d44367a0c56f09351af8dec2ddc4c98179077517f5526daf06357ffdc"
+    },
+    {
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/heads_online_devval256_2026-10-01-r2/summary.csv",
+      "sha256": "7d0d96dcd14441296fd9e06027ad2fe2f7fa7848856692d6ff2283742b67d176"
+    },
+    {
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/heads_online_devval256_2026-10-01-r2/paired-differences.csv",
+      "sha256": "1a793eaa7c48406510a51679a2597b090d0acf7e3f0c6e01f83ccbee2c144e04"
+    },
+    {
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/heads_online_devval256_2026-10-01-r2/head-comparison.png",
+      "sha256": "fc6841bd3a087959b0dab77e1a0b5db8926078a41381ff4f3d315bba7eb3d12e"
+    },
+    {
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/heads_online_devval256_2026-10-01-r2/head-comparison.svg",
+      "sha256": "c947107e0b0700669df68f141312d301044ce9db04a7073a79378a2b54f2fd0d"
+    }
+  ],
+  "scripts": [
+    {
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/scripts/remote_head_online_infer.py",
+      "sha256": "3abfd525f2d3ee040738671d9052f2a5d04f86f0de730b23bba2f2e5ef1b8bf0"
+    },
+    {
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/scripts/remote_head_online_analyze.py",
+      "sha256": "d547158b4aa07d730d5390207aea831515befb06261aae1317f86e6dc3318839"
+    },
+    {
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/scripts/head_policy_runtime.py",
+      "sha256": "699a26f6e678440272fa13ffe5c32b70c5e85635cfda9080dd28ff24f7d6cac1"
+    },
+    {
+      "path": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/scripts/remote_opt_score.py",
+      "sha256": "dd8c8e57c1af6fcba05752e48285ee5a96d718ced2ac3518970a07fa9e7d5e4c"
+    }
+  ],
+  "CV_reference_summary_sha256": "0d91cc1cbbfa54f2f9c45f24a244fbdc2ab179fb3b14ea5644b8e5083a169148",
+  "navtest_used": false,
+  "B_star_selected": false
+}

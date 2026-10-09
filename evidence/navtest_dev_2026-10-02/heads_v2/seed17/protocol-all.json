@@ -1,0 +1,26 @@
+{
+  "protocol": "v2",
+  "preregistration": "reports/\uc0ac\uc804\ub4f1\ub85d_navtest-dev_2026-10-02.md",
+  "epochs": 40,
+  "early_stopping": false,
+  "checkpoint": "last epoch only",
+  "selection_on_eval_set": false,
+  "seed": 17,
+  "optimizer": "AdamW",
+  "learning_rate": 0.0003,
+  "weight_decay": 0.01,
+  "batch_size": 32,
+  "warmup_fraction": 0.05,
+  "schedule": "cosine to zero",
+  "gradient_clip_norm": 1.0,
+  "amp": "bfloat16",
+  "train_scenes": 4000,
+  "train_features": "world_features_pilot_2026-10-01 head_train rows",
+  "monitor": "navtrain pilot head-val ADE per epoch (not used for selection)",
+  "eval": "navtest_dev 3250 scenes, last checkpoint, once",
+  "scripts": {
+    "remote_navtest_heads.py": "b99a0a2f29469e3284c79ecc798c50dc2ad76e96028ba00bfe749050d1924a18",
+    "remote_train_heads.py": "91f4e91e9abbe17016c975bbaaf847357a54151548466136dd102977e7d56b68",
+    "lightweight_heads.py": "73b5c95bd303bf58bdb3b1a6757b10e57d9c488bc1b7e9afd5a82c4c36eb9bb0"
+  }
+}

@@ -1,0 +1,86 @@
+[
+  {
+    "name": "openscene_sensor_trainval_camera_86.tgz",
+    "bytes": 3716217298,
+    "url": "https://huggingface.co/datasets/OpenDriveLab/OpenScene/resolve/a76f840b65e972bc45e56c2adced897498e9a026/openscene-v1.1/openscene_sensor_trainval_camera/openscene_sensor_trainval_camera_86.tgz?download=true",
+    "publisher_sha256": "11cbae59278c3bd6c12fe5dd6075f002719d721b9301ee58bb1183e5465294ae",
+    "etag": null
+  },
+  {
+    "name": "openscene_sensor_trainval_camera_169.tgz",
+    "bytes": 6360475387,
+    "url": "https://huggingface.co/datasets/OpenDriveLab/OpenScene/resolve/a76f840b65e972bc45e56c2adced897498e9a026/openscene-v1.1/openscene_sensor_trainval_camera/openscene_sensor_trainval_camera_169.tgz?download=true",
+    "publisher_sha256": "c5b64ca52fba2ee3064c49795e2424eb5f8b5d96b3aeeaa46e50a11f0bc0ee52",
+    "etag": null
+  },
+  {
+    "name": "openscene_sensor_trainval_camera_3.tgz",
+    "bytes": 3856766877,
+    "url": "https://huggingface.co/datasets/OpenDriveLab/OpenScene/resolve/a76f840b65e972bc45e56c2adced897498e9a026/openscene-v1.1/openscene_sensor_trainval_camera/openscene_sensor_trainval_camera_3.tgz?download=true",
+    "publisher_sha256": "514d2342ddbf680baf14573dc91d94cec32d71be879792f9e89e58d9f6111617",
+    "etag": null
+  },
+  {
+    "name": "openscene_sensor_trainval_camera_126.tgz",
+    "bytes": 2591614847,
+    "url": "https://huggingface.co/datasets/OpenDriveLab/OpenScene/resolve/a76f840b65e972bc45e56c2adced897498e9a026/openscene-v1.1/openscene_sensor_trainval_camera/openscene_sensor_trainval_camera_126.tgz?download=true",
+    "publisher_sha256": "38af771727c94f9c5fb3575bd4b3281706b356c0eb72e9c9969fe44cb504c7ec",
+    "etag": null
+  },
+  {
+    "name": "openscene_sensor_trainval_camera_23.tgz",
+    "bytes": 3508775313,
+    "url": "https://huggingface.co/datasets/OpenDriveLab/OpenScene/resolve/a76f840b65e972bc45e56c2adced897498e9a026/openscene-v1.1/openscene_sensor_trainval_camera/openscene_sensor_trainval_camera_23.tgz?download=true",
+    "publisher_sha256": "4556834c9d16b47b2323c3b1283e02a37303474631ed104c43dec78d302950f8",
+    "etag": null
+  },
+  {
+    "name": "openscene_sensor_trainval_camera_68.tgz",
+    "bytes": 3366432810,
+    "url": "https://huggingface.co/datasets/OpenDriveLab/OpenScene/resolve/a76f840b65e972bc45e56c2adced897498e9a026/openscene-v1.1/openscene_sensor_trainval_camera/openscene_sensor_trainval_camera_68.tgz?download=true",
+    "publisher_sha256": "e8bab2d3ccc95ea0ee466cb74c76cfb0cd6f1e0914279286236d8dcf7ecc437c",
+    "etag": null
+  },
+  {
+    "name": "openscene_sensor_trainval_camera_145.tgz",
+    "bytes": 3768687977,
+    "url": "https://huggingface.co/datasets/OpenDriveLab/OpenScene/resolve/a76f840b65e972bc45e56c2adced897498e9a026/openscene-v1.1/openscene_sensor_trainval_camera/openscene_sensor_trainval_camera_145.tgz?download=true",
+    "publisher_sha256": "0c64073ef6ab9f1c96e35c51255994b49b2f13bc716ffcae14518f7d155a6582",
+    "etag": null
+  },
+  {
+    "name": "openscene_sensor_trainval_camera_142.tgz",
+    "bytes": 3125691047,
+    "url": "https://huggingface.co/datasets/OpenDriveLab/OpenScene/resolve/a76f840b65e972bc45e56c2adced897498e9a026/openscene-v1.1/openscene_sensor_trainval_camera/openscene_sensor_trainval_camera_142.tgz?download=true",
+    "publisher_sha256": "68ebe9acae8c339dc22f6b9edc0d2177de115785add33549765138b8b7c4ffea",
+    "etag": null
+  },
+  {
+    "name": "openscene_sensor_trainval_camera_199.tgz",
+    "bytes": 4210008448,
+    "url": "https://huggingface.co/datasets/OpenDriveLab/OpenScene/resolve/a76f840b65e972bc45e56c2adced897498e9a026/openscene-v1.1/openscene_sensor_trainval_camera/openscene_sensor_trainval_camera_199.tgz?download=true",
+    "publisher_sha256": "e5ec4313c2ceef7c535b9c62e90e1302838adb776fc5815d6fdd2239df3a6227",
+    "etag": null
+  },
+  {
+    "name": "openscene_sensor_trainval_camera_144.tgz",
+    "bytes": 2189136850,
+    "url": "https://huggingface.co/datasets/OpenDriveLab/OpenScene/resolve/a76f840b65e972bc45e56c2adced897498e9a026/openscene-v1.1/openscene_sensor_trainval_camera/openscene_sensor_trainval_camera_144.tgz?download=true",
+    "publisher_sha256": "84646ce5ded6196754c81137f4ad205f0d98ce4f0bc1f5e11b5121dfcc444e17",
+    "etag": null
+  },
+  {
+    "name": "openscene_sensor_trainval_camera_134.tgz",
+    "bytes": 3341502479,
+    "url": "https://huggingface.co/datasets/OpenDriveLab/OpenScene/resolve/a76f840b65e972bc45e56c2adced897498e9a026/openscene-v1.1/openscene_sensor_trainval_camera/openscene_sensor_trainval_camera_134.tgz?download=true",
+    "publisher_sha256": "4ea8161bdbe42bd8f7fc0103a70f0e9ebcaa512df47170556b24c9847e47400c",
+    "etag": null
+  },
+  {
+    "name": "openscene_sensor_trainval_camera_146.tgz",
+    "bytes": 1772587391,
+    "url": "https://huggingface.co/datasets/OpenDriveLab/OpenScene/resolve/a76f840b65e972bc45e56c2adced897498e9a026/openscene-v1.1/openscene_sensor_trainval_camera/openscene_sensor_trainval_camera_146.tgz?download=true",
+    "publisher_sha256": "86a20b3ef6a5b1e2e3841a1d02dc0aafc1e2aec8c75b3a8172715df7ad7e99a9",
+    "etag": null
+  }
+]

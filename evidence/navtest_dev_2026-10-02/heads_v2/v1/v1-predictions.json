@@ -1,0 +1,67 @@
+{
+  "models": {
+    "ego-only": {
+      "checkpoint": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/head_pilot_2026-10-01/ego-only/epoch-015.safetensors",
+      "epoch": 15,
+      "predictions": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/heads_navtest_dev_2026-10-02/v1/ego-only.npz"
+    },
+    "linear-current": {
+      "checkpoint": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/head_pilot_2026-10-01/linear-current/epoch-030.safetensors",
+      "epoch": 30,
+      "predictions": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/heads_navtest_dev_2026-10-02/v1/linear-current.npz"
+    },
+    "linear-first": {
+      "checkpoint": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/head_pilot_2026-10-01/linear-first/epoch-030.safetensors",
+      "epoch": 30,
+      "predictions": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/heads_navtest_dev_2026-10-02/v1/linear-first.npz"
+    },
+    "linear-terminal": {
+      "checkpoint": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/head_pilot_2026-10-01/linear-terminal/epoch-030.safetensors",
+      "epoch": 30,
+      "predictions": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/heads_navtest_dev_2026-10-02/v1/linear-terminal.npz"
+    },
+    "FMLP-current": {
+      "checkpoint": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/head_pilot_2026-10-01/FMLP-current/epoch-020.safetensors",
+      "epoch": 20,
+      "predictions": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/heads_navtest_dev_2026-10-02/v1/FMLP-current.npz"
+    },
+    "FMLP-first": {
+      "checkpoint": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/head_pilot_2026-10-01/FMLP-first/epoch-025.safetensors",
+      "epoch": 25,
+      "predictions": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/heads_navtest_dev_2026-10-02/v1/FMLP-first.npz"
+    },
+    "FMLP-terminal": {
+      "checkpoint": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/head_pilot_2026-10-01/FMLP-terminal/epoch-030.safetensors",
+      "epoch": 30,
+      "predictions": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/heads_navtest_dev_2026-10-02/v1/FMLP-terminal.npz"
+    },
+    "SF1-terminal": {
+      "checkpoint": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/head_pilot_2026-10-01/SF1-terminal/epoch-025.safetensors",
+      "epoch": 25,
+      "predictions": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/heads_navtest_dev_2026-10-02/v1/SF1-terminal.npz"
+    },
+    "SF1-wide-terminal": {
+      "checkpoint": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/head_pilot_2026-10-01/SF1-wide-terminal/epoch-015.safetensors",
+      "epoch": 15,
+      "predictions": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/heads_navtest_dev_2026-10-02/v1/SF1-wide-terminal.npz"
+    },
+    "SF3-current": {
+      "checkpoint": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/head_pilot_2026-10-01/SF3-current/epoch-028.safetensors",
+      "epoch": 28,
+      "predictions": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/heads_navtest_dev_2026-10-02/v1/SF3-current.npz"
+    },
+    "SF3-first": {
+      "checkpoint": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/head_pilot_2026-10-01/SF3-first/epoch-030.safetensors",
+      "epoch": 30,
+      "predictions": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/heads_navtest_dev_2026-10-02/v1/SF3-first.npz"
+    },
+    "SF3-terminal": {
+      "checkpoint": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/head_pilot_2026-10-01/SF3-terminal/epoch-030.safetensors",
+      "epoch": 30,
+      "predictions": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/heads_navtest_dev_2026-10-02/v1/SF3-terminal.npz"
+    }
+  },
+  "split": "navtest_dev",
+  "quality_run": "navtest_dev_quality_2026-10-02",
+  "note": "v1 checkpoints were selected on navtrain pilot1000; no navtest-dev selection"
+}

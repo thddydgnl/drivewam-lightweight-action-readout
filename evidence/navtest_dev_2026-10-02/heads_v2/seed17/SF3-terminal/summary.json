@@ -1,0 +1,24 @@
+{
+  "model": "SF3-terminal",
+  "config": {
+    "kind": "sf3",
+    "phase": "terminal"
+  },
+  "seed": 17,
+  "parameters": 9978163,
+  "epochs": 40,
+  "steps": 5000,
+  "checkpoint": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/heads_navtest_dev_2026-10-02/seed17/SF3-terminal/epoch-040.safetensors",
+  "checkpoint_sha256": "671cfd071e686af3629e56aa8b430c5b00534c43a5e7a1a1c082a746c08eebd9",
+  "gradient_gate": {
+    "all_parameter_gradients_finite": true,
+    "query_gradient_norms": {
+      "poolers.0.query": 0.00046932094846852124,
+      "poolers.1.query": 0.0007568362634629011,
+      "poolers.2.query": 0.0005724919610656798
+    },
+    "backbone_present": false
+  },
+  "elapsed_seconds": 278.9918184336275,
+  "completed_at_utc": "2026-10-02T08:38:52.608786+00:00"
+}

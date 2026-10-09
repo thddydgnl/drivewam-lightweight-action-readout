@@ -1,0 +1,66 @@
+{
+  "stage": "verified",
+  "elapsed_seconds": 455,
+  "files": {
+    "openscene_sensor_trainval_camera_86.tgz": {
+      "stage": "verified",
+      "bytes": 3716217298,
+      "total": 3716217298
+    },
+    "openscene_sensor_trainval_camera_169.tgz": {
+      "stage": "verified",
+      "bytes": 6360475387,
+      "total": 6360475387
+    },
+    "openscene_sensor_trainval_camera_3.tgz": {
+      "stage": "verified",
+      "bytes": 3856766877,
+      "total": 3856766877
+    },
+    "openscene_sensor_trainval_camera_126.tgz": {
+      "stage": "verified",
+      "bytes": 2591614847,
+      "total": 2591614847
+    },
+    "openscene_sensor_trainval_camera_23.tgz": {
+      "stage": "verified",
+      "bytes": 3508775313,
+      "total": 3508775313
+    },
+    "openscene_sensor_trainval_camera_68.tgz": {
+      "stage": "verified",
+      "bytes": 3366432810,
+      "total": 3366432810
+    },
+    "openscene_sensor_trainval_camera_145.tgz": {
+      "stage": "verified",
+      "bytes": 3768687977,
+      "total": 3768687977
+    },
+    "openscene_sensor_trainval_camera_142.tgz": {
+      "stage": "verified",
+      "bytes": 3125691047,
+      "total": 3125691047
+    },
+    "openscene_sensor_trainval_camera_199.tgz": {
+      "stage": "verified",
+      "bytes": 4210008448,
+      "total": 4210008448
+    },
+    "openscene_sensor_trainval_camera_144.tgz": {
+      "stage": "verified",
+      "bytes": 2189136850,
+      "total": 2189136850
+    },
+    "openscene_sensor_trainval_camera_134.tgz": {
+      "stage": "verified",
+      "bytes": 3341502479,
+      "total": 3341502479
+    },
+    "openscene_sensor_trainval_camera_146.tgz": {
+      "stage": "verified",
+      "bytes": 1772587391,
+      "total": 1772587391
+    }
+  }
+}

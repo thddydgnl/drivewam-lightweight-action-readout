@@ -1,0 +1,644 @@
+{
+  "models": {
+    "FMLP-current": {
+      "original_pdms": 79.1713388990456,
+      "swapped_pdms": 41.281362948486375,
+      "swapped_minus_original": {
+        "score": {
+          "mean": -37.88997595055921,
+          "ci95_low": -46.276682317172735,
+          "ci95_high": -27.329826500393967
+        },
+        "no_at_fault_collisions": {
+          "mean": -17.3828125,
+          "ci95_low": -31.15625,
+          "ci95_high": -10.478890192587798
+        },
+        "drivable_area_compliance": {
+          "mean": -26.953125,
+          "ci95_low": -41.25312832116288,
+          "ci95_high": -8.811026187936966
+        },
+        "time_to_collision_within_bound": {
+          "mean": -20.3125,
+          "ci95_low": -34.58718912666281,
+          "ci95_high": -13.081283542039357
+        },
+        "comfort": {
+          "mean": 0.0,
+          "ci95_low": 0.0,
+          "ci95_high": 0.0
+        },
+        "ego_progress": {
+          "mean": -34.40891247719807,
+          "ci95_low": -41.068759039047656,
+          "ci95_high": -27.028578203324923
+        },
+        "driving_direction_compliance": {
+          "mean": -23.4375,
+          "ci95_low": -37.18105670103093,
+          "ci95_high": -4.934873269090619
+        },
+        "ade_4s_m": {
+          "mean": 1.7690898728496247,
+          "ci95_low": 1.4398562372058878,
+          "ci95_high": 2.314628344978171
+        },
+        "fde_4s_m": {
+          "mean": 4.3485341386133545,
+          "ci95_low": 3.4979378545478004,
+          "ci95_high": 5.669876498693591
+        }
+      },
+      "scenes": 256,
+      "logs": 12
+    },
+    "FMLP-first": {
+      "original_pdms": 84.54964173724655,
+      "swapped_pdms": 38.58336103105461,
+      "swapped_minus_original": {
+        "score": {
+          "mean": -45.96628070619194,
+          "ci95_low": -55.64683888947662,
+          "ci95_high": -35.895293328613796
+        },
+        "no_at_fault_collisions": {
+          "mean": -22.8515625,
+          "ci95_low": -35.03675216590491,
+          "ci95_high": -16.104174027559182
+        },
+        "drivable_area_compliance": {
+          "mean": -30.46875,
+          "ci95_low": -47.10498487568551,
+          "ci95_high": -8.678714367393617
+        },
+        "time_to_collision_within_bound": {
+          "mean": -26.953125,
+          "ci95_low": -40.35237923576064,
+          "ci95_high": -19.938494859890568
+        },
+        "comfort": {
+          "mean": 0.0,
+          "ci95_low": 0.0,
+          "ci95_high": 0.0
+        },
+        "ego_progress": {
+          "mean": -42.3276430147808,
+          "ci95_low": -51.157166704785844,
+          "ci95_high": -34.25469229472946
+        },
+        "driving_direction_compliance": {
+          "mean": -23.6328125,
+          "ci95_low": -37.92618121747267,
+          "ci95_high": -4.906100726895121
+        },
+        "ade_4s_m": {
+          "mean": 2.121615956229568,
+          "ci95_low": 1.6737407253636378,
+          "ci95_high": 2.642194850726808
+        },
+        "fde_4s_m": {
+          "mean": 5.320407345935591,
+          "ci95_low": 4.187387350020138,
+          "ci95_high": 6.6982158231310995
+        }
+      },
+      "scenes": 256,
+      "logs": 12
+    },
+    "FMLP-terminal": {
+      "original_pdms": 81.9273019710694,
+      "swapped_pdms": 38.73775971541212,
+      "swapped_minus_original": {
+        "score": {
+          "mean": -43.18954225565727,
+          "ci95_low": -53.15606727516175,
+          "ci95_high": -31.768254248205302
+        },
+        "no_at_fault_collisions": {
+          "mean": -21.2890625,
+          "ci95_low": -32.639032369146,
+          "ci95_high": -15.70861486486487
+        },
+        "drivable_area_compliance": {
+          "mean": -28.90625,
+          "ci95_low": -45.21790890269151,
+          "ci95_high": -6.866707541385654
+        },
+        "time_to_collision_within_bound": {
+          "mean": -26.953125,
+          "ci95_low": -40.719117320913725,
+          "ci95_high": -20.41858104498344
+        },
+        "comfort": {
+          "mean": 0.0,
+          "ci95_low": 0.0,
+          "ci95_high": 0.0
+        },
+        "ego_progress": {
+          "mean": -39.532530380452044,
+          "ci95_low": -47.60823487745422,
+          "ci95_high": -30.81644005384061
+        },
+        "driving_direction_compliance": {
+          "mean": -24.609375,
+          "ci95_low": -38.764166282427745,
+          "ci95_high": -5.843400785261255
+        },
+        "ade_4s_m": {
+          "mean": 2.1048104972515453,
+          "ci95_low": 1.6166024397978145,
+          "ci95_high": 2.6181202287347145
+        },
+        "fde_4s_m": {
+          "mean": 5.23300935961549,
+          "ci95_low": 4.012849854740266,
+          "ci95_high": 6.55269644329122
+        }
+      },
+      "scenes": 256,
+      "logs": 12
+    },
+    "SF1-terminal": {
+      "original_pdms": 84.35347208580657,
+      "swapped_pdms": 37.46005737173962,
+      "swapped_minus_original": {
+        "score": {
+          "mean": -46.89341471406695,
+          "ci95_low": -54.80516638376646,
+          "ci95_high": -38.02200915719252
+        },
+        "no_at_fault_collisions": {
+          "mean": -22.65625,
+          "ci95_low": -34.86342455933204,
+          "ci95_high": -15.551157555664394
+        },
+        "drivable_area_compliance": {
+          "mean": -31.640625,
+          "ci95_low": -47.05882352941177,
+          "ci95_high": -10.87843369110424
+        },
+        "time_to_collision_within_bound": {
+          "mean": -28.90625,
+          "ci95_low": -42.95375603438126,
+          "ci95_high": -21.552862653086624
+        },
+        "comfort": {
+          "mean": 0.0,
+          "ci95_low": 0.0,
+          "ci95_high": 0.0
+        },
+        "ego_progress": {
+          "mean": -42.83742730233769,
+          "ci95_low": -50.0355936757836,
+          "ci95_high": -35.72493327340002
+        },
+        "driving_direction_compliance": {
+          "mean": -23.4375,
+          "ci95_low": -36.951359923531456,
+          "ci95_high": -5.282852943965109
+        },
+        "ade_4s_m": {
+          "mean": 2.2727556971184963,
+          "ci95_low": 1.832624056786854,
+          "ci95_high": 2.7819642011652985
+        },
+        "fde_4s_m": {
+          "mean": 5.815508916350779,
+          "ci95_low": 4.639343821096222,
+          "ci95_high": 7.272887181743489
+        }
+      },
+      "scenes": 256,
+      "logs": 12
+    },
+    "SF1-wide-terminal": {
+      "original_pdms": 79.5021811392605,
+      "swapped_pdms": 35.06403187818902,
+      "swapped_minus_original": {
+        "score": {
+          "mean": -44.43814926107149,
+          "ci95_low": -55.111433676807295,
+          "ci95_high": -37.020876338680495
+        },
+        "no_at_fault_collisions": {
+          "mean": -22.4609375,
+          "ci95_low": -37.24893227577792,
+          "ci95_high": -12.893871198162293
+        },
+        "drivable_area_compliance": {
+          "mean": -30.46875,
+          "ci95_low": -45.70705662125496,
+          "ci95_high": -10.341681349106485
+        },
+        "time_to_collision_within_bound": {
+          "mean": -25.78125,
+          "ci95_low": -41.52141717931192,
+          "ci95_high": -17.45173210602705
+        },
+        "comfort": {
+          "mean": 0.0,
+          "ci95_low": 0.0,
+          "ci95_high": 0.0
+        },
+        "ego_progress": {
+          "mean": -41.49775050311422,
+          "ci95_low": -53.00129248825454,
+          "ci95_high": -36.190293322302075
+        },
+        "driving_direction_compliance": {
+          "mean": -23.2421875,
+          "ci95_low": -36.709107990506325,
+          "ci95_high": -5.118209524488498
+        },
+        "ade_4s_m": {
+          "mean": 2.1775699830792155,
+          "ci95_low": 1.658658102183375,
+          "ci95_high": 2.6637709891447017
+        },
+        "fde_4s_m": {
+          "mean": 5.99660126712659,
+          "ci95_low": 4.597222638097339,
+          "ci95_high": 7.422515739962308
+        }
+      },
+      "scenes": 256,
+      "logs": 12
+    },
+    "SF3-current": {
+      "original_pdms": 84.7554498517116,
+      "swapped_pdms": 35.53234657099525,
+      "swapped_minus_original": {
+        "score": {
+          "mean": -49.223103280716344,
+          "ci95_low": -59.64300136524397,
+          "ci95_high": -36.88964447115786
+        },
+        "no_at_fault_collisions": {
+          "mean": -23.6328125,
+          "ci95_low": -39.58449074074074,
+          "ci95_high": -14.476885644768856
+        },
+        "drivable_area_compliance": {
+          "mean": -32.8125,
+          "ci95_low": -51.026595744680854,
+          "ci95_high": -8.695652173913043
+        },
+        "time_to_collision_within_bound": {
+          "mean": -26.5625,
+          "ci95_low": -41.34753184713376,
+          "ci95_high": -19.586935699342128
+        },
+        "comfort": {
+          "mean": -0.78125,
+          "ci95_low": -2.3966038511212866,
+          "ci95_high": 0.0
+        },
+        "ego_progress": {
+          "mean": -45.48122505651907,
+          "ci95_low": -56.46662423367237,
+          "ci95_high": -37.02762558463762
+        },
+        "driving_direction_compliance": {
+          "mean": -24.4140625,
+          "ci95_low": -38.77595003518649,
+          "ci95_high": -6.249410377358494
+        },
+        "ade_4s_m": {
+          "mean": 3.9307498000111005,
+          "ci95_low": 3.1685806187715553,
+          "ci95_high": 4.861843446416557
+        },
+        "fde_4s_m": {
+          "mean": 8.513093127220891,
+          "ci95_low": 6.754328572182733,
+          "ci95_high": 10.790539392090874
+        }
+      },
+      "scenes": 256,
+      "logs": 12
+    },
+    "SF3-first": {
+      "original_pdms": 86.2659140953081,
+      "swapped_pdms": 36.30727854536683,
+      "swapped_minus_original": {
+        "score": {
+          "mean": -49.95863554994128,
+          "ci95_low": -59.418931080713975,
+          "ci95_high": -38.292278913586216
+        },
+        "no_at_fault_collisions": {
+          "mean": -23.6328125,
+          "ci95_low": -36.568555250065465,
+          "ci95_high": -15.158303590665959
+        },
+        "drivable_area_compliance": {
+          "mean": -34.375,
+          "ci95_low": -52.21018547847817,
+          "ci95_high": -11.335650446871899
+        },
+        "time_to_collision_within_bound": {
+          "mean": -27.734375,
+          "ci95_low": -41.54952441924273,
+          "ci95_high": -21.122870096655262
+        },
+        "comfort": {
+          "mean": 0.0,
+          "ci95_low": 0.0,
+          "ci95_high": 0.0
+        },
+        "ego_progress": {
+          "mean": -46.20688831186851,
+          "ci95_low": -54.40167961142246,
+          "ci95_high": -37.34110153954118
+        },
+        "driving_direction_compliance": {
+          "mean": -23.828125,
+          "ci95_low": -37.33610042204568,
+          "ci95_high": -6.367097455818326
+        },
+        "ade_4s_m": {
+          "mean": 3.729651880548137,
+          "ci95_low": 3.075809037578179,
+          "ci95_high": 4.640360700282783
+        },
+        "fde_4s_m": {
+          "mean": 8.384923729886152,
+          "ci95_low": 6.775733465157478,
+          "ci95_high": 10.594163030468428
+        }
+      },
+      "scenes": 256,
+      "logs": 12
+    },
+    "SF3-terminal": {
+      "original_pdms": 86.72147469179652,
+      "swapped_pdms": 36.09301553744297,
+      "swapped_minus_original": {
+        "score": {
+          "mean": -50.62845915435355,
+          "ci95_low": -60.6140869364026,
+          "ci95_high": -38.8377572021565
+        },
+        "no_at_fault_collisions": {
+          "mean": -22.8515625,
+          "ci95_low": -36.919062958307144,
+          "ci95_high": -14.073942869995502
+        },
+        "drivable_area_compliance": {
+          "mean": -34.375,
+          "ci95_low": -52.82172131147541,
+          "ci95_high": -9.998691099476448
+        },
+        "time_to_collision_within_bound": {
+          "mean": -28.515625,
+          "ci95_low": -42.03989272544418,
+          "ci95_high": -21.779017415396794
+        },
+        "comfort": {
+          "mean": 0.0,
+          "ci95_low": 0.0,
+          "ci95_high": 0.0
+        },
+        "ego_progress": {
+          "mean": -46.09594827465902,
+          "ci95_low": -55.64629075906842,
+          "ci95_high": -37.23216374925644
+        },
+        "driving_direction_compliance": {
+          "mean": -23.2421875,
+          "ci95_low": -35.93020860438893,
+          "ci95_high": -6.664930555555565
+        },
+        "ade_4s_m": {
+          "mean": 3.4584452591394514,
+          "ci95_low": 2.843524195085349,
+          "ci95_high": 4.326399799214225
+        },
+        "fde_4s_m": {
+          "mean": 8.065239950217492,
+          "ci95_low": 6.514339848807201,
+          "ci95_high": 10.213353474259664
+        }
+      },
+      "scenes": 256,
+      "logs": 12
+    },
+    "ego-only": {
+      "original_pdms": 63.475049057996486,
+      "swapped_pdms": 63.475049057996486,
+      "swapped_minus_original": {
+        "score": {
+          "mean": 0.0,
+          "ci95_low": 0.0,
+          "ci95_high": 0.0
+        },
+        "no_at_fault_collisions": {
+          "mean": 0.0,
+          "ci95_low": 0.0,
+          "ci95_high": 0.0
+        },
+        "drivable_area_compliance": {
+          "mean": 0.0,
+          "ci95_low": 0.0,
+          "ci95_high": 0.0
+        },
+        "time_to_collision_within_bound": {
+          "mean": 0.0,
+          "ci95_low": 0.0,
+          "ci95_high": 0.0
+        },
+        "comfort": {
+          "mean": 0.0,
+          "ci95_low": 0.0,
+          "ci95_high": 0.0
+        },
+        "ego_progress": {
+          "mean": 0.0,
+          "ci95_low": 0.0,
+          "ci95_high": 0.0
+        },
+        "driving_direction_compliance": {
+          "mean": 0.0,
+          "ci95_low": 0.0,
+          "ci95_high": 0.0
+        },
+        "ade_4s_m": {
+          "mean": 0.0,
+          "ci95_low": 0.0,
+          "ci95_high": 0.0
+        },
+        "fde_4s_m": {
+          "mean": 0.0,
+          "ci95_low": 0.0,
+          "ci95_high": 0.0
+        }
+      },
+      "scenes": 256,
+      "logs": 12
+    },
+    "linear-current": {
+      "original_pdms": 76.4888493694676,
+      "swapped_pdms": 35.39994608621865,
+      "swapped_minus_original": {
+        "score": {
+          "mean": -41.08890328324897,
+          "ci95_low": -49.91980407444561,
+          "ci95_high": -28.462731227321225
+        },
+        "no_at_fault_collisions": {
+          "mean": -19.7265625,
+          "ci95_low": -34.806834458768165,
+          "ci95_high": -11.41194722015521
+        },
+        "drivable_area_compliance": {
+          "mean": -29.296875,
+          "ci95_low": -46.09094663755357,
+          "ci95_high": -7.825747282608698
+        },
+        "time_to_collision_within_bound": {
+          "mean": -21.875,
+          "ci95_low": -37.83886158886159,
+          "ci95_high": -14.749270304568531
+        },
+        "comfort": {
+          "mean": -1.953125,
+          "ci95_low": -4.546197266785502,
+          "ci95_high": -0.5813113321683027
+        },
+        "ego_progress": {
+          "mean": -37.94333534127831,
+          "ci95_low": -44.57299129395268,
+          "ci95_high": -27.068270737299933
+        },
+        "driving_direction_compliance": {
+          "mean": -25.0,
+          "ci95_low": -40.402145748987856,
+          "ci95_high": -7.195203933422315
+        },
+        "ade_4s_m": {
+          "mean": 3.830814232369487,
+          "ci95_low": 2.9896596095476475,
+          "ci95_high": 5.087405444902427
+        },
+        "fde_4s_m": {
+          "mean": 7.429364044450644,
+          "ci95_low": 5.668601577446658,
+          "ci95_high": 10.051271360643975
+        }
+      },
+      "scenes": 256,
+      "logs": 12
+    },
+    "linear-first": {
+      "original_pdms": 77.17165099886542,
+      "swapped_pdms": 37.53771426021776,
+      "swapped_minus_original": {
+        "score": {
+          "mean": -39.63393673864765,
+          "ci95_low": -49.084685678084114,
+          "ci95_high": -25.67977663668397
+        },
+        "no_at_fault_collisions": {
+          "mean": -17.96875,
+          "ci95_low": -28.241243961352655,
+          "ci95_high": -12.079096362353244
+        },
+        "drivable_area_compliance": {
+          "mean": -27.34375,
+          "ci95_low": -44.558109760758235,
+          "ci95_high": -3.866872078198048
+        },
+        "time_to_collision_within_bound": {
+          "mean": -23.046875,
+          "ci95_low": -33.77295531995456,
+          "ci95_high": -17.173669695003248
+        },
+        "comfort": {
+          "mean": -1.171875,
+          "ci95_low": -3.9735099337748343,
+          "ci95_high": 0.0
+        },
+        "ego_progress": {
+          "mean": -36.91832317275437,
+          "ci95_low": -44.51465620065253,
+          "ci95_high": -26.48752241906092
+        },
+        "driving_direction_compliance": {
+          "mean": -22.4609375,
+          "ci95_low": -35.095685406605526,
+          "ci95_high": -6.965013848284353
+        },
+        "ade_4s_m": {
+          "mean": 3.637438606875765,
+          "ci95_low": 2.9779880504713905,
+          "ci95_high": 4.759610199550522
+        },
+        "fde_4s_m": {
+          "mean": 7.51313604592616,
+          "ci95_low": 6.0836594375303426,
+          "ci95_high": 9.801733579024862
+        }
+      },
+      "scenes": 256,
+      "logs": 12
+    },
+    "linear-terminal": {
+      "original_pdms": 78.10669648976193,
+      "swapped_pdms": 36.211944209706616,
+      "swapped_minus_original": {
+        "score": {
+          "mean": -41.894752280055314,
+          "ci95_low": -49.36182993026395,
+          "ci95_high": -31.23410901580662
+        },
+        "no_at_fault_collisions": {
+          "mean": -20.703125,
+          "ci95_low": -32.27429232444202,
+          "ci95_high": -14.02144094327241
+        },
+        "drivable_area_compliance": {
+          "mean": -27.34375,
+          "ci95_low": -42.43247688477952,
+          "ci95_high": -6.508491508491511
+        },
+        "time_to_collision_within_bound": {
+          "mean": -24.609375,
+          "ci95_low": -37.126280409731116,
+          "ci95_high": -18.16016330406626
+        },
+        "comfort": {
+          "mean": -1.171875,
+          "ci95_low": -3.9735099337748343,
+          "ci95_high": 0.0
+        },
+        "ego_progress": {
+          "mean": -39.281405732207524,
+          "ci95_low": -45.52026631086282,
+          "ci95_high": -31.55924380555621
+        },
+        "driving_direction_compliance": {
+          "mean": -21.6796875,
+          "ci95_low": -34.35078629554354,
+          "ci95_high": -6.313131313131313
+        },
+        "ade_4s_m": {
+          "mean": 3.594919969576841,
+          "ci95_low": 2.9067970742955467,
+          "ci95_high": 4.6695648638380565
+        },
+        "fde_4s_m": {
+          "mean": 7.472135380418058,
+          "ci95_low": 6.021892121797306,
+          "ci95_high": 9.768854437398003
+        }
+      },
+      "scenes": 256,
+      "logs": 12
+    }
+  },
+  "scenes": 256,
+  "excluded_scenes": 0,
+  "interpretation": "Swap tests scene-specific feature dependence; OOD scene combinations do not prove causal future dynamics.",
+  "navtest_used": false
+}
