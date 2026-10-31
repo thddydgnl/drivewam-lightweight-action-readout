@@ -25,7 +25,7 @@
 | 공식 DriveWAM (B10) | PDMS 89.67, policy p50 797.9 ms | ADE 0.802 m / FDE 2.384 m, 결정 p50 837.8 ms |
 | B\* (품질을 지키는 가장 빠른 저-step 기준) | B02-opt (action 2 step), 420.7 ms | B03-opt (action 3 step), 434.0 ms |
 | **제안 모델 (SF3-first)** 품질 | PDMS 89.25 / 89.49 (seed 2개) | ADE 0.750 / 0.748 / 0.762 m, FDE 2.244 / 2.244 / 2.287 m (seed 3개) |
-| **제안 모델 (SF3-first)** 결정 지연 | **189.0 ms** (B\*보다 2.2배, B10보다 4.2배 빠름) | **70.9 ms** (B\*보다 6.1배, B10보다 11.8배 빠름) |
+| **제안 모델 (SF3-first)** 지연 | policy p50 **189.0 ms** (B\*보다 2.2배, B10보다 4.2배 빠름) | 결정 p50 **70.9 ms** (B\*보다 6.1배, B10보다 11.8배 빠름) |
 | 사전등록 판정 | **근소 미통과**: seed 17의 DAC 조건을 한 장면 차이로 초과 (0.51 > 0.50) | **통과**: seed 3개 × 기준 7개 |
 
 ![구조 비교](docs/report/figures/fig2_compare.png)
@@ -71,7 +71,7 @@
 
 **비교 기준.** B10(공식)과 출력에 영향 없는 마지막 action cache pass를 생략하고 step 수를 줄인 *opt* 변형 B10/B05/B03/B02/B01-opt(raw와 비트 단위 동일 확인). **B\*** = dev 품질 규칙을 통과한 opt 변형 중 가장 빠른 것. 참고: ego-only head, 등속(CV).
 
-**통계.** 군집 단위 paired bootstrap 2,000회(NAVSIM: 로그, PhysicalAI: NVIDIA chunk). 지연: 같은 세션에서 장면/clip마다 모델 순서를 바꿔 3회 교차 측정. 공유 호스트라 절대 시간이 날마다 달라 판정은 비율로 한다.
+**통계.** 군집 단위 paired bootstrap 2,000회(NAVSIM: 로그, PhysicalAI: NVIDIA chunk). 지연: 같은 세션에서 장면/clip마다 모델 순서를 바꿔 3회 교차 측정. 공유 호스트라 절대 시간이 날마다 달라 판정은 비율로 한다. 재는 구간은 벤치마크마다 다르다. NAVSIM의 *policy 지연*은 policy 호출 한 번, 즉 메모리에 있는 카메라 프레임에서 궤적까지이며 VAE 인코딩과 관측 pass를 포함한다(경로 명령 문장 임베딩은 미리 계산). PhysicalAI의 *결정 지연*은 실제 기록 등록이 끝난 뒤부터 action chunk가 나올 때까지다(VAE latent와 안내 문장 임베딩은 미리 계산해 재지 않음).
 
 **결과를 보기 전에 끝낸 비트 단위 검증.** rollout 재구현 = 원본(B10, B05); opt = raw; 공유 다중 기준 rollout = 개별 실행; hook 비간섭; 조기 종료 feature = 전체 실행 중 feature; 온라인(backbone + head) = 오프라인(캐시 feature) 예측; clip당 forward 횟수(B10 87회, 제안 모델 17회).
 
@@ -189,7 +189,7 @@ PhysicalAI dev의 안내 문장은 DriveWAM 파이프라인대로 Qwen3-VL-8B로
 - PhysicalAI의 chunk 좌표계 출력 회전은 결과 전에 정했지만 결과를 크게 좌우한다(없으면 ADE +0.26 m).
 - 결정적 head 대 확률적 생성기 비교는 평균 오차 지표에서 head에 유리하다(발견 5c). 다봉 분포·안전 지표 비교가 필요하다.
 - action 생성기의 1단계 증류와는 비교하지 않았다(범위 제외).
-- 지연은 공유 호스트의 A5000 1장에서 잰 비율이다. VAE와 문장 인코더 비용은 모든 방법에 공통이라 제외했다.
+- 지연은 공유 호스트의 A5000 1장에서 잰 비율이고, 재는 구간이 벤치마크마다 다르다(*통계* 참고). NAVSIM은 모든 방법에 공통인 VAE 인코딩과 관측 pass를 포함하므로 속도비가 보수적이고, PhysicalAI는 이를 제외한다.
 - 가설 H2(여러 깊이 > 단일 깊이)는 방향은 일관하나 한 seed에서만 유의해 보류했다.
 
 ---
