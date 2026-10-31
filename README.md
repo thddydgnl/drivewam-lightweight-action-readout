@@ -25,7 +25,7 @@ This project asks: **without retraining the backbone, can a small head read the 
 | Official DriveWAM (B10) | PDMS 89.67, policy p50 797.9 ms | ADE 0.802 m / FDE 2.384 m, decision p50 837.8 ms |
 | B\* (fastest quality-preserving low-step baseline) | B02-opt (2 action steps), 420.7 ms | B03-opt (3 action steps), 434.0 ms |
 | **Proposed (SF3-first)** quality | PDMS 89.25 / 89.49 (2 seeds) | ADE 0.750 / 0.748 / 0.762 m, FDE 2.244 / 2.244 / 2.287 m (3 seeds) |
-| **Proposed (SF3-first)** decision latency | **189.0 ms** (2.2× faster than B\*, 4.2× faster than B10) | **70.9 ms** (6.1× faster than B\*, 11.8× faster than B10) |
+| **Proposed (SF3-first)** latency | policy p50 **189.0 ms** (2.2× faster than B\*, 4.2× faster than B10) | decision p50 **70.9 ms** (6.1× faster than B\*, 11.8× faster than B10) |
 | Pre-registered verdict | **Near miss**: one seed violated the DAC rule by a single scene (0.51 vs 0.50 allowed) | **Pass**: 3 seeds × 7 criteria |
 
 ![Architecture comparison](docs/report/figures/fig2_compare.png)
@@ -71,7 +71,7 @@ This project asks: **without retraining the backbone, can a small head read the 
 
 **Baselines.** B10 (official), and *opt* variants B10/B05/B03/B02/B01-opt that skip the output-irrelevant final action cache pass and reduce action steps (verified bitwise identical to raw). **B\*** = fastest opt variant that meets the dev-set quality rule. Reference: ego-only head, constant-velocity.
 
-**Statistics.** Cluster-paired bootstrap, 2,000 resamples (NAVSIM: per log; PhysicalAI: per NVIDIA chunk). Latency: three interleaved passes in the same session, models alternated per scene/clip; verdicts use ratios because absolute times drift on the shared host.
+**Statistics.** Cluster-paired bootstrap, 2,000 resamples (NAVSIM: per log; PhysicalAI: per NVIDIA chunk). Latency: three interleaved passes in the same session, models alternated per scene/clip; verdicts use ratios because absolute times drift on the shared host. The timed span differs by benchmark. NAVSIM *policy latency* covers one policy call, from the camera frame in host memory to the trajectory, including VAE encoding and the observation pass (route-command text embeddings are precomputed). PhysicalAI *decision latency* runs from the end of registering the recorded history until the action chunk is ready (VAE latents and guidance-sentence embeddings are precomputed and not timed).
 
 **Bitwise verification before any result was read.** Rollout re-implementation = upstream (B10, B05); opt = raw; shared multi-baseline rollout = individual runs; hooks do not perturb outputs; early-exit features = features captured during a full run; online (backbone + head) = offline (cached features) predictions; forward counts per clip (B10 87, proposed 17).
 
@@ -189,7 +189,7 @@ This repository is a **complete record** of the experiments, not a turnkey packa
 - The chunk-frame output rotation on PhysicalAI was decided before results but strongly affects them (without it, ADE +0.26 m).
 - Deterministic head vs stochastic generator is favourable to the head on mean-error metrics (see finding 5c). Multimodal or safety-oriented metrics are needed.
 - No comparison against one-step distillation of the action generator (scoped out).
-- Latency is a ratio measured on one A5000 on a shared host; VAE and text-encoder costs are common to all methods and excluded.
+- Latency is a ratio measured on one A5000 on a shared host, and the timed span differs by benchmark (see *Statistics*). NAVSIM includes VAE encoding and the observation pass, which all methods share, so its speed-up ratios are conservative; PhysicalAI excludes them.
 - Hypothesis H2 (multi-level > single-level) is directionally consistent but significant in only one seed; left open.
 
 ---
