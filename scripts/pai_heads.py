@@ -69,3 +69,18 @@ class PaiHead(nn.Module):
         state = state + self.residual(state)
         with torch.autocast("cuda", enabled=False):
             return self.out(state.float()[:, None, :] + self.time[None])            # [B, 40, 3] normalized deltas
+
+class PaiEgoHead(nn.Module):
+    """Ego-only control (pre-registration 2026-11-01 §2.2): PaiHead without the world poolers."""
+    def __init__(self, ego_dim=5):
+        super().__init__()
+        self.ego = nn.Sequential(nn.Linear(ego_dim, 128), nn.GELU(), nn.Linear(128, 128))
+        self.fuse = nn.Sequential(nn.Linear(128, 512), nn.GELU())
+        self.residual = nn.Sequential(nn.LayerNorm(512), nn.Linear(512, 1024), nn.GELU(), nn.Linear(1024, 512))
+        self.time = nn.Parameter(torch.randn(STEPS, 512) * 0.02)
+        self.out = nn.Sequential(nn.LayerNorm(512), nn.Linear(512, 256), nn.GELU(), nn.Linear(256, 3))
+    def forward(self, world, ego):
+        state = self.fuse(self.ego(ego))
+        state = state + self.residual(state)
+        with torch.autocast("cuda", enabled=False):
+            return self.out(state.float()[:, None, :] + self.time[None])

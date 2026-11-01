@@ -1,0 +1,12 @@
+{
+  "predictions": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/r5_navsim_noise_seed_2026-11-01/predictions/B10@g2.npz",
+  "prediction_sha256": "f03f7af1ad6baf3b530fde2bff6f8028b668f8f95adba003ce01a0263f28c4e9",
+  "scores_sha256": "d4709a41a87ca5609db626724780ad839e1ecbf54847edfdcd8aca481e80c0b5",
+  "scenes": 3250,
+  "coverage": 1.0,
+  "failures": 0,
+  "pdms": 91.2034605664231,
+  "ade_4s_m": 0.5967371510127563,
+  "official_navsim_commit": "3e8291bfa89ff247231e0227778840cd0a036896",
+  "split": "navtest-dev"
+}

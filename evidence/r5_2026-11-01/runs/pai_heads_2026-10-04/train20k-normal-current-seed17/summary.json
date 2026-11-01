@@ -1,0 +1,13 @@
+{
+  "name": "train20k-normal-current-seed17",
+  "frame": "ego",
+  "train_rows": 99971,
+  "epochs": 40,
+  "steps": 125000,
+  "checkpoint_sha256": "5efaca2c8972cade5c4b0537d844dc052f3ab31f91cd379357a3f4486bb4cdb0",
+  "predictions": {
+    "dev": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/pai_heads_2026-10-04/train20k-normal-current-seed17/pred-dev.npz"
+  },
+  "elapsed_s": 5012.202457412961,
+  "utc": "2026-11-01T08:19:50.734309+00:00"
+}

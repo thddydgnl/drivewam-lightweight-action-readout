@@ -1,0 +1,308 @@
+[
+ {
+  "name": "pai-seedfeat-g1-s0",
+  "after": [],
+  "cmd": "python -u remote_pai_features.py --set dev --variant normal --tag first-seed1 --phases first --seed 1 --shard 0"
+ },
+ {
+  "name": "pai-seedfeat-g1-s1",
+  "after": [],
+  "cmd": "python -u remote_pai_features.py --set dev --variant normal --tag first-seed1 --phases first --seed 1 --shard 1"
+ },
+ {
+  "name": "pai-seedfeat-g2-s0",
+  "after": [],
+  "cmd": "python -u remote_pai_features.py --set dev --variant normal --tag first-seed2 --phases first --seed 2 --shard 0"
+ },
+ {
+  "name": "pai-seedfeat-g2-s1",
+  "after": [],
+  "cmd": "python -u remote_pai_features.py --set dev --variant normal --tag first-seed2 --phases first --seed 2 --shard 1"
+ },
+ {
+  "name": "pai-seedpred",
+  "after": [
+   "pai-seedfeat-g1-s0",
+   "pai-seedfeat-g1-s1",
+   "pai-seedfeat-g2-s0",
+   "pai-seedfeat-g2-s1"
+  ],
+  "cmd": "python -u remote_pai_train_heads.py --train train20k --seeds 17,29,43 --predict --eval-sets dev --eval-tag first-seed1 && python -u remote_pai_train_heads.py --train train20k --seeds 17,29,43 --predict --eval-sets dev --eval-tag first-seed2"
+ },
+ {
+  "name": "pai-egoonly",
+  "after": [],
+  "cmd": "python -u remote_pai_train_heads.py --train train20k --head ego --seeds 17,29,43 --eval-sets dev --parallel-seeds"
+ },
+ {
+  "name": "nav-grid-s0",
+  "after": [
+   "nav-regen-dev"
+  ],
+  "cmd": "python -u remote_r5_navsim_grid.py --split dev --models V0-A1,V0-A2,V0-A3,V0-A5,V1-A1,V1-A2,V1-A3,V1-A5,V2-A1,V2-A2,V2-A3,V2-A5 --run-id r5_navsim_grid_dev_2026-11-01 --shard 0"
+ },
+ {
+  "name": "nav-grid-s1",
+  "after": [
+   "nav-regen-dev"
+  ],
+  "cmd": "python -u remote_r5_navsim_grid.py --split dev --models V0-A1,V0-A2,V0-A3,V0-A5,V1-A1,V1-A2,V1-A3,V1-A5,V2-A1,V2-A2,V2-A3,V2-A5 --run-id r5_navsim_grid_dev_2026-11-01 --shard 1"
+ },
+ {
+  "name": "nav-seed-s0",
+  "after": [
+   "nav-regen-dev"
+  ],
+  "cmd": "python -u remote_r5_navsim_seed.py --shard 0"
+ },
+ {
+  "name": "nav-seed-s1",
+  "after": [
+   "nav-regen-dev"
+  ],
+  "cmd": "python -u remote_r5_navsim_seed.py --shard 1"
+ },
+ {
+  "name": "pai-grid-V0-s0",
+  "after": [],
+  "cmd": "python -u remote_pai_baselines.py --set dev --models V0-A1,V0-A2,V0-A3,V0-A5 --shard 0 --num-shards 2 --run-id pai_dev_grid-V0_2026-11-01 --parity 4 --raw-check 0"
+ },
+ {
+  "name": "pai-grid-V0-s1",
+  "after": [],
+  "cmd": "python -u remote_pai_baselines.py --set dev --models V0-A1,V0-A2,V0-A3,V0-A5 --shard 1 --num-shards 2 --run-id pai_dev_grid-V0_2026-11-01 --parity 4 --raw-check 0"
+ },
+ {
+  "name": "pai-grid-V1-s0",
+  "after": [],
+  "cmd": "python -u remote_pai_baselines.py --set dev --models V1-A1,V1-A2,V1-A3,V1-A5 --shard 0 --num-shards 2 --run-id pai_dev_grid-V1_2026-11-01 --parity 4 --raw-check 0"
+ },
+ {
+  "name": "pai-grid-V1-s1",
+  "after": [],
+  "cmd": "python -u remote_pai_baselines.py --set dev --models V1-A1,V1-A2,V1-A3,V1-A5 --shard 1 --num-shards 2 --run-id pai_dev_grid-V1_2026-11-01 --parity 4 --raw-check 0"
+ },
+ {
+  "name": "pai-grid-V2-s0",
+  "after": [],
+  "cmd": "python -u remote_pai_baselines.py --set dev --models V2-A1,V2-A2,V2-A3,V2-A5 --shard 0 --num-shards 2 --run-id pai_dev_grid-V2_2026-11-01 --parity 4 --raw-check 0"
+ },
+ {
+  "name": "pai-grid-V2-s1",
+  "after": [],
+  "cmd": "python -u remote_pai_baselines.py --set dev --models V2-A1,V2-A2,V2-A3,V2-A5 --shard 1 --num-shards 2 --run-id pai_dev_grid-V2_2026-11-01 --parity 4 --raw-check 0"
+ },
+ {
+  "name": "pai-seedfeat-cleanup",
+  "after": [
+   "pai-seedpred"
+  ],
+  "device": "cpu",
+  "cmd": "du -sh /home/yonghwi/DriveWAM_Lightweight_Action_Readout/caches/pai-features/dev-first-seed1 /home/yonghwi/DriveWAM_Lightweight_Action_Readout/caches/pai-features/dev-first-seed2 && rm -rf /home/yonghwi/DriveWAM_Lightweight_Action_Readout/caches/pai-features/dev-first-seed1 /home/yonghwi/DriveWAM_Lightweight_Action_Readout/caches/pai-features/dev-first-seed2"
+ },
+ {
+  "name": "nav-regen-dev",
+  "after": [],
+  "device": "cpu",
+  "env": "scorer",
+  "cmd": "python -u remote_navtest_regen_inputs.py --split navtest_dev"
+ },
+ {
+  "name": "nav-regen-lat256",
+  "after": [
+   "nav-regen-dev"
+  ],
+  "device": "cpu",
+  "env": "scorer",
+  "cmd": "python -u remote_navtest_regen_inputs.py --split navtest_final --latency256"
+ },
+ {
+  "name": "nav-grid-score",
+  "after": [
+   "nav-grid-s0",
+   "nav-grid-s1"
+  ],
+  "device": "cpu",
+  "env": "scorer",
+  "cmd": "python -u remote_r5_analyze.py assemble --run r5_navsim_grid_dev_2026-11-01 --split dev && mkdir -p /home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/r5_navsim_grid_dev_2026-11-01/scores && for f in /home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/r5_navsim_grid_dev_2026-11-01/predictions/*.npz; do n=$(basename $f .npz); [ -f /home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/r5_navsim_grid_dev_2026-11-01/scores/$n.csv ] || python -u remote_navtest_score.py score --split dev --predictions $f --output /home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/r5_navsim_grid_dev_2026-11-01/scores/$n.csv || exit 1; done"
+ },
+ {
+  "name": "nav-seed-score",
+  "after": [
+   "nav-seed-s0",
+   "nav-seed-s1"
+  ],
+  "device": "cpu",
+  "env": "scorer",
+  "cmd": "python -u remote_r5_analyze.py assemble --run r5_navsim_noise_seed_2026-11-01 --split dev && mkdir -p /home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/r5_navsim_noise_seed_2026-11-01/scores && for f in /home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/r5_navsim_noise_seed_2026-11-01/predictions/*.npz; do n=$(basename $f .npz); [ -f /home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/r5_navsim_noise_seed_2026-11-01/scores/$n.csv ] || python -u remote_navtest_score.py score --split dev --predictions $f --output /home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/r5_navsim_noise_seed_2026-11-01/scores/$n.csv || exit 1; done"
+ },
+ {
+  "name": "nav-screen",
+  "after": [
+   "nav-grid-score"
+  ],
+  "device": "cpu",
+  "env": "scorer",
+  "cmd": "python -u remote_r5_analyze.py nav-screen"
+ },
+ {
+  "name": "pai-screen",
+  "after": [
+   "pai-grid-V0-s0",
+   "pai-grid-V0-s1",
+   "pai-grid-V1-s0",
+   "pai-grid-V1-s1",
+   "pai-grid-V2-s0",
+   "pai-grid-V2-s1"
+  ],
+  "device": "cpu",
+  "cmd": "python -u remote_r5_analyze.py pai-screen"
+ },
+ {
+  "name": "r5-seed-diag",
+  "after": [
+   "pai-seedpred",
+   "nav-seed-score"
+  ],
+  "device": "cpu",
+  "cmd": "python -u remote_r5_analyze.py seed-diag"
+ },
+ {
+  "name": "r5-latency",
+  "after": [
+   "pai-seedfeat-g1-s0",
+   "pai-seedfeat-g1-s1",
+   "pai-seedfeat-g2-s0",
+   "pai-seedfeat-g2-s1",
+   "pai-seedpred",
+   "pai-egoonly",
+   "nav-grid-s0",
+   "nav-grid-s1",
+   "nav-seed-s0",
+   "nav-seed-s1",
+   "pai-grid-V0-s0",
+   "pai-grid-V0-s1",
+   "pai-grid-V1-s0",
+   "pai-grid-V1-s1",
+   "pai-grid-V2-s0",
+   "pai-grid-V2-s1",
+   "pai-seedfeat-cleanup",
+   "nav-regen-dev",
+   "nav-regen-lat256",
+   "nav-grid-score",
+   "nav-seed-score",
+   "nav-screen",
+   "pai-screen",
+   "r5-seed-diag"
+  ],
+  "cmd": "bash remote_r5_latency_session.sh"
+ },
+ {
+  "name": "r5-select",
+  "after": [
+   "r5-latency"
+  ],
+  "device": "cpu",
+  "cmd": "python -u remote_r5_analyze.py select"
+ },
+ {
+  "name": "nav-final-s0",
+  "after": [
+   "nav-final-regen"
+  ],
+  "cmd": "bash remote_r5_final.sh nav-infer 0"
+ },
+ {
+  "name": "nav-final-s1",
+  "after": [
+   "nav-final-regen"
+  ],
+  "cmd": "bash remote_r5_final.sh nav-infer 1"
+ },
+ {
+  "name": "pai-final-s0",
+  "after": [
+   "r5-select"
+  ],
+  "cmd": "bash remote_r5_final.sh pai-infer 0"
+ },
+ {
+  "name": "pai-final-s1",
+  "after": [
+   "r5-select"
+  ],
+  "cmd": "bash remote_r5_final.sh pai-infer 1"
+ },
+ {
+  "name": "pai-cur20k-s0",
+  "after": [
+   "r5-latency",
+   "r5-select",
+   "nav-final-regen"
+  ],
+  "cmd": "python -u remote_pai_features.py --set train20k --variant normal --tag current --phases current --shard 0"
+ },
+ {
+  "name": "pai-cur20k-s1",
+  "after": [
+   "r5-latency",
+   "r5-select",
+   "nav-final-regen"
+  ],
+  "cmd": "python -u remote_pai_features.py --set train20k --variant normal --tag current --phases current --shard 1"
+ },
+ {
+  "name": "pai-heads-20k-current",
+  "after": [
+   "pai-cur20k-s0",
+   "pai-cur20k-s1"
+  ],
+  "cmd": "python -u remote_pai_train_heads.py --train train20k --phase current --seeds 17,29,43 --eval-sets dev --parallel-seeds"
+ },
+ {
+  "name": "r5-phase-diag",
+  "after": [
+   "pai-heads-20k-current",
+   "pai-egoonly"
+  ],
+  "device": "cpu",
+  "cmd": "python -u remote_r5_analyze.py phase-diag"
+ },
+ {
+  "name": "nav-final-regen",
+  "after": [
+   "r5-select"
+  ],
+  "device": "cpu",
+  "env": "scorer",
+  "cmd": "bash remote_r5_final.sh nav-regen"
+ },
+ {
+  "name": "nav-final-score",
+  "after": [
+   "nav-final-s0",
+   "nav-final-s1"
+  ],
+  "device": "cpu",
+  "env": "scorer",
+  "cmd": "bash remote_r5_final.sh nav-score"
+ },
+ {
+  "name": "nav-final-verdict",
+  "after": [
+   "nav-final-score"
+  ],
+  "device": "cpu",
+  "env": "scorer",
+  "cmd": "python -u remote_r5_analyze.py nav-final"
+ },
+ {
+  "name": "pai-final-verdict",
+  "after": [
+   "pai-final-s0",
+   "pai-final-s1"
+  ],
+  "device": "cpu",
+  "cmd": "python -u remote_r5_analyze.py pai-final"
+ }
+]

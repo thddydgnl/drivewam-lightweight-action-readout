@@ -1,0 +1,11 @@
+{
+  "stage": "verified",
+  "split": "navtest_final",
+  "samples": 256,
+  "regenerated": 256,
+  "kept": 0,
+  "manifest": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/splits/navtest-final-manifest.regen-2026-11-01-latency256.jsonl",
+  "manifest_sha256": "e0e810f6db29150ee0fe79893d4e017b83aa72c112dee52fdd793f2f0d8b7663",
+  "targets_opened": false,
+  "completed_at_utc": "2026-10-31T17:06:47.774276+00:00"
+}
