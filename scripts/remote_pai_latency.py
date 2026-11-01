@@ -6,11 +6,13 @@ registration, end = action chunk ready) and the following GT registration. VAE l
 computed once per clip and excluded. Baselines are opt models (the terminal action pass of raw
 B10 comes after the decision). The student = first video pass + head; its online predictions are
 saved to be compared bitwise with the offline (cached-feature) predictions.
+Grid models `V{v}-A{k}` (pre-registration 2026-11-01 §1.3) run v video denoising steps + k opt action steps.
 """
 import argparse
 from datetime import datetime, timezone
 import json
 from pathlib import Path
+import re
 import sys
 import time
 
@@ -23,6 +25,11 @@ import pai_common as pc                                          # noqa: E402
 from pai_heads import PaiHead, heading_before, to_clip_frame     # noqa: E402
 
 BASE = {"B10-opt": 10, "B05-opt": 5, "B03-opt": 3, "B02-opt": 2, "B01-opt": 1}
+
+def steps(model):
+    """(video steps, action steps) of an opt baseline or grid model."""
+    m = re.fullmatch(r"V(\d)-A(\d+)", model)
+    return (int(m.group(1)), int(m.group(2))) if m else (3, BASE[model])
 
 class Student:
     def __init__(self, folder, device):
@@ -74,7 +81,7 @@ if __name__ == "__main__":
             pred, _, _, _ = pc.rollout(ev, batch, "S", 3, 10, tap=tap, collect=("first",), head=student,
                                        stop_video_after_first=True, clock=clock, gt_latents=latents)
         else:
-            pred, _, _, _ = pc.rollout(ev, batch, "B", 3, BASE[model], skip_terminal_action=True, clock=clock,
+            pred, _, _, _ = pc.rollout(ev, batch, "B", *steps(model), skip_terminal_action=True, clock=clock,
                                        gt_latents=latents)
         t = {(e, i): s for e, i, s in stamps}
         chunks = sorted({i for _, i, _ in stamps})

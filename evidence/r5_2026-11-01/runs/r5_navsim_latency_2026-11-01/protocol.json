@@ -1,0 +1,27 @@
+{
+  "run_id": "r5_navsim_latency_2026-11-01",
+  "models": [
+    "B10",
+    "B05-opt",
+    "B03-opt",
+    "B02-opt",
+    "V0-A2",
+    "V0-A3",
+    "V0-A5",
+    "V1-A2",
+    "V1-A3",
+    "V1-A5",
+    "V2-A2",
+    "V2-A3",
+    "V2-A5",
+    "student"
+  ],
+  "scenes": 256,
+  "repeats": 3,
+  "warmup_scenes": 16,
+  "preregistration": "reports/\uc0ac\uc804\ub4f1\ub85d_\ubcf4\uc644\uc2e4\ud5d8_2026-11-01.md",
+  "manifest": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/splits/navtest-final-manifest.regen-2026-11-01-latency256.jsonl",
+  "script_sha256": "9f3041271f99fbfac9ec440f5c65e284b03628394b576296dfb1d02d70656129",
+  "gpu": "NVIDIA RTX A5000",
+  "created_at_utc": "2026-10-31T21:40:31.819761+00:00"
+}

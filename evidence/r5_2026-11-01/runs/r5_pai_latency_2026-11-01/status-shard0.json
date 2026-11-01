@@ -1,0 +1,1 @@
+{"stage": "verified", "clips": 128, "reps": 3, "models": ["B10-opt", "B05-opt", "B03-opt", "V0-A2", "V0-A3", "V0-A5", "V1-A3", "V1-A5", "V2-A3", "V2-A5", "S-first"], "head": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/runs/pai_heads_2026-10-04/train20k-normal-first-seed17", "gpu": "NVIDIA RTX A5000", "utc": "2026-11-01T01:57:24.251338+00:00"}

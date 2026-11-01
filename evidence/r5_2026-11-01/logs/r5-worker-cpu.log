@@ -1,0 +1,29 @@
+{"utc": "2026-10-31T17:05:22.690492+00:00", "gpu": -1, "event": "start", "job": "nav-regen-dev"}
+{"utc": "2026-10-31T17:06:24.749750+00:00", "gpu": -1, "event": "end", "job": "nav-regen-dev", "rc": 0, "elapsed_s": 62}
+{"utc": "2026-10-31T17:06:24.754440+00:00", "gpu": -1, "event": "start", "job": "nav-regen-lat256"}
+{"utc": "2026-10-31T17:06:48.122631+00:00", "gpu": -1, "event": "end", "job": "nav-regen-lat256", "rc": 0, "elapsed_s": 23}
+{"utc": "2026-10-31T17:25:49.315797+00:00", "gpu": -1, "event": "start", "job": "pai-seedfeat-cleanup"}
+{"utc": "2026-10-31T17:25:50.878211+00:00", "gpu": -1, "event": "end", "job": "pai-seedfeat-cleanup", "rc": 0, "elapsed_s": 2}
+{"utc": "2026-10-31T18:51:56.419229+00:00", "gpu": -1, "event": "start", "job": "nav-grid-score"}
+{"utc": "2026-10-31T18:55:30.310655+00:00", "gpu": -1, "event": "end", "job": "nav-grid-score", "rc": 0, "elapsed_s": 214}
+{"utc": "2026-10-31T18:55:30.311539+00:00", "gpu": -1, "event": "start", "job": "nav-screen"}
+{"utc": "2026-10-31T18:55:30.915951+00:00", "gpu": -1, "event": "end", "job": "nav-screen", "rc": 0, "elapsed_s": 1}
+{"utc": "2026-10-31T20:14:35.831716+00:00", "gpu": -1, "event": "start", "job": "nav-seed-score"}
+{"utc": "2026-10-31T20:16:23.163637+00:00", "gpu": -1, "event": "end", "job": "nav-seed-score", "rc": 0, "elapsed_s": 107}
+{"utc": "2026-10-31T20:16:23.167549+00:00", "gpu": -1, "event": "start", "job": "r5-seed-diag"}
+{"utc": "2026-10-31T20:16:34.789964+00:00", "gpu": -1, "event": "end", "job": "r5-seed-diag", "rc": 0, "elapsed_s": 12}
+{"utc": "2026-10-31T21:39:39.948125+00:00", "gpu": -1, "event": "start", "job": "pai-screen"}
+{"utc": "2026-10-31T21:39:46.412817+00:00", "gpu": -1, "event": "end", "job": "pai-screen", "rc": 0, "elapsed_s": 6}
+{"utc": "2026-11-01T01:59:02.600119+00:00", "gpu": -1, "event": "start", "job": "r5-select"}
+{"utc": "2026-11-01T01:59:07.292914+00:00", "gpu": -1, "event": "end", "job": "r5-select", "rc": 0, "elapsed_s": 5}
+{"utc": "2026-11-01T01:59:07.294252+00:00", "gpu": -1, "event": "start", "job": "nav-final-regen"}
+{"utc": "2026-11-01T02:01:33.985837+00:00", "gpu": -1, "event": "end", "job": "nav-final-regen", "rc": 0, "elapsed_s": 147}
+{"utc": "2026-11-01T02:17:34.962959+00:00", "gpu": -1, "event": "start", "job": "pai-final-verdict"}
+{"utc": "2026-11-01T02:17:42.836725+00:00", "gpu": -1, "event": "end", "job": "pai-final-verdict", "rc": 0, "elapsed_s": 8}
+{"utc": "2026-11-01T02:38:44.091331+00:00", "gpu": -1, "event": "start", "job": "nav-final-score"}
+{"utc": "2026-11-01T02:39:40.103264+00:00", "gpu": -1, "event": "end", "job": "nav-final-score", "rc": 0, "elapsed_s": 56}
+{"utc": "2026-11-01T02:39:40.106686+00:00", "gpu": -1, "event": "start", "job": "nav-final-verdict"}
+{"utc": "2026-11-01T02:39:41.169135+00:00", "gpu": -1, "event": "end", "job": "nav-final-verdict", "rc": 0, "elapsed_s": 1}
+{"utc": "2026-11-01T08:20:01.785460+00:00", "gpu": -1, "event": "start", "job": "r5-phase-diag"}
+{"utc": "2026-11-01T08:20:11.832674+00:00", "gpu": -1, "event": "end", "job": "r5-phase-diag", "rc": 0, "elapsed_s": 10}
+{"utc": "2026-11-01T08:21:11.896623+00:00", "gpu": -1, "event": "exit"}

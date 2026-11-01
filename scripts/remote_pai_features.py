@@ -8,6 +8,7 @@ Variants (pre-registration §5, diagnostics at 4k):
   fixedprompt: config default prompt for every chunk (no scene-evolving guidance)
 Per row we also store the head inputs (ego vel/acc 4 + curvature 1) and the normalized target
 chunk (40 x 3), which are read from the batch only after the rollout. Resumable shards.
+`--seed` sets the per-clip noise seed of the normal variant (official protocol and default: 0).
 """
 import argparse
 from datetime import datetime, timezone
@@ -94,9 +95,11 @@ if __name__ == "__main__":
     p.add_argument("--clips", default=None, help="optional clip list file (defaults to split file)")
     p.add_argument("--tag", default=None, help="output folder suffix (defaults to the variant)")
     p.add_argument("--wait", action="store_true", help="wait for clips still being processed")
+    p.add_argument("--seed", type=int, default=0, help="per-clip noise seed (normal variant)")
     p.add_argument("--shard", type=int, required=True); p.add_argument("--num-shards", type=int, default=2)
     a = p.parse_args()
     assert torch.cuda.device_count() == 1
+    assert a.seed == 0 or a.variant == "normal", "noise seed option is for the normal variant"
     assert json.loads((ROOT / "reports/pai-parity.json").read_text())["passed"]
     phases = tuple(a.phases.split(","))
     split_file = a.clips or str(ROOT / f"splits/pai-{a.set.replace('train', 'train-') if a.set.startswith('train') else a.set + '-1k'}.txt")
@@ -129,7 +132,7 @@ if __name__ == "__main__":
         path = out / f"{number:05d}.safetensors"; tmp = path.with_suffix(".tmp")
         save_file(tensors, str(tmp)); tmp.replace(path)
         Path(str(path) + ".json").write_text(json.dumps({"clips": pending_clips, "rows": meta, "phases": list(phases),
-            "variant": a.variant, "set": a.set}) + "\n")
+            "variant": a.variant, "set": a.set, "seed": a.seed}) + "\n")
         number += 1
         buf = {ph: [] for ph in phases}; meta, ego_rows, targets, pending_clips = [], [], [], []
     for i, clip in enumerate(clips):
@@ -142,7 +145,7 @@ if __name__ == "__main__":
         if a.variant == "nohist":
             feats = nohist_rollout(ev, batch, tap, phases)
         else:
-            _, _, feats, calls = pc.rollout(ev, batch, "S", 3, 10, tap=tap, collect=phases,
+            _, _, feats, calls = pc.rollout(ev, batch, "S", 3, 10, seed=a.seed, tap=tap, collect=phases,
                                             stop_video_after_first=("terminal" not in phases))
         K = len(feats)
         for k in range(K):

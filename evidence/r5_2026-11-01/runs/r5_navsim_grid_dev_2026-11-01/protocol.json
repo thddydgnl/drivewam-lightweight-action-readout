@@ -1,0 +1,55 @@
+{
+  "run_id": "r5_navsim_grid_dev_2026-11-01",
+  "split": "navtest-dev",
+  "preregistration": "reports/\uc0ac\uc804\ub4f1\ub85d_\ubcf4\uc644\uc2e4\ud5d8_2026-11-01.md",
+  "models": [
+    "V0-A1",
+    "V0-A2",
+    "V0-A3",
+    "V0-A5",
+    "V1-A1",
+    "V1-A2",
+    "V1-A3",
+    "V1-A5",
+    "V2-A1",
+    "V2-A2",
+    "V2-A3",
+    "V2-A5"
+  ],
+  "plan": {
+    "0": [
+      1,
+      2,
+      3,
+      5
+    ],
+    "1": [
+      1,
+      2,
+      3,
+      5
+    ],
+    "2": [
+      1,
+      2,
+      3,
+      5
+    ]
+  },
+  "skip_terminal_action_cache": true,
+  "video_denoise_fraction": 0.6,
+  "generation_seed": 0,
+  "manifest": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/splits/navtest-dev-manifest.regen-2026-11-01.jsonl",
+  "manifest_sha256": "3c10a06b8bad4eed57878d10f281b485e3a19bf08bf9b9435049d0348b088d99",
+  "checkpoint_sha256": "27e4846b0a25e22fc299f7aca90c01d802072d2b297741c85ed074b689ef26a9",
+  "parity_scenes_per_shard": 4,
+  "input_check": "V3-A2 reproduces B02-opt.npz within 1e-5",
+  "targets_opened": false,
+  "scripts": {
+    "remote_r5_navsim_grid.py": "288d00020d325192c0a669f1dfb3fae46543c458cc1bb74806b7ac0c702bd9c1",
+    "navsim_grid.py": "36fcab474fb82a9c080befe0d1f8ca3289fe25446afbfa95e5677d672f35ca39",
+    "navsim_action_opt.py": "16b1520ad05d080d2cdeab3323db9f326efbad6728f06ea44727fd11f26e8a8a",
+    "baseline_common.py": "ac70c9e43477727d67bd0222f7bb3308dc02f8b16c8b5e807ca1405618769977",
+    "navsim_current_dataset.py": "d2dd1561b96a84c6753a7a2c8f3d8b1ee4a09d0dbf4b136825bb5879d7383299"
+  }
+}

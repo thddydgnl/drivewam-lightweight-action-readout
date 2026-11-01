@@ -1,0 +1,29 @@
+{"utc": "2026-10-31T16:59:22.323147+00:00", "gpu": 1, "event": "start", "job": "pai-seedfeat-g1-s1"}
+{"utc": "2026-10-31T17:12:11.829683+00:00", "gpu": 1, "event": "end", "job": "pai-seedfeat-g1-s1", "rc": 0, "elapsed_s": 770}
+{"utc": "2026-10-31T17:12:11.830991+00:00", "gpu": 1, "event": "start", "job": "pai-seedfeat-g2-s0"}
+{"utc": "2026-10-31T17:24:47.594334+00:00", "gpu": 1, "event": "end", "job": "pai-seedfeat-g2-s0", "rc": 0, "elapsed_s": 756}
+{"utc": "2026-10-31T17:24:47.596148+00:00", "gpu": 1, "event": "start", "job": "pai-egoonly"}
+{"utc": "2026-10-31T17:52:27.775361+00:00", "gpu": 1, "event": "end", "job": "pai-egoonly", "rc": 0, "elapsed_s": 1660}
+{"utc": "2026-10-31T17:52:27.777885+00:00", "gpu": 1, "event": "start", "job": "nav-grid-s1"}
+{"utc": "2026-10-31T18:51:31.219514+00:00", "gpu": 1, "event": "end", "job": "nav-grid-s1", "rc": 0, "elapsed_s": 3543}
+{"utc": "2026-10-31T18:51:31.222864+00:00", "gpu": 1, "event": "start", "job": "nav-seed-s1"}
+{"utc": "2026-10-31T18:51:36.227112+00:00", "gpu": 1, "event": "end", "job": "nav-seed-s1", "rc": 1, "elapsed_s": 5}
+{"utc": "2026-10-31T18:51:36.229642+00:00", "gpu": 1, "event": "start", "job": "pai-grid-V0-s0"}
+{"utc": "2026-10-31T19:30:44.705035+00:00", "gpu": 1, "event": "end", "job": "pai-grid-V0-s0", "rc": 0, "elapsed_s": 2348}
+{"utc": "2026-10-31T19:30:44.708774+00:00", "gpu": 1, "event": "start", "job": "nav-seed-s1"}
+{"utc": "2026-10-31T20:13:54.038327+00:00", "gpu": 1, "event": "end", "job": "nav-seed-s1", "rc": 0, "elapsed_s": 2589}
+{"utc": "2026-10-31T20:13:54.041839+00:00", "gpu": 1, "event": "start", "job": "pai-grid-V1-s1"}
+{"utc": "2026-10-31T20:55:29.267322+00:00", "gpu": 1, "event": "end", "job": "pai-grid-V1-s1", "rc": 0, "elapsed_s": 2495}
+{"utc": "2026-10-31T20:55:29.270752+00:00", "gpu": 1, "event": "start", "job": "pai-grid-V2-s1"}
+{"utc": "2026-10-31T21:39:22.592693+00:00", "gpu": 1, "event": "end", "job": "pai-grid-V2-s1", "rc": 0, "elapsed_s": 2633}
+{"utc": "2026-10-31T21:40:22.662128+00:00", "gpu": 1, "event": "start", "job": "r5-latency"}
+{"utc": "2026-11-01T01:58:16.656325+00:00", "gpu": 1, "event": "end", "job": "r5-latency", "rc": 0, "elapsed_s": 15474}
+{"utc": "2026-11-01T01:59:16.724820+00:00", "gpu": 1, "event": "start", "job": "pai-final-s0"}
+{"utc": "2026-11-01T02:16:26.857996+00:00", "gpu": 1, "event": "end", "job": "pai-final-s0", "rc": 0, "elapsed_s": 1030}
+{"utc": "2026-11-01T02:16:26.859323+00:00", "gpu": 1, "event": "start", "job": "nav-final-s0"}
+{"utc": "2026-11-01T02:37:27.794568+00:00", "gpu": 1, "event": "end", "job": "nav-final-s0", "rc": 0, "elapsed_s": 1261}
+{"utc": "2026-11-01T02:37:27.797844+00:00", "gpu": 1, "event": "start", "job": "pai-cur20k-s0"}
+{"utc": "2026-11-01T06:56:13.144238+00:00", "gpu": 1, "event": "end", "job": "pai-cur20k-s0", "rc": 0, "elapsed_s": 15525}
+{"utc": "2026-11-01T06:56:13.147197+00:00", "gpu": 1, "event": "start", "job": "pai-heads-20k-current"}
+{"utc": "2026-11-01T08:19:56.911438+00:00", "gpu": 1, "event": "end", "job": "pai-heads-20k-current", "rc": 0, "elapsed_s": 5024}
+{"utc": "2026-11-01T08:20:56.978058+00:00", "gpu": 1, "event": "exit"}

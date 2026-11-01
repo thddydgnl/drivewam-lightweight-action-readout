@@ -5,6 +5,9 @@ cosine, last checkpoint, no selection on any evaluation set. One process trains 
 seeds sequentially for one (train set, variant, phase). `--frame ego` (default, change 9): the
 head predicts chunk-start ego-frame deltas, rotated into the clip frame by the heading from the
 registered GT actions; `--frame clip` is the originally registered parametrization (ablation).
+Pre-registration 2026-11-01: `--head ego` trains the ego-only control (no world features read);
+`--eval-tag T` predicts eval features from caches/pai-features/<set>-T (e.g. other noise seeds)
+into pred-<set>-T.npz of the already trained heads.
 """
 import argparse
 from datetime import datetime, timezone
@@ -22,7 +25,7 @@ from safetensors.torch import load_file, save_file
 
 ROOT = Path.home() / "DriveWAM_Lightweight_Action_Readout"
 sys.path.insert(0, str(ROOT / "scripts"))
-from pai_heads import PaiHead, loss_fn, heading_before, to_clip_frame   # noqa: E402
+from pai_heads import PaiHead, PaiEgoHead, loss_fn, heading_before, to_clip_frame   # noqa: E402
 
 def sha(path):
     h = hashlib.sha256()
@@ -37,6 +40,8 @@ def source(set_name, variant, phase):
         return "train20k-normal", ROOT / "splits/pai-train-4k.txt"
     if set_name == "train4k" and variant == "normal":
         return "train4k-ct", None
+    if set_name == "train20k" and variant == "normal" and phase == "current":
+        return "train20k-current", None
     return f"{set_name}-{variant}", None
 
 def mapped(path, name):
@@ -58,8 +63,8 @@ class Rows:
     def take(self, idx):
         return torch.stack([self.views[self.index[i][0]][self.index[i][1]] for i in idx.tolist()])
 
-def load(set_name, variant, phase):
-    folder, filt = source(set_name, variant, phase)
+def load(set_name, variant, phase, folder=None):
+    folder, filt = (folder, None) if folder else source(set_name, variant, phase)
     root = ROOT / "caches/pai-features" / folder
     keep = set(filt.read_text().split()) if filt else None
     if keep is None:
@@ -117,9 +122,10 @@ def predict(folder, model, mu, sd, evals, device, frame):
         if path.exists():
             done[es] = str(path); continue
         outs = []
+        ego_only = isinstance(model, PaiEgoHead)
         for i in range(len(ew)):
-            o = head_out(model, ew.take(torch.tensor([i])).to(device), ((ee[i:i + 1] - mu) / sd).to(device),
-                         eth[i:i + 1].to(device), frame)
+            w = None if ego_only else ew.take(torch.tensor([i])).to(device)
+            o = head_out(model, w, ((ee[i:i + 1] - mu) / sd).to(device), eth[i:i + 1].to(device), frame)
             outs.append(o.float().cpu()[0])
         np.savez(path, normalized=torch.stack(outs).numpy(), clips=np.asarray([r["clip"] for r in er]),
                  chunks=np.asarray([r["chunk"] for r in er]))
@@ -137,10 +143,17 @@ if __name__ == "__main__":
     p.add_argument("--frame", default="ego", choices=["ego", "clip"])
     p.add_argument("--parallel-seeds", action="store_true", help="one process per seed (shared page cache)")
     p.add_argument("--run", default="pai_heads_2026-10-04")
+    p.add_argument("--head", default="sf3", choices=["sf3", "ego"])
+    p.add_argument("--eval-tag", default=None, help="eval features from <set>-<tag>, predictions pred-<set>-<tag>.npz")
     a = p.parse_args()
     assert torch.cuda.device_count() == 1
     device = torch.device("cuda:0"); torch.set_num_threads(8)
-    evals = {es: load(es, a.variant, a.phase) for es in a.eval_sets.split(",") if es}
+    if a.eval_tag:
+        evals = {f"{es}-{a.eval_tag}": load(es, a.variant, a.phase, folder=f"{es}-{a.eval_tag}") for es in a.eval_sets.split(",") if es}
+    else:
+        evals = {es: load(es, a.variant, a.phase) for es in a.eval_sets.split(",") if es}
+    Head = PaiEgoHead if a.head == "ego" else PaiHead
+    kind = "egoonly" if a.head == "ego" else a.phase
     out_root = ROOT / "runs" / a.run
     out_root.mkdir(parents=True, exist_ok=True)
     seeds = [int(s) for s in a.seeds.split(",")]
@@ -155,10 +168,10 @@ if __name__ == "__main__":
         sys.exit(max(codes))
     if a.predict:
         for seed in seeds:
-            folder = out_root / f"{a.train}-{a.variant}-{a.phase}{'-clipframe' if a.frame == 'clip' else ''}-seed{seed}"
+            folder = out_root / f"{a.train}-{a.variant}-{kind}{'-clipframe' if a.frame == 'clip' else ''}-seed{seed}"
             summary = json.loads((folder / "summary.json").read_text())
             assert summary.get("frame", "ego") == a.frame
-            model = PaiHead().to(device)
+            model = Head().to(device)
             model.load_state_dict(load_file(str(folder / "epoch-040.safetensors")))
             st = load_file(str(folder / "stats.safetensors"))
             summary["predictions"] = {**summary.get("predictions", {}),
@@ -170,13 +183,13 @@ if __name__ == "__main__":
     mu, sd = ego.mean(0), ego.std(0, unbiased=False).clamp_min(1e-5)
     n = len(world)
     for seed in seeds:
-        name = f"{a.train}-{a.variant}-{a.phase}{'-clipframe' if a.frame == 'clip' else ''}-seed{seed}"
+        name = f"{a.train}-{a.variant}-{kind}{'-clipframe' if a.frame == 'clip' else ''}-seed{seed}"
         folder = out_root / name
         if (folder / "summary.json").exists():
             continue
         folder.mkdir(exist_ok=True)
         torch.manual_seed(seed); np.random.seed(seed)
-        model = PaiHead().to(device)
+        model = Head().to(device)
         opt = torch.optim.AdamW(model.parameters(), lr=3e-4, weight_decay=0.01, betas=(0.9, 0.999))
         total = 40 * math.ceil(n / 32); warm = int(total * 0.05); step = 0; hist = []; t0 = time.monotonic()
         for epoch in range(1, 41):
@@ -185,7 +198,7 @@ if __name__ == "__main__":
             acc = 0.0
             for off in range(0, n, 32):
                 idx = order[off:off + 32]
-                w = world.take(idx).to(device, non_blocking=True)
+                w = None if a.head == "ego" else world.take(idx).to(device, non_blocking=True)
                 e = ((ego.index_select(0, idx) - mu) / sd).to(device)
                 y = target.index_select(0, idx).to(device)
                 th = theta.index_select(0, idx).to(device)

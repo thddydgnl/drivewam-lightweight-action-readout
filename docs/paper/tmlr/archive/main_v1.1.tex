@@ -1,0 +1,557 @@
+% TMLR submission draft -- Transactions on Machine Learning Research
+% Style: tmlr.sty / tmlr.bst (github.com/JmlrOrg/tmlr-style-file, downloaded 2026-10-15).
+% Submission mode: \usepackage{tmlr} hides the author block (double-blind). Do NOT use [preprint]/[accepted]
+% for the OpenReview submission. No page limit; length must be justified by content.
+%
+% Build:  tectonic -X compile main.tex   (or pdflatex -> bibtex -> pdflatex x2)
+%
+% Anonymity checklist before submission: no author names, no institution, no GitHub URL with a user name,
+% no server names, no links to the Korean technical report. Supplementary code (<=100 MB zip) must be anonymized.
+
+\documentclass[10pt]{article}
+\usepackage{tmlr}
+% \usepackage[accepted]{tmlr}   % camera-ready
+% \usepackage[preprint]{tmlr}   % arXiv version (de-anonymized)
+
+\input{math_commands.tex}
+\usepackage{hyperref}
+\usepackage{url}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{xcolor}
+\usepackage{float}
+\graphicspath{{../figures/}}
+
+\newcommand{\Bstar}{B$^{*}$}
+\newcommand{\first}{\texttt{first}}
+\newcommand{\current}{\texttt{current}}
+\newcommand{\terminal}{\texttt{terminal}}
+
+\title{Imagine Once, Act Fast: Reading Driving Actions from the First Imagination Pass of a Frozen World-Action Model}
+
+% Authors are hidden while the tmlr package is used without [accepted] or [preprint].
+\author{\name Anonymous authors \email anonymous@example.com \\
+      \addr Anonymous institution}
+
+\def\month{MM}
+\def\year{YYYY}
+\def\openreview{\url{https://openreview.net/forum?id=XXXX}}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+Driving world-action models (WAMs) couple a video generative prior with action generation. DriveWAM, a 6.24B-parameter model built on a video diffusion transformer, first imagines future video latents and then runs the same backbone ten more times to denoise a 4-second action chunk; action denoising is the largest latency term in its pipeline. We ask whether a small head can read the trajectory directly from the representation the frozen backbone forms the moment it imagines the future once. We keep the official checkpoints frozen, hook the hidden states of three transformer blocks during the first future-denoising pass, regress the trajectory with a 10M-parameter state-fusion head, and stop inference there. We evaluate under pre-registered protocols on NAVSIM (single-scene planning, closed-form PDMS) and NVIDIA PhysicalAI-AV (continuous driving with memory and language guidance, ADE/FDE), comparing not only with official DriveWAM but with \Bstar{}, the fastest reduced-step action-denoising variant that still meets a pre-registered quality bar. On NAVSIM the readout costs 0.2 to 0.4 PDMS and is 2.2$\times$ faster than \Bstar{} and 4.2$\times$ faster than DriveWAM; one of two seeds misses a pre-registered drivable-area rule by a single scene, so we report a near miss. On PhysicalAI-AV it passes all pre-registered criteria for three seeds at 6.1$\times$ the speed of \Bstar{} and 11.8$\times$ that of DriveWAM. Three findings hold on both benchmarks: features from one imagination pass are far better for readout than observation-only features, completing the imagination adds nothing measurable, and the amount of head-training data decides the outcome. We also document two evaluation traps: the public NAVSIM backbone has memorized its training scenes, and the official single-seed PhysicalAI protocol is seed-sensitive. We do not claim higher accuracy than DriveWAM; a determinism control shows that the readout approximates the mean of DriveWAM's stochastic samples at a fraction of the cost.
+\end{abstract}
+
+\section{Introduction}
+\label{sec:intro}
+
+World-action models (WAMs) adapt large video generative models into policies: the model is trained to predict future observations and actions jointly, so that the dynamics learned from video pre-training inform action prediction \citep{shi2026drivewam,li2026lightwam,ma2026fasterwam}. In autonomous driving, DriveWAM \citep{shi2026drivewam} turns a pretrained video diffusion transformer \citep{wan2025wan} into an autoregressive video-action policy that achieves strong open-loop planning results on NAVSIM \citep{dauner2024navsim} and on the NVIDIA PhysicalAI-AV benchmark \citep{nvidia2025physicalai}. Its inference, however, is dominated by the action side: after a few denoising passes over future video latents, the same 5B backbone is executed ten more times to denoise a 4-second action chunk whose output is a few dozen numbers.
+
+This paper studies a post-hoc question that leaves the trained backbone untouched: \emph{at which point of the imagination, and from which depth, does a frozen driving WAM already hold enough information for a small head to read the action out in a single pass?} If the answer is ``right after the first imagination pass'', then the remaining future-denoising passes and the entire action-denoising loop can be skipped at inference, turning a generator into a readout without retraining anything.
+
+We answer this question with a lightweight readout head attached to the official DriveWAM checkpoints (Figure~\ref{fig:overview}). Forward hooks capture the outputs of three transformer blocks during a chosen phase of the rollout; a 10M-parameter state-fusion head (SF3), which adopts the design of the Light-WAM action expert \citep{li2026lightwam}, pools each block with learned queries, fuses them with the ego state, and regresses the trajectory. Our contribution is where and when to read, not the head architecture. We compare three readout phases with the same head: \current{} (the backbone has only registered the observation), \first{} (one future-denoising pass over pure-noise tokens that attended once to the observation cache), and \terminal{} (after all future-latent updates). The proposed model uses \first{} and exits early.
+
+Because ``just use fewer action-denoising steps'' needs no training, we judge the readout not only against official DriveWAM (B10) but against \Bstar{}, the fastest reduced-step variant that still meets a quality bar on a development set. All split rules, baseline selection rules, pass/fail criteria and the head specification were written down before any result on the relevant set was read, locked final sets were evaluated once, and every deviation is recorded with its timestamp (Appendix~\ref{app:prereg}).
+
+\paragraph{Contributions.}
+\begin{itemize}
+\item \textbf{A frozen-backbone readout that replaces iterative action denoising.} With one imagination pass and a 10M-parameter head, the readout reaches near-baseline quality at 0.449$\times$ the median latency of \Bstar{} on NAVSIM (0.237$\times$ B10) and 0.163$\times$ on PhysicalAI-AV (0.085$\times$ B10), under pre-registered criteria (Sections~\ref{sec:navsim} and \ref{sec:pai}).
+\item \textbf{Imagination matters, completing it does not.} On both benchmarks \first{} features beat \current{} features by a wide margin (+3.3 PDMS; $-$0.11 m ADE), while \terminal{} features are indistinguishable from \first{}. Memory and language guidance also contribute in the continuous setting, but less than imagination (Section~\ref{sec:pai-diag}).
+\item \textbf{Head-training scale decides the outcome.} With a fixed architecture, the NAVSIM gap to B10 shrinks from $-$4.2 to $-$0.4 PDMS as head-training scenes grow from 4k to 92.6k; on PhysicalAI the 4k head fails a tail-error criterion and the 20k head passes.
+\item \textbf{Evaluation traps and a determinism control.} The public NAVSIM backbone has memorized its training scenes (B10 ADE 0.076 m on navtrain versus 0.598 m on unseen navtest), the official single-seed PhysicalAI protocol is seed-sensitive (B10 ADE 0.82 to 0.93 m), and a deterministic regressor is favored by mean-error metrics: against the mean of four DriveWAM samples the readout is on par in ADE and about 0.1 m worse in FDE (Section~\ref{sec:determinism}).
+\end{itemize}
+
+We deliberately do not claim that the readout is more accurate than DriveWAM. The claim is that mean-prediction-level quality is available in one imagination pass at a fraction of the latency, and that this holds for a frozen public checkpoint under a pre-registered protocol.
+
+\begin{figure}[t]
+\begin{center}
+\includegraphics[width=\linewidth]{fig_overview.pdf}
+\end{center}
+\caption{Top: official DriveWAM inference for one 4-second chunk. Bottom: the proposed path stops right after the first future-denoising pass and reads the outputs of blocks 10/20/30 with the SF3 head. The backbone is never updated.}
+\label{fig:overview}
+\end{figure}
+
+\section{Related work}
+\label{sec:related}
+
+\paragraph{Driving world models and world-action models.} Generative world models for driving such as GAIA-1 \citep{hu2023gaia} and Vista \citep{gao2024vista} learn to predict future frames; DriveWAM \citep{shi2026drivewam} goes further by generating video and actions as one token sequence under a joint flow-matching objective \citep{lipman2023flow}, with a frozen vision-language model supplying a guidance sentence per chunk and a selective KV memory bounding long rollouts. We use its public checkpoints and inference code unchanged.
+
+\paragraph{Efficient action experts for WAMs.} Light-WAM \citep{li2026lightwam} pairs a compact video backbone with a state-fusion action expert that pools states from several backbone layers and predicts an action chunk in one forward pass. Two concurrent works named Faster-WAM argue that WAMs need only a shallow action expert reading all video layers \citep{ma2026fasterwam}, or that future representations should be computed once and reused throughout action denoising \citep{zhao2026fasterwam}. Our head adopts the multi-level state-fusion design of the Light-WAM expert, but the question differs: those works train or adapt the backbone together with the expert, whereas we keep a public driving WAM frozen and replace its own action generator, so the result isolates what the pretrained world representation already contains and at which phase of the imagination it becomes available.
+
+\paragraph{Diffusion features as representations.} Intermediate activations of image diffusion models carry semantic and geometric information \citep{xiang2023diffusionfeatures,tang2023dift}. Video Prediction Policy \citep{hu2025vpp} trains a robot policy on features from a single denoising pass of a video diffusion model, motivated by the idea that such features encode predicted dynamics. Our \first{} phase is the driving analogue inside a WAM, and our \current{}/\first{}/\terminal{} comparison tests the premise directly: one denoising pass from noise adds a large amount of action-relevant information, further passes add nothing measurable for readout.
+
+\paragraph{Few-step generation and distillation.} Reduced-step samplers, consistency models \citep{song2023consistency} and truncated diffusion planners \citep{liao2025diffusiondrive} attack the same latency problem from the generator side. Our \Bstar{} baseline is the training-free end of this spectrum; a one-step distillation of DriveWAM's action generator would be a natural additional baseline and is left for future work.
+
+\section{Background: DriveWAM inference}
+\label{sec:background}
+
+DriveWAM is built on the Wan2.2-TI2V-5B video diffusion transformer (30 blocks, hidden size 3072), extended with action tokens and an action decoder; the full model has 6.24B parameters. For one decision it (i) encodes the observed frames with a video VAE and registers them in the KV cache (the \emph{observation pass}), (ii) denoises the future video latents in three passes of the transformer starting from pure noise (\emph{future passes 1 to 3}), and (iii) denoises a 4-second action chunk in ten more passes of the same transformer (the official setting, \textbf{B10}), followed by a small action decoder. Guidance sentences from a frozen vision-language model and the ego state condition every pass. In the continuous PhysicalAI-AV setting this is repeated chunk by chunk with teacher forcing: after each chunk, the predicted trajectory is discarded and the recorded frames and actions are registered into memory before the next chunk is predicted (Figure~\ref{fig:pai}). Counting backbone forwards per PhysicalAI clip gives 87 for B10 (20 video, 55 action including cache passes, 12 registration) versus 17 for the proposed path (5 video, 12 registration).
+
+\section{Method}
+\label{sec:method}
+
+\subsection{Frozen backbone and readout phases}
+\label{sec:phases}
+
+We use the official DriveWAM checkpoints for NAVSIM and for PhysicalAI-AV without modification. The official inference loop is re-implemented step by step and verified bitwise against the upstream implementation (Appendix~\ref{app:verification}). Forward hooks read the outputs of transformer blocks 10, 20 and 30 (0-based 9, 19, 29) without altering them; each tap is a set of video tokens of width 3072 (112 tokens on PhysicalAI-AV, the corresponding number for the NAVSIM resolution).
+
+The same tap can be read at three phases of the rollout (Figure~\ref{fig:phases}):
+\begin{itemize}
+\item \current{}: during the observation pass; the backbone has registered the observed frames and has not imagined anything.
+\item \first{}: during future pass 1; the future tokens are pure noise that attends once to the observation cache. This is the first time the backbone ``imagines'' the future.
+\item \terminal{}: during the last future pass, after all future-latent updates; this requires the full future generation.
+\end{itemize}
+The proposed model reads \first{} and exits immediately after that pass; the KV cache is released and neither the remaining future passes nor any action-denoising pass is executed. We verified bitwise that early-exit features equal the features captured at the same point of a full B10 run.
+
+\begin{figure}[t]
+\begin{center}
+\includegraphics[width=\linewidth]{fig_phases.pdf}
+\end{center}
+\caption{The three readout phases for one 4-second chunk. The same head is trained separately for each phase; the proposed model uses \first{}.}
+\label{fig:phases}
+\end{figure}
+
+\subsection{SF3 readout head}
+\label{sec:head}
+
+The head (Figure~\ref{fig:sf3}) adopts the multi-level state-fusion design of the Light-WAM action expert \citep{li2026lightwam}: learned queries per tapped block, a fusion MLP and per-step decoding. It differs in what it is attached to and what it predicts: it is trained alone on the frozen DriveWAM backbone, reads the backbone during future pass 1 instead of reading the observation, takes the ego state as input, and predicts normalized displacement and heading per step. It has about 9.98M trainable parameters, 0.16\% of the backbone.
+\begin{itemize}
+\item \textbf{Per-block query pooling.} For each tapped block: LayerNorm $\rightarrow$ Linear $3072 \rightarrow 512$ $\rightarrow$ 16 learned queries attending to the tokens with 8 heads $\rightarrow$ learned weighted sum over queries $\rightarrow$ LayerNorm, giving a 512-d state per block.
+\item \textbf{Ego encoder.} A two-layer MLP maps the ego state to 128-d. NAVSIM: four past poses, velocity, acceleration and the driving command (20-d). PhysicalAI-AV: velocity, acceleration and curvature (5-d).
+\item \textbf{Fusion.} The three block states and the ego code are concatenated (1,664-d), projected to 512 with GELU, and refined by a residual MLP ($512 \rightarrow 1024 \rightarrow 512$) into a driving state $h$.
+\item \textbf{Decoder.} For each output step $t = 1 \dots K$, $h$ plus a learned time embedding $\psi(t)$ is mapped by LayerNorm $\rightarrow$ Linear $512 \rightarrow 256$ $\rightarrow$ GELU $\rightarrow$ Linear $256 \rightarrow 3$ to normalized $(\Delta x, \Delta y, \Delta\theta)$. The output layer is kept in FP32. $K = 8$ poses at 2 Hz on NAVSIM and $K = 40$ steps at 10 Hz on PhysicalAI-AV. Targets are normalized with 1\%/99\% quantiles; a cumulative sum gives poses.
+\item \textbf{Loss.} Huber on positions $+\,0.2\,(1 - \cos\Delta\theta) + 0.1\,$Huber on the normalized deltas.
+\item \textbf{Training protocol (fixed before the pre-registered runs).} 40 epochs, AdamW with learning rate $3 \times 10^{-4}$ and weight decay 0.01, batch 32, 5\% warm-up then cosine decay, \emph{last} checkpoint, no checkpoint selection on any evaluation set, batch-1 prediction as in deployment.
+\end{itemize}
+On PhysicalAI-AV the recorded actions are displacements in the clip-start frame. The head predicts in the chunk-start vehicle frame and the prediction is rotated into the data frame with the heading accumulated from the already registered ground-truth actions; every method receives this information through memory. This choice was fixed before results were read and turned out to be decisive (Section~\ref{sec:pai-diag}).
+
+\begin{figure}[t]
+\begin{center}
+\includegraphics[width=0.95\linewidth]{fig_sf3.pdf}
+\end{center}
+\caption{SF3 head. Three tapped blocks are pooled with learned queries, fused with the ego state, and decoded step by step. Only the head is trained.}
+\label{fig:sf3}
+\end{figure}
+
+\subsection{Baselines and the fair low-step reference \Bstar{}}
+\label{sec:baselines}
+
+\textbf{B10} is the official DriveWAM inference. The \textbf{opt} variants (B10-, B05-, B03-, B02-, B01-opt) skip the final action cache pass, which does not affect the output, and run 10/5/3/2/1 action-denoising steps; we verified that opt outputs are bitwise identical to the raw implementation at equal step count. \textbf{\Bstar{}} is the fastest opt variant that meets the pre-registered quality rule on the development set (Table~\ref{tab:criteria}); it represents the training-free alternative ``just use fewer steps'' and is the reference the readout must beat on latency while matching on quality. Reference points are a constant-velocity predictor and an ego-only head.
+
+\subsection{Evaluation protocol}
+\label{sec:protocol}
+
+\paragraph{Pre-registration.} Following the practice of pre-registration \citep{nosek2018preregistration}, the data splits, the \Bstar{} rule, the pass/fail criteria, the head specification and the number of seeds were written down for each benchmark before any prediction on the relevant set was produced. Changes made during execution were recorded before the corresponding results were read, and the locked final sets were evaluated exactly once. Appendix~\ref{app:prereg} lists the rules and every deviation.
+
+\paragraph{Statistics.} Differences to B10 and \Bstar{} are reported with 95\% confidence intervals from a cluster-paired bootstrap \citep{efron1994bootstrap} with 2,000 resamples, clustering by log on NAVSIM and by NVIDIA chunk on PhysicalAI-AV. Results are reported per seed; a criterion passes only if every seed passes.
+
+\paragraph{Latency.} The two benchmarks time different spans. On NAVSIM, \emph{policy latency} covers one call of the policy, from the camera frame and ego state already in host memory to the trajectory on the CPU: preprocessing, host-to-device transfer, VAE encoding, the observation pass and every later pass the method runs. The text embeddings of the four route commands are precomputed. On PhysicalAI-AV, \emph{decision latency} runs from the end of registering the recorded history to the moment the action chunk is ready. VAE latents are computed once per clip and guidance-sentence embeddings are precomputed, so neither is timed, and the registration of the recorded chunk that follows is measured separately. The NAVSIM span therefore includes costs common to all methods, which makes its speed-up ratios conservative. On both benchmarks, models are alternated per scene or clip in three interleaved passes within the same session on one RTX A5000 (24 GB) of a shared host whose load from other tenants varied between 12 and 60. Because absolute times drifted by up to 30\% across days, verdicts use the ratio to \Bstar{} measured in the same session.
+
+\paragraph{Bitwise verification.} Before any result was read we verified: rollout re-implementation $=$ upstream (B10, B05); opt $=$ raw; shared multi-baseline rollout $=$ individual runs; hooks do not perturb outputs; early-exit features $=$ features captured during a full run; online policy (backbone $+$ head) $=$ offline predictions from cached features; backbone forward counts per clip. The list is in Appendix~\ref{app:verification}.
+
+\section{Experimental setup}
+\label{sec:setup}
+
+\begin{table}[t]
+\caption{Benchmarks, splits and pre-registered criteria. ``CI'' is the 95\% bootstrap confidence interval of the paired difference to B10 (and to \Bstar{} for the readout); p50 is the median latency as defined in Section~\ref{sec:protocol} (policy latency on NAVSIM, decision latency on PhysicalAI-AV).}
+\label{tab:criteria}
+\begin{center}
+\small
+\begin{tabular}{p{2.2cm}p{5.2cm}p{6.0cm}}
+\toprule
+ & NAVSIM v1.1 & PhysicalAI-AV \\
+\midrule
+Data & OpenScene revision \texttt{a76f840b} & NVIDIA revision \texttt{33f9bf44}, front camera; 23,994 of 24,000 clips processed \\
+Unit & one scene $\rightarrow$ one 4-s trajectory (8 poses, 2 Hz) & one clip (21 frames at 1 fps) $\rightarrow$ 5 consecutive 4-s chunks (40 steps, 10 Hz), teacher forcing \\
+Head-train & navtrain head-train: 4k $\rightarrow$ 20k $\rightarrow$ 92,599 scenes (1,072 logs) & DriveWAM public train 4k $\subset$ 20k clips (all 5 chunks per clip) \\
+Dev & navtest-dev: 34 logs, 3,250 scenes (log-level split, seed 17) & val subset: 1,000 clips by hash rank (614 NVIDIA chunks); guidance sentences regenerated with the DriveWAM pipeline (Qwen3-VL-8B, \citealp{bai2025qwen3vl}; 27.8 words on average vs.\ 28.0 in the official prompts) \\
+Final (locked, one run) & navtest-final: 102 logs, 8,896 scenes & official test 1k (480 NVIDIA chunks, public guidance sentences) \\
+Metrics & official PDMS and its terms (NC, DAC, EP), ADE at 4 s & official ADE / FDE, chunk-level FDE $>$ 2 m rate \\
+\Bstar{} rule (dev) & PDMS CI lower bound $\ge -2.0$ vs.\ B10; mean NC and DAC degradation $\le 0.5$; fastest such opt variant & ADE CI upper bound $\le +0.05$ m and FDE CI upper bound $\le +0.15$ m vs.\ B10; fastest such opt variant \\
+Readout pass rule & PDMS CI lower bound $\ge -2.0$ vs.\ B10 and \Bstar{}; NC/DAC degradation $\le 0.5$; p50 $\le 0.8 \times$ \Bstar{}; both seeds & ADE CI upper $\le +0.05$ m and FDE CI upper $\le +0.15$ m vs.\ B10 and \Bstar{}; FDE $>$ 2 m rate increase $\le 1$ pp; p50 $\le 0.8 \times$ \Bstar{}; no p95 regression; all three seeds \\
+Seeds & 17, 29 & 17, 29, 43 \\
+\bottomrule
+\end{tabular}
+\end{center}
+\end{table}
+
+Table~\ref{tab:criteria} summarizes both benchmarks. On NAVSIM, a scene is scored by the official v1.1 scorer with the closed-form PDM score (PDMS), which combines no-collision (NC), drivable-area compliance (DAC), ego progress (EP), time-to-collision and comfort. On PhysicalAI-AV (Figure~\ref{fig:pai}) a clip yields five chunks; the official ADE and FDE reset to the recorded position at every chunk. Both evaluations are open-loop and non-reactive.
+
+\begin{figure}[t]
+\begin{center}
+\includegraphics[width=\linewidth]{fig_pai.pdf}
+\end{center}
+\caption{PhysicalAI-AV evaluation unit. A 21-frame clip yields five 4-second chunks that are predicted with teacher forcing.}
+\label{fig:pai}
+\end{figure}
+
+\section{Results on NAVSIM}
+\label{sec:navsim}
+
+\subsection{The public backbone has memorized its training scenes}
+\label{sec:memorization}
+
+Our first development set was a held-out subset of navtrain, the data on which the public NAVSIM checkpoint was trained. There, B10 reached a PDMS of 93.12 with an ADE of 0.076 m at 4 s. On the unseen navtest-dev split the same model scores 90.93 PDMS with an ADE of 0.598 m, eight times larger (Table~\ref{tab:memo}). The backbone's output on navtrain scenes is essentially the recorded trajectory. The consequence for a readout study is severe: a head trained on navtrain features sees memorized trajectories, so any conclusion about the head, the readout phase or the baseline gap must be drawn on unseen scenes. We therefore split navtest by log into a development part (34 logs) and a locked final part (102 logs), moved all decisions to navtest-dev, and recorded this change before any navtest prediction was made. A classification head with 256 k-means anchors illustrates the trap: it reached 100\% training accuracy and 18.8\% validation accuracy, memorizing the scene-to-trajectory shortcut present in the features (Appendix~\ref{app:navsim-dev}).
+
+\begin{table}[t]
+\caption{Backbone memorization on NAVSIM. ADE is the average displacement error of the 4-second trajectory.}
+\label{tab:memo}
+\begin{center}
+\small
+\begin{tabular}{lcc}
+\toprule
+Model & navtrain head-val (256 scenes) & navtest-dev (3,250 scenes, unseen) \\
+ & PDMS / ADE & PDMS / ADE \\
+\midrule
+B10 & 93.12 / 0.076 m & 90.93 / 0.598 m \\
+B02-opt & 92.75 / 0.077 m & 90.88 / 0.599 m \\
+SF3-\terminal{}, 4k head (v1) & 86.72 / 0.317 m & 85.59 / 0.674 m \\
+\bottomrule
+\end{tabular}
+\end{center}
+\end{table}
+
+\subsection{\Bstar{} selection and readout phases on navtest-dev}
+\label{sec:navsim-dev}
+
+On navtest-dev, the opt variants B05, B03 and B02 lose $-$0.03, $-$0.04 and $-$0.05 PDMS relative to B10 with confidence intervals containing zero, while B01-opt loses $-$1.19 $[-1.96, -0.53]$ and degrades DAC by 1.11, failing the rule. \Bstar{} is therefore \textbf{B02-opt}, at 0.520$\times$ the median latency of B10.
+
+Table~\ref{tab:navsim-phases} compares readout phases and depths with the 4k-scene head. \first{} beats \current{} by $+3.40$ and $+3.28$ PDMS for the two seeds (intervals exclude zero), whereas \first{} versus \terminal{} is $-0.74\,[-2.11, +0.41]$ and $+0.61\,[+0.06, +1.16]$, changing sign across seeds. Multi-level pooling (SF3) versus a single wide level (SF1-wide) is directionally consistent but significant in only one seed; we leave that hypothesis open. The latency ratio of \first{} to \Bstar{} is 0.467 and that of \terminal{} 0.794, so \first{} is both as good and almost twice as fast as \terminal{}.
+
+\begin{table}[t]
+\caption{NAVSIM navtest-dev, 4k-scene head, protocol v2 (40 epochs, last checkpoint, batch-1 prediction). $\Delta$ is the paired difference to B10 (PDMS 90.93) with its 95\% CI.}
+\label{tab:navsim-phases}
+\begin{center}
+\footnotesize
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{llccc}
+\toprule
+Head & Phase & PDMS seed 17 / 29 & $\Delta$ vs.\ B10, seed 17 / 29 & p50 / \Bstar{} \\
+\midrule
+SF3 & \terminal{} & 87.34 / 86.28 & $-3.59\,[-4.92,-2.42]$ / $-4.65\,[-6.42,-3.14]$ & 0.794 \\
+SF3 & \first{}    & 86.60 / 86.89 & $-4.34\,[-6.17,-2.81]$ / $-4.04\,[-5.89,-2.50]$ & 0.467 \\
+SF3 & \current{}  & 83.20 / 83.61 & $-7.73\,[-9.97,-5.86]$ / $-7.32\,[-9.43,-5.45]$ & 0.248 \\
+SF1 (block 30) & \terminal{} & 85.38 / 84.79 & $-5.55$ / $-6.15$ & 0.794 \\
+SF1-wide & \terminal{} & 83.64 / 85.04 & $-7.29$ / $-5.89$ & -- \\
+Flat MLP & \terminal{} & 83.00 / 84.16 & $-7.94$ / $-6.77$ & 0.796 \\
+Ego-only & -- & 67.07 / 68.10 & $-23.9$ / $-22.8$ & -- \\
+\bottomrule
+\end{tabular}
+\end{center}
+\end{table}
+
+\subsection{Head-training scale}
+\label{sec:navsim-scale}
+
+With 4k head-training scenes every head failed the pre-registered quality rule, losing 3.6 to 7.7 PDMS mostly through DAC and EP. A failure analysis showed that the loss was concentrated in about 4\% of scenes in which only the head left the drivable area, at high speed or in turns. Among the remedies we pre-registered, an FP32 output layer had no effect and the anchor head failed (Section~\ref{sec:memorization}); the decisive factor was data. Figure~\ref{fig:scale} shows that with the same SF3-\first{} architecture the gap to B10 shrank from $-$4.2 to $-$1.3 to $-$0.4 PDMS as head-training scenes grew from 4k to 20k to 92,599 (the entire navtrain head-train split). At 92.6k the result is $90.43 / 90.58$ PDMS ($-0.51\,[-1.12, +0.14]$ / $-0.36\,[-0.95, +0.28]$ versus B10); seed 29 passed every rule and seed 17 exceeded the DAC rule by one scene (0.52 versus 0.50 allowed). Under the pre-registered ``both seeds'' rule this is a near miss, not a pass.
+
+\begin{figure}[t]
+\begin{center}
+\includegraphics[width=\linewidth]{fig_scale.pdf}
+\end{center}
+\caption{Head-training data scale with a fixed SF3-\first{} architecture. Left: NAVSIM navtest-dev. Right: PhysicalAI-AV dev. Dashed lines are the B10 references.}
+\label{fig:scale}
+\end{figure}
+
+\subsection{Locked final set}
+\label{sec:navsim-final}
+
+The pre-registration allowed a final run only after a dev pass. Because the dev verdict missed by a single scene, the final run was made once as a recorded exception; the settings were frozen (checkpoint hashes in Appendix~\ref{app:prereg}) and nothing was changed afterwards. Table~\ref{tab:navsim-final} gives the result on navtest-final (8,896 scenes). The readout loses $-0.42\,[-0.76, -0.08]$ and $-0.17\,[-0.56, +0.27]$ PDMS to B10, improves the collision term by 0.15 to 0.17, and loses 0.35 to 0.51 on drivable-area compliance. Its median policy latency is 189.0 ms, 0.449$\times$ \Bstar{} and 0.237$\times$ B10, measured in the same session with per-scene interleaving (run-to-run variation 0.2\%). Seed 29 passes every criterion; seed 17 exceeds the DAC rule with 226 versus 181 violating scenes, where 44.48 additional violations were allowed, so the verdict is again a near miss by one scene. Dev and final agree in sign and magnitude.
+
+\begin{table}[t]
+\caption{NAVSIM navtest-final (102 logs, 8,896 scenes), evaluated once. p50 is the median policy latency (Section~\ref{sec:protocol}) from the same interleaved session.}
+\label{tab:navsim-final}
+\begin{center}
+\footnotesize
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{lcccccc}
+\toprule
+Model & PDMS & NC & DAC & EP & ADE (4 s) & p50 (ms), ratio to \Bstar{} \\
+\midrule
+B10 (official) & 89.67 & 98.12 & 97.97 & 83.83 & 0.564 m & 797.9 (1.90) \\
+\Bstar{} = B02-opt & 89.65 & 98.15 & 97.93 & 83.81 & 0.564 m & 420.7 (1.00) \\
+SF3-\first{}, 92.6k, seed 17 & 89.25 & 98.27 & 97.46 & 83.36 & 0.579 m & \textbf{189.0 (0.449)} \\
+SF3-\first{}, 92.6k, seed 29 & 89.49 & 98.30 & 97.62 & 83.52 & 0.577 m & \textbf{189.0 (0.449)} \\
+\midrule
+\multicolumn{7}{l}{$\Delta$PDMS vs.\ B10: seed 17 $-0.42\,[-0.76,-0.08]$, seed 29 $-0.17\,[-0.56,+0.27]$.} \\
+\multicolumn{7}{l}{$\Delta$PDMS vs.\ \Bstar{}: seed 17 $-0.40\,[-0.74,-0.07]$, seed 29 $-0.16\,[-0.54,+0.29]$.} \\
+\multicolumn{7}{l}{Verdict: near miss (seed 17 DAC degradation 0.51 $>$ 0.50; one scene). NC improves by $+0.15$ / $+0.17$.} \\
+\bottomrule
+\end{tabular}
+\end{center}
+\end{table}
+
+\section{Results on PhysicalAI-AV}
+\label{sec:pai}
+
+\subsection{Development set: \Bstar{} and head-training scale}
+\label{sec:pai-dev}
+
+Table~\ref{tab:pai-dev} reports the development set (1,000 val clips). B05-opt and B03-opt satisfy the \Bstar{} rule (ADE CI upper bound $+0.008$ and $+0.038$ m); B02-opt does not ($+0.089$ m). \Bstar{} is therefore \textbf{B03-opt} at a median decision latency of 434.0 ms versus 837.8 ms for B10. The 4k-clip head matches B10 on mean error ($\Delta$ADE $-0.005$ to $-0.012$ m) but increases the chunk-level rate of FDE $>$ 2 m by 2.3 to 3.7 percentage points, more than the 1 pp allowed; the 2 m threshold sits near the median chunk FDE of B10 (1.69 m), and the 4k head has a slightly higher median but a shorter tail (99th percentile 10.8 m versus 11.3 m). The pre-registered scale rule (choose the head-training size with the lower seed-averaged dev ADE) selected 20k clips (0.762 m versus 0.813 m), with which all three seeds pass every dev criterion.
+
+\begin{table}[t]
+\caption{PhysicalAI-AV development set (1,000 clips, 614 NVIDIA chunks). Decision latency is the median and 95th percentile over 128 clips $\times$ 3 interleaved passes (1,920 decisions per model).}
+\label{tab:pai-dev}
+\begin{center}
+\small
+\begin{tabular}{lcccc}
+\toprule
+Model & ADE (m) & FDE (m) & FDE $>$ 2 m (\%) & p50 / p95 (ms) \\
+\midrule
+B10-opt & 0.821 & 2.452 & 43.1 & 837.8 / 973.8 \\
+B05-opt & 0.825 & 2.400 & 42.4 & 546.8 / 625.4 \\
+B03-opt (\Bstar{}) & 0.852 & 2.408 & 42.6 & 434.0 / 502.9 \\
+B02-opt & 0.900 & 2.465 & 45.2 & 378.1 / 430.9 \\
+B01-opt & 1.262 & 2.991 & 59.5 & 320.0 / 363.5 \\
+SF3-\first{}, 4k head (mean of 3 seeds) & 0.813 & 2.442 & 46.0 & 70.9 / 84.2 \\
+SF3-\first{}, 20k head (mean of 3 seeds) & \textbf{0.762} & \textbf{2.299} & \textbf{41.6} & \textbf{70.9 / 84.2} \\
+Constant velocity & 1.900 & 5.332 & 64.9 & -- \\
+\bottomrule
+\end{tabular}
+\end{center}
+\end{table}
+
+\subsection{Locked final set}
+\label{sec:pai-final}
+
+The official test 1k was evaluated once with the frozen settings (Table~\ref{tab:pai-final}). Our B10 reproduction gives ADE 0.802 m and FDE 2.384 m (the DriveWAM paper reports 0.83 and 2.47). The 20k-clip readout reaches ADE 0.748 to 0.762 m and FDE 2.244 to 2.287 m; the paired differences to B10 are $-0.040$ to $-0.054$ m ADE and $-0.097$ to $-0.141$ m FDE, all with confidence intervals below zero, and the FDE $>$ 2 m rate is 1.8 to 2.9 pp lower. Relative to \Bstar{} the differences are $-0.080$ to $-0.094$ m ADE and $-0.075$ to $-0.119$ m FDE. The median decision latency is 70.9 ms, 0.163$\times$ \Bstar{} and 0.085$\times$ B10, with a 95th percentile of 84.2 ms versus 502.9 ms. Including the registration of the recorded history, the per-chunk latency is 189.9 ms versus 552.5 ms for \Bstar{}. All seven criteria pass for all three seeds, and dev and final agree in ranking and magnitude.
+
+\begin{table}[t]
+\caption{PhysicalAI-AV official test 1k (1,000 clips, 480 NVIDIA chunks), evaluated once. 95\% CIs from a chunk-paired bootstrap.}
+\label{tab:pai-final}
+\begin{center}
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{lcccll}
+\toprule
+Model & ADE (m) & FDE (m) & FDE $>$ 2 m (\%) & $\Delta$ADE vs.\ B10 & $\Delta$FDE vs.\ B10 \\
+\midrule
+B10-opt (official steps) & 0.802 & 2.384 & 43.9 & -- & -- \\
+B05-opt & 0.809 & 2.345 & 42.3 & & \\
+B03-opt (\Bstar{}) & 0.842 & 2.362 & 42.5 & & \\
+B02-opt & 0.891 & 2.420 & 44.3 & & \\
+B01-opt & 1.272 & 3.000 & 60.6 & & \\
+SF3-\first{}, 20k, seed 17 & 0.750 & 2.244 & 41.4 & $-0.051\,[-0.070,-0.035]$ & $-0.140\,[-0.198,-0.086]$ \\
+SF3-\first{}, 20k, seed 29 & 0.748 & 2.244 & 41.0 & $-0.054\,[-0.072,-0.036]$ & $-0.141\,[-0.196,-0.088]$ \\
+SF3-\first{}, 20k, seed 43 & 0.762 & 2.287 & 42.1 & $-0.040\,[-0.057,-0.023]$ & $-0.097\,[-0.152,-0.045]$ \\
+\midrule
+\multicolumn{6}{l}{Decision latency p50 / p95: readout 70.9 / 84.2 ms; \Bstar{} 434.0 / 502.9 ms; B10 837.8 / 973.8 ms.} \\
+\multicolumn{6}{l}{Verdict: pass (3 seeds $\times$ 7 criteria).} \\
+\bottomrule
+\end{tabular}
+\end{center}
+\end{table}
+
+\subsection{Determinism control: what the accuracy edge means}
+\label{sec:determinism}
+
+The readout is a deterministic regressor, while DriveWAM samples an action chunk from noise. The official protocol uses seed 0 for every clip, so a single seed moves the whole benchmark score in one direction. Table~\ref{tab:determinism} shows that B10's dev ADE ranges from 0.821 m (seed 0) to 0.930 m (seed 3), and that averaging the trajectories of $k$ seeds lowers it to 0.765 to 0.781 m, extrapolating to about 0.750 m for an infinite average. Against the four-sample mean the readout is on par in ADE ($-0.011$ to $-0.021$ m, two of three intervals include zero) and about 0.1 m worse in FDE ($+0.084$ to $+0.117$ m, intervals above zero). Most of the readout's apparent accuracy advantage over the official single sample is therefore an effect of determinism on mean-error metrics. The appropriate reading is that the readout approximates DriveWAM's mean prediction in one pass, at roughly 1/12 of the cost of one sample and 1/47 of the cost of a four-sample average.
+
+\begin{table}[t]
+\caption{Determinism control on the PhysicalAI-AV dev set (post-hoc analysis, not pre-registered). The official protocol uses seed 0 for all clips.}
+\label{tab:determinism}
+\begin{center}
+\footnotesize
+\setlength{\tabcolsep}{2pt}
+\begin{tabular}{lccc}
+\toprule
+B10 prediction & ADE (m) & FDE (m) & FDE $>$ 2 m (\%) \\
+\midrule
+one sample, seed 0 (official) / 1 / 2 / 3 & 0.821 / 0.869 / 0.882 / 0.930 & 2.452 / 2.453 / 2.542 / 2.647 & 43.1 / 44.2 / 46.3 / 48.0 \\
+mean of 2 / 3 / 4 samples & 0.781 / 0.765 / 0.777 & 2.250 / 2.179 / 2.200 & 39.0 / 38.7 / 39.5 \\
+extrapolated $k \to \infty$ ($a + b/k$) & 0.750 & 2.080 & -- \\
+\midrule
+SF3-\first{}, 20k, seeds 17 / 29 / 43 & 0.762 / 0.757 / 0.767 & 2.296 / 2.284 / 2.317 & 41.5 / 41.5 / 41.8 \\
+\multicolumn{4}{l}{readout $-$ 4-sample mean (seeds 17 / 29 / 43):} \\
+\multicolumn{4}{l}{\quad $\Delta$ADE $-0.016\,[-0.032,+0.001]$ / $-0.021\,[-0.037,-0.004]$ / $-0.011\,[-0.028,+0.006]$} \\
+\multicolumn{4}{l}{\quad $\Delta$FDE $+0.096$ / $+0.084$ / $+0.117$ (all CIs $>$ 0)} \\
+\bottomrule
+\end{tabular}
+\end{center}
+\end{table}
+
+\subsection{Diagnostics: imagination, memory, language, output frame}
+\label{sec:pai-diag}
+
+The pre-registered diagnostics (Table~\ref{tab:pai-diag}) retrain the 4k head with three seeds under one change at a time and compare with the 4k \first{} head on the dev set.
+
+\paragraph{Imagination matters; completing it does not.} \current{} features lose $+0.106$ to $+0.123$ m ADE and $+0.41$ to $+0.46$ m FDE relative to \first{} (all intervals above zero), while \terminal{} features differ by $+0.008$ to $+0.014$ m ADE with intervals including zero. One imagination pass from noise creates most of the action-relevant information; the remaining denoising passes add nothing measurable for readout. Together with the NAVSIM result this is the empirical basis for the early exit. A possible confound is that the \first{} pass receives the guidance sentence of the upcoming chunk while the \current{} pass has only the previous one; the fixed-prompt row below rules this out as the explanation.
+
+\paragraph{Memory and language guidance help, but less.} Removing past-chunk memory (registering only the latest frame and zero actions) costs $+0.020$ to $+0.037$ m ADE; replacing the per-chunk guidance sentence with a fixed default costs $+0.034$ to $+0.045$ m. Both are significant and both are smaller than the imagination effect. The \first{} head without guidance (0.851 to 0.854 m) is still more than 0.07 m better than \current{} with guidance (0.922 to 0.932 m).
+
+\paragraph{The output frame is decisive.} Predicting directly in the clip-start frame, the original pre-registered specification, costs $+0.26$ m ADE; with it the readout would have been about 0.25 m worse than B10. The rotation into the chunk-start vehicle frame was decided before results were read, after inspecting the data convention, and is recorded as change 9 of the pre-registration. We flag that this single choice determines whether the method passes.
+
+\begin{table}[t]
+\caption{PhysicalAI-AV dev diagnostics with the 4k-clip head (three seeds each). Differences are relative to the 4k \first{} head; ranges span the three seeds.}
+\label{tab:pai-diag}
+\begin{center}
+\small
+\begin{tabular}{lccc}
+\toprule
+Setting & ADE (m) & $\Delta$ADE vs.\ \first{} & $\Delta$FDE vs.\ \first{} \\
+\midrule
+\first{} (reference) & 0.809--0.817 & -- & -- \\
+\current{} (no imagination) & 0.922--0.932 & $+0.106$ to $+0.123$ (all CIs $>$ 0) & $+0.41$ to $+0.46$ \\
+\terminal{} (all future passes) & 0.822--0.830 & $+0.008$ to $+0.014$ (CIs include 0) & $+0.02$ to $+0.04$ \\
+no memory (latest frame, zero actions) & 0.837--0.846 & $+0.020$ to $+0.037$ (all CIs $>$ 0) & $+0.06$ to $+0.14$ \\
+fixed prompt (no per-chunk guidance) & 0.851--0.854 & $+0.034$ to $+0.045$ (all CIs $>$ 0) & $+0.14$ to $+0.19$ \\
+clip-frame output (original specification) & 1.070--1.085 & $+0.260$ to $+0.269$ (all CIs $>$ 0) & $+0.38$ to $+0.41$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+\end{table}
+
+\section{Discussion}
+\label{sec:discussion}
+
+\begin{figure}[t]
+\begin{center}
+\includegraphics[width=\linewidth]{fig_tradeoff.pdf}
+\end{center}
+\caption{Quality versus median latency on the locked final sets (policy latency on NAVSIM, decision latency on PhysicalAI-AV; Section~\ref{sec:protocol}). Lower-left is better. On both benchmarks the readout sits left of \Bstar{} at near-\Bstar{} quality.}
+\label{fig:tradeoff}
+\end{figure}
+
+\paragraph{Consistent effects across two settings.} Two findings replicate across a snapshot planning benchmark and a continuous one with memory and language (Figure~\ref{fig:tradeoff}). First, the phase effect: \first{} $\gg$ \current{} (+3.3 PDMS; $-$0.11 m ADE) and \first{} $\approx$ \terminal{}. Second, the scale effect: with a fixed 10M-parameter head, the gap to B10 closes with more head-training labels (4k $\rightarrow$ 92.6k scenes on NAVSIM; 4k $\rightarrow$ 20k clips, about 100k chunk samples, on PhysicalAI-AV). Had we stopped at the 4k pilots we would have concluded, wrongly, that frozen world features contain too little action information.
+
+\paragraph{Why the verdicts differ.} We can only hypothesize. PDMS is a rule-based score that is sensitive to drivable-area violations, where a deterministic mean prediction has nothing to gain and multimodal situations such as forks are averaged; ADE and FDE reward exactly such averaging (Section~\ref{sec:determinism}). The continuous setting also supplies memory and guidance that the readout provably uses. Sample counts were similar (92.6k versus about 100k), so data is not the explanation. The honest summary is not that the method ``works better on PhysicalAI'' but that the PhysicalAI metrics favor deterministic prediction.
+
+\paragraph{Remaining weaknesses.} The readout's residual losses are drivable-area compliance on NAVSIM and the 4-second endpoint on PhysicalAI-AV. Both are compatible with a regression head averaging over a multimodal future; we have not verified this cause. Multimodal or safety-oriented metrics, and closed-loop evaluation, are needed before any safety claim.
+
+\paragraph{Evaluation practice.} Two observations are relevant beyond this paper. Public checkpoints may have memorized public training splits, so readout and probing studies should use unseen scenes and should be wary of classification heads. Single-seed protocols for stochastic policies can be lucky or unlucky: on PhysicalAI-AV the official seed 0 gave the best of four seeds, and comparisons with deterministic methods should report multi-sample averages.
+
+\section{Limitations}
+\label{sec:limitations}
+
+Our results concern one world model (DriveWAM) and two open-loop, non-reactive benchmarks; closed-loop safety is untested. The NAVSIM final run is a near miss and was made after the dev set had missed by one scene, as a recorded exception. NAVSIM verdicts rest on two training seeds and PhysicalAI-AV verdicts on three (Appendix~\ref{app:prereg}). The PhysicalAI dev set is a random validation subset while the official test set is VLM-curated; B10's ADE was similar on both (0.821 versus 0.802 m). The chunk-frame output rotation on PhysicalAI-AV was fixed before results but decides the outcome. A deterministic head is favored by mean-error metrics. We did not compare against one-step distillation of the action generator, which would be the natural learned alternative. Latency is a ratio measured on one GPU of a shared host, and the timed span differs between the benchmarks (Section~\ref{sec:protocol}). The multi-level versus single-level hypothesis is directionally consistent but significant in only one seed.
+
+\section{Conclusion}
+\label{sec:conclusion}
+
+A frozen driving world-action model forms, during its first imagination pass, a representation from which a 10M-parameter head can read a 4-second trajectory at mean-prediction-level quality. Reading at that point and stopping removes the remaining future passes and the entire action-denoising loop, which on two benchmarks reduces the median latency to 0.45$\times$ and 0.16$\times$ that of the fastest quality-preserving reduced-step baseline and to 0.24$\times$ and 0.09$\times$ that of the official model. Imagination is what matters, completing it is not, and enough head-training labels are required to see this. We hope the pre-registered protocol, the fair low-step baseline and the documented evaluation traps are useful to others studying what world models already know about acting.
+
+\subsubsection*{Broader Impact Statement}
+This work reduces the inference cost of a driving policy evaluated in open loop. Faster inference could make world-action models more practical for deployment, but nothing here establishes closed-loop safety; the residual losses on drivable-area compliance and 4-second endpoints are exactly the terms a safety case would scrutinize. We caution against reading the open-loop accuracy numbers as evidence of safe driving.
+
+\bibliography{../references}
+\bibliographystyle{tmlr}
+
+\appendix
+
+\section{Pre-registration summary and deviations}
+\label{app:prereg}
+
+Both benchmarks were run under written pre-registration documents. Each document fixed, before any prediction on the relevant set was produced: the split rule and its file hash, the baseline set and the \Bstar{} rule, the head architecture and training protocol, the number of seeds, the pass/fail criteria, the bootstrap procedure and the latency protocol. Changes made during execution were appended with a timestamp before the affected results were read.
+
+\paragraph{NAVSIM.} navtest (136 logs) was shuffled with a fixed seed and split by log into 34 development logs and 102 locked final logs. Protocol v2 (40 fixed epochs, last checkpoint, two seeds) replaced the pilot's early stopping after the pilot had selected checkpoints on an evaluation set. Round 3 pre-registered an FP32 output layer, an anchor head and a 20k-scene head-train set with a ``partial improvement'' rule; round 4 pre-registered the full 92,599-scene head-train set. Recorded deviations: (i) dev predictions were first computed with batch 64 and recomputed with batch 1 after a BF16 output layer was found to change trajectories at the centimeter level with batch size (PDMS within $\pm$0.2); (ii) the final run was made although the dev verdict had missed by one scene, as a user decision recorded before the run, with the checkpoints frozen by SHA-256 hashes; (iii) ego-normalization statistics for the round-3 4k runs were not saved and are recomputable.
+
+\paragraph{PhysicalAI-AV.} Ten changes were recorded before results, including: the development set was switched to 1,000 random validation clips because the upstream VLM scene-tagging script exceeded the 24 GB GPU and was estimated at more than 50 GPU-hours; each test clip yields five rather than four chunks, as verified by the parity check; the head is trained on all five chunks; the scale rule chooses the head-train size with the lower seed-averaged dev ADE; and the output frame was changed to the chunk-start vehicle frame after inspecting the data convention (change 9). The original plan called for three training seeds; NAVSIM protocol v2 fixed two (17 and 29), and the PhysicalAI-AV pre-registration returned to three (17, 29 and 43). The determinism control (Section~\ref{sec:determinism}) is a post-hoc analysis added after the final result and is labeled as such.
+
+\section{Bitwise verification list}
+\label{app:verification}
+
+\begin{table}[H]
+\caption{Verifications performed before any result was read.}
+\begin{center}
+\small
+\begin{tabular}{p{7.5cm}p{3.8cm}p{3cm}}
+\toprule
+Check & Scope & Result \\
+\midrule
+Rollout re-implementation $=$ upstream inference (B10, B05) & NAVSIM pilot scenes; PhysicalAI 3 final clips & bitwise equal \\
+opt (skip final action cache pass) $=$ raw at equal step count & NAVSIM; PhysicalAI 3 final + 32 dev clips & bitwise equal \\
+Shared multi-baseline rollout $=$ individual runs & PhysicalAI 3 final clips & bitwise equal \\
+Hooks do not perturb outputs; early-exit features $=$ features captured during a full run & NAVSIM; PhysicalAI 3 final + 32 dev clips & bitwise equal \\
+Readout metric path $=$ official metric code & 6 clips $\times$ 5 models & max.\ difference $7 \times 10^{-6}$ m \\
+Memory-mapped training inputs $=$ stored features & train-4k sample & bitwise equal (identical epoch losses) \\
+Online policy (backbone $+$ head) $=$ offline predictions from cached features & NAVSIM final; PhysicalAI 128 clips, 640 chunks & bitwise equal \\
+Vehicle-frame / clip-frame rotation round trip & training sample & max.\ error $2.4 \times 10^{-7}$ (normalized units) \\
+Backbone forwards per clip & PhysicalAI & B10 87, readout 17 \\
+Our 1 fps frame store $=$ upstream video loader & 4 dev clips & bitwise equal \\
+\bottomrule
+\end{tabular}
+\end{center}
+\end{table}
+
+\section{Implementation details}
+\label{app:impl}
+
+\paragraph{Environment.} PyTorch 2.9.0 with CUDA 12.6, flash-attention 2.8.3, diffusers 0.36.0, transformers 4.55.2, two RTX A5000 (24 GB) GPUs on a shared host. Upstream commits, model revisions and file hashes are pinned in a source-lock file released with the code. The official NAVSIM scorer runs in a separate CPU environment.
+
+\paragraph{Head hyperparameters.} Taps at blocks 10/20/30; 16 queries, 8 heads, width 512; ego MLP 128-d; fusion 1,664 $\rightarrow$ 512, residual MLP 512 $\rightarrow$ 1024 $\rightarrow$ 512; decoder LayerNorm $\rightarrow$ 512 $\rightarrow$ 256 $\rightarrow$ 3 in FP32; 9.98M parameters. AdamW, learning rate $3 \times 10^{-4}$, weight decay 0.01, batch 32, 40 epochs, 5\% linear warm-up then cosine decay, last checkpoint, seeds 17/29 (NAVSIM) and 17/29/43 (PhysicalAI-AV). Features are cached once per phase and training set; online inference was verified to reproduce the cached-feature predictions bitwise.
+
+\paragraph{Guidance sentences for the PhysicalAI dev set.} The official test prompts are public; for the validation clips we regenerated guidance sentences with the DriveWAM three-stage pipeline using Qwen3-VL-8B \citep{bai2025qwen3vl}. The sentences average 27.8 words versus 28.0 in the official prompts. On torch 2.9 with cuDNN 9.10 the bf16 Conv3d patch embedding of the VLM took about 10 s per call; we replaced it with the mathematically identical linear operation (0.3 ms, same error relative to an FP32 reference). The upstream evaluator caches prompt embeddings on the GPU indefinitely; we clear the cache per clip (values identical).
+
+\paragraph{Latency protocol.} NAVSIM final (policy latency, Section~\ref{sec:protocol}): 256 final scenes, B10, \Bstar{} and the readout alternated per scene, three passes; run-to-run variation of the median 0.2\%; host load average 11.8 on that day versus 41 to 51 during the dev measurement, which is why only same-session ratios are used. PhysicalAI-AV: 128 dev clips $\times$ 3 passes, model order alternated per clip, 1,920 decisions per model; decision latency is measured from the end of registration of the recorded history until the action chunk is ready.
+
+\section{Additional NAVSIM development results}
+\label{app:navsim-dev}
+
+\begin{table}[H]
+\caption{NAVSIM navtest-dev, round 3 (pre-registered remedies) and round 4 (full head-train set). Differences are to B10 (90.93 PDMS).}
+\begin{center}
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{llccc}
+\toprule
+Train & Head / phase & PDMS 17 / 29 & $\Delta$ vs.\ B10 [95\% CI], seed 17 / 29 & DAC degr. \\
+\midrule
+4k & SF3 regression, FP32 output, \terminal{} & 86.58 / 87.04 & $-4.35$ / $-3.89$ & -- \\
+4k & SF3 anchor head ($K$=256), \first{} & 57.85 / 59.08 & $-33.1$ / $-31.9$ & -- \\
+20k & SF3 anchor head ($K$=256), \first{} & 79.53 / 78.96 & $-11.4$ / $-12.0$ & -- \\
+20k & SF3 regression, \first{} & 89.36 / 90.00 & $-1.57\,[-2.62,-0.71]$ / $-0.94\,[-1.95,+0.00]$ & $-1.51$ / $-1.05$ \\
+20k & SF3 regression, \terminal{} & 89.47 / 89.10 & $-1.46\,[-2.43,-0.57]$ / $-1.83\,[-3.00,-0.86]$ & $-1.54$ / $-1.72$ \\
+92.6k & SF3 regression, \first{} & 90.43 / 90.58 & $-0.51\,[-1.12,+0.14]$ / $-0.36\,[-0.95,+0.28]$ & $-0.52$ / $-0.40$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+\end{table}
+
+The pilot on the navtrain head-val subset also included a feature-swap control: replacing a scene's features with those of a different scene with similar ego state collapsed every head from 76--87 to 35--41 PDMS, below the ego-only head (63.5), confirming that the heads read scene-specific information from the features rather than from the ego input. A B10 generation-seed study on 32 unseen scenes found a mean RMS spread of 6.0 cm between the trajectories of different seeds, versus 3.5 cm on memorized navtrain scenes.
+
+\section{Additional PhysicalAI-AV development results}
+\label{app:pai-dev}
+
+\begin{table}[H]
+\caption{PhysicalAI-AV dev, \Bstar{} qualification (paired differences to B10-opt with 95\% CIs).}
+\begin{center}
+\small
+\begin{tabular}{lcccc}
+\toprule
+Candidate & $\Delta$ADE vs.\ B10 & $\Delta$FDE vs.\ B10 & FDE $>$ 2 m increase (pp) & qualifies \\
+\midrule
+B05-opt & $+0.004\,[+0.000,+0.008]$ & $-0.051\,[-0.061,-0.042]$ & $-0.70$ & yes \\
+B03-opt & $+0.031\,[+0.024,+0.038]$ & $-0.044\,[-0.064,-0.025]$ & $-0.42$ & yes (fastest) \\
+B02-opt & $+0.079\,[+0.069,+0.089]$ & $+0.014\,[-0.016,+0.041]$ & $+2.16$ & no \\
+B01-opt & $+0.440\,[+0.422,+0.459]$ & $+0.539\,[+0.498,+0.580]$ & $+16.40$ & no \\
+\bottomrule
+\end{tabular}
+\end{center}
+\end{table}
+
+\begin{table}[H]
+\caption{PhysicalAI-AV dev, readout heads per seed (\first{} phase, vehicle-frame output).}
+\begin{center}
+\footnotesize
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{lcccccc}
+\toprule
+Head & ADE & FDE & $\Delta$ADE vs.\ B10 & $\Delta$ADE vs.\ \Bstar{} & FDE$>$2 m (pp) & verdict \\
+\midrule
+20k, seed 17 & 0.762 & 2.296 & $-0.059\,[-0.078,-0.040]$ & $-0.091\,[-0.109,-0.072]$ & $-1.58$ & pass \\
+20k, seed 29 & 0.757 & 2.284 & $-0.064\,[-0.082,-0.046]$ & $-0.095\,[-0.113,-0.078]$ & $-1.60$ & pass \\
+20k, seed 43 & 0.767 & 2.317 & $-0.055\,[-0.072,-0.037]$ & $-0.086\,[-0.103,-0.068]$ & $-1.24$ & pass \\
+4k, seed 17 & 0.813 & 2.445 & $-0.008\,[-0.026,+0.011]$ & $-0.039\,[-0.057,-0.021]$ & $+2.62$ & fail (tail rate) \\
+4k, seed 29 & 0.817 & 2.460 & $-0.005\,[-0.023,+0.013]$ & $-0.036\,[-0.054,-0.018]$ & $+3.72$ & fail (tail rate) \\
+4k, seed 43 & 0.809 & 2.421 & $-0.012\,[-0.031,+0.007]$ & $-0.043\,[-0.062,-0.024]$ & $+2.34$ & fail (tail rate) \\
+\bottomrule
+\end{tabular}
+\end{center}
+\end{table}
+
+\end{document}

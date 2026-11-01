@@ -1,0 +1,29 @@
+{
+  "run_id": "r5_navsim_noise_seed_2026-11-01",
+  "split": "navtest_dev",
+  "preregistration": "reports/\uc0ac\uc804\ub4f1\ub85d_\ubcf4\uc644\uc2e4\ud5d8_2026-11-01.md",
+  "generation_seeds": [
+    1,
+    2
+  ],
+  "sample_seed": "sample_seed(token, g)",
+  "frozen_checkpoints": {
+    "17": "7af22cee1759676c1c078f6f5ce4d0e24e6ffb0fabf62fc447d22edc03b72c90",
+    "29": "0c5ad62f132d0fcf2c47995c5a02d2badcf9e9db88aed9a646ae0179d8ebd6b4"
+  },
+  "stats_sha256": "a4c4b471b2ae35276a9780456ba301749f79a1bc4454d87c5a08fb48af1867d8",
+  "manifest": "/home/yonghwi/DriveWAM_Lightweight_Action_Readout/splits/navtest-dev-manifest.regen-2026-11-01.jsonl",
+  "manifest_sha256": "3c10a06b8bad4eed57878d10f281b485e3a19bf08bf9b9435049d0348b088d99",
+  "student_features": "first-phase hook on original B10 rollout, layers [9,19,29]",
+  "student_batch": 1,
+  "check_scenes_per_shard": 4,
+  "targets_opened": false,
+  "scripts": {
+    "remote_r5_navsim_seed.py": "a76095e0c84163eb863df0e957db233ef7fef4a842264f1bef61b186a881e69d",
+    "world_feature_tap.py": "d2fa4de75b40bddf67b1f6fbdb6e2f32605a48d6ea6261733a547ab07b34c03c",
+    "heads_v3.py": "cb59c03e6d66e70bee3b02b86971aabf0da1ce58fd305ea78fe4d2a680e1bd10",
+    "remote_navtest_final_infer.py": "7170207271545b77f4f3eebae13b99a558b94a1a679c3b7e425e2695683d5e72",
+    "baseline_common.py": "ac70c9e43477727d67bd0222f7bb3308dc02f8b16c8b5e807ca1405618769977",
+    "navsim_current_dataset.py": "d2dd1561b96a84c6753a7a2c8f3d8b1ee4a09d0dbf4b136825bb5879d7383299"
+  }
+}
